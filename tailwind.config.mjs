@@ -19,7 +19,14 @@ export default {
         lg: "5.5rem",
       },
     },
-    extend: {},
+    extend: {
+      colors: {
+        harmonic: {
+          primary: "#D4A637",
+          secondary: "#FFD700",
+        },
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };
