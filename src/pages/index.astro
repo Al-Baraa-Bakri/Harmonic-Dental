@@ -1,8 +1,12 @@
 ---
 import DefaultLayout from "../layouts/Default.astro";
-import { HeaderSection } from "../sections/Header";
+import { Header } from "../components/Header";
+import HeroSection from "../components/Hero";
+import ProductCarousel from "@/components/ProductCarousel";
 ---
 
 <DefaultLayout>
-  <HeaderSection />
+  <Header/>
+  <HeroSection/>
+  <ProductCarousel client:visible />
 </DefaultLayout>
