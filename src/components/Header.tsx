@@ -9,11 +9,11 @@ type NavItem = {
 
 // Constants
 const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "#home" },
-  { label: "Products", href: "#products" },
-  { label: "About", href: "#about" },
-  { label: "Technology", href: "#technology" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Products", href: "/products" },
+  { label: "About", href: "/about" },
+  { label: "Technology", href: "/technology" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const CONTACT_INFO = {
@@ -41,6 +41,7 @@ export const Header = () => {
         /* Show mobile menu when checkbox is checked */
         #mobile-menu-toggle:checked ~ #mobile-menu {
           max-height: 500px;
+          padding-bottom: 24px
         }
 
         /* Swap hamburger/close icons */
@@ -122,7 +123,7 @@ export const Header = () => {
           </div>
 
           {/* Mobile Navigation */}
-          <div id="mobile-menu" className="lg:hidden pb-6">
+          <div id="mobile-menu" className="lg:hidden">
             <nav className="flex flex-col gap-4 mb-6" aria-label="Mobile navigation">
               {NAV_ITEMS.map((item) => (
                 <a

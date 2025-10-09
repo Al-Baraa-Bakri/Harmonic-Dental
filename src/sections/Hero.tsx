@@ -9,6 +9,7 @@ import implantImage from "@/assets/product-implant.png";
 import veneerImage from "@/assets/product-veneer.png";
 import dentureImage from "@/assets/product-denture.png";
 import orthodonticsImage from "@/assets/product-orthodontics.png";
+import { getImageSrc } from "@/lib/utils";
 
 // Types
 type ImageMetadata = {
@@ -93,10 +94,6 @@ const getAnimationStyle = (fadeDelay: number, scaleDelay?: number) => ({
     scaleDelay ? `, scale-in 0.4s ease-out ${scaleDelay}s both` : ""
   }`,
 });
-
-const getImageSrc = (image: string | ImageMetadata): string => {
-  return typeof image === "string" ? image : image.src;
-};
 
 // Memoized sub-components
 const BackgroundLayer = memo(() => (
@@ -202,7 +199,7 @@ const ProductCard = memo<{ product: Product; index: number }>(
   ({ product, index }) => {
     const Icon = product.icon;
     const animationDelay = 0.8 + index * 0.1;
-    const imageSrc = getImageSrc(product.image);
+    const imageSrc = getImageSrc(product.image as any);
 
     return (
       <div
