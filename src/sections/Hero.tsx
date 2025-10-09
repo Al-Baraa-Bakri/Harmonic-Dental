@@ -1,6 +1,6 @@
 import { memo } from "react";
-import { Button } from "./ui/button";
-import { Badge } from "./ui/badge";
+import { Button } from "../components/ui/button";
+import { Badge } from "../components/ui/badge";
 import { ArrowRight, Sparkles, Crown, Box, Layers, Gem, Smile, Braces, type LucideIcon } from "lucide-react";
 import heroImage from "@/assets/dental-lab-hero.png";
 import crownImage from "@/assets/product-crown.png";
