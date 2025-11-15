@@ -3,17 +3,22 @@ import { products, categories } from "@/data/products";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Box, ArrowLeft } from "lucide-react";
+import { Box, ArrowLeft, X } from "lucide-react";
 import { getImageSrc } from "@/lib/utils";
+import ModelViewer from "@/components/ModelViewer";
 
 const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All Products");
+  const [activeModelId, setActiveModelId] = useState<string | null>(null);
 
   const filteredProducts =
     selectedCategory === "All Products"
       ? products
       : products.filter((product) => product.category === selectedCategory);
+
+  const handleToggleModel = (productId: string) => {
+    setActiveModelId(activeModelId === productId ? null : productId);
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -61,6 +66,7 @@ const ProductsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {filteredProducts.map((product, index) => {
               const Icon = product.icon;
+              const isModelActive = activeModelId === product.id;
               
               return (
                 <Card
@@ -68,31 +74,66 @@ const ProductsPage = () => {
                   className="group overflow-hidden hover:border-primary/50 transition-all duration-500 hover-glow"
                   style={{ animation: `fade-in 0.5s ease-out ${index * 0.1}s both` }}
                 >
-                  {/* Product Image */}
-                  <div className="relative h-64 overflow-hidden">
-                    <img
-                      src={getImageSrc(product.image)}
-                      alt={product.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
+                  {/* Product Image / 3D Model Container */}
+                  <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
+                    {/* Original Image */}
+                    <div 
+                      className={`absolute inset-0 transition-opacity duration-500 ${
+                        isModelActive ? 'opacity-0 pointer-events-none' : 'opacity-100'
+                      }`}
+                    >
+                      <img
+                        src={getImageSrc(product.image)}
+                        alt={product.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
+                    </div>
+
+                    {/* 3D Model Viewer */}
+                    {product.model && (
+                      <div 
+                        className={`absolute inset-0 transition-opacity duration-500 ${
+                          isModelActive ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                        }`}
+                      >
+                        <ModelViewer
+                          src={product.model}
+                          alt={`3D model of ${product.title}`}
+                          className="w-full h-full"
+                        />
+                      </div>
+                    )}
                     
                     {/* Icon Badge */}
-                    <div className="absolute top-4 left-4 w-12 h-12 rounded-xl bg-primary/20 backdrop-blur-md border border-primary/30 flex items-center justify-center">
+                    <div className="absolute top-4 left-4 w-12 h-12 rounded-xl bg-primary/20 backdrop-blur-md border border-primary/30 flex items-center justify-center z-10">
                       <Icon className="w-6 h-6 text-primary" />
                     </div>
 
                     {/* Badge */}
                     {product.badge && (
-                      <Badge className="absolute top-4 right-4 bg-primary text-primary-foreground border-0">
+                      <Badge className="absolute top-4 right-4 bg-primary text-primary-foreground border-0 z-10">
                         {product.badge}
                       </Badge>
                     )}
 
-                    {/* Category */}
-                    <div className="absolute bottom-4 left-4 px-3 py-1 rounded-full bg-card/80 backdrop-blur-sm border border-primary/20">
-                      <span className="text-xs text-foreground/90">{product.category}</span>
-                    </div>
+                    {/* Close Button (when 3D is active) */}
+                    {isModelActive && (
+                      <button
+                        onClick={() => handleToggleModel(product.id)}
+                        className="absolute top-4 right-4 w-10 h-10 rounded-full bg-background/90 backdrop-blur-md border border-border hover:bg-background transition-colors flex items-center justify-center z-20"
+                        aria-label="Close 3D view"
+                      >
+                        <X className="w-5 h-5" />
+                      </button>
+                    )}
+
+                    {/* Category (only show when not in 3D mode) */}
+                    {!isModelActive && (
+                      <div className="absolute bottom-4 left-4 px-3 py-1 rounded-full bg-card/80 backdrop-blur-sm border border-primary/20 z-10">
+                        <span className="text-xs text-foreground/90">{product.category}</span>
+                      </div>
+                    )}
                   </div>
 
                   <CardHeader>
@@ -118,58 +159,16 @@ const ProductsPage = () => {
                     </div>
 
                     {/* 3D View Button */}
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button variant="outline" className="w-full gap-2 group/btn">
-                          <Box className="w-4 h-4 transition-transform group-hover/btn:rotate-12" />
-                          View in 3D
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent className="max-w-4xl">
-                        <DialogHeader>
-                          <DialogTitle className="flex items-center gap-2">
-                            <Icon className="w-5 h-5 text-primary" />
-                            {product.title} - 3D View
-                          </DialogTitle>
-                          <DialogDescription>
-                            Interactive 3D model of {product.title.toLowerCase()}
-                          </DialogDescription>
-                        </DialogHeader>
-                        
-                        {/* 3D View Placeholder */}
-                        <div className="relative aspect-video bg-gradient-to-br from-primary/5 to-primary/10 rounded-lg flex items-center justify-center border border-primary/20">
-                          <div className="text-center space-y-4">
-                            <Box className="w-16 h-16 text-primary mx-auto animate-pulse" />
-                            <div>
-                              <p className="text-lg font-semibold mb-2">3D Model Viewer</p>
-                              <p className="text-sm text-muted-foreground">
-                                Interactive 3D view of {product.title}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Product Details */}
-                        <div className="space-y-4 pt-4 border-t">
-                          <div>
-                            <h4 className="font-semibold mb-2">Features</h4>
-                            <div className="flex flex-wrap gap-2">
-                              {product.features.map((feature) => (
-                                <Badge key={feature} variant="secondary">
-                                  {feature}
-                                </Badge>
-                              ))}
-                            </div>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold mb-2">Description</h4>
-                            <p className="text-sm text-muted-foreground">
-                              {product.description}
-                            </p>
-                          </div>
-                        </div>
-                      </DialogContent>
-                    </Dialog>
+                    {product.model && (
+                      <Button 
+                        variant={isModelActive ? "default" : "outline"}
+                        className="w-full gap-2 group/btn"
+                        onClick={() => handleToggleModel(product.id)}
+                      >
+                        <Box className="w-4 h-4 transition-transform group-hover/btn:rotate-12" />
+                        {isModelActive ? "Back to Image" : "View in 3D"}
+                      </Button>
+                    )}
                   </CardContent>
                 </Card>
               );

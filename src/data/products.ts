@@ -6,11 +6,13 @@ import veneerImage from "@/assets/product-veneer.png";
 import dentureImage from "@/assets/product-denture.png";
 import orthodonticsImage from "@/assets/product-orthodontics.png";
 
+
 export interface Product {
   id: string;
   title: string;
   description: string;
   image: any;
+  model?: string,
   icon: LucideIcon;
   features: string[];
   category: string;
@@ -24,6 +26,7 @@ export const products: Product[] = [
     description: "High-strength ceramic and zirconia crowns designed for maximum durability and natural aesthetics. Perfect shade matching and precision fit guaranteed.",
     image: crownImage,
     icon: Crown,
+    model: '/models/bridge-3d.glb',
     features: ["Zirconia & Ceramic", "Natural Look", "10-Year Warranty"],
     category: "Restorative",
     badge: "Popular",

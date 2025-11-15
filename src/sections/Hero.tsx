@@ -251,7 +251,7 @@ const ProductCard = memo<{ product: Product; index: number }>(
 ProductCard.displayName = "ProductCard";
 
 const ProductsShowcase = memo(() => (
-  <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
+  <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
     {PRODUCTS.map((product, index) => (
       <ProductCard key={product.id} product={product} index={index} />
     ))}
