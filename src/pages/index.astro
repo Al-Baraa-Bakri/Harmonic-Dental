@@ -4,6 +4,10 @@ import DefaultLayout from "../layouts/Default.astro";
 import HeroSection from "../sections/Hero";
 import ProductCarousel from "@/components/ProductCarousel";
 import TechnologySection from "@/sections/Technology";
+import ContactUs from "@/sections/ContactUs"  
+import Stats from "@/sections/Stats";
+import WhyChooseUs from "@/sections/WhyChooseUs";
+import OurServices from "@/sections/OurServices";
 ---
 
 <DefaultLayout>
@@ -11,4 +15,8 @@ import TechnologySection from "@/sections/Technology";
   <!-- <ProductCarousel client:visible /> -->
   <TechnologySection client:load/>
   <OurStory />
+  <WhyChooseUs />
+  <OurServices />
+  <Stats />
+  <ContactUs />
 </DefaultLayout>

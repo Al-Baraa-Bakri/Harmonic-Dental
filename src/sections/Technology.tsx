@@ -125,7 +125,7 @@ const CurvedPath = ({ pathProgress }: { pathProgress: MotionValue<number> }) => 
   const strokeDashoffset = useTransform(pathProgress, [0, 1], [2000, 0]);
 
   return (
-    <div className="absolute left-1/2 -translate-x-1/2 top-0 h-full w-full max-w-md pointer-events-none hidden md:block">
+    <div className="absolute left-1/2 -translate-x-1/2 top-0 h-full w-full max-w-md pointer-events-none block">
       <svg className="w-full h-full" viewBox="0 0 300 1400" preserveAspectRatio="xMidYMid meet">
         <path d={PATH_D} stroke="hsl(var(--primary) / 0.12)" strokeWidth="2" fill="none" strokeDasharray="8 8" />
         <motion.path
@@ -287,20 +287,20 @@ const TechnologySection = () => {
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-4 tech-badge">
-              <Sparkles className="w-3.5 h-3.5 text-primary animate-pulse" />
-              <span className="text-xs text-foreground/90">Advanced Technology</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-4 tech-badge">
+                <Sparkles className="w-3.5 h-3.5 text-primary animate-pulse" />
+                <span className="text-xs text-foreground/90">Advanced Technology</span>
+              </div>
+
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 tech-heading">
+                Your Journey to
+                <span className="block text-gradient mt-1">Perfect Dental Prosthetics</span>
+              </h2>
+
+              <p className="text-sm md:text-base text-muted-foreground tech-description">
+                Follow the path from digital scan to final delivery, powered by cutting-edge technology.
+              </p>
             </div>
-
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 tech-heading">
-              Your Journey to
-              <span className="block text-gradient mt-1">Perfect Dental Prosthetics</span>
-            </h2>
-
-            <p className="text-sm md:text-base text-muted-foreground tech-description">
-              Follow the path from digital scan to final delivery, powered by cutting-edge technology.
-            </p>
-          </div>
 
           <div className="relative mb-12 md:mb-16">
             {/* pass the same scroll progress to both the path and the cards */}
