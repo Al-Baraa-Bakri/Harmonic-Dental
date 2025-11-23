@@ -293,7 +293,7 @@ const TechnologySection = () => {
               </div>
 
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 tech-heading">
-                Your Journey to
+                Your Journey to {" "}
                 <span className="block text-gradient mt-1">Perfect Dental Prosthetics</span>
               </h2>
 

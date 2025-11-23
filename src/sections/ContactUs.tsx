@@ -1,5 +1,7 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 
+import GoogleMap from "../components/GoogleMap";
+
 const ContactSection = () => {
   const emails = [
     { label: "General Inquiries", email: "info@dentalab.com" },
@@ -14,7 +16,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section className="relative py-24 overflow-hidden bg-gradient-to-b from-background via-primary/5 to-background">
+    <section id="contact-us" className="relative py-24 overflow-hidden bg-gradient-to-b from-background via-primary/5 to-background">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
@@ -23,18 +25,21 @@ const ContactSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-block mb-4 px-6 py-2 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full border border-primary/30">
-            <span className="text-sm font-semibold text-primary">Get in Touch</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_linear_infinite]">
-              Contact Us
-            </span>
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We're here to help. Reach out to us through any of the channels below.
-          </p>
+    
+         <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-4 tech-badge">
+                <Phone className="w-3.5 h-3.5 text-primary animate-pulse" />
+                <span className="text-xs text-foreground/90">Contact Us</span>
+              </div>
+
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 tech-heading">
+                To start your amazing journey {" "}
+                <span className="block text-gradient mt-1">Get in touch with us</span>
+              </h2>
+
+              <p className="text-sm md:text-base text-muted-foreground tech-description">
+                We're here to help. Reach out to us through any of the channels below.
+              </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -102,11 +107,8 @@ const ContactSection = () => {
         </div>
 
         {/* Location Section */}
-        <div className="mt-12 text-center animate-fade-in" style={{ animationDelay: '0.6s' }}>
-          <div className="inline-flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-card/80 to-card/60 backdrop-blur-sm border border-primary/20 rounded-full hover:border-primary/40 transition-all duration-300 hover:shadow-lg">
-            <MapPin className="w-5 h-5 text-primary" />
-            <span className="text-foreground font-medium">123 Dental Street, Medical District, City, State 12345</span>
-          </div>
+        <div className="mt-16 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <GoogleMap />
         </div>
       </div>
     </section>

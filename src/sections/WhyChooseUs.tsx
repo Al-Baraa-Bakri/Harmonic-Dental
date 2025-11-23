@@ -1,4 +1,4 @@
-import { Award, Users, Microscope, Zap, Heart } from "lucide-react";
+import { Award, Users, Microscope, Zap, Heart, Sparkles } from "lucide-react";
 import teamCollaborationImg from "@/assets/stats-background.jpg";
 import { getImageSrc } from "@/lib/utils";
 
@@ -28,10 +28,27 @@ const whyChooseUs = [
 
 const WhyChooseUs = () => {
   return (
-    <div 
+    <div>
+         <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-4 tech-badge">
+                <Sparkles className="w-3.5 h-3.5 text-primary animate-pulse" />
+                <span className="text-xs text-foreground/90">Why Choose Us?</span>
+              </div>
+
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 tech-heading">
+                Your Journey to {" "}
+                <span className="block text-gradient mt-1">Perfect Dental Prosthetics</span>
+              </h2>
+
+              <p className="text-sm md:text-base text-muted-foreground tech-description">
+                Follow the path from digital scan to final delivery, powered by cutting-edge technology.
+              </p>
+            </div>
+            
+        <div 
       className="mb-16 animate-fade-in relative overflow-hidden p-8 md:p-12 border border-border/20" 
       style={{ animationDelay: '0.7s' }}
-    >
+    >     
       {/* Background Image with Overlay */}
         <div className="absolute inset-0">
         <img
@@ -48,12 +65,6 @@ const WhyChooseUs = () => {
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "1s" }} />
         
       <div className="relative">
-        <h3 className="text-2xl md:text-3xl font-semibold mb-12 text-center flex items-center justify-center gap-3">
-          <div className="p-3 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 animate-pulse" style={{ animationDelay: '0.5s' }}>
-            <Microscope className="w-7 h-7 text-primary" />
-          </div>
-          <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Why Choose Us?</span>
-        </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {whyChooseUs.map((item, index) => (
             <div
@@ -79,6 +90,7 @@ const WhyChooseUs = () => {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 };

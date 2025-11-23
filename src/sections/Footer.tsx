@@ -1,5 +1,7 @@
 import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getImageSrc } from "@/lib/utils";
+import Logo from "@/assets/logo.png";
 
 const Footer = () => {
   const navigation = {
@@ -37,15 +39,10 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Brand Section */}
             <div className="lg:col-span-2">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center shadow-lg">
-                  <span className="text-lg font-bold text-primary-foreground">DL</span>
-                </div>
-                <div>
-                  <h2 className="text-xl font-bold text-gradient">DentalLab</h2>
-                  <p className="text-xs text-muted-foreground">Precision Prosthetics</p>
-                </div>
-              </div>
+              {/* Logo */}
+              <a href="#" className="flex items-center gap-3 w-40 mb-4 translate-x-[-10px] ">
+                <img src={getImageSrc(Logo)} alt="Harmonic Dental" />
+              </a>
               <p className="text-sm text-muted-foreground mb-6 max-w-sm">
                 Crafting excellence in dental solutions with cutting-edge technology and unmatched precision. Your trusted partner in dental prosthetics.
               </p>
@@ -138,7 +135,7 @@ const Footer = () => {
         <div className="border-t border-primary/10 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground text-center md:text-left">
-              © {new Date().getFullYear()} DentalLab. All rights reserved.
+              © {new Date().getFullYear()} Harmonic Dental. All rights reserved.
             </p>
             
             {/* Social Links */}
@@ -148,7 +145,7 @@ const Footer = () => {
                   key={social.label}
                   variant="ghost"
                   size="icon"
-                  className="w-9 h-9 rounded-lg hover:bg-primary/10"
+                  className="w-9 h-9 rounded-lg hover:bg-primary"
                   asChild
                 >
                   <a href={social.href} aria-label={social.label}>
@@ -156,16 +153,6 @@ const Footer = () => {
                   </a>
                 </Button>
               ))}
-            </div>
-            
-            <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-primary transition-colors">
-                Privacy Policy
-              </a>
-              <span>•</span>
-              <a href="#" className="hover:text-primary transition-colors">
-                Terms of Service
-              </a>
             </div>
           </div>
         </div>

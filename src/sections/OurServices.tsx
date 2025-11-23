@@ -1,108 +1,191 @@
+import { useState, useEffect, useRef } from "react";
 import { Wrench } from "lucide-react";
 
 // --- Service Imports & Data ---
 import serviceCrowns from "@/assets/product-crown.png";
-import serviceDentures from "@/assets/product-crown.png";
-import serviceOrtho from "@/assets/product-crown.png";
-import serviceImplant from "@/assets/product-crown.png";
-import serviceMouthguard from "@/assets/product-crown.png";
+import serviceDentures from "@/assets/product-bridge.png";
+import serviceOrtho from "@/assets/product-implant.png";
+import serviceImplant from "@/assets/product-denture.png";
+import serviceMouthguard from "@/assets/product-orthodontics.png";
 import { getImageSrc } from "@/lib/utils";
 
 const services = [
   {
+    id: "crowns",
     title: "Crown and Bridge Fabrication",
     imageSrc: getImageSrc(serviceCrowns),
-    description: "Utilizing advanced CAD/CAM technology for precision-milled, custom-made crowns and bridges."
+    items: [
+      "Custom-made crowns and bridges",
+      "Utilizing advanced CAD/CAM technology for precision"
+    ]
   },
   {
+    id: "dentures",
     title: "Denture Creation and Repair",
     imageSrc: getImageSrc(serviceDentures),
-    description: "Crafting full and partial dentures for optimal fit and function, plus rapid repair services."
+    items: [
+      "Full and partial dentures",
+      "Rapid repair services to minimize patient inconvenience"
+    ]
   },
   {
+    id: "implants",
     title: "Implant Prosthetics",
     imageSrc: getImageSrc(serviceImplant),
-    description: "High-quality prosthetic components and custom abutments for dental implants, ensuring a natural look."
+    items: [
+      "High-quality prosthetic components for dental implants",
+      "Ensuring a natural look and feel",
+      "Custom abutment"
+    ]
   },
   {
+    id: "ortho",
     title: "Orthodontic Appliances",
     imageSrc: getImageSrc(serviceOrtho),
-    description: "Designing braces, retainers, and other corrective devices for comfort and effectiveness."
+    items: [
+      "Braces, retainers, and other corrective devices",
+      "Designed for comfort and effectiveness"
+    ]
   },
   {
+    id: "mouthguards",
     title: "Custom Mouthguards",
     imageSrc: getImageSrc(serviceMouthguard),
-    description: "Tailor-made protective mouthguards for sports or night use, ensuring a perfect fit."
+    items: [
+      "Tailor-made for sports or night use",
+      "Protecting teeth with a perfect fit"
+    ]
   }
 ];
 
-// --- Well-Designed, Responsive Grid ---
 const OurServices = () => {
+  const [activeServiceId, setActiveServiceId] = useState(services[0].id);
+  const serviceRefs = useRef({});
+
+  useEffect(() => {
+    const observerOptions = {
+      root: null, 
+      rootMargin: "-50% 0px -50% 0px", // Trigger at the vertical center
+      threshold: 0
+    };
+
+    const observerCallback = (entries: any) => {
+      entries.forEach((entry: any) => {
+        if (entry.isIntersecting) {
+          setActiveServiceId(entry.target.dataset.serviceId);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    const refs = serviceRefs.current;
+    Object.values(refs).forEach((ref: any) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      Object.values(refs).forEach((ref: any) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
+
   return (
-    <div className="my-16 md:my-24 animate-fade-in" style={{ animationDelay: '0.5s' }}>
+    // Section vertical margin
+    <div className="my-16 md:my-24 animate-fade-in container" style={{ animationDelay: '0.5s' }}>
       
       {/* Section Header */}
-      <div className="text-center mb-12 md:mb-16 max-w-3xl mx-auto">
-        <div className="flex justify-center mb-4">
-          <div className="p-3 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 animate-pulse">
-            <Wrench className="w-7 h-7 text-primary" />
-          </div>
+ 
+
+       <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-4 tech-badge">
+                <Wrench className="w-3.5 h-3.5 text-primary animate-pulse" />
+                <span className="text-xs text-foreground/90">Our Services</span>
+              </div>
+
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 tech-heading">
+                Precision-crafted solutions {" "}
+                <span className="block text-gradient mt-1">for every dental need</span>
+              </h2>
+
+              <p className="text-sm md:text-base text-muted-foreground tech-description">
+                combining artistry with advanced technology.
+              </p>
         </div>
-        <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
-          Our Services
-        </h2>
-        <p className="text-lg md:text-xl text-muted-foreground">
-          From foundational restorations to specialized appliances,
-          every product is crafted with unparalleled precision.
-        </p>
-      </div>
       
-      {/* Responsive Grid:
-        - Mobile: 1 column (default)
-        - Tablet (md): 2 columns
-        - Desktop (lg): A 6-column grid for a custom 2-row (2-up, 3-up) layout
-      */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
-        
-        {services.map((service, index) => (
-          <div
-            key={service.title}
-            className={`
-              group rounded-2xl border border-border/50 bg-card/60
-              overflow-hidden transition-all duration-300
-              hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10
-              hover:-translate-y-1
-              ${index < 2 ? 'lg:col-span-3' : 'lg:col-span-2'}
-            `}
-            // Staggered animation delay
-            style={{ animationDelay: `${0.6 + index * 0.1}s` }}
-          >
-            {/* Card Image */}
-            <div className="overflow-hidden">
+      {/* --- Main Layout Grid --- */}
+      {/* ADJUSTED: Gap between columns is now responsive */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20">
+
+        {/* --- Left Column (Scrolling Text) --- */}
+        {/* ADJUSTED: Gap between items is reduced (gap-12 md:gap-20). Top padding is reduced (lg:pt-12). */}
+        <div className="flex flex-col gap-12 lg:pt-12 lg:pb-[20vh]">
+          {services.map((service) => (
+            <div
+              key={service.id}
+              ref={(el: any) => ((serviceRefs as any).current[service.id] = el)}
+              data-service-id={service.id}
+              className={`transition-opacity duration-500 h-[450px] flex flex-col justify-center
+                ${activeServiceId === service.id 
+                  ? 'opacity-100' 
+                  : 'opacity-40 hover:opacity-100'}
+              `}
+            >
+              {/* --- Mobile-Only Image --- */}
+              {/* ADJUSTED: Bottom margin on mobile image (mb-5) */}
               <img 
                 src={service.imageSrc as any}
                 alt={service.title}
-                className="w-full h-48 object-cover 
-                           transition-transform duration-500 ease-in-out
-                           group-hover:scale-105"
-                width={400}
-                height={200}
+                className="w-full h-auto aspect-video object-cover rounded-2xl mb-5 shadow-lg lg:hidden"
+                width={600}
+                height={400}
                 loading="lazy"
               />
-            </div>
-            
-            {/* Card Content */}
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-3 text-foreground
-                             group-hover:text-primary transition-colors">
+
+              {/* Service Details */}
+              {/* ADJUSTED: Bottom margin on title (mb-5) */}
+              <h3 className="text-2xl md:text-3xl font-semibold mb-5 text-primary">
                 {service.title}
               </h3>
-              <p className="text-base text-muted-foreground">
-                {service.description}
-              </p>
+              {/* ADJUSTED: Space between list items (space-y-3.5) */}
+              <ul className="space-y-3.5">
+                {service.items.map((item, itemIndex) => (
+                  <li
+                    key={itemIndex}
+                    className="flex items-start gap-3 text-lg text-foreground/90"
+                  >
+                    <span className="text-primary mt-1 text-xl font-bold leading-none">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* --- Right Column (Sticky Image) --- */}
+        <div className="hidden lg:block">
+          {/* ADJUSTED: Sticky offset from top (top-28) */}
+          <div className="sticky top-28">
+            <div className="relative w-full aspect-[4/3] rounded-3xl bg-card/50 border border-border/50 overflow-hidden shadow-2xl shadow-primary/10">
+              {services.map((service) => (
+                <img
+                  key={service.id}
+                  src={service.imageSrc as any}
+                  alt={service.title}
+                  className={`
+                    absolute inset-0 w-full h-full object-cover
+                    transition-opacity duration-500 ease-in-out
+                    ${activeServiceId === service.id
+                      ? 'opacity-100 scale-100'
+                      : 'opacity-0 scale-105'
+                    }
+                  `}
+                />
+              ))}
             </div>
           </div>
-        ))}
+        </div>
 
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "./ui/button";
-
+import { getImageSrc } from "@/lib/utils";
+import Logo from "@/assets/logo.png";
 // Types
 type NavItem = {
   label: string;
@@ -13,6 +14,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: "Products", href: "/products" },
   { label: "The Newst Technology", href: "/technology" },
   { label: "Emergency Cases", href: "/emergency-cases" },
+  { label: "Contact Us", href: "#contact-us" },
 ];
 
 const CONTACT_INFO = {
@@ -71,14 +73,8 @@ export const Header = () => {
 
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <a href="#home" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center shadow-lg">
-                <span className="text-lg font-bold text-primary-foreground">DL</span>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gradient">DentalLab</h1>
-                <p className="text-xs text-muted-foreground">Precision Prosthetics</p>
-              </div>
+            <a href="/" className="flex items-center gap-3 w-28 lg:w-40">
+              <img src={getImageSrc(Logo)} alt="Harmonic Dental" />
             </a>
 
             {/* Desktop Navigation */}
@@ -103,7 +99,7 @@ export const Header = () => {
                 </a>
               </Button>
               <Button variant="default" size="sm" className="gap-2" asChild>
-                <a href="#contact">
+                <a href="#contact-us">
                   <Mail className="w-4 h-4" />
                   Get Quote
                 </a>
@@ -142,7 +138,7 @@ export const Header = () => {
                 </a>
               </Button>
               <Button variant="default" size="sm" className="gap-2 w-full" asChild>
-                <a href="#contact">
+                <a href="#contact-us">
                   <Mail className="w-4 h-4" />
                   Get Quote
                 </a>

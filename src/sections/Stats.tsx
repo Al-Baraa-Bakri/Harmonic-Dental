@@ -51,8 +51,8 @@ const StatsSection = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Trusted by Professionals
-            <span className="block text-gradient mt-2">Worldwide</span>
+            Trusted by Professionals {' '}
+              <span className="text-gradient mt-2">Worldwide</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Our commitment to excellence has earned us the trust of dental professionals globally.

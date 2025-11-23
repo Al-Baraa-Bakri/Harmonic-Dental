@@ -8,43 +8,58 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 7%;
+    --background: 0 0% 10%;        /* deep black like the logo */
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 10%;
+    --card: 0 0% 3%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 10%;
+    --popover: 0 0% 3%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 42 74% 52%;
-    --primary-foreground: 0 0% 10%;
-    --primary-glow: 42 90% 65%;
+    /* Yellow from the tooth outline */
+    --primary: 50 85% 60%;
+    --primary-foreground: 0 0% 5%;
+    --primary-glow: 50 95% 70%;
 
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 20%;
+    --muted: 0 0% 25%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 42 74% 52%;
-    --accent-foreground: 0 0% 10%;
+    /* Teal used for “harmonic” text */
+    --accent: 165 45% 50%;
+    --accent-foreground: 0 0% 5%;
 
-    --destructive: 0 84.2% 60.2%;
+    /* Destructive can stay red-ish */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 42 74% 52%;
+    --ring: 50 85% 60%; /* yellow ring to match theme */
 
     --radius: 0.75rem;
 
-    /* Custom gradient and effects */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 7%) 0%, hsl(0 0% 12%) 50%, hsl(42 74% 10%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(42 74% 52%) 0%, hsl(42 90% 65%) 100%);
-    --shadow-glow: 0 0 40px hsl(42 74% 52% / 0.3);
-    --shadow-gold: 0 10px 40px -10px hsl(42 74% 52% / 0.4);
+    /* Updated gradients */
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(0 0% 0%) 0%,
+      hsl(0 0% 10%) 50%,
+      hsl(50 85% 10%) 100%
+    );
+
+    --gradient-gold: linear-gradient(
+      135deg,
+      hsl(50 85% 60%) 0%,
+      hsl(50 95% 70%) 100%
+    );
+
+    --shadow-glow: 0 0 40px hsl(50 85% 60% / 0.3);
+    --shadow-gold: 0 10px 40px -10px hsl(50 85% 60% / 0.4);
   }
+
 
   .dark {
     --background: 0 0% 7%;
@@ -110,6 +125,10 @@ All colors MUST be HSL.
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -126,7 +145,7 @@ All colors MUST be HSL.
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent;
+    @apply inline-block bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent;
   }
 
   .hover-glow {
@@ -157,5 +176,60 @@ All colors MUST be HSL.
     50% {
       box-shadow: 0 0 40px hsl(42 74% 52% / 0.4);
     }
+  }
+}
+
+/* 1. Define the keyframes for our fade-up effect */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2. Use @supports for browsers that understand animation-timeline */
+@supports (animation-timeline: view()) {
+  
+  /* Target both elements */
+  .animate-on-scroll-header,
+  .animate-on-scroll-card {
+    /* Set the initial state (before animation) */
+    opacity: 0;
+
+    /* Link the animation to the keyframes.
+      'linear' ensures it scrubs smoothly.
+      'both' makes it stick to the 'to' state when finished.
+    */
+    animation: fade-up linear both;
+
+    /* THIS IS THE MAGIC:
+      Tell the animation to follow the element's visibility 
+      in the viewport instead of following time.
+    */
+    animation-timeline: view();
+  }
+
+  /* 3. Define the scroll range for each animation */
+
+  .animate-on-scroll-header {
+    /* Start: when the element's top enters the viewport (entry 0%)
+      End: when it's 40% of the way up the screen (cover 40%)
+    */
+    animation-range: entry 0% cover 40%;
+  }
+
+  .animate-on-scroll-card {
+    /*
+      Start: when the card just enters the screen
+      End: when it's 35% of the way up
+      
+      By applying this to *each* card, they will naturally 
+      stagger based on their position, which is a great effect!
+    */
+    animation-range: entry 5% cover 35%;
   }
 }

@@ -136,12 +136,12 @@ const HeroHeading = memo(() => (
       className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
       style={getAnimationStyle(0.4)}
     >
-      Crafting Perfect
+     We Complain 
       <span 
-        className="block text-gradient mt-2" 
+        className="block text-gradient mt-2 leading-[130%]" 
         style={getAnimationStyle(0.6)}
       >
-        Dental Prosthetics
+        Art & Technology
       </span>
     </h1>
 
@@ -161,9 +161,11 @@ const CTAButtons = memo(() => (
     className="flex flex-col sm:flex-row gap-4 mb-12"
     style={getAnimationStyle(1, 1)}
   >
-    <Button variant="hero" size="lg" className="group">
-      Contact us
-      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+    <Button variant="hero" size="lg" className="group" asChild>
+      <a href="#contact-us">
+        Contact us
+        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+      </a>
     </Button>
     <Button variant="hero-outline" size="lg">
       View Our Work
