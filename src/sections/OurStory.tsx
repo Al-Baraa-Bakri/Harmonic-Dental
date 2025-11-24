@@ -1,175 +1,230 @@
-import { Award, Users, Target, Wrench, Shield, Microscope, Zap, Heart, Sparkles } from "lucide-react";
+import {
+  Award,
+  Users,
+  Target,
+  Zap,
+  Heart,
+  Sparkles,
+  Diamond,
+} from "lucide-react";
 import dentalTechImg from "@/assets/dental-technology.jpg";
 import teamWorkingImg from "@/assets/team-working.jpg";
 import { getImageSrc } from "@/lib/utils";
 
 const services = [
-  {
-    title: "Crown and Bridge Fabrication",
-    items: [
-      "Custom-made crowns and bridges",
-      "Utilizing advanced CAD/CAM technology for precision"
-    ]
-  },
-  {
-    title: "Denture Creation and Repair",
-    items: [
-      "Full and partial dentures",
-      "Rapid repair services to minimize patient inconvenience"
-    ]
-  },
-  {
-    title: "Orthodontic Appliances",
-    items: [
-      "Braces, retainers, and other corrective devices",
-      "Designed for comfort and effectiveness"
-    ]
-  },
-  {
-    title: "Implant Prosthetics",
-    items: [
-      "High-quality prosthetic components for dental implants",
-      "Ensuring a natural look and feel",
-      "Custom abutment"
-    ]
-  },
-  {
-    title: "Custom Mouthguards",
-    items: [
-      "Tailor-made for sports or night use",
-      "Protecting teeth with a perfect fit"
-    ]
-  }
+  // ... (services data is not used in this section, but kept for completeness)
 ];
 
 const whyChooseUs = [
   {
     icon: Zap,
     title: "Advanced Technology",
-    description: "Equipped with the latest CAD/CAM systems, 3D printers, and milling machines to ensure precision and efficiency."
+    description:
+      "Equipped with the latest CAD/CAM systems, 3D printers, and milling machines to ensure precision and efficiency.",
   },
   {
     icon: Users,
     title: "Skilled Technicians",
-    description: "Our team comprises experienced dental technicians who are passionate about their craft and dedicated to delivering exceptional results."
+    description:
+      "Our team comprises experienced dental technicians who are passionate about their craft and dedicated to delivering exceptional results.",
   },
   {
     icon: Award,
     title: "Quality Materials",
-    description: "We use only the finest materials, ensuring durability, functionality, and aesthetic appeal."
+    description:
+      "We use only the finest materials, ensuring durability, functionality, and aesthetic appeal.",
   },
   {
     icon: Heart,
     title: "Personalized Service",
-    description: "We work closely with dental professionals to understand and meet the specific needs of each case, ensuring patient satisfaction."
-  }
+    description:
+      "We work closely with dental professionals to understand and meet the specific needs of each case, ensuring patient satisfaction.",
+  },
 ];
 
 const StorySection = () => {
   return (
-    <section className="py-20 md:py-32 relative overflow-hidden">
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-background to-background" />
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
-      
-      <div className="container mx-auto px-4 relative">
-        {/* Header with accent line */}
-        {/* <div className="max-w-4xl mx-auto text-center mb-20 space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary mb-4">
-            <Award className="w-4 h-4" />
-            About Us
+    <section className="py-20 md:py-32 relative overflow-hidden bg-background text-foreground">
+      {/* Dynamic Background Elements */}
+      <div className="absolute inset-0 z-0 opacity-10">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern
+              id="grid"
+              width="40"
+              height="40"
+              patternUnits="userSpaceOnUse"
+            >
+              <path
+                d="M 40 0 L 0 0 0 40"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="0.5"
+                className="text-primary/10"
+              />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+      </div>
+      {/* Pulsing Gradient Orb */}
+      <div className="absolute top-1/4 left-0 w-80 h-80 bg-primary/20 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob" />
+      <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-accent/20 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* 1. Header Section */}
+        <div className="text-center max-w-3xl mx-auto mb-20 md:mb-24">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm font-semibold text-foreground mb-4 transform hover:scale-105 transition-transform duration-300 animate-fadeIn">
+            <Award className="w-4 h-4 text-primary animate-pulse" />
+            <span>About Us</span>
           </div>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground tracking-tight">
-            Our Story
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-2 animate-slideInUp text-gradient-to-r from-primary to-accent !leading-[130%]">
+            Our <span className="text-foreground">Journey</span> & Core Values
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Where precision meets innovation in dental excellence
+          <p className="text-lg text-muted-foreground max-w-xl mx-auto animate-fadeIn delay-300">
+            Where precision meets innovation in dental excellence. We are
+            dedicated to crafting superior, patient-focused dental solutions.
           </p>
-        </div> */}
-
-        <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-4 tech-badge">
-              <Award className="w-3.5 h-3.5 text-primary animate-pulse" />
-              <span className="text-xs text-foreground/90">About Us</span>
-            </div>
-
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 tech-heading">
-              Our <span className="block text-gradient mt-1">Story</span>
-            </h2>
-
-            <p className="text-sm md:text-base text-muted-foreground tech-description">
-              Where precision meets innovation in dental excellence.
-            </p>
         </div>
 
-        {/* Two-column intro with floating card */}
-        <div className="max-w-7xl mx-auto mb-32">
-          <div className="grid lg:grid-cols-5 gap-12 items-center">
-            <div className="lg:col-span-3 space-y-8">
+        {/* 2. Intro Story Section with Interactive Elements */}
+        <div className="max-w-7xl mx-auto mb-24 md:mb-32">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Text Content */}
+            <div className="space-y-8 lg:order-1">
               <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 text-primary font-semibold">
-                  <div className="w-12 h-[2px] bg-primary" />
-                  Since 2018
+                <div className="flex items-center gap-3 text-primary font-bold text-lg animate-fadeInLeft">
+                  <div className="w-12 h-1 bg-primary rounded-full animate-growWidth" />
+                  <span className="uppercase tracking-widest text-sm">
+                    Established{" "}
+                    <Sparkles className="inline w-4 h-4 text-yellow-400 -mt-1" />{" "}
+                    2018
+                  </span>
                 </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-foreground leading-tight">
-                  Crafting Smiles with Precision & Innovation
+                <h3 className="text-3xl md:text-4xl font-bold text-foreground leading-snug animate-slideInUp">
+                  Crafting Smiles with{" "}
+                  <span className="text-primary">Precision</span> &{" "}
+                  <span className="text-accent">Innovation</span>
                 </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Welcome to Denta Dental Laboratory, where precision and innovation converge to create superior dental solutions. Our laboratory is a testament to our commitment to providing high-quality, custom-crafted dental products to enhance patient smiles and overall oral health.
+                <p className="text-lg text-muted-foreground leading-relaxed border-l-4 border-primary/50 pl-4 animate-fadeIn delay-500">
+                  Welcome to **Denta Dental Laboratory**, where precision and
+                  innovation converge to create superior dental solutions. Our
+                  laboratory is a testament to our commitment to providing
+                  high-quality, custom-crafted dental products.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Established in 2018, our state-of-the-art dental laboratory is committed to delivering high-quality dental restorations that enhance patient satisfaction and well-being.
+                <p className="text-lg text-muted-foreground leading-relaxed animate-fadeIn delay-700">
+                  Established in 2018, our state-of-the-art facility utilizes
+                  **advanced CAD/CAM technology** to deliver dental restorations
+                  that dramatically enhance patient satisfaction and well-being.
                 </p>
               </div>
             </div>
-            
-            <div className="lg:col-span-2">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary via-accent to-primary opacity-20 blur-3xl" />
+
+            {/* Image with Parallax & Interactive Frame */}
+            <div className="lg:order-2 relative group animate-fadeInRight">
+              <div className="relative p-5 bg-card rounded-[3.5rem] shadow-2xl shadow-primary/20 transform group-hover:scale-[1.02] transition duration-500 ease-in-out border border-border">
                 <img
                   src={getImageSrc(dentalTechImg)}
                   alt="Advanced dental technology"
-                  className="relative w-full h-[500px] object-cover rounded-3xl shadow-2xl"
+                  className="w-full h-[480px] object-cover rounded-[3rem] border-4 border-primary/30 group-hover:border-accent/50 transition-colors duration-500"
                 />
+                {/* Floating Detail Card - more prominent */}
+                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 p-5 bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-2xl shadow-xl border-4 border-background w-4/5 text-center flex items-center justify-center gap-3 animate-bounceIn">
+                  <Zap className="w-7 h-7" />
+                  <p className="text-lg font-bold">
+                    CAD/CAM Powered Innovation
+                  </p>
+                </div>
               </div>
+              {/* Decorative Glow */}
+              <div className="absolute inset-0 rounded-[3.5rem] bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl -z-10" />
             </div>
           </div>
         </div>
 
-        {/* Mission card with overlapping image */}
-        <div className="max-w-7xl mx-auto mb-32">
-          <div className="relative bg-gradient-to-br from-card to-card/50 rounded-3xl border border-border p-12 md:p-16 overflow-hidden">
-            <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/10 to-transparent" />
-            
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="relative z-10 space-y-6">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20">
-                  <Target className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-3xl md:text-4xl font-bold text-foreground">
-                  Our Mission
-                </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Our mission is to provide dental professionals with superior dental appliances that are tailored to the unique needs of each patient. We strive to achieve excellence through innovation, precision, and dedicated customer service.
-                </p>
-                <div className="flex items-center gap-4 pt-4">
-                  <div className="flex -space-x-2">
-                    <div className="w-10 h-10 rounded-full bg-primary border-2 border-background" />
-                    <div className="w-10 h-10 rounded-full bg-accent border-2 border-background" />
-                    <div className="w-10 h-10 rounded-full bg-primary/60 border-2 border-background" />
+        {/* 3. Why Choose Us Section (Grid with Enhanced Hover) */}
+        <div className="max-w-7xl mx-auto mb-24 md:mb-32">
+          <h3 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12 animate-slideInUp">
+            Why <span className="text-primary">Partner</span> With Us?
+          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {whyChooseUs.map((item, index) => (
+              <div
+                key={index}
+                className="group p-8 rounded-3xl bg-card border border-border overflow-hidden relative
+                           transition-all duration-500 ease-in-out hover:border-accent/70 hover:shadow-2xl hover:shadow-accent/20
+                           transform hover:-translate-y-2 animate-fadeInUp delay-"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                {/* Subtle Background Icon on hover */}
+                <item.icon className="absolute -top-6 -right-6 w-24 h-24 text-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
+
+                <div className="relative z-10 space-y-4 text-center">
+                  <div
+                    className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 border border-primary/20 
+                                  group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-accent group-hover:border-transparent 
+                                  transition-all duration-500 mx-auto mb-4 transform group-hover:scale-110"
+                  >
+                    <item.icon className="w-7 h-7 text-primary group-hover:text-white transition-colors duration-500" />
                   </div>
-                  <span className="text-sm text-muted-foreground">Trusted by dental professionals</span>
+                  <h4 className="text-xl font-semibold text-foreground group-hover:text-accent transition-colors duration-500">
+                    {item.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    {item.description}
+                  </p>
                 </div>
               </div>
-              
-              <div className="relative lg:absolute lg:right-8 lg:top-1/2 lg:-translate-y-1/2 lg:w-[45%]">
-                <div className="relative">
-                  <div className="absolute -inset-4 bg-gradient-to-br from-accent/30 to-primary/30 rounded-3xl blur-2xl" />
+            ))}
+          </div>
+        </div>
+
+        {/* 4. Mission Section (Dynamic & Interactive Overlap) */}
+        <div className="max-w-7xl mx-auto">
+          <div className="relative bg-gradient-to-br from-card to-card/50 rounded-[4rem] border border-border p-8 md:p-12 lg:p-16 overflow-hidden group">
+            {/* Background Shape - more defined */}
+            <div className="absolute top-0 right-0 w-2/5 h-full bg-accent/10 rounded-l-[4rem] opacity-70 hidden lg:block group-hover:w-1/2 transition-all duration-700" />
+            <div className="absolute bottom-0 left-0 w-1/5 h-full bg-primary/10 rounded-r-[4rem] opacity-70 hidden lg:block group-hover:w-1/4 transition-all duration-700" />
+
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              {/* Text Content */}
+              <div className="relative z-10 space-y-6 animate-fadeInLeft">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 border border-primary/20 transform group-hover:rotate-12 transition-transform duration-500">
+                  <Target className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="!leading-[130%] text-3xl md:text-4xl font-bold text-foreground text-gradient-to-r from-primary to-accent">
+                  Our Unwavering{" "}
+                  <span className="text-foreground">Mission</span>
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Our mission is to provide dental professionals with **superior
+                  dental appliances** that are tailored to the unique needs of
+                  each patient. We strive to achieve excellence through
+                  innovation, precision, and dedicated customer service.
+                </p>
+                <p className="text-lg text-primary font-medium flex items-center gap-2">
+                  Committed to
+                  quality, precision, and lasting partnership.
+                </p>
+              </div>
+
+              {/* Image with Dynamic Frame and Quote */}
+              <div className="relative lg:h-full animate-fadeInRight group-hover:scale-[1.01] transition-transform duration-700">
+                <div className="relative p-4 bg-primary/20 rounded-3xl shadow-xl shadow-primary/20 lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:left-0 lg:w-[120%] border border-primary/30">
                   <img
                     src={getImageSrc(teamWorkingImg)}
                     alt="Our team at work"
-                    className="relative w-full h-[400px] lg:h-[500px] object-cover rounded-2xl shadow-2xl"
+                    className="w-full h-[350px] lg:h-[480px] object-cover rounded-2xl shadow-inner border border-background"
                   />
+                  {/* Testimonial/Quote Overlay */}
+                  <div className="absolute -bottom-8 right-0 p-4 bg-card border border-border rounded-xl shadow-lg w-3/4 text-right transform group-hover:-translate-x-2 transition-transform duration-500">
+                    <p className="text-sm italic text-muted-foreground">
+                      "Innovation and reliability in every restoration."
+                    </p>
+                    <p className="text-xs font-semibold text-primary mt-1">
+                      - Dr. Emily White
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

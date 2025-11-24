@@ -1,7 +1,17 @@
 import { memo } from "react";
 import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
-import { ArrowRight, Sparkles, Crown, Box, Layers, Gem, Smile, Braces, type LucideIcon } from "lucide-react";
+import {
+  ArrowRight,
+  Sparkles,
+  Crown,
+  Box,
+  Layers,
+  Gem,
+  Smile,
+  Braces,
+  type LucideIcon,
+} from "lucide-react";
 import heroImage from "@/assets/dental-lab-hero.png";
 import crownImage from "@/assets/product-crown.png";
 import bridgeImage from "@/assets/product-bridge.png";
@@ -100,7 +110,7 @@ const BackgroundLayer = memo(() => (
   <>
     <div className="absolute inset-0 z-0">
       <div className="absolute inset-0 bg-[image:var(--gradient-hero)]" />
-      <div 
+      <div
         className="absolute inset-0 opacity-10 bg-cover bg-center"
         style={{ backgroundImage: `url(${getImageSrc(heroImage)})` }}
       />
@@ -119,12 +129,14 @@ const BackgroundLayer = memo(() => (
 BackgroundLayer.displayName = "BackgroundLayer";
 
 const HeroBadge = memo(() => (
-  <div 
+  <div
     className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6"
     style={getAnimationStyle(0.2, 0.2)}
   >
     <Sparkles className="w-4 h-4 text-primary animate-pulse" />
-    <span className="text-sm text-foreground/90">Precision Dental Solutions</span>
+    <span className="text-sm text-foreground/90">
+      Precision Dental Solutions
+    </span>
   </div>
 ));
 
@@ -132,24 +144,25 @@ HeroBadge.displayName = "HeroBadge";
 
 const HeroHeading = memo(() => (
   <>
-    <h1 
+    <h1
       className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
       style={getAnimationStyle(0.4)}
     >
-     We Complain 
-      <span 
-        className="block text-gradient mt-2 leading-[130%]" 
+      We Combine
+      <span
+        className="block text-gradient mt-2 leading-[130%]"
         style={getAnimationStyle(0.6)}
       >
         Art & Technology
       </span>
     </h1>
 
-    <p 
+    <p
       className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed"
       style={getAnimationStyle(0.8)}
     >
-      State-of-the-art laboratory delivering precision-engineered dental solutions with unmatched quality and speed.
+      State-of-the-art laboratory delivering precision-engineered dental
+      solutions with unmatched quality and speed.
     </p>
   </>
 ));
@@ -157,7 +170,7 @@ const HeroHeading = memo(() => (
 HeroHeading.displayName = "HeroHeading";
 
 const CTAButtons = memo(() => (
-  <div 
+  <div
     className="flex flex-col sm:flex-row gap-4 mb-12"
     style={getAnimationStyle(1, 1)}
   >
@@ -168,7 +181,7 @@ const CTAButtons = memo(() => (
       </a>
     </Button>
     <Button variant="hero-outline" size="lg">
-      View Our Work
+      <a href="/products">View Our Work</a>
     </Button>
   </div>
 ));
@@ -176,7 +189,7 @@ const CTAButtons = memo(() => (
 CTAButtons.displayName = "CTAButtons";
 
 const StatItem = memo<{ stat: Stat }>(({ stat }) => (
-  <div 
+  <div
     className="flex flex-col"
     style={getAnimationStyle(stat.delay, stat.delay)}
   >
@@ -188,7 +201,7 @@ const StatItem = memo<{ stat: Stat }>(({ stat }) => (
 StatItem.displayName = "StatItem";
 
 const StatsGrid = memo(() => (
-  <div className="grid grid-cols-3 gap-6">
+  <div className="hidden lg:grid grid-cols-3 gap-6">
     {STATS.map((stat) => (
       <StatItem key={stat.label} stat={stat} />
     ))}
@@ -217,7 +230,7 @@ const ProductCard = memo<{ product: Product; index: number }>(
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent opacity-90" />
-          
+
           {/* Badge */}
           {product.badge && (
             <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-0 text-xs px-2 py-0.5">
@@ -236,9 +249,7 @@ const ProductCard = memo<{ product: Product; index: number }>(
           <h3 className="text-base font-bold mb-0.5 group-hover:text-gradient transition-all duration-300">
             {product.title}
           </h3>
-          <p className="text-xs text-muted-foreground">
-            {product.description}
-          </p>
+          <p className="text-xs text-muted-foreground">{product.description}</p>
         </div>
 
         {/* Hover Glow */}
@@ -269,7 +280,7 @@ const HeroSection = () => {
       <BackgroundLayer />
 
       {/* Content */}
-      <div className="container mx-auto px-6 z-10">
+      <div className="container mx-auto px-6 z-10 pt-5 xlg:pt-0">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Column - Hero Content */}
           <div className="max-w-2xl">

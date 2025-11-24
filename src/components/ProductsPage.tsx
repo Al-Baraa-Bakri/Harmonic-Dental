@@ -43,15 +43,15 @@ const ProductsPage = () => {
       </section>
 
       {/* Filter Section */}
-      <section className="py-8 border-b border-border/50 bg-card/30 sticky top-20 z-40 backdrop-blur-xl">
+      <section className="py-2 md:py-8 border-b border-border/50 bg-card/30 sticky top-20 z-40 backdrop-blur-xl">
         <div className="container mx-auto px-6">
-          <div className="flex flex-wrap gap-2 md:gap-3">
+          <div className="flex flex-nowrap overflow-x-auto gap-2 md:gap-3 scrollbar-thin scrollbar-thumb-border scrollbar-track-background">
             {categories.map((category) => (
               <Button
                 key={category}
                 variant={selectedCategory === category ? "default" : "outline"}
                 onClick={() => setSelectedCategory(category)}
-                className="text-sm"
+                className="text-sm mb-3"
               >
                 {category}
               </Button>
@@ -75,7 +75,7 @@ const ProductsPage = () => {
                   style={{ animation: `fade-in 0.5s ease-out ${index * 0.1}s both` }}
                 >
                   {/* Product Image / 3D Model Container */}
-                  <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
+                  <div className="relative h-64 md:h-80 2xl:h-96 overflow-hidden">
                     {/* Original Image */}
                     <div 
                       className={`absolute inset-0 transition-opacity duration-500 ${

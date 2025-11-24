@@ -8,29 +8,35 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 10%;        /* deep black like the logo */
+    /* Dark mode background */
+    --background: 0 0% 10%; 
+    /* Dark mode foreground (text) */
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 3%;
+    /* Slightly lighter card for contrast */
+    --card: 0 0% 13%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 3%;
+    --popover: 0 0% 13%;
     --popover-foreground: 0 0% 98%;
 
-    /* Yellow from the tooth outline */
-    --primary: 50 85% 60%;
-    --primary-foreground: 0 0% 5%;
-    --primary-glow: 50 95% 70%;
+    /* Primary: Extracted Soft Gold from the logo */
+    /* Original estimated gold: hsl(48, 85%, 74%) - made slightly more vibrant for UI */
+    --primary: 48 85% 65%;
+    --primary-foreground: 0 0% 10%;
+    /* Lighter shade for glowing effects */
+    --primary-glow: 48 90% 75%;
 
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 25%;
+    --muted: 0 0% 20%;
     --muted-foreground: 0 0% 65%;
 
-    /* Teal used for “harmonic” text */
-    --accent: 165 45% 50%;
-    --accent-foreground: 0 0% 5%;
+    /* Accent: Extracted Soft Teal/Green from the logo */
+    /* Original estimated teal: hsl(155, 36%, 52%) */
+    --accent: 155 36% 52%;
+    --accent-foreground: 0 0% 10%;
 
     /* Destructive can stay red-ish */
     --destructive: 0 84% 60%;
@@ -38,42 +44,44 @@ All colors MUST be HSL.
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 50 85% 60%; /* yellow ring to match theme */
+    /* Yellow ring to match theme */
+    --ring: 48 85% 65%;
 
     --radius: 0.75rem;
 
-    /* Updated gradients */
+    /* Updated gradients using the new primary color */
     --gradient-hero: linear-gradient(
       135deg,
       hsl(0 0% 0%) 0%,
       hsl(0 0% 10%) 50%,
-      hsl(50 85% 10%) 100%
+      hsl(48 85% 15%) 100%
     );
 
     --gradient-gold: linear-gradient(
       135deg,
-      hsl(50 85% 60%) 0%,
-      hsl(50 95% 70%) 100%
+      hsl(48 85% 65%) 0%,
+      hsl(48 90% 75%) 100%
     );
 
-    --shadow-glow: 0 0 40px hsl(50 85% 60% / 0.3);
-    --shadow-gold: 0 10px 40px -10px hsl(50 85% 60% / 0.4);
+    /* Updated shadows using the new primary color */
+    --shadow-glow: 0 0 40px hsl(48 85% 65% / 0.3);
+    --shadow-gold: 0 10px 40px -10px hsl(48 85% 65% / 0.4);
   }
 
-
   .dark {
-    --background: 0 0% 7%;
+    /* Dark mode variables match the :root definition */
+    --background: 0 0% 10%;
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 10%;
+    --card: 0 0% 13%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 10%;
+    --popover: 0 0% 13%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 42 74% 52%;
+    --primary: 48 85% 65%;
     --primary-foreground: 0 0% 10%;
-    --primary-glow: 42 90% 65%;
+    --primary-glow: 48 90% 75%;
 
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 98%;
@@ -81,7 +89,7 @@ All colors MUST be HSL.
     --muted: 0 0% 20%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 42 74% 52%;
+    --accent: 155 36% 52%;
     --accent-foreground: 0 0% 10%;
 
     --destructive: 0 62.8% 30.6%;
@@ -89,40 +97,42 @@ All colors MUST be HSL.
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 42 74% 52%;
+    --ring: 48 85% 65%;
   }
 
   .light {
-    --background: 0 0% 98%;
-    --foreground: 0 0% 10%;
+    /* Simplified Light mode variables (match primary/accent to dark theme for consistency) */
+    /* Pure white background from the logo */
+    --background: 0 0% 100%;
+    /* Dark grey foreground from the logo's "Dental Laboratory" text */
+    --foreground: 0 0% 20%;
 
     --card: 0 0% 98%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 0 0% 20%;
 
     --popover: 0 0% 98%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 0 0% 20%;
 
-    --primary: 42 74% 52%;
+    --primary: 48 85% 65%;
     --primary-foreground: 0 0% 10%;
-    --primary-glow: 42 90% 65%;
+    --primary-glow: 48 90% 75%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 0 0% 90%;
+    --secondary-foreground: 0 0% 20%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 42 74% 52%;
+    --accent: 155 36% 52%;
     --accent-foreground: 0 0% 10%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 42 74% 52%;
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 48 85% 65%;
   }
-
 }
 
 html {
@@ -138,18 +148,26 @@ html {
     @apply bg-background text-foreground antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bold tracking-tight;
   }
 }
 
 @layer utilities {
+  /* Existing utilities */
   .text-gradient {
+    /* Updated to use the new primary color */
     @apply inline-block bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent;
   }
 
   .hover-glow {
-    @apply transition-all duration-300 hover:shadow-[0_0_30px_hsl(42_74%_52%_/_0.4)];
+    /* Updated to use the new primary color */
+    @apply transition-all duration-300 hover:shadow-[0_0_30px_hsl(48_85%_65%_/_0.4)];
   }
 
   .animate-float {
@@ -157,7 +175,8 @@ html {
   }
 
   @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px);
     }
     50% {
@@ -170,12 +189,34 @@ html {
   }
 
   @keyframes glow {
-    0%, 100% {
-      box-shadow: 0 0 20px hsl(42 74% 52% / 0.2);
+    0%,
+    100% {
+      /* Updated to use the new primary color */
+      box-shadow: 0 0 20px hsl(48 85% 65% / 0.2);
     }
     50% {
-      box-shadow: 0 0 40px hsl(42 74% 52% / 0.4);
+      /* Updated to use the new primary color */
+      box-shadow: 0 0 40px hsl(48 85% 65% / 0.4);
     }
+  }
+
+  /* NEW UTILITIES FOR COMPONENT */
+
+  /* Text gradient utility to apply a specific gradient path */
+  .text-gradient-to-r {
+    /* Using the primary and accent colors defined in the component */
+    background-image: linear-gradient(
+      to right,
+      hsl(var(--primary)),
+      hsl(var(--accent))
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Custom utility for staggered animation delay */
+  .animation-delay-2000 {
+    animation-delay: 2s;
   }
 }
 
@@ -193,7 +234,6 @@ html {
 
 /* 2. Use @supports for browsers that understand animation-timeline */
 @supports (animation-timeline: view()) {
-  
   /* Target both elements */
   .animate-on-scroll-header,
   .animate-on-scroll-card {
@@ -201,35 +241,34 @@ html {
     opacity: 0;
 
     /* Link the animation to the keyframes.
-      'linear' ensures it scrubs smoothly.
-      'both' makes it stick to the 'to' state when finished.
-    */
+    'linear' ensures it scrubs smoothly.
+    'both' makes it stick to the 'to' state when finished.
+  */
     animation: fade-up linear both;
 
     /* THIS IS THE MAGIC:
-      Tell the animation to follow the element's visibility 
-      in the viewport instead of following time.
-    */
-    animation-timeline: view();
+    Tell the animation to follow the element's visibility 
+    in the viewport instead of following time.
+  */
+    animation-timeline: view(
+      block
+    ); /* Added 'block' for clarity and compatibility */
   }
 
   /* 3. Define the scroll range for each animation */
 
   .animate-on-scroll-header {
     /* Start: when the element's top enters the viewport (entry 0%)
-      End: when it's 40% of the way up the screen (cover 40%)
-    */
+    End: when it's 40% of the way up the screen (cover 40%)
+  */
     animation-range: entry 0% cover 40%;
   }
 
   .animate-on-scroll-card {
     /*
-      Start: when the card just enters the screen
-      End: when it's 35% of the way up
-      
-      By applying this to *each* card, they will naturally 
-      stagger based on their position, which is a great effect!
-    */
+    Start: when the card just enters the screen
+    End: when it's 35% of the way up
+  */
     animation-range: entry 5% cover 35%;
   }
 }

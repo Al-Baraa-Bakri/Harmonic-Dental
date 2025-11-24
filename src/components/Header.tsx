@@ -65,11 +65,7 @@ export const Header = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-primary/10">
         <div className="container mx-auto px-6">
           {/* Hidden checkbox for menu state */}
-          <input 
-            type="checkbox" 
-            id="mobile-menu-toggle" 
-            aria-hidden="true"
-          />
+          <input type="checkbox" id="mobile-menu-toggle" aria-hidden="true" />
 
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
@@ -78,7 +74,10 @@ export const Header = () => {
             </a>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-8" aria-label="Main navigation">
+            <nav
+              className="hidden lg:flex items-center gap-8"
+              aria-label="Main navigation"
+            >
               {NAV_ITEMS.map((item) => (
                 <a
                   key={item.label}
@@ -119,7 +118,10 @@ export const Header = () => {
 
           {/* Mobile Navigation */}
           <div id="mobile-menu" className="lg:hidden">
-            <nav className="flex flex-col gap-4 mb-6" aria-label="Mobile navigation">
+            <nav
+              className="flex flex-col gap-4 mb-6"
+              aria-label="Mobile navigation"
+            >
               {NAV_ITEMS.map((item) => (
                 <a
                   key={item.label}
@@ -131,16 +133,15 @@ export const Header = () => {
               ))}
             </nav>
             <div className="flex flex-col gap-3">
-              <Button variant="ghost" size="sm" className="gap-2 justify-start" asChild>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="gap-2 justify-start"
+                asChild
+              >
                 <a href={`tel:${CONTACT_INFO.phone}`}>
                   <Phone className="w-4 h-4" />
                   <span className="text-sm">{CONTACT_INFO.phone}</span>
-                </a>
-              </Button>
-              <Button variant="default" size="sm" className="gap-2 w-full" asChild>
-                <a href="#contact-us">
-                  <Mail className="w-4 h-4" />
-                  Get Quote
                 </a>
               </Button>
             </div>
