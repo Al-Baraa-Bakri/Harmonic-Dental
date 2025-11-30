@@ -3,7 +3,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Box, ArrowLeft, X, Crown, Layers, Gem, Smile, Braces, type LucideIcon } from "lucide-react";
-import type { ProcessedProductsPage } from "@/lib/api/products-page";
 
 // Icon mapping by category slug or name
 const ICON_MAP: Record<string, LucideIcon> = {
@@ -28,8 +27,6 @@ const getIconForCategory = (categorySlug?: string): LucideIcon => {
   const slug = categorySlug.toLowerCase();
   return ICON_MAP[slug] || Box;
 };
-
-interface ProductsPageProps extends Partial<ProcessedProductsPage> {}
 
 const ProductsPage = ({
   heroTitle = "Our",

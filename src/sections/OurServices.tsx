@@ -1,23 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { Wrench } from "lucide-react";
-import type { ProcessedServices } from "@/types/strapi";
-
-// Types
-interface StrapiService {
-  id: number;
-  title: string;
-  image?: {
-    url: string;
-    alternativeText: string;
-    width: number;
-    height: number;
-  };
-  items: Array<{
-    id: number;
-    text: string;
-  }>;
-  order: number;
-}
 
 const OurServices = ({
   headerBadge = "Our Services",
@@ -25,7 +7,7 @@ const OurServices = ({
   headerHighlightedText = "for every dental need",
   headerSubtitle = "combining artistry with advanced technology.",
   services: propServices = [],
-}: ProcessedServices) => {
+}: any) => {
   // Fallback services if none from Strapi
   const fallbackServices = [
     {
@@ -213,7 +195,7 @@ const OurServices = ({
               </h3>
 
               <ul className="space-y-3.5">
-                {service.items.map((item) => (
+                {service.items.map((item: any) => (
                   <li
                     key={item.id}
                     className="flex items-start gap-3 text-lg text-foreground/90"

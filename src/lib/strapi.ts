@@ -1,7 +1,7 @@
 // src/lib/strapi.ts - Updated to handle direct image objects
 
 import qs from 'qs';
-import type { StrapiMediaField, ImageData } from '../types/strapi';
+import type { ImageData } from '../types/strapi';
 
 const STRAPI_URL = import.meta.env.STRAPI_URL || 'http://localhost:1337';
 

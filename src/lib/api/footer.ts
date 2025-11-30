@@ -56,7 +56,7 @@ export interface ProcessedFooter {
  *   - socialLinks (Repeatable Component: components.social-link):
  *     - platform, url, icon
  */
-export async function getFooter(): Promise<ProcessedFooter> {
+export async function getFooter(): Promise<ProcessedFooter | null> {
   try {
 
     const response = await fetchAPI<StrapiResponse<any>>(

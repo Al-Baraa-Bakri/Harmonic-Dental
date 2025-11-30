@@ -1,11 +1,8 @@
-import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Youtube, type LucideIcon } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, type LucideIcon, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import type { ProcessedFooter } from "@/lib/api/footer";
 
 // Icon mapping for social platforms
 const SOCIAL_ICON_MAP: Record<string, LucideIcon> = {
-  linkedin: Linkedin,
-  twitter: Twitter,
   facebook: Facebook,
   instagram: Instagram,
   youtube: Youtube,
@@ -14,7 +11,7 @@ const SOCIAL_ICON_MAP: Record<string, LucideIcon> = {
 // Helper to get social icon
 const getSocialIcon = (platform: string): LucideIcon => {
   const key = platform.toLowerCase();
-  return SOCIAL_ICON_MAP[key] || Linkedin;
+  return SOCIAL_ICON_MAP[key];
 };
 
 
@@ -27,7 +24,7 @@ const Footer = ({
   navigationColumns = [],
   companyName = "Harmonic Dental",
   socialLinks = [],
-}: ProcessedFooter) => {
+}: any) => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -93,13 +90,13 @@ const Footer = ({
             </div>
 
             {/* Navigation Columns */}
-            {navigationColumns.map((column) => (
+            {navigationColumns.map((column: any) => (
               <div key={column.id}>
                 <h3 className="text-sm font-semibold text-foreground mb-4">
                   {column.title}
                 </h3>
                 <ul className="space-y-3">
-                  {column.links.map((link) => (
+                  {column.links.map((link: any) => (
                     <li key={link.id}>
                       <a
                         href={link.url}
@@ -127,7 +124,7 @@ const Footer = ({
             {/* Social Links */}
             {socialLinks.length > 0 && (
               <div className="flex items-center gap-2">
-                {socialLinks.map((social) => {
+                {socialLinks.map((social: any) => {
                   const Icon = getSocialIcon(social.platform);
                   return (
                     <Button

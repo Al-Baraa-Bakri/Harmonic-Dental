@@ -1,17 +1,14 @@
 import {
   Award,
   Users,
-  Target,
   Zap,
   Heart,
   Sparkles,
-  Diamond,
-  Play,
   type LucideIcon,
 } from "lucide-react";
 import dentalTechImg from "@/assets/dental-technology.jpg";
 import { getImageSrc } from "@/lib/utils";
-import type { ProcessedOurStory } from "@/types/strapi";
+import type { ProcessedOurStory } from "@/lib/api";
 
 // Icon mapping for Why Choose Us items (by order)
 const ICON_MAP: LucideIcon[] = [Zap, Users, Award, Heart];
@@ -35,11 +32,6 @@ const StorySection = ({
   storyImageFloatingText = "CAD/CAM Powered Innovation",
   whyChooseUsHeading = "Why Partner With Us?",
   whyChooseUsItems = [],
-  missionHeading = "Our Unwavering Mission",
-  missionParagraph1 = "Our mission is to provide exceptional dental solutions that exceed expectations.",
-  missionParagraph2 = "Committed to quality, precision, and lasting partnership.",
-  missionVideoUrl,
-  testimonial,
 }: any) => {
   // Fallback items if none from Strapi
   const fallbackItems = [
@@ -185,7 +177,7 @@ const StorySection = ({
             {whyChooseUsHeading}
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {displayItems.map((item, index) => {
+            {displayItems.map((item: any, index: number) => {
               const Icon = getIconForItem(index);
 
               return (

@@ -1,4 +1,4 @@
-import { fetchAPI, getImageData, getImagesData } from '../strapi';
+import { fetchAPI, getImageData } from '../strapi';
 import type {
   StrapiResponse,
   Product,

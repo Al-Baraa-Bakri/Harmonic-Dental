@@ -46,8 +46,6 @@ const TechnologyPage = ({
   heroHighlightedText = "Technology",
   heroSubtitle = "Explore cutting-edge dental technology that transforms precision and efficiency in every restoration.",
   backButtonText = "Back to Home",
-  sectionTitle,
-  sectionDescription,
   technologyItems = [],
 }: ProcessedTechnologyPage) => {
   return (
@@ -193,7 +191,7 @@ const TechnologyPage = ({
                         {/* Features */}
                         {item.features.length > 0 && (
                           <div className="flex flex-wrap gap-2">
-                            {item.features.map((feature) => (
+                            {item.features.map((feature: any) => (
                               <span
                                 key={feature.id}
                                 className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full border border-primary/20"

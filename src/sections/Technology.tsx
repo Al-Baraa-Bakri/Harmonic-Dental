@@ -6,14 +6,10 @@ import {
   Cog,
   Sparkles,
   CheckCircle2,
-  Zap,
-  Microscope,
-  Package,
   ArrowRight,
   type LucideIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import type { ProcessedTechnology } from "@/types/strapi";
 
 // Types
 type StrapiProcessStep = {
@@ -28,13 +24,6 @@ type StrapiProcessStep = {
     height: number;
   };
   order: number;
-};
-
-type StrapiCTAButton = {
-  id: number;
-  label: string;
-  url: string;
-  isExternal: boolean;
 };
 
 // Icon mapping by step order/number
@@ -300,7 +289,6 @@ const ProcessStepCard = ({
   );
 };
 
-interface TechnologySectionProps extends Partial<ProcessedTechnology> {}
 
 const TechnologySection = ({
   headerBadge = "Advanced Technology",
@@ -309,7 +297,7 @@ const TechnologySection = ({
   headerSubtitle = "Follow the path from digital scan to final delivery, powered by cutting-edge technology.",
   processSteps = [],
   ctaButton,
-}: TechnologySectionProps) => {
+}: any) => {
   // single source of truth for progress of the entire section
   const sectionRef = useRef<HTMLElement | null>(null);
   const { scrollYProgress } = useScroll({

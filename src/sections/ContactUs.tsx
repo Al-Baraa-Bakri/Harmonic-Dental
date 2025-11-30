@@ -1,5 +1,4 @@
 import GoogleMap from "@/components/GoogleMap";
-import type { ProcessedContactSection } from "@/lib/api/contact";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 
@@ -11,9 +10,8 @@ const ContactSection = ({
   emails = [],
   phones = [],
   locationTitle,
-  address,
   mapUrl,
-}: ProcessedContactSection) => {
+}: any) => {
   return (
     <section
       id="contact-us"
@@ -64,7 +62,7 @@ const ContactSection = ({
                   <h3 className="text-2xl font-bold text-foreground">Email Us</h3>
                 </div>
                 <div className="space-y-4">
-                  {emails.map((item, index) => (
+                  {emails.map((item: any, index: any) => (
                     <div
                       key={item.id}
                       className="group/item p-4 bg-background/50 rounded-lg hover:bg-primary/10 transition-all duration-300 hover:-translate-y-1"
@@ -104,7 +102,7 @@ const ContactSection = ({
                   <h3 className="text-2xl font-bold text-foreground">Call Us</h3>
                 </div>
                 <div className="space-y-4">
-                  {phones.map((item, index) => (
+                  {phones.map((item: any, index: any) => (
                     <div
                       key={item.id}
                       className="group/item p-4 bg-background/50 rounded-lg hover:bg-accent/10 transition-all duration-300 hover:-translate-y-1"

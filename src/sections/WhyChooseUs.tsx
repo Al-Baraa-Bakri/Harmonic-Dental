@@ -1,4 +1,4 @@
-import { Award, Users, Microscope, Zap, Heart, Sparkles } from "lucide-react";
+import { Award, Users, Zap, Heart, Sparkles } from "lucide-react";
 import teamCollaborationImg from "@/assets/stats-background.jpg";
 import { getImageSrc } from "@/lib/utils";
 

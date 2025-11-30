@@ -3,8 +3,6 @@
 import { fetchAPI, getImageData } from '../strapi';
 import type {
   StrapiResponse,
-  StrapiEntity,
-  HeroSectionAttributes,
   ProcessedHeroSection,
 } from '../../types/strapi';
 
