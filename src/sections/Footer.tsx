@@ -1,35 +1,34 @@
-import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Youtube, type LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getImageSrc } from "@/lib/utils";
-import Logo from "@/assets/logo.png";
+import type { ProcessedFooter } from "@/lib/api/footer";
 
-const Footer = () => {
-  const navigation = {
-    products: [
-      { name: "Crowns & Bridges", href: "#products" },
-      { name: "Implants", href: "#products" },
-      { name: "Dentures", href: "#products" },
-      { name: "Veneers", href: "#products" },
-    ],
-    company: [
-      { name: "About Us", href: "#about" },
-      { name: "Technology", href: "#technology" },
-      { name: "Quality Standards", href: "#about" },
-      { name: "Certifications", href: "#about" },
-    ],
-    support: [
-      { name: "Contact", href: "#contact" },
-      { name: "FAQs", href: "#contact" },
-      { name: "Shipping", href: "#contact" },
-      { name: "Returns", href: "#contact" },
-    ],
-  };
+// Icon mapping for social platforms
+const SOCIAL_ICON_MAP: Record<string, LucideIcon> = {
+  linkedin: Linkedin,
+  twitter: Twitter,
+  facebook: Facebook,
+  instagram: Instagram,
+  youtube: Youtube,
+};
 
-  const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Facebook, href: "#", label: "Facebook" },
-  ];
+// Helper to get social icon
+const getSocialIcon = (platform: string): LucideIcon => {
+  const key = platform.toLowerCase();
+  return SOCIAL_ICON_MAP[key] || Linkedin;
+};
+
+
+const Footer = ({
+  logo,
+  description = "Crafting excellence in dental solutions with cutting-edge technology and unmatched precision. Your trusted partner in dental prosthetics.",
+  phoneNumber = "+1 (555) 123-4567",
+  email = "info@dentallab.com",
+  address = "123 Dental Street, Suite 100\nNew York, NY 10001",
+  navigationColumns = [],
+  companyName = "Harmonic Dental",
+  socialLinks = [],
+}: ProcessedFooter) => {
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-gradient-to-b from-background to-background/50 border-t border-primary/10">
@@ -40,94 +39,81 @@ const Footer = () => {
             {/* Brand Section */}
             <div className="lg:col-span-2">
               {/* Logo */}
-              <a href="#" className="flex items-center gap-3 w-40 mb-4 translate-x-[-10px] ">
-                <img src={getImageSrc(Logo)} alt="Harmonic Dental" />
+              <a href="/" className="flex items-center gap-3 w-40 mb-4 translate-x-[-10px]">
+                {logo?.url ? (
+                  <img 
+                    src={logo.url} 
+                    alt={logo.alternativeText || companyName} 
+                    className="w-full h-auto"
+                  />
+                ) : (
+                  <span className="text-xl font-bold text-gradient">{companyName}</span>
+                )}
               </a>
+              
               <p className="text-sm text-muted-foreground mb-6 max-w-sm">
-                Crafting excellence in dental solutions with cutting-edge technology and unmatched precision. Your trusted partner in dental prosthetics.
+                {description}
               </p>
               
               {/* Contact Info */}
               <div className="space-y-3">
-                <a 
-                  href="tel:+15551234567" 
-                  className="flex items-center gap-3 text-sm text-foreground/80 hover:text-primary transition-colors group"
-                >
-                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Phone className="w-4 h-4" />
-                  </div>
-                  <span>+1 (555) 123-4567</span>
-                </a>
+                {phoneNumber && (
+                  <a 
+                    href={`tel:${phoneNumber.replace(/\s/g, '')}`}
+                    className="flex items-center gap-3 text-sm text-foreground/80 hover:text-primary transition-colors group"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <Phone className="w-4 h-4" />
+                    </div>
+                    <span>{phoneNumber}</span>
+                  </a>
+                )}
                 
-                <a 
-                  href="mailto:info@dentallab.com" 
-                  className="flex items-center gap-3 text-sm text-foreground/80 hover:text-primary transition-colors group"
-                >
-                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Mail className="w-4 h-4" />
-                  </div>
-                  <span>info@dentallab.com</span>
-                </a>
+                {email && (
+                  <a 
+                    href={`mailto:${email}`}
+                    className="flex items-center gap-3 text-sm text-foreground/80 hover:text-primary transition-colors group"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <Mail className="w-4 h-4" />
+                    </div>
+                    <span>{email}</span>
+                  </a>
+                )}
                 
-                <div className="flex items-center gap-3 text-sm text-foreground/80">
-                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <MapPin className="w-4 h-4" />
+                {address && (
+                  <div className="flex items-start gap-3 text-sm text-foreground/80">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                      <MapPin className="w-4 h-4" />
+                    </div>
+                    <span className="whitespace-pre-line">{address}</span>
                   </div>
-                  <span>123 Dental Street, Suite 100<br />New York, NY 10001</span>
-                </div>
+                )}
               </div>
             </div>
 
-            {/* Products Links */}
-            <div>
-              <h3 className="text-sm font-semibold text-foreground mb-4">Products</h3>
-              <ul className="space-y-3">
-                {navigation.products.map((item) => (
-                  <li key={item.name}>
-                    <a
-                      href={item.href}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Company Links */}
-            <div>
-              <h3 className="text-sm font-semibold text-foreground mb-4">Company</h3>
-              <ul className="space-y-3">
-                {navigation.company.map((item) => (
-                  <li key={item.name}>
-                    <a
-                      href={item.href}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Support Links */}
-            <div>
-              <h3 className="text-sm font-semibold text-foreground mb-4">Support</h3>
-              <ul className="space-y-3">
-                {navigation.support.map((item) => (
-                  <li key={item.name}>
-                    <a
-                      href={item.href}
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {/* Navigation Columns */}
+            {navigationColumns.map((column) => (
+              <div key={column.id}>
+                <h3 className="text-sm font-semibold text-foreground mb-4">
+                  {column.title}
+                </h3>
+                <ul className="space-y-3">
+                  {column.links.map((link) => (
+                    <li key={link.id}>
+                      <a
+                        href={link.url}
+                        target={link.isExternal ? "_blank" : undefined}
+                        rel={link.isExternal ? "noopener noreferrer" : undefined}
+                        className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -135,25 +121,35 @@ const Footer = () => {
         <div className="border-t border-primary/10 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground text-center md:text-left">
-              © {new Date().getFullYear()} Harmonic Dental. All rights reserved.
+              © {currentYear} {companyName}. All rights reserved.
             </p>
             
             {/* Social Links */}
-            <div className="flex items-center gap-2">
-              {socialLinks.map((social) => (
-                <Button
-                  key={social.label}
-                  variant="ghost"
-                  size="icon"
-                  className="w-9 h-9 rounded-lg hover:bg-primary"
-                  asChild
-                >
-                  <a href={social.href} aria-label={social.label}>
-                    <social.icon className="w-4 h-4" />
-                  </a>
-                </Button>
-              ))}
-            </div>
+            {socialLinks.length > 0 && (
+              <div className="flex items-center gap-2">
+                {socialLinks.map((social) => {
+                  const Icon = getSocialIcon(social.platform);
+                  return (
+                    <Button
+                      key={social.id}
+                      variant="ghost"
+                      size="icon"
+                      className="w-9 h-9 rounded-lg hover:bg-primary/20"
+                      asChild
+                    >
+                      <a 
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={social.platform}
+                      >
+                        <Icon className="w-4 h-4" />
+                      </a>
+                    </Button>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
       </div>

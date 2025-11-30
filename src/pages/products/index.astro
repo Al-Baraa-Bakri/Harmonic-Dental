@@ -1,9 +1,12 @@
 ---
 import ProductsPage from "@/components/ProductsPage";
 import DefaultLayout from "../../layouts/Default.astro";
-// Import any product-specific components you'll create
+import { getProductsPage } from "@/lib/api/products-page";
+
+// Fetch products page data from Strapi
+const productsPageData = await getProductsPage();
 ---
 
 <DefaultLayout>  
-    <ProductsPage client:load/>
+    <ProductsPage {...productsPageData} client:load />
 </DefaultLayout>

@@ -2,6 +2,14 @@
 import { Header } from "@/components/Header";
 import "../styles/global.css";
 import Footer from "@/sections/Footer";
+import ContactUs from "@/sections/ContactUs";
+import { getHeaderNavigation } from "@/lib/api/header";
+import { getFooter } from "@/lib/api/footer";
+import { getContactSection } from "@/lib/api/contact";
+
+const headerData = await getHeaderNavigation();
+const footerData = await getFooter();
+const contactData = await getContactSection(); 
 ---
 
 <!doctype html>
@@ -18,10 +26,11 @@ import Footer from "@/sections/Footer";
     />
   </head>
   <body>
-    <Header />
+    <Header {...headerData}/>
       <main>
         <slot />
       </main>
-    <Footer />
+    <ContactUs {...contactData}/>
+    <Footer {...footerData} />
   </body>
 </html>

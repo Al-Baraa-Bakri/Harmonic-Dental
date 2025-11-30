@@ -1,6 +1,6 @@
 import { memo } from "react";
-import { Button } from "../components/ui/button";
-import { Badge } from "../components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import {
   ArrowRight,
   Sparkles,
@@ -10,93 +10,83 @@ import {
   Gem,
   Smile,
   Braces,
+  Activity,
   type LucideIcon,
 } from "lucide-react";
 import heroImage from "@/assets/dental-lab-hero.png";
-import crownImage from "@/assets/product-crown.png";
-import bridgeImage from "@/assets/product-bridge.png";
-import implantImage from "@/assets/product-implant.png";
-import veneerImage from "@/assets/product-veneer.png";
-import dentureImage from "@/assets/product-denture.png";
-import orthodonticsImage from "@/assets/product-orthodontics.png";
 import { getImageSrc } from "@/lib/utils";
+import type { ProcessedHeroSection } from "@/types/strapi";
 
 // Types
-type ImageMetadata = {
-  src: string;
-  width: number;
-  height: number;
-};
-
-type Product = {
-  id: string;
-  title: string;
+type StrapiProduct = {
+  id: number;
+  name: string;
+  slug: string;
   description: string;
-  image: string | ImageMetadata;
-  icon: LucideIcon;
+  image?: {
+    url: string;
+    alternativeText: string;
+    width: number;
+    height: number;
+  };
   badge?: string;
+  featured: boolean;
+  order: number;
 };
 
-type Stat = {
+type StrapiStat = {
+  id: number;
   value: string;
   label: string;
-  delay: number;
+  order: number;
 };
 
-// Constants
-const PRODUCTS: Product[] = [
-  {
-    id: "crowns",
-    title: "Crowns",
-    description: "Premium ceramic & zirconia",
-    image: crownImage,
-    icon: Crown,
-    badge: "Popular",
-  },
-  {
-    id: "bridges",
-    title: "Bridges",
-    description: "Custom-designed solutions",
-    image: bridgeImage,
-    icon: Layers,
-  },
-  {
-    id: "implants",
-    title: "Implants",
-    description: "High-precision titanium",
-    image: implantImage,
-    icon: Box,
-    badge: "Advanced",
-  },
-  {
-    id: "veneers",
-    title: "Veneers",
-    description: "Ultra-thin porcelain",
-    image: veneerImage,
-    icon: Gem,
-  },
-  {
-    id: "dentures",
-    title: "Dentures",
-    description: "Full & partial solutions",
-    image: dentureImage,
-    icon: Smile,
-  },
-  {
-    id: "orthodontics",
-    title: "Orthodontics",
-    description: "Aligners & appliances",
-    image: orthodonticsImage,
-    icon: Braces,
-    badge: "New",
-  },
-];
+// Icon mapping by product slug or name (case-insensitive)
+const ICON_MAP: Record<string, LucideIcon> = {
+  // By slug
+  'crowns': Crown,
+  'crown': Crown,
+  'product-1': Crown,
+  
+  'bridges': Layers,
+  'bridge': Layers,
+  
+  'implants': Box,
+  'implant': Box,
+  'product-2': Box,
+  
+  'veneers': Gem,
+  'veneer': Gem,
+  'product-5': Gem,
+  
+  'dentures': Smile,
+  'denture': Smile,
+  
+  'orthodontics': Braces,
+  'orthodontic': Braces,
+  
+  // By name (case-insensitive match)
+  'removable appliance': Smile,
+  'product-3': Smile,
+  
+  'surgical guide': Activity,
+  'product-4': Activity,
+};
 
-const STATS: Stat[] = [
-  { value: "15+", label: "Years Excellence", delay: 1.2 },
-  { value: "24h", label: "Express Service", delay: 1.4 },
-  { value: "99.9%", label: "Quality Rate", delay: 1.6 },
-];
+// Helper to get icon for a product
+const getIconForProduct = (product: StrapiProduct): LucideIcon => {
+  const slug = product.slug?.toLowerCase() || '';
+  const name = product.name?.toLowerCase() || '';
+  
+  // Try slug first
+  if (ICON_MAP[slug]) return ICON_MAP[slug];
+  
+  // Try name
+  if (ICON_MAP[name]) return ICON_MAP[name];
+  
+  // Default fallback
+  return Box;
+};
 
 // Utility functions
 const getAnimationStyle = (fadeDelay: number, scaleDelay?: number) => ({
@@ -106,13 +96,17 @@ const getAnimationStyle = (fadeDelay: number, scaleDelay?: number) => ({
 });
 
 // Memoized sub-components
-const BackgroundLayer = memo(() => (
+const BackgroundLayer = memo(({ backgroundImage }: { backgroundImage?: { url: string } }) => (
   <>
     <div className="absolute inset-0 z-0">
       <div className="absolute inset-0 bg-[image:var(--gradient-hero)]" />
       <div
         className="absolute inset-0 opacity-10 bg-cover bg-center"
-        style={{ backgroundImage: `url(${getImageSrc(heroImage)})` }}
+        style={{ 
+          backgroundImage: backgroundImage?.url 
+            ? `url(${backgroundImage.url})` 
+            : `url(${getImageSrc(heroImage)})` 
+        }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-background via-background/98 to-background/90" />
     </div>
@@ -128,32 +122,38 @@ const BackgroundLayer = memo(() => (
 
 BackgroundLayer.displayName = "BackgroundLayer";
 
-const HeroBadge = memo(() => (
+const HeroBadge = memo(({ badgeText }: { badgeText: string }) => (
   <div
     className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6"
     style={getAnimationStyle(0.2, 0.2)}
   >
     <Sparkles className="w-4 h-4 text-primary animate-pulse" />
-    <span className="text-sm text-foreground/90">
-      Precision Dental Solutions
-    </span>
+    <span className="text-sm text-foreground/90">{badgeText}</span>
   </div>
 ));
 
 HeroBadge.displayName = "HeroBadge";
 
-const HeroHeading = memo(() => (
+const HeroHeading = memo(({ 
+  mainHeading, 
+  highlightedText, 
+  subtitle 
+}: { 
+  mainHeading: string;
+  highlightedText: string;
+  subtitle: string;
+}) => (
   <>
     <h1
       className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
       style={getAnimationStyle(0.4)}
     >
-      We Combine
+      {mainHeading}{' '}
       <span
         className="block text-gradient mt-2 leading-[130%]"
         style={getAnimationStyle(0.6)}
       >
-        Art & Technology
+        {highlightedText}
       </span>
     </h1>
 
@@ -161,75 +161,113 @@ const HeroHeading = memo(() => (
       className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed"
       style={getAnimationStyle(0.8)}
     >
-      State-of-the-art laboratory delivering precision-engineered dental
-      solutions with unmatched quality and speed.
+      {subtitle}
     </p>
   </>
 ));
 
 HeroHeading.displayName = "HeroHeading";
 
-const CTAButtons = memo(() => (
-  <div
-    className="flex flex-col sm:flex-row gap-4 mb-12"
-    style={getAnimationStyle(1, 1)}
-  >
-    <Button variant="hero" size="lg" className="group" asChild>
-      <a href="#contact-us">
-        Contact us
-        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-      </a>
-    </Button>
-    <Button variant="hero-outline" size="lg">
-      <a href="/products">View Our Work</a>
-    </Button>
-  </div>
-));
+const CTAButtons = memo(({ 
+  primaryButton, 
+  secondaryButton 
+}: { 
+  primaryButton?: { label: string; url: string; isExternal: boolean };
+  secondaryButton?: { label: string; url: string; isExternal: boolean };
+}) => {
+  if (!primaryButton && !secondaryButton) return null;
+
+  return (
+    <div
+      className="flex flex-col sm:flex-row gap-4 mb-12"
+      style={getAnimationStyle(1, 1)}
+    >
+      {primaryButton && (
+        <Button variant="hero" size="lg" className="group capitalize" asChild>
+          <a 
+            href={primaryButton.url}
+            target={primaryButton.isExternal ? "_blank" : undefined}
+            rel={primaryButton.isExternal ? "noopener noreferrer" : undefined}
+          >
+            {primaryButton.label}
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </a>
+        </Button>
+      )}
+      {secondaryButton && (
+        <Button variant="hero-outline" size="lg" className="capitalize" asChild>
+          <a 
+            href={secondaryButton.url}
+            target={secondaryButton.isExternal ? "_blank" : undefined}
+            rel={secondaryButton.isExternal ? "noopener noreferrer" : undefined}
+          >
+            {secondaryButton.label}
+          </a>
+        </Button>
+      )}
+    </div>
+  );
+});
 
 CTAButtons.displayName = "CTAButtons";
 
-const StatItem = memo<{ stat: Stat }>(({ stat }) => (
-  <div
-    className="flex flex-col"
-    style={getAnimationStyle(stat.delay, stat.delay)}
-  >
+const StatItem = memo<{ stat: StrapiStat }>(({ stat }) => (
+  <div className="flex flex-col" style={getAnimationStyle(1.5, 1.5)}>
     <div className="text-3xl font-bold text-gradient mb-1">{stat.value}</div>
-    <div className="text-xs text-muted-foreground">{stat.label}</div>
+    <div className="text-xs text-muted-foreground capitalize">{stat.label}</div>
   </div>
 ));
 
 StatItem.displayName = "StatItem";
 
-const StatsGrid = memo(() => (
-  <div className="hidden lg:grid grid-cols-3 gap-6">
-    {STATS.map((stat) => (
-      <StatItem key={stat.label} stat={stat} />
-    ))}
-  </div>
-));
+const StatsGrid = memo(({ stats }: { stats: StrapiStat[] }) => {
+  if (!stats || stats.length === 0) return null;
+
+  // Sort stats by order (1 is first, 2 is second, etc.)
+  // Treat 0 as last if it exists
+  const sortedStats = [...stats].sort((a, b) => {
+    const orderA = a.order === 0 ? 999 : a.order;
+    const orderB = b.order === 0 ? 999 : b.order;
+    return orderA - orderB;
+  });
+
+  return (
+    <div className="hidden lg:grid grid-cols-3 gap-6">
+      {sortedStats.map((stat) => (
+        <StatItem key={stat.id} stat={stat} />
+      ))}
+    </div>
+  );
+});
 
 StatsGrid.displayName = "StatsGrid";
 
-const ProductCard = memo<{ product: Product; index: number }>(
+const ProductCard = memo<{ product: StrapiProduct; index: number }>(
   ({ product, index }) => {
-    const Icon = product.icon;
+    const Icon = getIconForProduct(product);
     const animationDelay = 0.8 + index * 0.1;
-    const imageSrc = getImageSrc(product.image as any);
 
     return (
-      <div
-        className="group relative overflow-hidden rounded-xl bg-card/80 backdrop-blur-sm border border-primary/20 hover:border-primary/50 transition-all duration-500 hover-glow cursor-pointer"
+      <a
+        href={`/products?category=${encodeURIComponent(product.name)}`}
+        className="group relative overflow-hidden rounded-xl bg-card/80 backdrop-blur-sm border border-primary/20 hover:border-primary/50 transition-all duration-500 hover-glow cursor-pointer block"
         style={getAnimationStyle(animationDelay, animationDelay)}
       >
         {/* Product Image */}
         <div className="relative h-32 lg:h-36 overflow-hidden">
-          <img
-            src={imageSrc}
-            alt={product.title}
-            loading="lazy"
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent opacity-90" />
+          {product.image?.url ? (
+            <img
+              src={product.image.url}
+              alt={product.image.alternativeText || product.name}
+              loading="lazy"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
+          ) : (
+            <div className="w-full h-full bg-muted flex items-center justify-center">
+              <Icon className="w-12 h-12 text-muted-foreground/20" />
+            </div>
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent opacity-60" />
 
           {/* Badge */}
           {product.badge && (
@@ -247,7 +285,7 @@ const ProductCard = memo<{ product: Product; index: number }>(
         {/* Product Info */}
         <div className="p-3">
           <h3 className="text-base font-bold mb-0.5 group-hover:text-gradient transition-all duration-300">
-            {product.title}
+            {product.name}
           </h3>
           <p className="text-xs text-muted-foreground">{product.description}</p>
         </div>
@@ -256,42 +294,61 @@ const ProductCard = memo<{ product: Product; index: number }>(
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
           <div className="absolute -inset-1 bg-gradient-to-r from-primary/10 via-primary-glow/10 to-primary/10 blur-xl" />
         </div>
-      </div>
+      </a>
     );
   }
 );
 
 ProductCard.displayName = "ProductCard";
 
-const ProductsShowcase = memo(() => (
-  <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
-    {PRODUCTS.map((product, index) => (
-      <ProductCard key={product.id} product={product} index={index} />
-    ))}
-  </div>
-));
+const ProductsShowcase = memo(({ products }: { products: StrapiProduct[] }) => {
+  if (!products || products.length === 0) return null;
+
+  // Sort products by order (1 is first, 2 is second, etc.)
+  // Treat 0 as last if it exists
+  const sortedProducts = [...products].sort((a, b) => {
+    const orderA = a.order === 0 ? 999 : a.order;
+    const orderB = b.order === 0 ? 999 : b.order;
+    return orderA - orderB;
+  });
+
+  return (
+    <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
+      {sortedProducts.map((product, index) => (
+        <ProductCard key={product.id} product={product} index={index} />
+      ))}
+    </div>
+  );
+});
 
 ProductsShowcase.displayName = "ProductsShowcase";
 
 // Main component
-const HeroSection = () => {
+const HeroSection = (props: ProcessedHeroSection) => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
-      <BackgroundLayer />
+      <BackgroundLayer backgroundImage={props.backgroundImage} />
 
       {/* Content */}
       <div className="container mx-auto px-6 z-10 pt-5 xlg:pt-0">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Column - Hero Content */}
           <div className="max-w-2xl">
-            <HeroBadge />
-            <HeroHeading />
-            <CTAButtons />
-            <StatsGrid />
+            <HeroBadge badgeText={props.badgeText} />
+            <HeroHeading
+              mainHeading={props.mainHeading}
+              highlightedText={props.highlightedText}
+              subtitle={props.subtitle}
+            />
+            <CTAButtons
+              primaryButton={props.primaryButton}
+              secondaryButton={props.secondaryButton}
+            />
+            <StatsGrid stats={props.stats} />
           </div>
 
           {/* Right Column - Products Showcase */}
-          <ProductsShowcase />
+          <ProductsShowcase products={props.showcaseProducts} />
         </div>
       </div>
     </section>

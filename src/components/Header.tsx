@@ -1,28 +1,16 @@
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "./ui/button";
-import { getImageSrc } from "@/lib/utils";
-import Logo from "@/assets/logo.png";
-// Types
-type NavItem = {
-  label: string;
-  href: string;
-};
+import type { ProcessedHeaderNavigation } from "@/lib/api/header";
 
-// Constants
-const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "Products", href: "/products" },
-  { label: "The Newst Technology", href: "/technology" },
-  { label: "Emergency Cases", href: "/emergency-cases" },
-  { label: "Contact Us", href: "#contact-us" },
-];
-
-const CONTACT_INFO = {
-  phone: "+1 (555) 123-4567",
-} as const;
+interface HeaderProps extends Partial<ProcessedHeaderNavigation> {}
 
 // Pure CSS Mobile Menu (No JavaScript needed!)
-export const Header = () => {
+export const Header = ({
+  logo,
+  navigationItems = [],
+  phoneNumber = "+1 (555) 123-4567",
+  ctaButton,
+}: HeaderProps) => {
   return (
     <>
       {/* CSS for mobile menu toggle */}
@@ -70,7 +58,15 @@ export const Header = () => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <a href="/" className="flex items-center gap-3 w-28 lg:w-40">
-              <img src={getImageSrc(Logo)} alt="Harmonic Dental" />
+              {logo?.url ? (
+                <img 
+                  src={logo.url} 
+                  alt={logo.alternativeText || "Logo"} 
+                  className="w-full h-auto"
+                />
+              ) : (
+                <span className="text-xl font-bold text-gradient">Logo</span>
+              )}
             </a>
 
             {/* Desktop Navigation */}
@@ -78,10 +74,12 @@ export const Header = () => {
               className="hidden lg:flex items-center gap-8"
               aria-label="Main navigation"
             >
-              {NAV_ITEMS.map((item) => (
+              {navigationItems.map((item) => (
                 <a
-                  key={item.label}
-                  href={item.href}
+                  key={item.id}
+                  href={item.url}
+                  target={item.isExternal ? "_blank" : undefined}
+                  rel={item.isExternal ? "noopener noreferrer" : undefined}
                   className="text-sm text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
                 >
                   {item.label}
@@ -91,18 +89,26 @@ export const Header = () => {
 
             {/* Desktop CTA Buttons */}
             <div className="hidden lg:flex items-center gap-4">
-              <Button variant="ghost" size="sm" className="gap-2" asChild>
-                <a href={`tel:${CONTACT_INFO.phone}`}>
-                  <Phone className="w-4 h-4" />
-                  <span className="text-sm">{CONTACT_INFO.phone}</span>
-                </a>
-              </Button>
-              <Button variant="default" size="sm" className="gap-2" asChild>
-                <a href="#contact-us">
-                  <Mail className="w-4 h-4" />
-                  Get Quote
-                </a>
-              </Button>
+              {phoneNumber && (
+                <Button variant="ghost" size="sm" className="gap-2" asChild>
+                  <a href={`tel:${phoneNumber.replace(/\s/g, '')}`}>
+                    <Phone className="w-4 h-4" />
+                    <span className="text-sm">{phoneNumber}</span>
+                  </a>
+                </Button>
+              )}
+              {ctaButton && (
+                <Button variant="default" size="sm" className="gap-2" asChild>
+                  <a
+                    href={ctaButton.url}
+                    target={ctaButton.isExternal ? "_blank" : undefined}
+                    rel={ctaButton.isExternal ? "noopener noreferrer" : undefined}
+                  >
+                    <Mail className="w-4 h-4" />
+                    {ctaButton.label}
+                  </a>
+                </Button>
+              )}
             </div>
 
             {/* Mobile Menu Toggle Label */}
@@ -122,28 +128,54 @@ export const Header = () => {
               className="flex flex-col gap-4 mb-6"
               aria-label="Mobile navigation"
             >
-              {NAV_ITEMS.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="nav-link text-sm text-foreground/80 hover:text-primary transition-colors py-2 border-b border-border/50"
+              {navigationItems.map((item) => (
+                <label
+                  key={item.id}
+                  htmlFor="mobile-menu-toggle"
+                  className="cursor-pointer text-sm text-foreground/80 hover:text-primary transition-colors py-2 border-b border-border/50"
                 >
-                  {item.label}
-                </a>
+                  <a
+                    href={item.url}
+                    target={item.isExternal ? "_blank" : undefined}
+                    rel={item.isExternal ? "noopener noreferrer" : undefined}
+                    className="block w-full"
+                  >
+                    {item.label}
+                  </a>
+                </label>
               ))}
             </nav>
             <div className="flex flex-col gap-3">
-              <Button
-                variant="ghost"
-                size="sm"
-                className="gap-2 justify-start"
-                asChild
-              >
-                <a href={`tel:${CONTACT_INFO.phone}`}>
-                  <Phone className="w-4 h-4" />
-                  <span className="text-sm">{CONTACT_INFO.phone}</span>
-                </a>
-              </Button>
+              {phoneNumber && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="gap-2 justify-start"
+                  asChild
+                >
+                  <a href={`tel:${phoneNumber.replace(/\s/g, '')}`}>
+                    <Phone className="w-4 h-4" />
+                    <span className="text-sm">{phoneNumber}</span>
+                  </a>
+                </Button>
+              )}
+              {ctaButton && (
+                <Button
+                  variant="default"
+                  size="sm"
+                  className="gap-2 justify-start"
+                  asChild
+                >
+                  <a
+                    href={ctaButton.url}
+                    target={ctaButton.isExternal ? "_blank" : undefined}
+                    rel={ctaButton.isExternal ? "noopener noreferrer" : undefined}
+                  >
+                    <Mail className="w-4 h-4" />
+                    {ctaButton.label}
+                  </a>
+                </Button>
+              )}
             </div>
           </div>
         </div>

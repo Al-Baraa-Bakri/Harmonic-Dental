@@ -1,22 +1,43 @@
 ---
-import OurStory from "@/sections/OurStory";
 import DefaultLayout from "../layouts/Default.astro";
 import HeroSection from "../sections/Hero";
-import ProductCarousel from "@/components/ProductCarousel";
+import OurStory from "@/sections/OurStory";
 import TechnologySection from "@/sections/Technology";
-import ContactUs from "@/sections/ContactUs"  
-import Stats from "@/sections/Stats";
-import WhyChooseUs from "@/sections/WhyChooseUs";
 import OurServices from "@/sections/OurServices";
+import Stats from "@/sections/Stats";
+
+import { getHeroSection, getOurStorySection, getServicesSection, getTechnologySection } from "../lib/api";
+
+// Fetch data at build time
+const heroData = await getHeroSection();
+const storyData = await getOurStorySection();
+const techData = await getTechnologySection();
+const servicesDate = await getServicesSection();
 ---
 
 <DefaultLayout>
-  <HeroSection/>
-  <!-- <ProductCarousel client:visible /> -->
-  <TechnologySection client:load/>
-  <OurStory />
-  <WhyChooseUs />
-  <OurServices client:visible/>
+  {heroData ? (
+    <HeroSection 
+      badgeText={heroData.badgeText}
+      mainHeading={heroData.mainHeading}
+      highlightedText={heroData.highlightedText}
+      subtitle={heroData.subtitle}
+      backgroundImage={heroData.backgroundImage}
+      primaryButton={heroData.primaryButton}
+      secondaryButton={heroData.secondaryButton}
+      stats={heroData.stats}
+      showcaseProducts={heroData.showcaseProducts}
+    />
+  ) : (
+    <div style="padding: 2rem; background: #f8d7da; color: #721c24;">
+      <h2>⚠️ Hero Section Data Missing</h2>
+      <p>Could not load hero section from Strapi</p>
+    </div>
+  )}
+  
+  <TechnologySection {...techData} client:load/>
+  <OurStory {...storyData} />
+  <!-- <WhyChooseUs /> -->
+  <OurServices client:visible {...servicesDate}/>
   <Stats />
-  <ContactUs />
 </DefaultLayout>
