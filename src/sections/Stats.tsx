@@ -1,5 +1,5 @@
 import { TrendingUp, Users, Award, Globe } from "lucide-react";
-import teamCollaborationImg from "@/assets/stats-background.jpg";
+// import teamCollaborationImg from "@/assets/stats-background.jpg";
 import { getImageSrc } from "@/lib/utils";
 
 const stats = [
@@ -34,11 +34,11 @@ const StatsSection = () => {
     <section className="py-20 lg:py-32 relative overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <img
+        {/* <img
           src={getImageSrc(teamCollaborationImg) as any}
           alt="Team collaboration"
           className="w-full h-full object-cover"
-        />
+        /> */}
         <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95" />
       </div>
 

@@ -6,8 +6,6 @@ import {
   Sparkles,
   type LucideIcon,
 } from "lucide-react";
-import dentalTechImg from "@/assets/dental-technology.jpg";
-import { getImageSrc } from "@/lib/utils";
 
 // Icon mapping for Why Choose Us items (by order)
 const ICON_MAP: LucideIcon[] = [Zap, Users, Award, Heart];
@@ -138,7 +136,7 @@ const StorySection = ({
             {/* Image with Parallax & Interactive Frame */}
             <div className="lg:order-2 relative group animate-fadeInRight">
               <div className="relative p-5 bg-card rounded-[3.5rem] shadow-2xl shadow-primary/20 transform group-hover:scale-[1.02] transition duration-500 ease-in-out border border-border">
-                {storyImage?.url ? (
+                {storyImage?.url ? 
                   <img
                     src={storyImage.url}
                     alt={
@@ -146,13 +144,7 @@ const StorySection = ({
                     }
                     className="w-full h-[480px] object-cover rounded-[3rem] border-4 border-primary/30 group-hover:border-accent/50 transition-colors duration-500"
                   />
-                ) : (
-                  <img
-                    src={getImageSrc(dentalTechImg)}
-                    alt="Advanced dental technology"
-                    className="w-full h-[480px] object-cover rounded-[3rem] border-4 border-primary/30 group-hover:border-accent/50 transition-colors duration-500"
-                  />
-                )}
+                  : null}
                 {/* Floating Detail Card */}
                 {storyImageFloatingText && (
                   <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 p-5 bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-2xl shadow-xl border-4 border-background w-4/5 text-center flex items-center justify-center gap-3 animate-bounceIn">

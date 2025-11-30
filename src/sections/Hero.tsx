@@ -13,7 +13,6 @@ import {
   Activity,
   type LucideIcon,
 } from "lucide-react";
-import heroImage from "@/assets/dental-lab-hero.png";
 import { getImageSrc } from "@/lib/utils";
 import type { ProcessedHeroSection } from "@/types/strapi";
 
@@ -98,19 +97,6 @@ const getAnimationStyle = (fadeDelay: number, scaleDelay?: number) => ({
 // Memoized sub-components
 const BackgroundLayer = memo(({ backgroundImage }: { backgroundImage?: { url: string } }) => (
   <>
-    <div className="absolute inset-0 z-0">
-      <div className="absolute inset-0 bg-[image:var(--gradient-hero)]" />
-      <div
-        className="absolute inset-0 opacity-10 bg-cover bg-center"
-        style={{ 
-          backgroundImage: backgroundImage?.url 
-            ? `url(${backgroundImage.url})` 
-            : `url(${getImageSrc(heroImage)})` 
-        }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/98 to-background/90" />
-    </div>
-
     {/* Animated glow orbs */}
     <div className="absolute top-20 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px] animate-pulse" />
     <div className="absolute bottom-20 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[140px] animate-pulse delay-1000" />
