@@ -8,7 +8,6 @@ import {
 } from "lucide-react";
 import dentalTechImg from "@/assets/dental-technology.jpg";
 import { getImageSrc } from "@/lib/utils";
-import type { ProcessedOurStory } from "@/lib/api";
 
 // Icon mapping for Why Choose Us items (by order)
 const ICON_MAP: LucideIcon[] = [Zap, Users, Award, Heart];
@@ -18,7 +17,6 @@ const getIconForItem = (index: number): LucideIcon => {
   return ICON_MAP[index] || Zap;
 };
 
-interface StorySectionProps extends Partial<ProcessedOurStory> {}
 
 const StorySection = ({
   headerBadge = "About Us",

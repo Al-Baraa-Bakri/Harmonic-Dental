@@ -47,8 +47,6 @@ export interface ProcessedTechnologyPage {
  */
 export async function getTechnologyPage(): Promise<ProcessedTechnologyPage | null> {
   try {
-    console.log('[Technology Page API] Step 1: Fetching technology page...');
-
     // Step 1: Get the technology page basic info
     const pageResponse = await fetchAPI<StrapiResponse<any>>(
       '/technology-page',
