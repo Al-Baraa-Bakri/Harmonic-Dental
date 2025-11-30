@@ -109,7 +109,7 @@ const ProductsPage = ({
       {categories.length > 0 && (
         <section className="py-2 md:py-8 border-b border-border/50 bg-card/30 sticky top-20 z-40 backdrop-blur-xl">
           <div className="container mx-auto px-6">
-            <div className="flex flex-nowrap overflow-x-auto gap-2 md:gap-3 scrollbar-thin scrollbar-thumb-border scrollbar-track-background">
+            <div className="flex flex-nowrap overflow-x-auto gap-2 md:gap-3">
               <Button
                 variant={selectedCategorySlug === "all" ? "default" : "outline"}
                 onClick={() => setSelectedCategorySlug("all")}
