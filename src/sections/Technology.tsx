@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useMemo, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import {
   Scan,
@@ -6,7 +6,6 @@ import {
   Cog,
   Sparkles,
   CheckCircle2,
-  ArrowRight,
   type LucideIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -29,68 +28,76 @@ type StrapiProcessStep = {
 // Icon mapping by step order/number
 const ICON_MAP: LucideIcon[] = [Scan, Cpu, Cog, CheckCircle2];
 
-// Color mapping by step order
+// Color mapping by step order - Brand "Harmonic Green" theme (Hue 152)
 const COLOR_MAP = [
   {
-    color: "from-blue-500/20 to-cyan-500/20",
-    gradientFrom: "from-blue-500",
-    gradientTo: "to-cyan-500",
+    color: "from-[hsl(152,85%,42%)]/20 to-[hsl(152,85%,50%)]/20",
+    gradientFrom: "from-[hsl(152,85%,42%)]",
+    gradientTo: "to-[hsl(152,85%,50%)]",
   },
   {
-    color: "from-purple-500/20 to-pink-500/20",
-    gradientFrom: "from-purple-500",
-    gradientTo: "to-pink-500",
+    color: "from-[hsl(170,75%,42%)]/20 to-[hsl(180,75%,45%)]/20",
+    gradientFrom: "from-[hsl(170,75%,42%)]",
+    gradientTo: "to-[hsl(180,75%,45%)]",
   },
   {
-    color: "from-orange-500/20 to-red-500/20",
-    gradientFrom: "from-orange-500",
-    gradientTo: "to-red-500",
+    color: "from-[hsl(140,70%,45%)]/20 to-[hsl(152,80%,48%)]/20",
+    gradientFrom: "from-[hsl(140,70%,45%)]",
+    gradientTo: "to-[hsl(152,80%,48%)]",
   },
   {
-    color: "from-green-500/20 to-emerald-500/20",
-    gradientFrom: "from-green-500",
-    gradientTo: "to-emerald-500",
+    color: "from-[hsl(160,80%,40%)]/20 to-[hsl(170,80%,45%)]/20",
+    gradientFrom: "from-[hsl(160,80%,40%)]",
+    gradientTo: "to-[hsl(170,80%,45%)]",
   },
 ];
 
-// Helper to get icon for step
-const getIconForStep = (index: number): LucideIcon => {
-  return ICON_MAP[index] || Scan;
-};
+// Helper functions (memoized)
+const getIconForStep = (index: number): LucideIcon => ICON_MAP[index] || Scan;
+const getColorsForStep = (index: number) => COLOR_MAP[index] || COLOR_MAP[0];
+const getPosition = (index: number): "left" | "right" =>
+  index % 2 === 0 ? "right" : "left";
 
-// Helper to get colors for step
-const getColorsForStep = (index: number) => {
-  return COLOR_MAP[index] || COLOR_MAP[0];
-};
-
-// Helper to get position based on index
-const getPosition = (index: number): "left" | "right" => {
-  return index % 2 === 0 ? "right" : "left";
-};
-
-// Styles
+// Optimized styles with reduced animations
 const sectionStyles = `
   @keyframes fade-in { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes scale-in { from { transform: scale(0.95); } to { transform: scale(1); } }
   @keyframes pulse-glow {
-    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 hsl(var(--primary) / 0.7); }
-    50% { transform: scale(1.15); box-shadow: 0 0 0 15px hsl(var(--primary) / 0); }
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
   }
-  .tech-badge { animation: fade-in 0.6s ease-out 0.2s both, scale-in 0.4s ease-out 0.2s both; }
+  .tech-badge { animation: fade-in 0.6s ease-out 0.2s both; }
   .tech-heading { animation: fade-in 0.8s ease-out 0.4s both; }
   .tech-description { animation: fade-in 0.8s ease-out 0.6s both; }
-  .tech-card { animation: scale-in 0.5s ease-out both; }
-  .tech-card:nth-child(1) { animation-delay: 1.6s; }
-  .tech-card:nth-child(2) { animation-delay: 1.7s; }
-  .tech-card:nth-child(3) { animation-delay: 1.8s; }
-  .tech-card:nth-child(4) { animation-delay: 1.9s; }
-  .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  }
 `;
 
+// Hook to detect mobile devices - SSR safe
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    // Mark that we're on the client
+    setIsClient(true);
+
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile, { passive: true });
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Return false during SSR and initial render to match server
+  return isClient ? isMobile : false;
+};
+
 /**
- * CurvedPath
- * - Receives the shared `pathProgress` MotionValue (0..1)
- * - strokeDashoffset is driven by that progress so the line draws as the section scrolls
+ * Optimized CurvedPath - hidden on mobile with CSS
  */
 const CurvedPath = ({
   pathProgress,
@@ -99,16 +106,18 @@ const CurvedPath = ({
 }) => {
   const PATH_D =
     "M 150 100 C 250 200, 50 300, 150 450 C 250 600, 50 700, 150 900 C 250 1050, 50 1150, 150 1300";
-  // map normalized progress -> dashoffset (2000 -> 0)
+
   const strokeDashoffset = useTransform(pathProgress, [0, 1], [2000, 0]);
 
+  // Use CSS to hide on mobile (prevents hydration issues)
   return (
-    <div className="absolute left-1/2 -translate-x-1/2 top-0 h-full w-full max-w-md pointer-events-none block">
+    <div className="absolute left-1/2 -translate-x-1/2 top-0 h-full w-full max-w-md pointer-events-none hidden md:block">
       <svg
         className="w-full h-full"
         viewBox="0 0 300 1400"
         preserveAspectRatio="xMidYMid meet"
       >
+        {/* Static background path */}
         <path
           d={PATH_D}
           stroke="hsl(var(--primary) / 0.12)"
@@ -116,6 +125,7 @@ const CurvedPath = ({
           fill="none"
           strokeDasharray="8 8"
         />
+        {/* Animated path */}
         <motion.path
           d={PATH_D}
           stroke="hsl(var(--primary))"
@@ -123,7 +133,10 @@ const CurvedPath = ({
           fill="none"
           strokeDasharray={2000}
           strokeDashoffset={strokeDashoffset}
-          style={{ filter: "drop-shadow(0 0 8px hsl(var(--primary) / 0.6))" }}
+          style={{
+            filter: "drop-shadow(0 0 8px hsl(var(--primary) / 0.6))",
+            willChange: "stroke-dashoffset",
+          }}
         />
       </svg>
     </div>
@@ -131,39 +144,40 @@ const CurvedPath = ({
 };
 
 /**
- * ProcessStepCard
- * - Uses the shared `pathProgress` to compute a reveal MotionValue for this step.
- * - The reveal only becomes > 0 when the pathProgress approaches the step's threshold.
- * - This guarantees the line draws first; only when the path reaches threshold the card appears.
+ * Optimized ProcessStepCard with reduced transforms on mobile
  */
 const ProcessStepCard = ({
   step,
   index,
   totalSteps,
   pathProgress,
+  isMobile,
 }: {
   step: StrapiProcessStep;
   index: number;
   totalSteps: number;
   pathProgress: MotionValue<number>;
+  isMobile: boolean;
 }) => {
-  const Icon = getIconForStep(index);
-  const colors = getColorsForStep(index);
-  const position = getPosition(index);
+  const Icon = useMemo(() => getIconForStep(index), [index]);
+  const colors = useMemo(() => getColorsForStep(index), [index]);
+  const position = useMemo(() => getPosition(index), [index]);
 
-  // threshold derived from index: spaced across the [0..1] progress of the whole path.
-  const threshold = (index + 1) / (totalSteps + 1) - 0.1;
-  const lower = Math.max(0, threshold - 0.72);
+  // Calculate thresholds - only used for desktop
+  const threshold = useMemo(
+    () => (index + 1) / (totalSteps + 1) - 0.1,
+    [index, totalSteps]
+  );
+  const lower = useMemo(() => Math.max(0, threshold - 0.72), [threshold]);
 
-  // reveal: clamp to 0 before `lower`, ramp 0->1 between lower..threshold, and stay 1 afterwards
+  // ALWAYS call all hooks at top level (Rules of Hooks)
   const reveal = useTransform(
     pathProgress,
     [0, lower, threshold, 1],
     [0, 0, 1, 1]
   );
 
-  // derive visible transforms from reveal
-  const opacity = reveal;
+  // Always calculate all transforms (even if not used on mobile)
   const scale = useTransform(reveal, [0, 1], [0.95, 1]);
   const rotate = useTransform(
     reveal,
@@ -171,19 +185,49 @@ const ProcessStepCard = ({
     [position === "left" ? -6 : 6, 0]
   );
   const x = useTransform(reveal, [0, 1], [position === "left" ? -60 : 60, 0]);
-
-  // connecting beam (from card to line) grows with reveal
+  const y = useTransform(reveal, [0, 1], [20, 0]); // For mobile
   const beamScaleX = useTransform(reveal, [0, 1], [0, 1]);
+  const dotScale = useTransform(reveal, [0, 1], [0.8, 1]);
+
+  // Decide which animation props to use based on isMobile
+  const animationProps = useMemo(() => {
+    // Both mobile and desktop now use scroll-based animations
+    // Mobile uses simpler transforms for better performance
+    if (isMobile) {
+      return {
+        style: {
+          opacity: reveal,
+          y: y,
+          willChange: "transform, opacity",
+        },
+      };
+    }
+
+    // Desktop: full scroll-based animations
+    return {
+      style: {
+        opacity: reveal,
+        scale,
+        rotate,
+        x,
+        willChange: "transform, opacity",
+      },
+    };
+  }, [isMobile, reveal, scale, rotate, x, y]);
 
   return (
-    <div className="relative flex items-center justify-center min-h-[400px] md:min-h-[400px]">
-      {/* Dot on path that appears when reveal > 0 */}
+    <div className="relative flex items-center justify-center min-h-[350px] md:min-h-[400px] py-6">
+      {/* Dot on path - desktop only using CSS */}
       <motion.div
-        style={{ opacity: reveal, scale }}
+        style={{
+          opacity: reveal,
+          scale: dotScale,
+          willChange: "transform, opacity",
+        }}
         className="absolute left-1/2 -translate-x-1/2 hidden md:block z-30"
       >
         <div className="relative">
-          <div className="w-6 h-6 rounded-full bg-primary pulse-glow" />
+          <div className="w-6 h-6 rounded-full bg-primary animate-pulse" />
           <div className="absolute inset-0 rounded-full border-2 border-primary/30 scale-150" />
           <div className="absolute -top-8 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-bold shadow-lg whitespace-nowrap">
             Step {step.number}
@@ -193,76 +237,88 @@ const ProcessStepCard = ({
 
       {/* Card */}
       <motion.article
-        style={{ opacity, scale, rotate, x }}
+        {...animationProps}
         className={`group relative w-full md:w-[300px] ${
           position === "left" ? "md:mr-[30vw] md:pr-8" : "md:ml-[30vw] md:pl-8"
         }`}
       >
-        {/* Connecting beam -> grows horizontally as reveal increases */}
+        {/* Connecting beam - hidden on mobile with CSS */}
         <motion.div
           style={{
             transformOrigin:
               position === "left" ? "left center" : "right center",
             scaleX: beamScaleX,
-            opacity,
+            opacity: reveal,
+            willChange: "transform",
           }}
           className={`absolute hidden md:block top-1/2 -translate-y-1/2 h-1 z-10 ${
             position === "left"
-              ? "left-full w-8 origin-left bg-gradient-to-r from-primary to-transparent"
-              : "right-full w-8 origin-right bg-gradient-to-l from-primary to-transparent"
+              ? "left-full w-8 bg-gradient-to-r from-primary to-transparent"
+              : "right-full w-8 bg-gradient-to-l from-primary to-transparent"
           }`}
         />
 
         <div className="relative group/card">
+          {/* Background gradient - no hover effects */}
           <div
-            className={`absolute -inset-0.5 bg-gradient-to-br ${colors.gradientFrom} ${colors.gradientTo} rounded-3xl blur opacity-30 group-hover/card:opacity-60 transition-all duration-500`}
+            className={`absolute -inset-0.5 bg-gradient-to-br ${colors.gradientFrom} ${colors.gradientTo} rounded-3xl opacity-30 transition-opacity duration-500 blur-0 md:blur`}
           />
-          <div className="relative bg-card/95 backdrop-blur-xl border border-primary/20 rounded-3xl overflow-hidden hover:border-primary/40 transition-all duration-500">
+
+          <div
+            className={`relative bg-card border border-primary/20 rounded-3xl overflow-hidden transition-all duration-500 backdrop-blur-none md:backdrop-blur-xl bg-card md:bg-card/95`}
+          >
+            {/* Image section */}
             <div className="relative h-40 overflow-hidden">
+              {/* Mobile step indicator - shown only on mobile with CSS */}
+              <div className="absolute top-4 right-4 z-20 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-bold shadow-lg md:hidden">
+                Step {step.number}
+              </div>
+
               {step.image?.url ? (
                 <img
                   src={step.image.url}
                   alt={step.image.alternativeText || step.title}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110"
+                  className="w-full h-full object-cover"
+                  decoding="async"
                 />
               ) : (
                 <div className="w-full h-full bg-muted flex items-center justify-center">
                   <Icon className="w-16 h-16 text-muted-foreground/20" />
                 </div>
               )}
+
               <div
                 className={`absolute inset-0 bg-gradient-to-br ${colors.color} mix-blend-overlay`}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-transparent" />
+
+              {/* Icon badge */}
               <div className="absolute top-4 left-4">
                 <div
-                  className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${colors.color} backdrop-blur-md border-2 border-white/20 flex items-center justify-center shadow-2xl group-hover/card:scale-110 transition-all duration-500`}
+                  className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${colors.color} border-2 border-white/20 flex items-center justify-center shadow-2xl transition-transform duration-500 backdrop-blur-none md:backdrop-blur-md`}
                 >
                   <Icon className="w-7 h-7 text-primary drop-shadow-lg" />
                 </div>
               </div>
+
+              {/* Step number watermark */}
               <div className="absolute top-4 right-4 text-7xl font-black text-white/5 select-none leading-none">
                 {step.number}
               </div>
             </div>
 
+            {/* Content section */}
             <div className="p-5 relative">
               <div className="flex items-start justify-between gap-2 mb-3">
-                <h3 className="text-xl font-bold group-hover/card:text-gradient transition-all duration-300">
-                  {step.title}
-                </h3>
-                <ArrowRight
-                  className={`w-5 h-5 text-primary opacity-0 group-hover/card:opacity-100 transition-all duration-300 flex-shrink-0 mt-1 ${
-                    position === "left" ? "rotate-180" : ""
-                  }`}
-                />
+                <h3 className="text-xl font-bold">{step.title}</h3>
               </div>
 
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 {step.description}
               </p>
 
+              {/* Progress indicators */}
               <div className="flex items-center gap-1.5">
                 {Array.from({ length: totalSteps }).map((_, i) => (
                   <div
@@ -275,6 +331,7 @@ const ProcessStepCard = ({
               </div>
             </div>
 
+            {/* Side accent line */}
             <div
               className={`absolute top-0 bottom-0 w-1 bg-gradient-to-b ${
                 colors.gradientFrom
@@ -289,7 +346,6 @@ const ProcessStepCard = ({
   );
 };
 
-
 const TechnologySection = ({
   headerBadge = "Advanced Technology",
   headerTitle = "Your Journey to",
@@ -298,19 +354,23 @@ const TechnologySection = ({
   processSteps = [],
   ctaButton,
 }: any) => {
-  // single source of truth for progress of the entire section
+  const isMobile = useIsMobile();
   const sectionRef = useRef<HTMLElement | null>(null);
+
+  // Scroll progress - only on desktop for performance
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start start", "end end"], // the whole section maps to 0..1
+    offset: ["start start", "end end"],
   });
 
-  // Sort steps by order
-  const sortedSteps = [...processSteps].sort((a, b) => {
-    const orderA = a.order === 0 ? 999 : a.order;
-    const orderB = b.order === 0 ? 999 : b.order;
-    return orderA - orderB;
-  });
+  // Sort steps once
+  const sortedSteps = useMemo(() => {
+    return [...processSteps].sort((a, b) => {
+      const orderA = a.order === 0 ? 999 : a.order;
+      const orderB = b.order === 0 ? 999 : b.order;
+      return orderA - orderB;
+    });
+  }, [processSteps]);
 
   return (
     <>
@@ -320,14 +380,17 @@ const TechnologySection = ({
         ref={sectionRef}
         className="py-12 md:py-20 lg:py-28 relative overflow-hidden bg-gradient-to-b from-card/30 via-background to-background"
       >
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-primary/10 rounded-full blur-[140px]" />
+        {/* Background effects - hidden on mobile with CSS */}
+        <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[120px] hidden md:block" />
+        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-primary/10 rounded-full blur-[140px] hidden md:block" />
+
         <div
           className="absolute inset-0 bg-[linear-gradient(to_right,hsl(0_0%_20%_/_0.03)_1px,transparent_1px),linear-gradient(to_bottom,hsl(0_0%_20%_/_0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]"
           aria-hidden="true"
         />
 
         <div className="container mx-auto px-6 relative z-10">
+          {/* Header */}
           <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-4 tech-badge">
               <Sparkles className="w-3.5 h-3.5 text-primary animate-pulse" />
@@ -336,7 +399,7 @@ const TechnologySection = ({
 
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 tech-heading">
               {headerTitle}{" "}
-              <span className="block text-gradient mt-1">
+              <span className="block bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent mt-1">
                 {headerHighlightedText}
               </span>
             </h2>
@@ -346,9 +409,9 @@ const TechnologySection = ({
             </p>
           </div>
 
+          {/* Process steps */}
           {sortedSteps.length > 0 && (
             <div className="relative mb-12 md:mb-16">
-              {/* pass the same scroll progress to both the path and the cards */}
               <CurvedPath pathProgress={scrollYProgress} />
 
               <div className="relative">
@@ -359,19 +422,21 @@ const TechnologySection = ({
                     index={index}
                     totalSteps={sortedSteps.length}
                     pathProgress={scrollYProgress}
+                    isMobile={isMobile}
                   />
                 ))}
               </div>
             </div>
           )}
 
+          {/* CTA Button */}
           {ctaButton && (
-            <div
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               className="text-center"
-              style={{
-                animation:
-                  "fade-in 0.8s ease-out 2s both, scale-in 0.4s ease-out 2s both",
-              }}
             >
               <Button variant="hero" size="lg" className="group" asChild>
                 <a
@@ -383,7 +448,7 @@ const TechnologySection = ({
                   <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                 </a>
               </Button>
-            </div>
+            </motion.div>
           )}
         </div>
       </section>

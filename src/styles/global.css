@@ -2,175 +2,122 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* HARMONIC DENTAL LABORATORY DESIGN SYSTEM
+  Theme: Soft Light, Clinical, Fresh - EYE-FRIENDLY VERSION
+  Primary Color: Vibrant Spring Green (Hue 152)
 */
 
 @layer base {
   :root {
-    /* Dark mode background */
-    --background: 0 0% 10%;
-    /* Dark mode foreground (text) */
-    --foreground: 0 0% 98%;
+    /* --- LIGHT MODE (EASIER ON EYES) --- */
 
-    /* Slightly lighter card for contrast */
-    --card: 0 0% 13%;
-    --card-foreground: 0 0% 98%;
+    /* Background: Soft off-white with slight warmth */
+    --background: 210 15% 97%;
 
-    --popover: 0 0% 13%;
-    --popover-foreground: 0 0% 98%;
+    /* Foreground: Softer dark grey instead of pure black */
+    --foreground: 215 15% 20%;
 
-    /* Primary: Extracted Soft Gold from the logo */
-    /* Original estimated gold: hsl(48, 85%, 74%) - made slightly more vibrant for UI */
-    --primary: 48 85% 65%;
-    --primary-foreground: 0 0% 10%;
-    /* Lighter shade for glowing effects */
-    --primary-glow: 48 90% 75%;
+    /* Card: Darker for better visibility and depth */
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
+    --popover: 210 12% 94%;
+    --popover-foreground: 215 15% 20%;
 
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 65%;
+    /* Primary: "Harmonic Green" - slightly desaturated for comfort */
+    --primary: 152 75% 40%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Accent: Extracted Soft Teal/Green from the logo */
-    /* Original estimated teal: hsl(155, 36%, 52%) */
-    --accent: 155 36% 52%;
-    --accent-foreground: 0 0% 10%;
+    /* Glow: Softer pastel green */
+    --primary-glow: 152 70% 62%;
 
-    /* Destructive can stay red-ish */
-    --destructive: 0 84% 60%;
+    /* --- SOFTER NEUTRALS --- */
+    --secondary: 152 12% 88%;
+    --secondary-foreground: 152 60% 28%;
+
+    --muted: 152 10% 86%;
+    --muted-foreground: 215 12% 42%;
+
+    /* Accent: Softer teal tint */
+    --accent: 170 20% 89%;
+    --accent-foreground: 152 70% 32%;
+
+    --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    /* Yellow ring to match theme */
-    --ring: 48 85% 65%;
+    /* Softer borders */
+    --border: 220 12% 88%;
+    --input: 220 12% 90%;
+    --ring: 152 75% 40%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Updated gradients using the new primary color */
+    /* --- SOFTER GRADIENTS --- */
     --gradient-hero: linear-gradient(
       135deg,
-      hsl(0 0% 0%) 0%,
-      hsl(0 0% 10%) 50%,
-      hsl(48 85% 15%) 100%
+      hsl(210 15% 95%) 0%,
+      hsl(152 20% 92%) 100%
     );
 
-    --gradient-gold: linear-gradient(
+    --gradient-primary: linear-gradient(
       135deg,
-      hsl(48 85% 65%) 0%,
-      hsl(48 90% 75%) 100%
+      hsl(152 75% 40%) 0%,
+      hsl(152 75% 48%) 100%
     );
 
-    /* Updated shadows using the new primary color */
-    --shadow-glow: 0 0 40px hsl(48 85% 65% / 0.3);
-    --shadow-gold: 0 10px 40px -10px hsl(48 85% 65% / 0.4);
+    /* --- GENTLER SHADOWS --- */
+    --shadow-glow: 0 0 20px hsl(152 75% 40% / 0.12);
+    --shadow-primary: 0 4px 14px 0 hsl(152 75% 40% / 0.2);
+  }
+
+  /* Dark mode overrides */
+  .dark {
+    --background: 215 20% 12%;
+    --foreground: 0 0% 96%;
+
+    --card: 215 20% 15%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 215 20% 15%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 152 75% 48%;
+    --primary-foreground: 215 20% 12%;
+    --primary-glow: 152 80% 58%;
+
+    --secondary: 215 20% 20%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 215 20% 20%;
+    --muted-foreground: 215 12% 60%;
+
+    --accent: 152 70% 22%;
+    --accent-foreground: 0 0% 96%;
+
+    --destructive: 0 60% 35%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 20% 22%;
+    --input: 215 20% 22%;
+    --ring: 152 75% 48%;
   }
 
   ::selection {
-    background: hsl(var(--primary)); /* or any HSL value */
-    color: hsl(var(--primary-foreground));
-  }
-
-  /* For Firefox */
-  ::-moz-selection {
-    background: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
+    background: hsl(var(--primary) / 0.15);
+    color: hsl(var(--primary));
   }
 
   ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
   }
-
-  /* Track (background) */
   ::-webkit-scrollbar-track {
-    background: hsl(var(--background));
+    background: transparent;
   }
-
-  /* Scrollbar thumb */
   ::-webkit-scrollbar-thumb {
-    background: hsl(var(--primary) / 0.6);
+    background: hsl(var(--muted-foreground) / 0.25);
     border-radius: 9999px;
-    border: 2px solid hsl(var(--background)); /* creates padding effect */
   }
-
-  /* Thumb on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--primary));
-  }
-
-  /* Firefox scrollbar */
-  * {
-    scrollbar-color: hsl(var(--primary)) hsl(var(--background));
-    scrollbar-width: thin;
-  }
-
-  .dark {
-    /* Dark mode variables match the :root definition */
-    --background: 0 0% 10%;
-    --foreground: 0 0% 98%;
-
-    --card: 0 0% 13%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 0 0% 13%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 48 85% 65%;
-    --primary-foreground: 0 0% 10%;
-    --primary-glow: 48 90% 75%;
-
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 65%;
-
-    --accent: 155 36% 52%;
-    --accent-foreground: 0 0% 10%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 48 85% 65%;
-  }
-
-  .light {
-    /* Simplified Light mode variables (match primary/accent to dark theme for consistency) */
-    /* Pure white background from the logo */
-    --background: 0 0% 100%;
-    /* Dark grey foreground from the logo's "Dental Laboratory" text */
-    --foreground: 0 0% 20%;
-
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 20%;
-
-    --popover: 0 0% 98%;
-    --popover-foreground: 0 0% 20%;
-
-    --primary: 48 85% 65%;
-    --primary-foreground: 0 0% 10%;
-    --primary-glow: 48 90% 75%;
-
-    --secondary: 0 0% 90%;
-    --secondary-foreground: 0 0% 20%;
-
-    --muted: 0 0% 90%;
-    --muted-foreground: 0 0% 40%;
-
-    --accent: 155 36% 52%;
-    --accent-foreground: 0 0% 10%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 85%;
-    --input: 0 0% 85%;
-    --ring: 48 85% 65%;
+    background: hsl(var(--primary) / 0.7);
   }
 }
 
@@ -193,20 +140,21 @@ html {
   h4,
   h5,
   h6 {
-    @apply font-bold tracking-tight;
+    @apply font-bold tracking-tight text-foreground;
   }
 }
 
 @layer utilities {
-  /* Existing utilities */
   .text-gradient {
-    /* Updated to use the new primary color */
-    @apply inline-block bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent;
+    @apply inline-block bg-gradient-to-r from-primary to-[hsl(152,70%,35%)] bg-clip-text text-transparent;
+  }
+
+  .card-accent-top {
+    @apply border-t-4 border-primary shadow-sm;
   }
 
   .hover-glow {
-    /* Updated to use the new primary color */
-    @apply transition-all duration-300 hover:shadow-[0_0_30px_hsl(48_85%_65%_/_0.4)];
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-[hsl(152_75%_40%_/_0.12)] hover:-translate-y-0.5;
   }
 
   .animate-float {
@@ -219,7 +167,7 @@ html {
       transform: translateY(0px);
     }
     50% {
-      transform: translateY(-20px);
+      transform: translateY(-10px);
     }
   }
 
@@ -230,40 +178,22 @@ html {
   @keyframes glow {
     0%,
     100% {
-      /* Updated to use the new primary color */
-      box-shadow: 0 0 20px hsl(48 85% 65% / 0.2);
+      box-shadow: 0 0 5px hsl(152 75% 40% / 0);
     }
     50% {
-      /* Updated to use the new primary color */
-      box-shadow: 0 0 40px hsl(48 85% 65% / 0.4);
+      box-shadow: 0 0 15px hsl(152 75% 40% / 0.15);
     }
   }
 
-  /* NEW UTILITIES FOR COMPONENT */
-
-  /* Text gradient utility to apply a specific gradient path */
-  .text-gradient-to-r {
-    /* Using the primary and accent colors defined in the component */
-    background-image: linear-gradient(
-      to right,
-      hsl(var(--primary)),
-      hsl(var(--accent))
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  /* Custom utility for staggered animation delay */
   .animation-delay-2000 {
     animation-delay: 2s;
   }
 }
 
-/* 1. Define the keyframes for our fade-up effect */
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -271,43 +201,19 @@ html {
   }
 }
 
-/* 2. Use @supports for browsers that understand animation-timeline */
 @supports (animation-timeline: view()) {
-  /* Target both elements */
   .animate-on-scroll-header,
   .animate-on-scroll-card {
-    /* Set the initial state (before animation) */
     opacity: 0;
-
-    /* Link the animation to the keyframes.
-    'linear' ensures it scrubs smoothly.
-    'both' makes it stick to the 'to' state when finished.
-  */
-    animation: fade-up linear both;
-
-    /* THIS IS THE MAGIC:
-    Tell the animation to follow the element's visibility 
-    in the viewport instead of following time.
-  */
-    animation-timeline: view(
-      block
-    ); /* Added 'block' for clarity and compatibility */
+    animation: fade-up 0.6s ease-out both;
+    animation-timeline: view(block);
   }
 
-  /* 3. Define the scroll range for each animation */
-
   .animate-on-scroll-header {
-    /* Start: when the element's top enters the viewport (entry 0%)
-    End: when it's 40% of the way up the screen (cover 40%)
-  */
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 30%;
   }
 
   .animate-on-scroll-card {
-    /*
-    Start: when the card just enters the screen
-    End: when it's 35% of the way up
-  */
-    animation-range: entry 5% cover 35%;
+    animation-range: entry 5% cover 25%;
   }
 }

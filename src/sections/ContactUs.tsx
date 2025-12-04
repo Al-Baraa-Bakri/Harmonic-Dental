@@ -1,7 +1,6 @@
 import GoogleMap from "@/components/GoogleMap";
 import { Mail, Phone, MapPin } from "lucide-react";
 
-
 const ContactSection = ({
   headerBadge = "Contact Us",
   headerTitle = "To start your amazing journey",
@@ -59,7 +58,9 @@ const ContactSection = ({
                   <div className="p-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl group-hover:scale-110 transition-transform duration-300">
                     <Mail className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground">Email Us</h3>
+                  <h3 className="text-2xl font-bold text-foreground">
+                    Email Us
+                  </h3>
                 </div>
                 <div className="space-y-4">
                   {emails.map((item: any, index: any) => (
@@ -90,37 +91,37 @@ const ContactSection = ({
           {/* Phone Section */}
           {phones.length > 0 && (
             <div
-              className="group relative animate-fade-in"
+              className="group relative animate-fade-in cursor-pointer"
               style={{ animationDelay: "0.4s" }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
-              <div className="relative h-full bg-gradient-to-br from-card/90 to-card/50 backdrop-blur-sm border-2 border-accent/30 rounded-2xl p-8 hover:border-accent/50 transition-all duration-300 hover:shadow-2xl">
+              <div className="border-2 border-primary/30 relative h-full bg-gradient-to-br from-card/90 to-card/50 backdrop-blur-sm rounded-2xl p-8 hover:border-accent/50 transition-all duration-300 hover:shadow-2xl">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="p-4 bg-gradient-to-br from-accent/20 to-primary/20 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                    <Phone className="w-8 h-8 text-accent" />
+                    <Phone className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground">Call Us</h3>
+                  <h3 className="text-2xl font-bold text-foreground">
+                    Call Us
+                  </h3>
                 </div>
                 <div className="space-y-4">
                   {phones.map((item: any, index: any) => (
-                    <div
+                    <a
                       key={item.id}
-                      className="group/item p-4 bg-background/50 rounded-lg hover:bg-accent/10 transition-all duration-300 hover:-translate-y-1"
+                      href={`tel:${item.value.replace(/\s/g, "")}`}
+                      className="group/item block p-4 bg-background/50 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:bg-primary/10"
                       style={{ animationDelay: `${0.5 + index * 0.1}s` }}
                     >
                       <p className="text-sm text-muted-foreground mb-1">
                         {item.label}
                       </p>
-                      <a
-                        href={`tel:${item.value.replace(/\s/g, "")}`}
-                        className="text-foreground font-medium hover:text-accent transition-colors duration-200 flex items-center gap-2 group-hover/item:gap-3"
-                      >
+                      <div className="text-foreground font-medium transition-colors duration-200 flex items-center gap-2 group-hover/item:gap-3 group-hover/item:text-primary">
                         {item.value}
-                        <span className="text-accent opacity-0 group-hover/item:opacity-100 transition-all duration-300">
+                        <span className="text-primary opacity-0 group-hover/item:opacity-100 transition-all duration-300">
                           →
                         </span>
-                      </a>
-                    </div>
+                      </div>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -142,7 +143,10 @@ const ContactSection = ({
                 </h3>
               </div>
             )}
-            <GoogleMap embedUrl={mapUrl} title={locationTitle || "Our Location"} />
+            <GoogleMap
+              embedUrl={mapUrl}
+              title={locationTitle || "Our Location"}
+            />
           </div>
         )}
       </div>

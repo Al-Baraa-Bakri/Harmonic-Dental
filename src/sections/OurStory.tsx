@@ -15,7 +15,6 @@ const getIconForItem = (index: number): LucideIcon => {
   return ICON_MAP[index] || Zap;
 };
 
-
 const StorySection = ({
   headerBadge = "About Us",
   headerTitle = "Our Journey & Core Values",
@@ -65,7 +64,10 @@ const StorySection = ({
     whyChooseUsItems.length > 0 ? whyChooseUsItems : fallbackItems;
 
   return (
-    <section id="about-us" className="py-20 md:py-32 relative overflow-hidden bg-background text-foreground">
+    <section
+      id="about-us"
+      className="py-20 md:py-32 relative overflow-hidden bg-background text-foreground"
+    >
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0 z-0 opacity-10">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -136,7 +138,7 @@ const StorySection = ({
             {/* Image with Parallax & Interactive Frame */}
             <div className="lg:order-2 relative group animate-fadeInRight">
               <div className="relative p-5 bg-card rounded-[3.5rem] shadow-2xl shadow-primary/20 transform group-hover:scale-[1.02] transition duration-500 ease-in-out border border-border">
-                {storyImage?.url ? 
+                {storyImage?.url ? (
                   <img
                     src={storyImage.url}
                     alt={
@@ -144,7 +146,7 @@ const StorySection = ({
                     }
                     className="w-full h-[480px] object-cover rounded-[3rem] border-4 border-primary/30 group-hover:border-accent/50 transition-colors duration-500"
                   />
-                  : null}
+                ) : null}
                 {/* Floating Detail Card */}
                 {storyImageFloatingText && (
                   <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 p-5 bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-2xl shadow-xl border-4 border-background w-4/5 text-center flex items-center justify-center gap-3 animate-bounceIn">
@@ -174,22 +176,21 @@ const StorySection = ({
                 <div
                   key={item.id}
                   className="group p-8 rounded-3xl bg-card border border-border overflow-hidden relative
-                             transition-all duration-500 ease-in-out hover:border-accent/70 hover:shadow-2xl hover:shadow-accent/20
+                             transition-all duration-500 ease-in-out hover:shadow-2xl hover:shadow-accent/20
                              transform hover:-translate-y-2 animate-fadeInUp"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {/* Subtle Background Icon on hover */}
-                  <Icon className="absolute -top-6 -right-6 w-24 h-24 text-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
 
                   <div className="relative z-10 space-y-4 text-center">
                     <div
                       className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 border border-primary/20 
-                                    group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-accent group-hover:border-transparent 
+                                    
                                     transition-all duration-500 mx-auto mb-4 transform group-hover:scale-110"
                     >
-                      <Icon className="w-7 h-7 text-primary group-hover:text-white transition-colors duration-500" />
+                      <Icon className="w-7 h-7 text-primary transition-colors duration-500" />
                     </div>
-                    <h4 className="text-xl font-semibold text-foreground group-hover:text-accent transition-colors duration-500">
+                    <h4 className="text-xl font-semibold text-foreground transition-colors duration-500">
                       {item.title}
                     </h4>
                     <p className="text-sm text-muted-foreground">

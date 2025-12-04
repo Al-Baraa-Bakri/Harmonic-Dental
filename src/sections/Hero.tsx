@@ -43,46 +43,46 @@ type StrapiStat = {
 // Icon mapping by product slug or name (case-insensitive)
 const ICON_MAP: Record<string, LucideIcon> = {
   // By slug
-  'crowns': Crown,
-  'crown': Crown,
-  'product-1': Crown,
-  
-  'bridges': Layers,
-  'bridge': Layers,
-  
-  'implants': Box,
-  'implant': Box,
-  'product-2': Box,
-  
-  'veneers': Gem,
-  'veneer': Gem,
-  'product-5': Gem,
-  
-  'dentures': Smile,
-  'denture': Smile,
-  
-  'orthodontics': Braces,
-  'orthodontic': Braces,
-  
+  crowns: Crown,
+  crown: Crown,
+  "product-1": Crown,
+
+  bridges: Layers,
+  bridge: Layers,
+
+  implants: Box,
+  implant: Box,
+  "product-2": Box,
+
+  veneers: Gem,
+  veneer: Gem,
+  "product-5": Gem,
+
+  dentures: Smile,
+  denture: Smile,
+
+  orthodontics: Braces,
+  orthodontic: Braces,
+
   // By name (case-insensitive match)
-  'removable appliance': Smile,
-  'product-3': Smile,
-  
-  'surgical guide': Activity,
-  'product-4': Activity,
+  "removable appliance": Smile,
+  "product-3": Smile,
+
+  "surgical guide": Activity,
+  "product-4": Activity,
 };
 
 // Helper to get icon for a product
 const getIconForProduct = (product: StrapiProduct): LucideIcon => {
-  const slug = product.slug?.toLowerCase() || '';
-  const name = product.name?.toLowerCase() || '';
-  
+  const slug = product.slug?.toLowerCase() || "";
+  const name = product.name?.toLowerCase() || "";
+
   // Try slug first
   if (ICON_MAP[slug]) return ICON_MAP[slug];
-  
+
   // Try name
   if (ICON_MAP[name]) return ICON_MAP[name];
-  
+
   // Default fallback
   return Box;
 };
@@ -95,16 +95,18 @@ const getAnimationStyle = (fadeDelay: number, scaleDelay?: number) => ({
 });
 
 // Memoized sub-components
-const BackgroundLayer = memo(({ backgroundImage }: { backgroundImage?: { url: string } }) => (
-  <>
-    {/* Animated glow orbs */}
-    <div className="absolute top-20 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px] animate-pulse" />
-    <div className="absolute bottom-20 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[140px] animate-pulse delay-1000" />
+const BackgroundLayer = memo(
+  ({ backgroundImage }: { backgroundImage?: { url: string } }) => (
+    <>
+      {/* Animated glow orbs */}
+      <div className="absolute top-20 right-1/4 w-96 h-96 bg-primary/30 rounded-full blur-[120px] animate-pulse" />
+      <div className="absolute bottom-20 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-[140px] animate-pulse delay-1000" />
 
-    {/* Decorative grid pattern */}
-    <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(0_0%_20%_/_0.05)_1px,transparent_1px),linear-gradient(to_bottom,hsl(0_0%_20%_/_0.05)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] pointer-events-none" />
-  </>
-));
+      {/* Decorative grid pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(0_0%_20%_/_0.05)_1px,transparent_1px),linear-gradient(to_bottom,hsl(0_0%_20%_/_0.05)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] pointer-events-none" />
+    </>
+  )
+);
 
 BackgroundLayer.displayName = "BackgroundLayer";
 
@@ -120,80 +122,91 @@ const HeroBadge = memo(({ badgeText }: { badgeText: string }) => (
 
 HeroBadge.displayName = "HeroBadge";
 
-const HeroHeading = memo(({ 
-  mainHeading, 
-  highlightedText, 
-  subtitle 
-}: { 
-  mainHeading: string;
-  highlightedText: string;
-  subtitle: string;
-}) => (
-  <>
-    <h1
-      className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
-      style={getAnimationStyle(0.4)}
-    >
-      {mainHeading}{' '}
-      <span
-        className="block text-gradient mt-2 leading-[130%]"
-        style={getAnimationStyle(0.6)}
+const HeroHeading = memo(
+  ({
+    mainHeading,
+    highlightedText,
+    subtitle,
+  }: {
+    mainHeading: string;
+    highlightedText: string;
+    subtitle: string;
+  }) => (
+    <>
+      <h1
+        className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+        style={getAnimationStyle(0.4)}
       >
-        {highlightedText}
-      </span>
-    </h1>
+        {mainHeading}{" "}
+        <span
+          className="block text-gradient mt-2 leading-[130%]"
+          style={getAnimationStyle(0.6)}
+        >
+          {highlightedText}
+        </span>
+      </h1>
 
-    <p
-      className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed"
-      style={getAnimationStyle(0.8)}
-    >
-      {subtitle}
-    </p>
-  </>
-));
+      <p
+        className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed"
+        style={getAnimationStyle(0.8)}
+      >
+        {subtitle}
+      </p>
+    </>
+  )
+);
 
 HeroHeading.displayName = "HeroHeading";
 
-const CTAButtons = memo(({ 
-  primaryButton, 
-  secondaryButton 
-}: { 
-  primaryButton?: { label: string; url: string; isExternal: boolean };
-  secondaryButton?: { label: string; url: string; isExternal: boolean };
-}) => {
-  if (!primaryButton && !secondaryButton) return null;
+const CTAButtons = memo(
+  ({
+    primaryButton,
+    secondaryButton,
+  }: {
+    primaryButton?: { label: string; url: string; isExternal: boolean };
+    secondaryButton?: { label: string; url: string; isExternal: boolean };
+  }) => {
+    if (!primaryButton && !secondaryButton) return null;
 
-  return (
-    <div
-      className="flex flex-col sm:flex-row gap-4 mb-12"
-      style={getAnimationStyle(1, 1)}
-    >
-      {primaryButton && (
-        <Button variant="hero" size="lg" className="group capitalize" asChild>
-          <a 
-            href={primaryButton.url}
-            target={primaryButton.isExternal ? "_blank" : undefined}
-            rel={primaryButton.isExternal ? "noopener noreferrer" : undefined}
+    return (
+      <div
+        className="flex flex-col sm:flex-row gap-4 mb-12"
+        style={getAnimationStyle(1, 1)}
+      >
+        {primaryButton && (
+          <Button variant="hero" size="lg" className="group capitalize" asChild>
+            <a
+              href={primaryButton.url}
+              target={primaryButton.isExternal ? "_blank" : undefined}
+              rel={primaryButton.isExternal ? "noopener noreferrer" : undefined}
+            >
+              {primaryButton.label}
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </Button>
+        )}
+        {secondaryButton && (
+          <Button
+            variant="hero-outline"
+            size="lg"
+            className="capitalize"
+            asChild
           >
-            {primaryButton.label}
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </a>
-        </Button>
-      )}
-      {secondaryButton && (
-        <Button variant="hero-outline" size="lg" className="capitalize" asChild>
-          <a 
-            href={secondaryButton.url}
-            target={secondaryButton.isExternal ? "_blank" : undefined}
-            rel={secondaryButton.isExternal ? "noopener noreferrer" : undefined}
-          >
-            {secondaryButton.label}
-          </a>
-        </Button>
-      )}
-    </div>
-  );
-});
+            <a
+              href={secondaryButton.url}
+              target={secondaryButton.isExternal ? "_blank" : undefined}
+              rel={
+                secondaryButton.isExternal ? "noopener noreferrer" : undefined
+              }
+            >
+              {secondaryButton.label}
+            </a>
+          </Button>
+        )}
+      </div>
+    );
+  }
+);
 
 CTAButtons.displayName = "CTAButtons";
 

@@ -1,4 +1,12 @@
-import { Phone, Mail, MapPin, Facebook, Instagram, type LucideIcon, Youtube } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Instagram,
+  type LucideIcon,
+  Youtube,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // Icon mapping for social platforms
@@ -13,7 +21,6 @@ const getSocialIcon = (platform: string): LucideIcon => {
   const key = platform.toLowerCase();
   return SOCIAL_ICON_MAP[key];
 };
-
 
 const Footer = ({
   logo,
@@ -36,28 +43,33 @@ const Footer = ({
             {/* Brand Section */}
             <div className="lg:col-span-2">
               {/* Logo */}
-              <a href="/" className="flex items-center gap-3 w-40 mb-4 translate-x-[-10px]">
+              <a
+                href="/"
+                className="flex items-center gap-3 w-40 mb-4 translate-x-[-10px]"
+              >
                 {logo?.url ? (
-                  <img 
-                    src={logo.url} 
-                    alt={logo.alternativeText || companyName} 
+                  <img
+                    src={logo.url}
+                    alt={logo.alternativeText || companyName}
                     className="w-full h-auto"
                   />
                 ) : (
-                  <span className="text-xl font-bold text-gradient">{companyName}</span>
+                  <span className="text-xl font-bold text-gradient">
+                    {companyName}
+                  </span>
                 )}
               </a>
-              
+
               <p className="text-sm text-muted-foreground mb-6 max-w-sm">
                 {description}
               </p>
-              
+
               {/* Contact Info */}
               <div className="space-y-3">
                 {phoneNumber && (
-                  <a 
-                    href={`tel:${phoneNumber.replace(/\s/g, '')}`}
-                    className="flex items-center gap-3 text-sm text-foreground/80 hover:text-primary transition-colors group"
+                  <a
+                    href={`tel:${phoneNumber.replace(/\s/g, "")}`}
+                    className="flex items-center gap-3 text-sm text-foreground hover:text-primary transition-colors group"
                   >
                     <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <Phone className="w-4 h-4" />
@@ -65,11 +77,11 @@ const Footer = ({
                     <span>{phoneNumber}</span>
                   </a>
                 )}
-                
+
                 {email && (
-                  <a 
+                  <a
                     href={`mailto:${email}`}
-                    className="flex items-center gap-3 text-sm text-foreground/80 hover:text-primary transition-colors group"
+                    className="flex items-center gap-3 text-sm text-foreground hover:text-primary transition-colors group"
                   >
                     <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <Mail className="w-4 h-4" />
@@ -77,9 +89,9 @@ const Footer = ({
                     <span>{email}</span>
                   </a>
                 )}
-                
+
                 {address && (
-                  <div className="flex items-start gap-3 text-sm text-foreground/80">
+                  <div className="flex items-start gap-3 text-sm text-foreground">
                     <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                       <MapPin className="w-4 h-4" />
                     </div>
@@ -101,7 +113,9 @@ const Footer = ({
                       <a
                         href={link.url}
                         target={link.isExternal ? "_blank" : undefined}
-                        rel={link.isExternal ? "noopener noreferrer" : undefined}
+                        rel={
+                          link.isExternal ? "noopener noreferrer" : undefined
+                        }
                         className="text-sm text-muted-foreground hover:text-primary transition-colors"
                       >
                         {link.label}
@@ -120,7 +134,7 @@ const Footer = ({
             <p className="text-sm text-muted-foreground text-center md:text-left">
               © {currentYear} {companyName}. All rights reserved.
             </p>
-            
+
             {/* Social Links */}
             {socialLinks.length > 0 && (
               <div className="flex items-center gap-2">
@@ -134,7 +148,7 @@ const Footer = ({
                       className="w-9 h-9 rounded-lg hover:bg-primary/20"
                       asChild
                     >
-                      <a 
+                      <a
                         href={social.url}
                         target="_blank"
                         rel="noopener noreferrer"

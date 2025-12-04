@@ -59,9 +59,9 @@ export const Header = ({
             {/* Logo */}
             <a href="/" className="flex items-center gap-3 w-28 lg:w-40">
               {logo?.url ? (
-                <img 
-                  src={logo.url} 
-                  alt={logo.alternativeText || "Logo"} 
+                <img
+                  src={logo.url}
+                  alt={logo.alternativeText || "Logo"}
                   className="w-full h-auto"
                 />
               ) : (
@@ -80,7 +80,7 @@ export const Header = ({
                   href={item.url}
                   target={item.isExternal ? "_blank" : undefined}
                   rel={item.isExternal ? "noopener noreferrer" : undefined}
-                  className="text-sm text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+                  className="text-sm text-foreground hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
                 >
                   {item.label}
                 </a>
@@ -91,7 +91,7 @@ export const Header = ({
             <div className="hidden lg:flex items-center gap-4">
               {phoneNumber && (
                 <Button variant="ghost" size="sm" className="gap-2" asChild>
-                  <a href={`tel:${phoneNumber.replace(/\s/g, '')}`}>
+                  <a href={`tel:${phoneNumber.replace(/\s/g, "")}`}>
                     <Phone className="w-4 h-4" />
                     <span className="text-sm">{phoneNumber}</span>
                   </a>
@@ -102,7 +102,9 @@ export const Header = ({
                   <a
                     href={ctaButton.url}
                     target={ctaButton.isExternal ? "_blank" : undefined}
-                    rel={ctaButton.isExternal ? "noopener noreferrer" : undefined}
+                    rel={
+                      ctaButton.isExternal ? "noopener noreferrer" : undefined
+                    }
                   >
                     <Mail className="w-4 h-4" />
                     {ctaButton.label}
@@ -153,7 +155,7 @@ export const Header = ({
                   className="gap-2 justify-start"
                   asChild
                 >
-                  <a href={`tel:${phoneNumber.replace(/\s/g, '')}`}>
+                  <a href={`tel:${phoneNumber.replace(/\s/g, "")}`}>
                     <Phone className="w-4 h-4" />
                     <span className="text-sm">{phoneNumber}</span>
                   </a>
@@ -169,7 +171,9 @@ export const Header = ({
                   <a
                     href={ctaButton.url}
                     target={ctaButton.isExternal ? "_blank" : undefined}
-                    rel={ctaButton.isExternal ? "noopener noreferrer" : undefined}
+                    rel={
+                      ctaButton.isExternal ? "noopener noreferrer" : undefined
+                    }
                   >
                     <Mail className="w-4 h-4" />
                     {ctaButton.label}
