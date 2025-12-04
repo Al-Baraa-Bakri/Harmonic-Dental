@@ -56,7 +56,7 @@ const debounce = (func: Function, wait: number) => {
 };
 
 // Products per page constant
-const PRODUCTS_PER_PAGE = 9;
+const PRODUCTS_PER_PAGE = 6;
 
 const ProductsPage = ({
   heroTitle = "Our",
@@ -312,9 +312,8 @@ const ProductsPage = ({
                             alt={product.image.alternativeText || product.name}
                             loading="lazy"
                             decoding="async"
-                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 bg-muted"
+                            className="w-full h-full object-cover bg-muted"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
                         </>
                       ) : (
                         <div className="w-full h-full bg-muted flex items-center justify-center">
