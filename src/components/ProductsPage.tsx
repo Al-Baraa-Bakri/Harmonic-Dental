@@ -11,7 +11,6 @@ import { Badge } from "@/components/ui/badge";
 import {
   Box,
   ArrowLeft,
-  X,
   Crown,
   Layers,
   Gem,
@@ -21,6 +20,7 @@ import {
   ChevronRight,
   type LucideIcon,
 } from "lucide-react";
+import Model3DModal from "./Model3DModal";
 
 // Icon mapping by category slug or name
 const ICON_MAP: Record<string, LucideIcon> = {
@@ -75,8 +75,16 @@ const ProductsPage = ({
 
   const [selectedCategorySlug, setSelectedCategorySlug] =
     useState<string>(getInitialCategory);
-  const [activeModelId, setActiveModelId] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
+  const [modalState, setModalState] = useState<{
+    isOpen: boolean;
+    modelUrl: string;
+    productName: string;
+  }>({
+    isOpen: false,
+    modelUrl: "",
+    productName: "",
+  });
 
   // Debounced URL update
   const updateURL = useMemo(
@@ -135,9 +143,24 @@ const ProductsPage = ({
     setCurrentPage(1);
   }, [selectedCategorySlug]);
 
-  // Memoize toggle handler
-  const handleToggleModel = useCallback((productId: string) => {
-    setActiveModelId((prev) => (prev === productId ? null : productId));
+  // Memoize modal handlers
+  const handleOpenModal = useCallback(
+    (modelUrl: string, productName: string) => {
+      setModalState({
+        isOpen: true,
+        modelUrl,
+        productName,
+      });
+    },
+    []
+  );
+
+  const handleCloseModal = useCallback(() => {
+    setModalState({
+      isOpen: false,
+      modelUrl: "",
+      productName: "",
+    });
   }, []);
 
   // Memoize pagination handlers
@@ -192,6 +215,15 @@ const ProductsPage = ({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
+
+      {/* 3D Modal */}
+      <Model3DModal
+        isOpen={modalState.isOpen}
+        onClose={handleCloseModal}
+        modelUrl={modalState.modelUrl}
+        productName={modalState.productName}
+      />
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-b from-background via-background to-card/30 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(0_0%_20%_/_0.03)_1px,transparent_1px),linear-gradient(to_bottom,hsl(0_0%_20%_/_0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
@@ -264,7 +296,6 @@ const ProductsPage = ({
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {paginatedProducts.map((product: any, index: any) => {
               const Icon = getIconForCategory(product.category?.slug);
-              const isModelActive = activeModelId === product.slug;
 
               return (
                 <Card
@@ -272,49 +303,22 @@ const ProductsPage = ({
                   className="group overflow-hidden hover:border-primary/50 transition-all duration-500 hover-glow animate-fade-in"
                 >
                   <a href="#contact-us">
-                    {/* Product Image / 3D Model Container */}
+                    {/* Product Image */}
                     <div className="relative h-64 md:h-80 2xl:h-96 overflow-hidden">
-                      {/* Original Image */}
-                      <div
-                        className={`absolute inset-0 transition-opacity duration-500 ${
-                          isModelActive
-                            ? "opacity-0 pointer-events-none"
-                            : "opacity-100"
-                        }`}
-                      >
-                        {product.image?.url ? (
-                          <>
-                            <img
-                              src={product.image.url}
-                              alt={
-                                product.image.alternativeText || product.name
-                              }
-                              loading="lazy"
-                              decoding="async"
-                              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 bg-muted"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
-                          </>
-                        ) : (
-                          <div className="w-full h-full bg-muted flex items-center justify-center">
-                            <Icon className="w-20 h-20 text-muted-foreground/20" />
-                          </div>
-                        )}
-                      </div>
-
-                      {/* 3D Model Viewer (placeholder - implement when needed) */}
-                      {product.model3dUrl && (
-                        <div
-                          className={`absolute inset-0 transition-opacity duration-500 bg-muted flex items-center justify-center ${
-                            isModelActive
-                              ? "opacity-100"
-                              : "opacity-0 pointer-events-none"
-                          }`}
-                        >
-                          <p className="text-muted-foreground text-sm">
-                            3D Model View
-                          </p>
-                          {/* TODO: Integrate 3D viewer library here */}
+                      {product.image?.url ? (
+                        <>
+                          <img
+                            src={product.image.url}
+                            alt={product.image.alternativeText || product.name}
+                            loading="lazy"
+                            decoding="async"
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 bg-muted"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
+                        </>
+                      ) : (
+                        <div className="w-full h-full bg-muted flex items-center justify-center">
+                          <Icon className="w-20 h-20 text-muted-foreground/20" />
                         </div>
                       )}
 
@@ -332,19 +336,8 @@ const ProductsPage = ({
                         </Badge>
                       )}
 
-                      {/* Close Button (when 3D is active) */}
-                      {isModelActive && (
-                        <button
-                          onClick={() => handleToggleModel(product.slug)}
-                          className="absolute top-4 right-4 w-10 h-10 rounded-full bg-background/90 backdrop-blur-md border border-border hover:bg-background transition-colors flex items-center justify-center z-20"
-                          aria-label="Close 3D view"
-                        >
-                          <X className="w-5 h-5" />
-                        </button>
-                      )}
-
-                      {/* Category (only show when not in 3D mode) */}
-                      {!isModelActive && product.category && (
+                      {/* Category */}
+                      {product.category && (
                         <div className="absolute bottom-4 left-4 px-3 py-1 rounded-full bg-secondary border-0 z-10">
                           <span className="text-xs text-black">
                             {product.category.name}
@@ -387,12 +380,15 @@ const ProductsPage = ({
                       {/* 3D View Button */}
                       {product.model3dUrl && (
                         <Button
-                          variant={isModelActive ? "default" : "outline"}
-                          className="w-full gap-2 group/btn"
-                          onClick={() => handleToggleModel(product.slug)}
+                          variant="outline"
+                          className="w-full gap-2 group/btn shadow-2xl border border-primary"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleOpenModal(product.model3dUrl, product.name);
+                          }}
                         >
                           <Box className="w-4 h-4 transition-transform group-hover/btn:rotate-12" />
-                          {isModelActive ? "Back to Image" : "View in 3D"}
+                          View in 3D
                         </Button>
                       )}
                     </CardContent>
@@ -431,7 +427,6 @@ const ProductsPage = ({
                 <div className="flex items-center gap-1">
                   {Array.from({ length: totalPages }, (_, i) => i + 1)
                     .filter((page) => {
-                      // Show first page, last page, current page, and pages around current
                       return (
                         page === 1 ||
                         page === totalPages ||
@@ -439,7 +434,6 @@ const ProductsPage = ({
                       );
                     })
                     .map((page, index, array) => {
-                      // Add ellipsis if there's a gap
                       const prevPage = array[index - 1];
                       const showEllipsis = prevPage && page - prevPage > 1;
 
