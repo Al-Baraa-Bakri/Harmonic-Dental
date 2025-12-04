@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import {
   Card,
   CardContent,
@@ -17,6 +17,8 @@ import {
   Gem,
   Smile,
   Braces,
+  ChevronLeft,
+  ChevronRight,
   type LucideIcon,
 } from "lucide-react";
 
@@ -44,6 +46,18 @@ const getIconForCategory = (categorySlug?: string): LucideIcon => {
   return ICON_MAP[slug] || Box;
 };
 
+// Debounce utility
+const debounce = (func: Function, wait: number) => {
+  let timeout: NodeJS.Timeout;
+  return (...args: any[]) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
+};
+
+// Products per page constant
+const PRODUCTS_PER_PAGE = 9;
+
 const ProductsPage = ({
   heroTitle = "Our",
   heroHighlightedText = "Products",
@@ -62,19 +76,28 @@ const ProductsPage = ({
   const [selectedCategorySlug, setSelectedCategorySlug] =
     useState<string>(getInitialCategory);
   const [activeModelId, setActiveModelId] = useState<string | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Debounced URL update
+  const updateURL = useMemo(
+    () =>
+      debounce((slug: string) => {
+        if (typeof window === "undefined") return;
+        const url = new URL(window.location.href);
+        if (slug === "all") {
+          url.searchParams.delete("category");
+        } else {
+          url.searchParams.set("category", slug);
+        }
+        window.history.replaceState({}, "", url);
+      }, 300),
+    []
+  );
 
   // Update URL when category changes
   useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    const url = new URL(window.location.href);
-    if (selectedCategorySlug === "all") {
-      url.searchParams.delete("category");
-    } else {
-      url.searchParams.set("category", selectedCategorySlug);
-    }
-    window.history.replaceState({}, "", url);
-  }, [selectedCategorySlug]);
+    updateURL(selectedCategorySlug);
+  }, [selectedCategorySlug, updateURL]);
 
   // Listen for URL changes (browser back/forward)
   useEffect(() => {
@@ -88,45 +111,78 @@ const ProductsPage = ({
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
-  // Filter products by category (client-side)
-  const filteredProducts =
-    selectedCategorySlug === "all"
+  // Memoize filtered products
+  const filteredProducts = useMemo(() => {
+    return selectedCategorySlug === "all"
       ? productTypes
       : productTypes.filter(
           (product: any) =>
             product.category?.name?.toLowerCase() ===
             selectedCategorySlug.toLowerCase()
         );
+  }, [selectedCategorySlug, productTypes]);
 
-  const handleToggleModel = (productId: string) => {
-    setActiveModelId(activeModelId === productId ? null : productId);
-  };
+  // Paginate products
+  const paginatedProducts = useMemo(() => {
+    const startIndex = (currentPage - 1) * PRODUCTS_PER_PAGE;
+    return filteredProducts.slice(startIndex, startIndex + PRODUCTS_PER_PAGE);
+  }, [filteredProducts, currentPage]);
+
+  const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
+
+  // Reset to page 1 when category changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategorySlug]);
+
+  // Memoize toggle handler
+  const handleToggleModel = useCallback((productId: string) => {
+    setActiveModelId((prev) => (prev === productId ? null : productId));
+  }, []);
+
+  // Memoize pagination handlers
+  const handlePreviousPage = useCallback(() => {
+    setCurrentPage((p) => Math.max(1, p - 1));
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  const handleNextPage = useCallback(() => {
+    setCurrentPage((p) => Math.min(totalPages, p + 1));
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [totalPages]);
+
+  const handlePageClick = useCallback((page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "itemListElement": productTypes.map((product: any, index: number) => ({
+    itemListElement: productTypes.map((product: any, index: number) => ({
       "@type": "Product",
-      "name": product.name,
-      "description": product.description,
-      "image": product.image?.url,
-      "sku": product.id,
-      "mpn": product.id,
-      "brand": {
+      name: product.name,
+      description: product.description,
+      image: product.image?.url,
+      sku: product.id,
+      mpn: product.id,
+      brand: {
         "@type": "Brand",
-        "name": "Harmonic Dental"
+        name: "Harmonic Dental",
       },
-      "offers": {
+      offers: {
         "@type": "Offer",
-        "url": `https://www.harmonicdental.com/products`,
-        "priceCurrency": "USD",
-        "price": product.price || "0",
-        "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
-        "seller": {
+        url: `https://www.harmonicdental.com/products`,
+        priceCurrency: "USD",
+        price: product.price || "0",
+        availability: product.inStock
+          ? "https://schema.org/InStock"
+          : "https://schema.org/OutOfStock",
+        seller: {
           "@type": "Organization",
-          "name": "Harmonic Dental"
-        }
-      }
+          name: "Harmonic Dental",
+        },
+      },
     })),
   };
 
@@ -162,7 +218,7 @@ const ProductsPage = ({
 
       {/* Filter Section */}
       {categories.length > 0 && (
-        <section className="py-2 md:py-8 border-b border-border/50 bg-card/30 sticky top-20 z-40 backdrop-blur-xl">
+        <section className="py-2 md:py-8 border-b border-border/50 bg-card/30 sticky top-20 z-40 bg-white">
           <div className="container mx-auto px-6">
             <div className="flex flex-nowrap overflow-x-auto gap-2 md:gap-3">
               <Button
@@ -197,18 +253,23 @@ const ProductsPage = ({
       {/* Products Grid */}
       <section className="flex-1 py-12 md:py-16 lg:py-20">
         <div className="container mx-auto px-6">
+          {/* Results count */}
+          {filteredProducts.length > 0 && (
+            <div className="mb-6 text-sm text-muted-foreground">
+              Showing {paginatedProducts.length} of {filteredProducts.length}{" "}
+              products
+            </div>
+          )}
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {filteredProducts.map((product: any, index: any) => {
+            {paginatedProducts.map((product: any, index: any) => {
               const Icon = getIconForCategory(product.category?.slug);
               const isModelActive = activeModelId === product.slug;
 
               return (
                 <Card
                   key={product.id}
-                  className="group overflow-hidden hover:border-primary/50 transition-all duration-500 hover-glow"
-                  style={{
-                    animation: `fade-in 0.5s ease-out ${index * 0.1}s both`,
-                  }}
+                  className="group overflow-hidden hover:border-primary/50 transition-all duration-500 hover-glow animate-fade-in"
                 >
                   <a href="#contact-us">
                     {/* Product Image / 3D Model Container */}
@@ -229,6 +290,7 @@ const ProductsPage = ({
                                 product.image.alternativeText || product.name
                               }
                               loading="lazy"
+                              decoding="async"
                               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 bg-muted"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
@@ -283,7 +345,7 @@ const ProductsPage = ({
 
                       {/* Category (only show when not in 3D mode) */}
                       {!isModelActive && product.category && (
-                        <div className="absolute bottom-4 left-4 px-3 py-1 rounded-full bg-secondary  border-0 z-10">
+                        <div className="absolute bottom-4 left-4 px-3 py-1 rounded-full bg-secondary border-0 z-10">
                           <span className="text-xs text-black">
                             {product.category.name}
                           </span>
@@ -347,6 +409,75 @@ const ProductsPage = ({
                 {productTypes.length === 0
                   ? "No products available yet."
                   : "No products found in this category."}
+              </p>
+            </div>
+          )}
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="flex flex-col items-center gap-4 mt-12">
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={handlePreviousPage}
+                  disabled={currentPage === 1}
+                  aria-label="Previous page"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </Button>
+
+                {/* Page Numbers */}
+                <div className="flex items-center gap-1">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1)
+                    .filter((page) => {
+                      // Show first page, last page, current page, and pages around current
+                      return (
+                        page === 1 ||
+                        page === totalPages ||
+                        Math.abs(page - currentPage) <= 1
+                      );
+                    })
+                    .map((page, index, array) => {
+                      // Add ellipsis if there's a gap
+                      const prevPage = array[index - 1];
+                      const showEllipsis = prevPage && page - prevPage > 1;
+
+                      return (
+                        <div key={page} className="flex items-center gap-1">
+                          {showEllipsis && (
+                            <span className="px-2 text-muted-foreground">
+                              ...
+                            </span>
+                          )}
+                          <Button
+                            variant={
+                              currentPage === page ? "default" : "outline"
+                            }
+                            size="icon"
+                            onClick={() => handlePageClick(page)}
+                            className="w-10 h-10"
+                          >
+                            {page}
+                          </Button>
+                        </div>
+                      );
+                    })}
+                </div>
+
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={handleNextPage}
+                  disabled={currentPage === totalPages}
+                  aria-label="Next page"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </Button>
+              </div>
+
+              <p className="text-sm text-muted-foreground">
+                Page {currentPage} of {totalPages}
               </p>
             </div>
           )}
