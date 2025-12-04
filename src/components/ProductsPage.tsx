@@ -102,8 +102,40 @@ const ProductsPage = ({
     setActiveModelId(activeModelId === productId ? null : productId);
   };
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": productTypes.map((product: any, index: number) => ({
+      "@type": "Product",
+      "name": product.name,
+      "description": product.description,
+      "image": product.image?.url,
+      "sku": product.id,
+      "mpn": product.id,
+      "brand": {
+        "@type": "Brand",
+        "name": "Harmonic Dental"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": `https://www.harmonicdental.com/products`,
+        "priceCurrency": "USD",
+        "price": product.price || "0",
+        "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "Harmonic Dental"
+        }
+      }
+    })),
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-b from-background via-background to-card/30 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(0_0%_20%_/_0.03)_1px,transparent_1px),linear-gradient(to_bottom,hsl(0_0%_20%_/_0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
@@ -196,7 +228,8 @@ const ProductsPage = ({
                               alt={
                                 product.image.alternativeText || product.name
                               }
-                              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                              loading="lazy"
+                              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 bg-muted"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
                           </>

@@ -5,8 +5,11 @@ import { getProductsPage } from "@/lib/api/products-page";
 
 // Fetch products page data from Strapi
 const productsPageData = await getProductsPage();
+
+const title = `Our Products | Harmonic Dental`;
+const description = "Explore our wide range of dental prosthetics, including crowns, bridges, implants, and veneers, all crafted with precision and care.";
 ---
 
-<DefaultLayout>  
+<DefaultLayout {title} {description}>
     <ProductsPage {...productsPageData} client:load />
 </DefaultLayout>

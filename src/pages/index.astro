@@ -15,7 +15,10 @@ const techData = await getTechnologySection();
 const servicesDate = await getServicesSection();
 ---
 
-<DefaultLayout>
+<DefaultLayout
+  title="Harmonic Dental | High-Quality Dental Prosthetics"
+  description="Your trusted partner for precision-crafted crowns, bridges, implants, and veneers. We combine artistry with technology for exceptional results."
+>
   {heroData ? (
     <HeroSection 
       badgeText={heroData.badgeText}

@@ -6,10 +6,18 @@ import ContactUs from "@/sections/ContactUs";
 import { getHeaderNavigation } from "@/lib/api/header";
 import { getFooter } from "@/lib/api/footer";
 import { getContactSection } from "@/lib/api/contact";
+import SEO from "@/components/SEO.astro";
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
 
 const headerData = await getHeaderNavigation();
 const footerData = await getFooter();
-const contactData = await getContactSection(); 
+const contactData = await getContactSection();
 ---
 
 <!doctype html>
@@ -18,12 +26,38 @@ const contactData = await getContactSection();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Harmonic Dental</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <SEO title={title} description={description} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Harmonic Dental",
+      "description": "Your trusted partner for precision-crafted crowns, bridges, implants, and veneers. We combine artistry with technology for exceptional results.",
+      "url": "https://www.harmonicdl.com",
+      "logo": "https://www.harmonicdental.com/logo.png",
+      "image": "https://www.harmonicdental.com/logo.png",
+      "telephone": "+971 502298321", 
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Abu Dhabi, United Arab Emirates",
+        "addressRegion": "Abu Dhabi City",
+        "postalCode": "00000",
+        "addressCountry": "UAE"
+      },
+      "openingHours": "Mon-Sat 08am-7pm",
+      "sameAs": [
+        "https://www.facebook.com/harmonicdentallab",
+        "https://https://www.instagram.com/harmonicdentallab/",
+        "https://www.youtube.com/shorts/ucYA_YBliBY"
+      ]
+    })}>
+    </script>
   </head>
   <body>
     <Header {...headerData}/>
