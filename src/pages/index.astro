@@ -8,6 +8,7 @@ import Stats from "@/sections/Stats";
 
 import { getHeroSection, getOurStorySection, getServicesSection, getTechnologySection } from "../lib/api";
 import BeforeAfterSection from "@/sections/BeforeAfter";
+import DiplomasSection from "@/sections/Diploma";
 
 // Fetch data at build time
 const heroData = await getHeroSection();
@@ -44,4 +45,5 @@ const servicesDate = await getServicesSection();
   <!-- <WhyChooseUs /> -->
   <OurServices client:visible {...servicesDate}/>
   <BeforeAfterSection client:visible/>
+  <DiplomasSection />
 </DefaultLayout>
