@@ -51,6 +51,9 @@ const Footer = ({
                   <img
                     src={logo.url}
                     alt={logo.alternativeText || companyName}
+                    width={logo.width || 160}
+                    height={logo.height || 60}
+                    crossOrigin="anonymous"
                     className="w-full h-auto"
                   />
                 ) : (

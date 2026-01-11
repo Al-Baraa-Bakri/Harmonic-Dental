@@ -42,6 +42,10 @@ const DiplomasSection = () => {
                 <img
                   src="/Diploma.webp"
                   alt="Dental Laboratory Excellence Diploma"
+                  width="1920"
+                  height="1080"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-auto rounded-xl"
                 />
               </div>

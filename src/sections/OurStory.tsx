@@ -144,6 +144,11 @@ const StorySection = ({
                     alt={
                       storyImage.alternativeText || "Advanced dental technology"
                     }
+                    width={storyImage.width || 800}
+                    height={storyImage.height || 480}
+                    loading="lazy"
+                    decoding="async"
+                    crossOrigin="anonymous"
                     className="w-full h-[480px] object-cover rounded-[3rem] border-4 border-primary/30 group-hover:border-accent/50 transition-colors duration-500"
                   />
                 ) : null}

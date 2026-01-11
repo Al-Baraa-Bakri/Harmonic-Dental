@@ -310,8 +310,11 @@ const ProductsPage = ({
                           <img
                             src={product.image.url}
                             alt={product.image.alternativeText || product.name}
+                            width={product.image.width || 600}
+                            height={product.image.height || 400}
                             loading="lazy"
                             decoding="async"
+                            crossOrigin="anonymous"
                             className="w-full h-full object-cover bg-muted"
                           />
                         </>

@@ -112,6 +112,10 @@ const BeforeAfterSection = () => {
               <img
                 src="/before.webp"
                 alt="Before - Standard dental work"
+                width="1600"
+                height="1000"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover select-none"
                 draggable={false}
               />
@@ -129,6 +133,10 @@ const BeforeAfterSection = () => {
               <img
                 src="/after.webp"
                 alt="After - Denta precision craftsmanship"
+                width="1600"
+                height="1000"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover select-none"
                 draggable={false}
               />

@@ -15,4 +15,27 @@ export default defineConfig({
     react(),
     sitemap(),
   ],
+  vite: {
+    build: {
+      // Optimize chunk splitting
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            // Separate vendor chunks for better caching
+            'react-vendor': ['react', 'react-dom'],
+            'framer-motion': ['framer-motion'],
+            'lucide': ['lucide-react'],
+          },
+        },
+      },
+      // Increase chunk size warning limit
+      chunkSizeWarningLimit: 1000,
+      // Enable CSS code splitting
+      cssCodeSplit: true,
+    },
+    // Optimize dependencies
+    optimizeDeps: {
+      include: ['react', 'react-dom', 'framer-motion', 'lucide-react'],
+    },
+  },
 });

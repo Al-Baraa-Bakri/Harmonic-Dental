@@ -258,7 +258,11 @@ const ProductCard = memo<{ product: StrapiProduct; index: number }>(
             <img
               src={product.image.url}
               alt={product.image.alternativeText || product.name}
+              width={product.image.width || 400}
+              height={product.image.height || 300}
               loading="lazy"
+              decoding="async"
+              crossOrigin="anonymous"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
           ) : (
@@ -283,9 +287,9 @@ const ProductCard = memo<{ product: StrapiProduct; index: number }>(
 
         {/* Product Info */}
         <div className="p-3">
-          <h3 className="text-base font-bold mb-0.5 group-hover:text-gradient transition-all duration-300">
+          <h2 className="text-base font-bold mb-0.5 group-hover:text-gradient transition-all duration-300">
             {product.name}
-          </h3>
+          </h2>
           <p className="text-xs text-muted-foreground">{product.description}</p>
         </div>
 

@@ -62,6 +62,9 @@ export const Header = ({
                 <img
                   src={logo.url}
                   alt={logo.alternativeText || "Logo"}
+                  width={logo.width || 160}
+                  height={logo.height || 60}
+                  crossOrigin="anonymous"
                   className="w-full h-auto"
                 />
               ) : (

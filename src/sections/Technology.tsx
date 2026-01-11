@@ -278,9 +278,12 @@ const ProcessStepCard = ({
                 <img
                   src={step.image.url}
                   alt={step.image.alternativeText || step.title}
+                  width={step.image.width || 400}
+                  height={step.image.height || 300}
                   loading="lazy"
-                  className="w-full h-full object-cover"
                   decoding="async"
+                  crossOrigin="anonymous"
+                  className="w-full h-full object-cover"
                 />
               ) : (
                 <div className="w-full h-full bg-muted flex items-center justify-center">

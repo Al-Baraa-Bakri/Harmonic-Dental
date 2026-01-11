@@ -64,24 +64,22 @@ const ContactSection = ({
                 </div>
                 <div className="space-y-4">
                   {emails.map((item: any, index: any) => (
-                    <div
+                    <a
                       key={item.id}
-                      className="group/item p-4 bg-background/50 rounded-lg hover:bg-primary/10 transition-all duration-300 hover:-translate-y-1"
-                      style={{ animationDelay: `${0.3 + index * 0.1}s` }}
+                      href={`mailto:${item.value}`}
+                      className="group/item block p-4 bg-background/50 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:bg-primary/10"
+                      style={{ animationDelay: `${0.5 + index * 0.1}s` }}
                     >
                       <p className="text-sm text-muted-foreground mb-1">
                         {item.label}
                       </p>
-                      <a
-                        href={`mailto:${item.value}`}
-                        className="text-foreground font-medium hover:text-primary transition-colors duration-200 flex items-center gap-2 group-hover/item:gap-3"
-                      >
+                      <div className="text-foreground font-medium transition-colors duration-200 flex items-center gap-2 group-hover/item:gap-3 group-hover/item:text-primary">
                         {item.value}
                         <span className="text-primary opacity-0 group-hover/item:opacity-100 transition-all duration-300">
                           →
                         </span>
-                      </a>
-                    </div>
+                      </div>
+                    </a>
                   ))}
                 </div>
               </div>

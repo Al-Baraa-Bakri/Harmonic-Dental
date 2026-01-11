@@ -156,6 +156,11 @@ const TechnologyPage = ({
                               <img
                                 src={item.image.url}
                                 alt={item.image.alternativeText || item.name}
+                                width={item.image.width || 600}
+                                height={item.image.height || 400}
+                                loading="lazy"
+                                decoding="async"
+                                crossOrigin="anonymous"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                               />
                               <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />

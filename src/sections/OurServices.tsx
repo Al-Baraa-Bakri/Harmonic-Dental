@@ -186,6 +186,7 @@ const OurServices = ({
                   width={service.image.width}
                   height={service.image.height}
                   loading="lazy"
+                  crossOrigin="anonymous"
                 />
               )}
 
@@ -232,6 +233,9 @@ const OurServices = ({
                     <img
                       src={service.image.url}
                       alt={service.image.alternativeText || service.title}
+                      width={service.image.width}
+                      height={service.image.height}
+                      crossOrigin="anonymous"
                       className="w-full h-full object-cover"
                     />
                   ) : (
