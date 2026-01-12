@@ -87,12 +87,7 @@ const getIconForProduct = (product: StrapiProduct): LucideIcon => {
   return Box;
 };
 
-// Utility functions
-const getAnimationStyle = (fadeDelay: number, scaleDelay?: number) => ({
-  animation: `fade-in 0.6s ease-out ${fadeDelay}s both${
-    scaleDelay ? `, scale-in 0.4s ease-out ${scaleDelay}s both` : ""
-  }`,
-});
+// Animation styles removed for better LCP performance
 
 // Memoized sub-components
 const BackgroundLayer = memo(
@@ -111,10 +106,7 @@ const BackgroundLayer = memo(
 BackgroundLayer.displayName = "BackgroundLayer";
 
 const HeroBadge = memo(({ badgeText }: { badgeText: string }) => (
-  <div
-    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6"
-    style={getAnimationStyle(0.2, 0.2)}
-  >
+  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
     <Sparkles className="w-4 h-4 text-primary animate-pulse" />
     <span className="text-sm text-foreground/90">{badgeText}</span>
   </div>
@@ -133,23 +125,14 @@ const HeroHeading = memo(
     subtitle: string;
   }) => (
     <>
-      <h1
-        className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
-        style={getAnimationStyle(0.4)}
-      >
+      <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
         {mainHeading}{" "}
-        <span
-          className="block text-gradient mt-2 leading-[130%]"
-          style={getAnimationStyle(0.6)}
-        >
+        <span className="block text-gradient mt-2 leading-[130%]">
           {highlightedText}
         </span>
       </h1>
 
-      <p
-        className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed"
-        style={getAnimationStyle(0.8)}
-      >
+      <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
         {subtitle}
       </p>
     </>
@@ -169,10 +152,7 @@ const CTAButtons = memo(
     if (!primaryButton && !secondaryButton) return null;
 
     return (
-      <div
-        className="flex flex-col sm:flex-row gap-4 mb-12"
-        style={getAnimationStyle(1, 1)}
-      >
+      <div className="flex flex-col sm:flex-row gap-4 mb-12">
         {primaryButton && (
           <Button variant="hero" size="lg" className="group capitalize" asChild>
             <a
@@ -211,7 +191,7 @@ const CTAButtons = memo(
 CTAButtons.displayName = "CTAButtons";
 
 const StatItem = memo<{ stat: StrapiStat }>(({ stat }) => (
-  <div className="flex flex-col" style={getAnimationStyle(1.5, 1.5)}>
+  <div className="flex flex-col">
     <div className="text-3xl font-bold text-gradient mb-1">{stat.value}</div>
     <div className="text-xs text-muted-foreground capitalize">{stat.label}</div>
   </div>
@@ -250,7 +230,6 @@ const ProductCard = memo<{ product: StrapiProduct; index: number }>(
       <a
         href={`/products?category=${encodeURIComponent(product.name)}`}
         className="group relative overflow-hidden rounded-xl bg-card/80 backdrop-blur-sm border border-primary/20 hover:border-primary/50 transition-all duration-500 hover-glow cursor-pointer block"
-        style={getAnimationStyle(animationDelay, animationDelay)}
       >
         {/* Product Image */}
         <div className="relative h-32 lg:h-36 overflow-hidden">
@@ -260,7 +239,8 @@ const ProductCard = memo<{ product: StrapiProduct; index: number }>(
               alt={product.image.alternativeText || product.name}
               width={product.image.width || 400}
               height={product.image.height || 300}
-              loading="lazy"
+              loading={index < 3 ? "eager" : "lazy"}
+              fetchPriority={index < 3 ? "high" : "auto"}
               decoding="async"
               crossOrigin="anonymous"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

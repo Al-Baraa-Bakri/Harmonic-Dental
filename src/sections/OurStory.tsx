@@ -146,7 +146,8 @@ const StorySection = ({
                     }
                     width={storyImage.width || 800}
                     height={storyImage.height || 480}
-                    loading="lazy"
+                    loading="eager"
+                    fetchPriority="high"
                     decoding="async"
                     crossOrigin="anonymous"
                     className="w-full h-[480px] object-cover rounded-[3rem] border-4 border-primary/30 group-hover:border-accent/50 transition-colors duration-500"
