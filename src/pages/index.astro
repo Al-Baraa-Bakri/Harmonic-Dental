@@ -4,7 +4,6 @@ import HeroSection from "../sections/Hero";
 import OurStory from "@/sections/OurStory";
 import TechnologySection from "@/sections/Technology";
 import OurServices from "@/sections/OurServices";
-import Stats from "@/sections/Stats";
 
 import { getHeroSection, getOurStorySection, getServicesSection, getTechnologySection } from "../lib/api";
 import BeforeAfterSection from "@/sections/BeforeAfter";
@@ -42,7 +41,6 @@ const servicesDate = await getServicesSection();
   
   <TechnologySection {...techData} client:load/>
   <OurStory {...storyData} />
-  <!-- <WhyChooseUs /> -->
   <OurServices client:visible {...servicesDate}/>
   <BeforeAfterSection client:visible/>
   <DiplomasSection />
