@@ -218,6 +218,7 @@ const ProductsPage = ({
 
       {/* 3D Modal */}
       <Model3DModal
+        key={modalState.modelUrl}
         isOpen={modalState.isOpen}
         onClose={handleCloseModal}
         modelUrl={modalState.modelUrl}
