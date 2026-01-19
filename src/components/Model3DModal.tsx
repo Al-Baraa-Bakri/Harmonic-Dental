@@ -12,6 +12,7 @@ interface Model3DModalProps {
   onClose: () => void;
   modelUrl: string;
   productName: string;
+  modelColor?: string; // Optional color (e.g., "#ff0000" for red, or "0xff0000")
 }
 
 const Model3DModal = ({
@@ -19,6 +20,7 @@ const Model3DModal = ({
   onClose,
   modelUrl,
   productName,
+  modelColor,
 }: Model3DModalProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<THREE.Scene | null>(null);
@@ -95,8 +97,36 @@ const Model3DModal = ({
     directionalLight2.position.set(-5, 5, -5);
     scene.add(directionalLight2);
 
-    // Load model based on extension
-    const extension = modelUrl.split(".").pop()?.toLowerCase();
+    // Detect model format from URL
+    const detectModelFormat = (url: string): string | null => {
+      // First, try to get extension from filename
+      const urlLower = url.toLowerCase();
+      const fileExtMatch = urlLower.match(/\.([a-z0-9]+)(?:[?#]|$)/i);
+      if (fileExtMatch) {
+        const ext = fileExtMatch[1];
+        if (['stl', 'obj', 'glb', 'gltf'].includes(ext)) {
+          return ext;
+        }
+      }
+      
+      // If no valid extension, check if format is in the URL path
+      if (urlLower.includes('/stl/') || urlLower.includes('/stl')) {
+        return 'stl';
+      }
+      if (urlLower.includes('/obj/') || urlLower.includes('/obj')) {
+        return 'obj';
+      }
+      if (urlLower.includes('/glb/') || urlLower.includes('/glb')) {
+        return 'glb';
+      }
+      if (urlLower.includes('/gltf/') || urlLower.includes('/gltf')) {
+        return 'gltf';
+      }
+      
+      return null;
+    };
+
+    const extension = detectModelFormat(modelUrl);
     setIsLoading(true);
     setError(null);
 
@@ -145,10 +175,33 @@ const Model3DModal = ({
         modelUrl,
         (geometry) => {
           geometry.center();
+          
+          // Check if geometry has vertex colors
+          const hasVertexColors = geometry.hasAttribute('color');
+          
+          // Determine color to use
+          let materialColor = 0xe8e8e8; // Default grey
+          
+          if (hasVertexColors) {
+            materialColor = 0xffffff; // White base for vertex colors
+          } else if (modelColor) {
+            // Parse modelColor - support both hex string "#ff0000" and number "0xff0000"
+            if (typeof modelColor === 'string') {
+              if (modelColor.startsWith('#')) {
+                materialColor = parseInt(modelColor.substring(1), 16);
+              } else if (modelColor.startsWith('0x')) {
+                materialColor = parseInt(modelColor, 16);
+              } else {
+                materialColor = parseInt(modelColor, 16);
+              }
+            }
+          }
+          
           const material = new THREE.MeshStandardMaterial({
-            color: 0xe8e8e8,
-            roughness: 0.3,
-            metalness: 0.5,
+            color: materialColor,
+            roughness: 0.4,
+            metalness: 0.2,
+            vertexColors: hasVertexColors,
           });
           const mesh = new THREE.Mesh(geometry, material);
           onLoadSuccess(mesh);
@@ -161,13 +214,41 @@ const Model3DModal = ({
       loader.load(
         modelUrl,
         (object) => {
+          // Parse modelColor if provided
+          let defaultColor = 0xe8e8e8;
+          if (modelColor) {
+            if (typeof modelColor === 'string') {
+              if (modelColor.startsWith('#')) {
+                defaultColor = parseInt(modelColor.substring(1), 16);
+              } else if (modelColor.startsWith('0x')) {
+                defaultColor = parseInt(modelColor, 16);
+              } else {
+                defaultColor = parseInt(modelColor, 16);
+              }
+            }
+          }
+          
           object.traverse((child) => {
             if (child instanceof THREE.Mesh) {
-              child.material = new THREE.MeshStandardMaterial({
-                color: 0xe8e8e8,
-                roughness: 0.3,
-                metalness: 0.5,
-              });
+              // Only apply default material if no material exists
+              if (!child.material || (child.material as THREE.Material).type === 'MeshBasicMaterial') {
+                child.material = new THREE.MeshStandardMaterial({
+                  color: defaultColor,
+                  roughness: 0.4,
+                  metalness: 0.2,
+                });
+              } else {
+                // Preserve existing material but ensure it's properly lit
+                if (child.material instanceof THREE.MeshBasicMaterial) {
+                  const oldMaterial = child.material;
+                  child.material = new THREE.MeshStandardMaterial({
+                    color: oldMaterial.color,
+                    map: oldMaterial.map,
+                    roughness: 0.4,
+                    metalness: 0.2,
+                  });
+                }
+              }
             }
           });
           onLoadSuccess(object);
@@ -185,6 +266,15 @@ const Model3DModal = ({
         onLoadProgress,
         onLoadError
       );
+    } else {
+      // No valid extension found
+      console.error("❌ Unsupported or missing file extension:", extension);
+      setError(
+        `Unsupported file format: ${
+          extension || "unknown"
+        }. Please use .stl, .obj, .glb, or .gltf files.`
+      );
+      setIsLoading(false);
     }
 
     // Animation loop
