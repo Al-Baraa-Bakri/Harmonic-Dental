@@ -82,7 +82,7 @@ export async function getProductsPage(): Promise<ProcessedProductsPage | null> {
     if (Array.isArray(attrs.product_types) && attrs.product_types.length > 0) {
       // Fetch all product types with their relations
       const productTypesResponse = await fetchAPI<StrapiResponse<any[]>>(
-        "/product-types",
+        "/product-types?pagination[limit]=100",
         {
           populate: ["image", "category", "features"],
           filters: {

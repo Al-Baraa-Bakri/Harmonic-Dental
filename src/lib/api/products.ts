@@ -23,7 +23,6 @@ export async function getAllProducts(
       console.warn('[Products API] No products found');
       return [];
     }
-
     return response.data.map((product) => processProduct(product));
   } catch (error) {
     console.error('[Products API] Error fetching products:', error);
