@@ -85,6 +85,7 @@ const ProductsPage = ({
     modelUrl: "",
     productName: "",
   });
+  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
 
   // Debounced URL update
   const updateURL = useMemo(
@@ -143,6 +144,11 @@ const ProductsPage = ({
     setCurrentPage(1);
   }, [selectedCategorySlug]);
 
+  // Reset loaded images when pagination changes
+  useEffect(() => {
+    setLoadedImages(new Set());
+  }, [currentPage, selectedCategorySlug]);
+
   // Memoize modal handlers
   const handleOpenModal = useCallback(
     (modelUrl: string, productName: string) => {
@@ -177,6 +183,11 @@ const ProductsPage = ({
   const handlePageClick = useCallback((page: number) => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  // Handle image load
+  const handleImageLoad = useCallback((imageUrl: string) => {
+    setLoadedImages((prev) => new Set(prev).add(imageUrl));
   }, []);
 
   const productSchema = {
@@ -305,9 +316,26 @@ const ProductsPage = ({
                 >
                   <a href="#contact-us">
                     {/* Product Image */}
-                    <div className="relative h-64 md:h-80 2xl:h-96 overflow-hidden">
+                    <div className="relative h-64 md:h-80 2xl:h-96 overflow-hidden bg-muted">
                       {product.image?.url ? (
                         <>
+                          {/* Blurred placeholder background */}
+                          <div
+                            className={`absolute inset-0 transition-opacity duration-500 ${
+                              loadedImages.has(product.image.url)
+                                ? "opacity-0"
+                                : "opacity-100"
+                            }`}
+                            style={{
+                              backgroundImage: `url(${product.image.url})`,
+                              backgroundSize: "cover",
+                              backgroundPosition: "center",
+                              filter: "blur(20px)",
+                              transform: "scale(1.1)",
+                            }}
+                          />
+                          
+                          {/* Main image */}
                           <img
                             src={product.image.url}
                             alt={product.image.alternativeText || product.name}
@@ -316,7 +344,12 @@ const ProductsPage = ({
                             loading="lazy"
                             decoding="async"
                             crossOrigin="anonymous"
-                            className="w-full h-full object-cover bg-muted"
+                            onLoad={() => handleImageLoad(product.image.url)}
+                            className={`relative w-full h-full  transition-opacity duration-500 ${
+                              loadedImages.has(product.image.url)
+                                ? "opacity-100"
+                                : "opacity-0"
+                            }`}
                           />
                         </>
                       ) : (
