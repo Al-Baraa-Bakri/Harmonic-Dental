@@ -2,6 +2,7 @@
 
 import qs from 'qs';
 import type { ImageData } from '../types/strapi';
+import { getCachedData, setCachedData } from './strapi-cache';
 
 const STRAPI_URL = import.meta.env.STRAPI_URL || 'http://localhost:1337';
 
@@ -11,6 +12,12 @@ export async function fetchAPI<T>(
   options: RequestInit = {}
 ): Promise<T> {
   try {
+    // Check cache first
+    const cachedData = getCachedData<T>(path, urlParamsObject);
+    if (cachedData) {
+      return cachedData;
+    }
+
     const queryString = qs.stringify(urlParamsObject, { 
       encodeValuesOnly: true,
     });
@@ -18,6 +25,8 @@ export async function fetchAPI<T>(
     const requestUrl = `${STRAPI_URL}/api${path}${
       queryString ? `?${queryString}` : ''
     }`;
+
+    console.log(`[Strapi API] 🌐 Fetching from: ${path}`);
 
     const response = await fetch(requestUrl, {
       headers: { 'Content-Type': 'application/json' },
@@ -29,6 +38,9 @@ export async function fetchAPI<T>(
     }
 
     const data = await response.json();
+    
+    // Save to cache
+    setCachedData(path, urlParamsObject, data);
     
     return data;
   } catch (error) {
