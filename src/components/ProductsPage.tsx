@@ -21,6 +21,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import Model3DModal from "./Model3DModal";
+import { getResponsiveImageUrl } from "@/lib/strapi";
 
 // Icon mapping by category slug or name
 const ICON_MAP: Record<string, LucideIcon> = {
@@ -85,7 +86,6 @@ const ProductsPage = ({
     modelUrl: "",
     productName: "",
   });
-  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
 
   // Debounced URL update
   const updateURL = useMemo(
@@ -144,11 +144,6 @@ const ProductsPage = ({
     setCurrentPage(1);
   }, [selectedCategorySlug]);
 
-  // Reset loaded images when pagination changes
-  useEffect(() => {
-    setLoadedImages(new Set());
-  }, [currentPage, selectedCategorySlug]);
-
   // Memoize modal handlers
   const handleOpenModal = useCallback(
     (modelUrl: string, productName: string) => {
@@ -183,11 +178,6 @@ const ProductsPage = ({
   const handlePageClick = useCallback((page: number) => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-
-  // Handle image load
-  const handleImageLoad = useCallback((imageUrl: string) => {
-    setLoadedImages((prev) => new Set(prev).add(imageUrl));
   }, []);
 
   const productSchema = {
@@ -305,53 +295,53 @@ const ProductsPage = ({
             </div>
           )}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center">
             {paginatedProducts.map((product: any, index: any) => {
               const Icon = getIconForCategory(product.category?.slug);
+              
+              // Build responsive image URLs and srcset
+              const imageUrl = product.image?.url || '';
+              const mediumUrl = getResponsiveImageUrl(product.image, 'medium');
+              const smallUrl = getResponsiveImageUrl(product.image, 'small');
+              const largeUrl = getResponsiveImageUrl(product.image, 'large');
+              
+              // Create srcset for responsive loading
+              const srcSet = [
+                smallUrl && `${smallUrl} 500w`,
+                mediumUrl && `${mediumUrl} 750w`,
+                largeUrl && `${largeUrl} 1000w`,
+                imageUrl && `${imageUrl} 1920w`,
+              ]
+                .filter(Boolean)
+                .join(', ');
 
               return (
                 <Card
                   key={product.id}
-                  className="group overflow-hidden hover:border-primary/50 transition-all duration-500 hover-glow animate-fade-in"
+                  className="group overflow-hidden hover:border-primary/50 transition-all duration-500 hover-glow animate-fade-in max-w-[380px] md:max-w-fit"
                 >
                   <a href="#contact-us">
                     {/* Product Image */}
                     <div className="relative h-64 md:h-80 2xl:h-96 overflow-hidden bg-muted">
                       {product.image?.url ? (
-                        <>
-                          {/* Blurred placeholder background */}
-                          <div
-                            className={`absolute inset-0 transition-opacity duration-500 ${
-                              loadedImages.has(product.image.url)
-                                ? "opacity-0"
-                                : "opacity-100"
-                            }`}
-                            style={{
-                              backgroundImage: `url(${product.image.url})`,
-                              backgroundSize: "cover",
-                              backgroundPosition: "center",
-                              filter: "blur(20px)",
-                              transform: "scale(1.1)",
-                            }}
-                          />
-                          
-                          {/* Main image */}
-                          <img
-                            src={product.image.url}
-                            alt={product.image.alternativeText || product.name}
-                            width={product.image.width || 600}
-                            height={product.image.height || 400}
-                            loading="lazy"
-                            decoding="async"
-                            crossOrigin="anonymous"
-                            onLoad={() => handleImageLoad(product.image.url)}
-                            className={`relative w-full h-full  transition-opacity duration-500 ${
-                              loadedImages.has(product.image.url)
-                                ? "opacity-100"
-                                : "opacity-0"
-                            }`}
-                          />
-                        </>
+                        <img
+                          // src="/test.png"
+                          src={mediumUrl || imageUrl}
+                          srcSet={srcSet || undefined}
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          alt={product.image.alternativeText || product.name}
+                          width={product.image.width || 600}
+                          height={product.image.height || 400}
+                          loading={index < 2 ? "eager" : "lazy"}
+                          decoding="async"
+                          fetchPriority={index === 0 ? "high" : "auto"}
+                          crossOrigin="anonymous"
+                          className="w-full h-full object-cover"
+                          style={{
+                            contentVisibility: 'auto',
+                            willChange: 'auto',
+                          }}
+                        />
                       ) : (
                         <div className="w-full h-full bg-muted flex items-center justify-center">
                           <Icon className="w-20 h-20 text-muted-foreground/20" />

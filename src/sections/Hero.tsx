@@ -224,7 +224,6 @@ StatsGrid.displayName = "StatsGrid";
 const ProductCard = memo<{ product: StrapiProduct; index: number }>(
   ({ product, index }) => {
     const Icon = getIconForProduct(product);
-    const animationDelay = 0.8 + index * 0.1;
 
     return (
       <a
@@ -296,7 +295,7 @@ const ProductsShowcase = memo(({ products }: { products: StrapiProduct[] }) => {
   });
 
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
+    <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4 max-w-[400px] md:max-w-fit m-auto">
       {sortedProducts.map((product, index) => (
         <ProductCard key={product.id} product={product} index={index} />
       ))}

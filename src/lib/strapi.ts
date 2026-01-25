@@ -13,7 +13,7 @@ export async function fetchAPI<T>(
 ): Promise<T> {
   try {
     // Check cache first
-    const cachedData = getCachedData<T>(path, urlParamsObject);
+    const cachedData = await getCachedData<T>(path, urlParamsObject);
     if (cachedData) {
       return cachedData;
     }
@@ -39,7 +39,7 @@ export async function fetchAPI<T>(
 
     const data = await response.json();
     
-    // Save to cache
+    // Save to cache (fire and forget)
     setCachedData(path, urlParamsObject, data);
     
     return data;
@@ -56,6 +56,7 @@ export function getStrapiURL(url?: string | null): string | null {
 }
 
 // Updated to handle both formats: direct object or wrapped in data
+// Now includes responsive image formats (thumbnail, small, medium, large)
 export function getImageData(media?: any): ImageData | null {
   if (!media) return null;
   
@@ -66,6 +67,7 @@ export function getImageData(media?: any): ImageData | null {
       alternativeText: media.alternativeText || media.name || '',
       width: media.width || 0,
       height: media.height || 0,
+      formats: media.formats || null, // Include responsive formats
     };
   }
   
@@ -82,6 +84,7 @@ export function getImageData(media?: any): ImageData | null {
         alternativeText: imageData.attributes.alternativeText || '',
         width: imageData.attributes.width || 0,
         height: imageData.attributes.height || 0,
+        formats: imageData.attributes.formats || null,
       };
     }
     
@@ -91,10 +94,40 @@ export function getImageData(media?: any): ImageData | null {
       alternativeText: imageData.alternativeText || imageData.name || '',
       width: imageData.width || 0,
       height: imageData.height || 0,
+      formats: imageData.formats || null,
     };
   }
   
   return null;
+}
+
+// Helper to get the best image format for specific use case
+export function getResponsiveImageUrl(
+  imageData: ImageData | null | undefined,
+  preferredSize: 'thumbnail' | 'small' | 'medium' | 'large' = 'medium'
+): string | null {
+  if (!imageData) return null;
+  
+  // If formats exist, try to get the preferred size
+  if (imageData.formats) {
+    const format = imageData.formats[preferredSize];
+    if (format?.url) {
+      return getStrapiURL(format.url);
+    }
+    
+    // Fallback to next available size
+    const fallbackOrder: Array<'thumbnail' | 'small' | 'medium' | 'large'> = 
+      ['large', 'medium', 'small', 'thumbnail'];
+    
+    for (const size of fallbackOrder) {
+      if (imageData.formats[size]?.url) {
+        return getStrapiURL(imageData.formats[size].url);
+      }
+    }
+  }
+  
+  // Fallback to original URL
+  return imageData.url;
 }
 
 // Handle multiple images

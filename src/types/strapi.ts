@@ -122,6 +122,12 @@ export interface ImageData {
   alternativeText: string;
   width: number;
   height: number;
+  formats?: {
+    thumbnail?: ImageFormat;
+    small?: ImageFormat;
+    medium?: ImageFormat;
+    large?: ImageFormat;
+  } | null;
 }
 
 export interface ProcessedProduct {
