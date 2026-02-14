@@ -19,6 +19,7 @@ export interface ProcessedContactSection {
   locationTitle?: string;
   address?: string;
   mapUrl?: string;
+  locations?: string[];
 }
 
 /**
@@ -45,7 +46,7 @@ export async function getContactSection(): Promise<ProcessedContactSection | nul
     const response = await fetchAPI<StrapiResponse<any>>(
       '/contact-section',
       {
-        populate: ['emails', 'phones'],
+        populate: ['emails', 'phones', 'locations'],
       }
     );
 
@@ -56,6 +57,21 @@ export async function getContactSection(): Promise<ProcessedContactSection | nul
 
     const attrs = response.data;
 
+    console.log('locations', attrs.locations);
+    // Process locations
+    const locations = Array.isArray(attrs.locations)
+      ? attrs.locations
+          .map((item: any) => ({
+            id: item.id,
+            text: item.text || '',
+          }))
+          .sort((a: any, b: any) => {
+            // Sort by order (1 is first, 0 is last)
+            const orderA = a.order === 0 ? 999 : a.order;
+            const orderB = b.order === 0 ? 999 : b.order;
+            return orderA - orderB;
+          })
+      : [];
 
     // Process emails
     const emails = Array.isArray(attrs.emails)
@@ -102,6 +118,7 @@ export async function getContactSection(): Promise<ProcessedContactSection | nul
       locationTitle: attrs.locationTitle || undefined,
       address: attrs.locationTitle || undefined,
       mapUrl: attrs.address || undefined,
+      locations,
     };
 
     return result;

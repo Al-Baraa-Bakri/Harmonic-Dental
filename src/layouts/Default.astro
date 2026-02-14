@@ -8,6 +8,7 @@ import { getFooter } from "@/lib/api/footer";
 import { getContactSection } from "@/lib/api/contact";
 import SEO from "@/components/SEO.astro";
 import CriticalCSS from "@/components/CriticalCSS.astro";
+import { Toaster } from "@/components/ui/Toaster";
 
 export interface Props {
   title?: string;
@@ -79,7 +80,9 @@ const contactData = await getContactSection();
       <main>
         <slot />
       </main>
+    <!-- <InquiryFormSection client:visible/> -->
     <ContactUs {...contactData}/>
     <Footer {...footerData} />
+    <Toaster client:load />
   </body>
 </html>

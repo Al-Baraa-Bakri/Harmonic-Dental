@@ -10,6 +10,7 @@ const ContactSection = ({
   phones = [],
   locationTitle,
   mapUrl,
+  locations = []
 }: any) => {
   return (
     <section
@@ -141,10 +142,42 @@ const ContactSection = ({
                 </h3>
               </div>
             )}
-            <GoogleMap
+            {/* <GoogleMap
               embedUrl={mapUrl}
               title={locationTitle || "Our Location"}
-            />
+            /> */}
+
+            {locations.length > 0 && (
+              <div className="grid md:grid-cols-2 gap-6 mt-8">
+                {locations.map((location: any, index: any) => (
+                  <div
+                    key={location.id}
+                    className="group relative animate-fade-in"
+                    style={{ animationDelay: `${0.7 + index * 0.1}s` }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                    <div className="relative bg-gradient-to-br from-card/90 to-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl">
+                      <div className="flex items-center gap-4">
+                        <div className="p-3 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                          <MapPin className="w-5 h-5 text-primary" />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-200">
+                            {location.text}
+                          </h4>
+                          {location.description && (
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                              {location.description}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
           </div>
         )}
       </div>

@@ -1,5 +1,6 @@
-import { fetchAPI, getImageData } from '../strapi';
+import { fetchAPI, getImageData, getImagesData } from '../strapi';
 import type { StrapiResponse } from '../../types/strapi';
+import type { ImageData } from '../../types/strapi';
 
 // Types
 export interface TechnologyFeature {
@@ -13,12 +14,7 @@ export interface ProcessedTechnologyItem {
   name: string;
   slug: string;
   description: string;
-  image?: {
-    url: string;
-    alternativeText: string;
-    width: number;
-    height: number;
-  };
+  images: ImageData[];
   badge?: string;
   features: TechnologyFeature[];
   detailedDescription?: string;
@@ -105,12 +101,38 @@ export async function getTechnologyPage(): Promise<ProcessedTechnologyPage | nul
             })
         : [];
 
+      // Process images - handle multiple images or duplicate single image
+      let images: ImageData[] = [];
+      if (item.image) {
+        // Extract raw image data and sort by createdAt (oldest first)
+        let rawImages: any[] = [];
+        
+        // Handle different image data structures from Strapi
+        if (Array.isArray(item.image)) {
+          rawImages = item.image;
+        } else if (item.image.data) {
+          rawImages = Array.isArray(item.image.data) ? item.image.data : [item.image.data];
+        } else {
+          rawImages = [item.image];
+        }
+        
+        // Sort images by createdAt (oldest first - first created shows first)
+        rawImages.sort((a: any, b: any) => {
+          const createdAtA = a.createdAt || a.attributes?.createdAt || '';
+          const createdAtB = b.createdAt || b.attributes?.createdAt || '';
+          return createdAtA.localeCompare(createdAtB);
+        });
+        
+        // Process sorted images
+        images = getImagesData(rawImages.length === 1 ? rawImages[0] : { data: rawImages });
+      }
+
       return {
         id: item.id || item.documentId,
         name: item.name || '',
         slug: item.slug || '',
         description: item.description || '',
-        image: item.image ? getImageData(item.image) : undefined,
+        images,
         badge: item.badge || undefined,
         features,
         detailedDescription: item.detailedDescription || undefined,
@@ -123,7 +145,7 @@ export async function getTechnologyPage(): Promise<ProcessedTechnologyPage | nul
 
     console.log('[Technology Page API] ✅ Success!', {
       technologyItemsCount: technologyItems.length,
-      withImages: technologyItems.filter(item => item.image).length,
+      withImages: technologyItems.filter(item => item.images.length > 0).length,
       totalFeatures: technologyItems.reduce((acc, item) => acc + item.features.length, 0),
     });
 

@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Embla Carousel Styles */
+.embla {
+  overflow: hidden;
+  position: relative;
+}
+
+.embla__container {
+  display: flex;
+  touch-action: pan-y;
+  will-change: transform;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  position: relative;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
 /* HARMONIC DENTAL LABORATORY DESIGN SYSTEM
   Theme: Soft Light, Clinical, Fresh - EYE-FRIENDLY VERSION
   Primary Color: Vibrant Spring Green (Hue 152)
@@ -188,6 +208,62 @@ html {
   .animation-delay-2000 {
     animation-delay: 2s;
   }
+
+  /* Hide scrollbar for thumbnail strip */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Prose styles for richtext content */
+@layer components {
+  .prose {
+    @apply text-muted-foreground;
+  }
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4 {
+    @apply font-bold text-foreground mt-6 mb-4;
+  }
+  .prose h1 {
+    @apply text-2xl;
+  }
+  .prose h2 {
+    @apply text-xl;
+  }
+  .prose h3 {
+    @apply text-lg;
+  }
+  .prose p {
+    @apply mb-4 leading-relaxed;
+  }
+  .prose ul,
+  .prose ol {
+    @apply mb-4 pl-6;
+  }
+  .prose ul {
+    @apply list-disc;
+  }
+  .prose ol {
+    @apply list-decimal;
+  }
+  .prose li {
+    @apply mb-2;
+  }
+  .prose a {
+    @apply text-primary underline hover:text-primary/80 transition-colors;
+  }
+  .prose strong {
+    @apply font-semibold text-foreground;
+  }
+  .prose code {
+    @apply bg-muted px-1.5 py-0.5 rounded text-sm font-mono;
+  }
 }
 
 @keyframes fade-up {
@@ -215,5 +291,95 @@ html {
 
   .animate-on-scroll-card {
     animation-range: entry 5% cover 25%;
+  }
+}
+
+/* Custom styles for react-phone-number-input */
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.phone-input .PhoneInputCountry {
+  margin-right: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.phone-input .PhoneInputCountryIcon {
+  width: 16px;
+  height: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.phone-input .PhoneInputCountryIcon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.phone-input .PhoneInputCountrySelect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3.5rem;
+  z-index: 1;
+  border: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.phone-input .PhoneInputCountrySelectArrow {
+  display: none;
+}
+
+.phone-input .PhoneInputInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  min-width: 0;
+}
+
+.phone-input .PhoneInputInput:focus {
+  outline: none;
+}
+
+.phone-input .PhoneInputInput::placeholder {
+  color: hsl(var(--muted-foreground));
+  opacity: 0.7;
+}
+
+/* Country Select Flags */
+.country-flag {
+  display: inline-block;
+  width: 20px;
+  height: 15px;
+  border-radius: 2px;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .phone-input .PhoneInputCountryIcon,
+  .country-flag {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Ensure consistent height */
+.phone-input {
+  min-height: 3.5rem;
+}
+
+@media (max-width: 640px) {
+  .phone-input {
+    min-height: 3rem;
   }
 }

@@ -9,14 +9,39 @@ const USE_CACHE = import.meta.env.USE_STRAPI_CACHE === 'true';
 
 /**
  * Generate cache key from endpoint and params
+ * Uses a simple hash function to create deterministic, collision-resistant keys
  */
 function getCacheKey(endpoint: string, params: Record<string, any>): string {
-  const paramsStr = JSON.stringify(params);
-  // Create a simple hash that's safe for filenames and cross-platform
-  let hash = endpoint + paramsStr;
-  // Use a simple encoding for cross-platform compatibility
-  hash = hash.replace(/[^a-zA-Z0-9]/g, '_').substring(0, 100);
-  return `${hash}.json`;
+  // Normalize params by sorting keys and ensuring consistent stringification
+  const normalizedParams = Object.keys(params)
+    .sort()
+    .reduce((acc, key) => {
+      const value = params[key];
+      // Handle arrays by ensuring consistent representation
+      if (Array.isArray(value)) {
+        acc[key] = [...value].sort();
+      } else {
+        acc[key] = value;
+      }
+      return acc;
+    }, {} as Record<string, any>);
+  
+  const paramsStr = JSON.stringify(normalizedParams);
+  const input = `${endpoint}${paramsStr}`;
+  
+  // Create a simple hash using string char codes
+  let hash = 0;
+  for (let i = 0; i < input.length; i++) {
+    const char = input.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash; // Convert to 32-bit integer
+  }
+  
+  // Convert to positive hex string and make it filename-safe
+  const hashStr = Math.abs(hash).toString(16);
+  const safeEndpoint = endpoint.replace(/[^a-zA-Z0-9]/g, '_');
+  
+  return `${safeEndpoint}_${hashStr}.json`;
 }
 
 /**
