@@ -9,7 +9,7 @@ import { getHeroSection, getOurStorySection, getServicesSection, getTechnologySe
 import BeforeAfterSection from "@/sections/BeforeAfter";
 import DiplomasSection from "@/sections/Diploma";
 
-// Fetch data at build time
+// Read repository-owned content at build time.
 const heroData = await getHeroSection();
 const storyData = await getOurStorySection();
 const techData = await getTechnologySection();
@@ -35,7 +35,7 @@ const servicesDate = await getServicesSection();
   ) : (
     <div style="padding: 2rem; background: #f8d7da; color: #721c24;">
       <h2>⚠️ Hero Section Data Missing</h2>
-      <p>Could not load hero section from Strapi</p>
+      <p>Could not load the local hero content.</p>
     </div>
   )}
   

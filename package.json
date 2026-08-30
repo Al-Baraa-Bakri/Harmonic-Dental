@@ -8,10 +8,11 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "cache:enable": "node scripts/cache-enable.js",
-    "cache:disable": "node scripts/cache-disable.js",
-    "cache:clear": "node scripts/cache-clear.js",
-    "cache:stats": "node scripts/cache-stats.js"
+    "content:download-images": "node scripts/content-download-images.mjs",
+    "content:validate-images": "node scripts/content-validate-images.mjs",
+    "content:export": "node scripts/content-export.mjs",
+    "content:validate": "node scripts/content-validate.mjs",
+    "content:refresh": "npm run content:download-images && npm run content:validate-images && npm run content:export && npm run content:validate"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -32,7 +33,6 @@
     "framer-motion": "^11.18.2",
     "libphonenumber-js": "^1.12.36",
     "lucide-react": "^0.545.0",
-    "qs": "^6.14.0",
     "radix-ui": "^1.4.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -43,12 +43,10 @@
     "tailwindcss": "^3.4.10",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.181.2",
-    "typescript": "^5.5.4",
-    "wrangler": "^4.51.0"
+    "typescript": "^5.5.4"
   },
   "devDependencies": {
     "@types/google.maps": "^3.58.1",
-    "@types/qs": "^6.14.0",
     "@types/three": "^0.181.0"
   }
 }

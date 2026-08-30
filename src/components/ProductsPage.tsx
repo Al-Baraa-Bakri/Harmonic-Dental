@@ -21,7 +21,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import Model3DModal from "./Model3DModal";
-import { getResponsiveImageUrl } from "@/lib/strapi";
+import { getResponsiveImageUrl } from "@/lib/media";
 
 // Icon mapping by category slug or name
 const ICON_MAP: Record<string, LucideIcon> = {

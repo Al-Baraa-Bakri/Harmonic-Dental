@@ -28,7 +28,7 @@ import type {
   ProcessedTechnologyItem,
   ProcessedTechnologyPage,
 } from "@/lib/api/technology-page";
-import { getStrapiURL } from "@/lib/strapi";
+import { resolveMediaUrl } from "@/lib/media";
 
 // Icon mapping by icon name or slug
 const ICON_MAP: Record<string, LucideIcon> = {
@@ -133,7 +133,7 @@ const ImageCarousel = ({
       <div className="embla h-full" ref={emblaRef}>
         <div className="embla__container h-full flex">
           {images.map((image: any, idx: number) => {
-            const imageUrl = image?.url ? getStrapiURL(image.url) || '' : '';
+            const imageUrl = image?.url ? resolveMediaUrl(image.url) || '' : '';
 
             return (
               <div
@@ -454,7 +454,7 @@ const TechnologyDetailsModal = ({
               <div className="embla h-full" ref={emblaRef}>
                 <div className="embla__container h-full flex">
                   {images.map((image: any, idx: number) => {
-                    const imageUrl = image?.url ? getStrapiURL(image.url) || '' : '';
+                    const imageUrl = image?.url ? resolveMediaUrl(image.url) || '' : '';
                     
                     return (
                       <div

@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 
 // Types
-type StrapiProcessStep = {
+type ProcessStep = {
   id: number;
   number: string;
   title: string;
@@ -153,7 +153,7 @@ const ProcessStepCard = ({
   pathProgress,
   isMobile,
 }: {
-  step: StrapiProcessStep;
+  step: ProcessStep;
   index: number;
   totalSteps: number;
   pathProgress: MotionValue<number>;

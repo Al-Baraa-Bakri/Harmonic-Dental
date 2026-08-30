@@ -1,0 +1,3575 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-30T05:29:09.488Z",
+  "source": "https://legendary-delight-abce3e6fc0.strapiapp.com",
+  "imageDirectory": "public/images/strapi",
+  "count": 254,
+  "totalBytes": 35499128,
+  "images": [
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Adobe_Express_file_4_ddb8807b2a.jpg",
+      "filename": "Adobe_Express_file_4_ddb8807b2a.jpg",
+      "byteSize": 46528,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 725,
+      "sha256": "e2ac3139c8f3986ea22994408b9f3aa053669a0a9bae79fc57d325b380c1e401",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.34.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/All_on_five_d30c9611ac.webp",
+      "filename": "All_on_five_d30c9611ac.webp",
+      "byteSize": 372244,
+      "mimeType": "image/webp",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "219355fc4ce8f65343b22e9d3c68b785e449fc2744fcdb50097be2cb00d1af15",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.3.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/All_on_four_06551a6fb8.webp",
+      "filename": "All_on_four_06551a6fb8.webp",
+      "byteSize": 263154,
+      "mimeType": "image/webp",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "7216ca2b27737a866b2e946e1616dddb31411384aa72273e2aba5f4e6bd54ec7",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.9.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/All_on_four_080883193d.JPG",
+      "filename": "All_on_four_080883193d.JPG",
+      "byteSize": 925206,
+      "mimeType": "image/jpeg",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "0f7fd159af82b5ad8ec969fc605bf4c3ed1d8f57770345db39c95f42009b3994",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.29.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/All_on_six_db70aa9d5e.webp",
+      "filename": "All_on_six_db70aa9d5e.webp",
+      "byteSize": 367462,
+      "mimeType": "image/webp",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "014d18b3491166e4e3500b6d768e622084f9cd3af68a21d1c6e4ea23726e7888",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.4.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/All_On_X_Dental_Implant_3025cfbdb6.JPG",
+      "filename": "All_On_X_Dental_Implant_3025cfbdb6.JPG",
+      "byteSize": 1184033,
+      "mimeType": "image/jpeg",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "f25830150bfdb6d60a14a438421b2623656fd7d4035b4cfd352ee95bf09dcfca",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.22.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Bi_helix_applaince_49cff1e523.JPG",
+      "filename": "Bi_helix_applaince_49cff1e523.JPG",
+      "byteSize": 767938,
+      "mimeType": "image/jpeg",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "30f9ce42949ba7a91f944e3786244db8df0e962b68af00d916e7b1fb2a416776",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.30.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Blue_glass_Appliances_6ecbeda1db.JPG",
+      "filename": "Blue_glass_Appliances_6ecbeda1db.JPG",
+      "byteSize": 901159,
+      "mimeType": "image/jpeg",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "7d0a5943a0689b6280d49e81b6ea786c95550addd0406116d6da21fc3460080c",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.12.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/crown_f27b04d2c6.webp",
+      "filename": "crown_f27b04d2c6.webp",
+      "byteSize": 2154,
+      "mimeType": "image/webp",
+      "width": 200,
+      "height": 133,
+      "sha256": "a80b613c6e36d09651b65bc533bb7715ec3ae5af71eac0dfe416d4808a106f32",
+      "responsiveFormat": "original",
+      "references": [
+        "/hero-section:response.data.showcaseProducts.0.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Custom_multi_unit_0bf412dff9.jpg",
+      "filename": "Custom_multi_unit_0bf412dff9.jpg",
+      "byteSize": 69540,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 750,
+      "sha256": "483f0a52a2892bfdf8856068857cf52da7b4c824e9130c1b15d5529a24a461a9",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.32.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Customized_Abutments_f4c85e5ec1.jpg",
+      "filename": "Customized_Abutments_f4c85e5ec1.jpg",
+      "byteSize": 1587431,
+      "mimeType": "image/jpeg",
+      "width": 5899,
+      "height": 3598,
+      "sha256": "b04541978327f75634fe4f57c0c0118556274f80ea84807af1f696dd9379c42e",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.23.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67.JPG",
+      "filename": "Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67.JPG",
+      "byteSize": 1014364,
+      "mimeType": "image/jpeg",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "2e1adf083c2460e8837d1534f591e067d6f0e844d361a592eb2ad7982269ccc7",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.24.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Distal_pendulum_5d6e563952.JPG",
+      "filename": "Distal_pendulum_5d6e563952.JPG",
+      "byteSize": 807738,
+      "mimeType": "image/jpeg",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "5c7ab566fc0bccf33aafad5b8e9597566a184f722193a91bbea9ee80402e656f",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.13.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/f_2d378ce99e.png",
+      "filename": "f_2d378ce99e.png",
+      "byteSize": 1312302,
+      "mimeType": "image/png",
+      "width": 2480,
+      "height": 3186,
+      "sha256": "015e3d41ee97d451a64b32a25c0f4105cd62c9c6127440e1e4377c94ba635995",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.36.image"
+      ],
+      "detectedMimeType": "image/png"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Feldspathic_Veneers_0aa42f16a8.jpg",
+      "filename": "Feldspathic_Veneers_0aa42f16a8.jpg",
+      "byteSize": 36083,
+      "mimeType": "image/jpeg",
+      "width": 1215,
+      "height": 741,
+      "sha256": "fcea7265e466463d040a1485aff22d7a879158e8c59601840d012b7998a45b9d",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.10.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/fixed_bonded_retainer_e75464ea04.JPG",
+      "filename": "fixed_bonded_retainer_e75464ea04.JPG",
+      "byteSize": 857318,
+      "mimeType": "image/jpeg",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "d6a7201bbd3dd7ae60af1f1b4a38a4a4553c6c5e7851517f9faab682544aafa0",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.14.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/FULL_ARCH_77093bde2b.jpg",
+      "filename": "FULL_ARCH_77093bde2b.jpg",
+      "byteSize": 1696962,
+      "mimeType": "image/jpeg",
+      "width": 4866,
+      "height": 3507,
+      "sha256": "de333c194de64a8b9abaf8d56dbf417cd7978094f7d67e7cd2096ae97910d8e7",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.28.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/hawely_retainer_21192529ac.JPG",
+      "filename": "hawely_retainer_21192529ac.JPG",
+      "byteSize": 978297,
+      "mimeType": "image/jpeg",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "db287f3ac5c6ffb7d42770c8065a64bbcb337cabd6e074112399e46c43f5870f",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.15.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef.JPG",
+      "filename": "Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef.JPG",
+      "byteSize": 809285,
+      "mimeType": "image/jpeg",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "478de5e0254d2b4dee52efb98ea192f5a30e5e47a9d6fd386ed8a046956e78a0",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.16.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Hawley_With_Palatal_Design_8554f930f1.JPG",
+      "filename": "Hawley_With_Palatal_Design_8554f930f1.JPG",
+      "byteSize": 1018196,
+      "mimeType": "image/jpeg",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "68b6c7094b5dd805cec3f0481613cce0610d9f3bab40c435747328ccfedd3ec9",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.17.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/images_cc32b9cf49.jpeg",
+      "filename": "images_cc32b9cf49.jpeg",
+      "byteSize": 21074,
+      "mimeType": "image/jpeg",
+      "width": 598,
+      "height": 513,
+      "sha256": "c687067ee8aa0ed4b193d2b839c7b0346417873eaa97cc12d1e4e0a80dd6b8cd",
+      "responsiveFormat": "original",
+      "references": [
+        "/our-services-section:response.data.services.4.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/IMG_20260125_161915_2a72417e9b.jpg",
+      "filename": "IMG_20260125_161915_2a72417e9b.jpg",
+      "byteSize": 76738,
+      "mimeType": "image/jpeg",
+      "width": 1264,
+      "height": 1266,
+      "sha256": "c1fb6705393f8cbf5a64b8c8688391ebf9f28d984e57cb185f1517b7505f9d62",
+      "responsiveFormat": "original",
+      "references": [
+        "/technology-section:response.data.processSteps.3.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/IMG_20260203_115429_894_c6534538b8.jpg",
+      "filename": "IMG_20260203_115429_894_c6534538b8.jpg",
+      "byteSize": 36771,
+      "mimeType": "image/jpeg",
+      "width": 490,
+      "height": 275,
+      "sha256": "eccbb2d9154ce8df07cb06eea2c3132e39d3c0e488249ddc8d023a4ae1b96973",
+      "responsiveFormat": "original",
+      "references": [
+        "/technology-items:response.data.0.image.2"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/IMG_20260203_115432_058_6c285533dd.jpg",
+      "filename": "IMG_20260203_115432_058_6c285533dd.jpg",
+      "byteSize": 31350,
+      "mimeType": "image/jpeg",
+      "width": 241,
+      "height": 428,
+      "sha256": "2f24861f6957ac8654abab769cbe55bcf11a4f0fd95e2dcfa736ec7d7254364c",
+      "responsiveFormat": "original",
+      "references": [
+        "/technology-items:response.data.0.image.1"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/IMG_20260214_150422_a46102a4ad.jpg",
+      "filename": "IMG_20260214_150422_a46102a4ad.jpg",
+      "byteSize": 66482,
+      "mimeType": "image/jpeg",
+      "width": 1198,
+      "height": 1764,
+      "sha256": "69eb61257cc711c5a43422580f081cf937e66f2cbb4c25e90d54ce1bd31d76f3",
+      "responsiveFormat": "original",
+      "references": [
+        "/technology-items:response.data.0.image.0"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Implant_Crowns_d1dc8c0431.jpg",
+      "filename": "Implant_Crowns_d1dc8c0431.jpg",
+      "byteSize": 1528467,
+      "mimeType": "image/jpeg",
+      "width": 5299,
+      "height": 3244,
+      "sha256": "a45498782ea1256c4f985daa3509aa57159662acb2661e503c8298153849a76b",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.25.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/implants_ce30f97b0b.webp",
+      "filename": "implants_ce30f97b0b.webp",
+      "byteSize": 4972,
+      "mimeType": "image/webp",
+      "width": 500,
+      "height": 344,
+      "sha256": "fc205a4cbbc67dcce139a4f6b228ea7933765e51be76433189c16419a71c1b7b",
+      "responsiveFormat": "original",
+      "references": [
+        "/hero-section:response.data.showcaseProducts.1.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Inaly_1353cf4bd2.png",
+      "filename": "Inaly_1353cf4bd2.png",
+      "byteSize": 63183,
+      "mimeType": "image/png",
+      "width": 554,
+      "height": 432,
+      "sha256": "8c53c199ed58d2c0752cf9f5214f0f9c157330908f6188e1bd5884add20d62ab",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.0.image"
+      ],
+      "detectedMimeType": "image/png"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Injectable_Composite_4f99368198.jpg",
+      "filename": "Injectable_Composite_4f99368198.jpg",
+      "byteSize": 45501,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 750,
+      "sha256": "f7f5142eaf87e8646d2f5a2c408d20b871351c43b3941220eb5c1885f95a5226",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.33.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Laithinum_Veneers_59b5b80c0a.jpg",
+      "filename": "Laithinum_Veneers_59b5b80c0a.jpg",
+      "byteSize": 25862,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 437,
+      "sha256": "8f21addeb909cc405cb066cf30424af6ed57cdd9f7931c274dce07062c34e1d0",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.31.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_All_on_five_d30c9611ac.webp",
+      "filename": "large_All_on_five_d30c9611ac.webp",
+      "byteSize": 21552,
+      "mimeType": "image/webp",
+      "width": 1000,
+      "height": 667,
+      "sha256": "99629e2234ac29b5b5289eb8e6b74e074b725a2b77df246fb66d266a21e13625",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.3.image.formats.large"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_All_on_four_06551a6fb8.webp",
+      "filename": "large_All_on_four_06551a6fb8.webp",
+      "byteSize": 16834,
+      "mimeType": "image/webp",
+      "width": 1000,
+      "height": 667,
+      "sha256": "ff702e3d78cd12d52f18b008eaf21310679ea44d098c34f93c014af304ac57f7",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.9.image.formats.large"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_All_on_four_080883193d.JPG",
+      "filename": "large_All_on_four_080883193d.JPG",
+      "byteSize": 36447,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 667,
+      "sha256": "a247b4350d2526dea4fa03cfbf54c3d60534098a0bf20fab5d7384948a40fc7f",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.29.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_All_on_six_db70aa9d5e.webp",
+      "filename": "large_All_on_six_db70aa9d5e.webp",
+      "byteSize": 25334,
+      "mimeType": "image/webp",
+      "width": 1000,
+      "height": 667,
+      "sha256": "06ef719f743aadba7e928c87b7007fd28ee4a7f7f1c43121feb34aeba0921496",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.4.image.formats.large"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_All_On_X_Dental_Implant_3025cfbdb6.JPG",
+      "filename": "large_All_On_X_Dental_Implant_3025cfbdb6.JPG",
+      "byteSize": 53385,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 667,
+      "sha256": "c98474cb4ed6dce17a1779fdc85d1904eec69f9161328a2b88f21c936dd16695",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.22.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Bi_helix_applaince_49cff1e523.JPG",
+      "filename": "large_Bi_helix_applaince_49cff1e523.JPG",
+      "byteSize": 34777,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 667,
+      "sha256": "f6a28227a8f9a606cb688631a63987d4e758f20e421fda3965235f1258c1ea32",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.30.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Blue_glass_Appliances_6ecbeda1db.JPG",
+      "filename": "large_Blue_glass_Appliances_6ecbeda1db.JPG",
+      "byteSize": 41776,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 667,
+      "sha256": "1e117b0647cdf541e0825124fc49caabe721778c5c67303bb299f3693a788e96",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.12.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Customized_Abutments_f4c85e5ec1.jpg",
+      "filename": "large_Customized_Abutments_f4c85e5ec1.jpg",
+      "byteSize": 59113,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 610,
+      "sha256": "ce3101aeb452bd3e1e713c210f86cf2c5c8b03f108fba2c9102db06a64137dc6",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.23.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67.JPG",
+      "filename": "large_Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67.JPG",
+      "byteSize": 35197,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 667,
+      "sha256": "672915942e6c68249b272492ef042126850c93068dabc7d9e8c0f851cad9c53b",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.24.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Distal_pendulum_5d6e563952.JPG",
+      "filename": "large_Distal_pendulum_5d6e563952.JPG",
+      "byteSize": 36321,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 667,
+      "sha256": "a8f7900d527967d05910005971d64834852961b00e27ec880d16d2e061220809",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.13.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_f_2d378ce99e.png",
+      "filename": "large_f_2d378ce99e.png",
+      "byteSize": 769413,
+      "mimeType": "image/png",
+      "width": 778,
+      "height": 1000,
+      "sha256": "8bb8972eccc8d574f8fef44f4d48a4446861f573cb6697745a55c111035a201b",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.36.image.formats.large"
+      ],
+      "detectedMimeType": "image/png"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Feldspathic_Veneers_0aa42f16a8.jpg",
+      "filename": "large_Feldspathic_Veneers_0aa42f16a8.jpg",
+      "byteSize": 27256,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 610,
+      "sha256": "dcb9d4f9d6a77b45a091875575ba146f1732d2666ad2d688962505457512fbbf",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.10.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_fixed_bonded_retainer_e75464ea04.JPG",
+      "filename": "large_fixed_bonded_retainer_e75464ea04.JPG",
+      "byteSize": 36145,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 667,
+      "sha256": "72c1790dabc9e2bec121187c4ce2a3ca5e76f0509e9442b6a197384e8623c684",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.14.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_FULL_ARCH_77093bde2b.jpg",
+      "filename": "large_FULL_ARCH_77093bde2b.jpg",
+      "byteSize": 57322,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 721,
+      "sha256": "bae5814b0b1ab56757e1bb93cf6c26cc8aed786caf4d2eddc46cf34ca26371b3",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.28.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_hawely_retainer_21192529ac.JPG",
+      "filename": "large_hawely_retainer_21192529ac.JPG",
+      "byteSize": 48170,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 667,
+      "sha256": "ab631d20c38786a9a903d6e3520a94d0ae0cb3c9511c67b44fb61d33981144c2",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.15.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef.JPG",
+      "filename": "large_Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef.JPG",
+      "byteSize": 39855,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 667,
+      "sha256": "64524de52a3e242587b9835b78f6f8043108f813610f1e6173a026167c184af6",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.16.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Hawley_With_Palatal_Design_8554f930f1.JPG",
+      "filename": "large_Hawley_With_Palatal_Design_8554f930f1.JPG",
+      "byteSize": 48803,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 667,
+      "sha256": "448d909455e5435e479a074f2a5b0d45a9d351245e93cf012460d6fb297bfd59",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.17.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_IMG_20260125_161915_2a72417e9b.jpg",
+      "filename": "large_IMG_20260125_161915_2a72417e9b.jpg",
+      "byteSize": 56093,
+      "mimeType": "image/jpeg",
+      "width": 998,
+      "height": 1000,
+      "sha256": "fcc08c16b07bc19c8c71080e9f72f55a0f0e8d693834ce79a5210158f9963982",
+      "responsiveFormat": "large",
+      "references": [
+        "/technology-section:response.data.processSteps.3.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_IMG_20260214_150422_a46102a4ad.jpg",
+      "filename": "large_IMG_20260214_150422_a46102a4ad.jpg",
+      "byteSize": 29894,
+      "mimeType": "image/jpeg",
+      "width": 679,
+      "height": 1000,
+      "sha256": "6c5adaf2961ac0ffb8b4e30dc9d7aba5e0e157dc2613f286cae44680f8e2f265",
+      "responsiveFormat": "large",
+      "references": [
+        "/technology-items:response.data.0.image.0.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Implant_Crowns_d1dc8c0431.jpg",
+      "filename": "large_Implant_Crowns_d1dc8c0431.jpg",
+      "byteSize": 61793,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 613,
+      "sha256": "2d4edc4156e6d04f37989400cf05df78cce7d9a4b294495aa2f241f6f226697e",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.25.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Metal_Bar_Over_Implant_b4a585f213.JPG",
+      "filename": "large_Metal_Bar_Over_Implant_b4a585f213.JPG",
+      "byteSize": 48816,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 667,
+      "sha256": "97160c1486b65b4ddb6f6ef2ccecd14bfd9989b981ceab3d0ab79c5a9d58a511",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.26.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_One_implant_182dde9bbf.webp",
+      "filename": "large_One_implant_182dde9bbf.webp",
+      "byteSize": 15444,
+      "mimeType": "image/webp",
+      "width": 1000,
+      "height": 667,
+      "sha256": "59cdd960c269e3c14be22a5344f1ea09734569d2c7dea2f7046d0e9ade9a833f",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.7.image.formats.large"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Onlay_f7ea61b5f0.webp",
+      "filename": "large_Onlay_f7ea61b5f0.webp",
+      "byteSize": 13408,
+      "mimeType": "image/webp",
+      "width": 1000,
+      "height": 667,
+      "sha256": "af9f72d2e664e23f6f84bcf1b828444efb1f7bb5817e6cf939e7ab8878038681",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.2.image.formats.large"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_partial_veneers_07870c2faf.JPG",
+      "filename": "large_partial_veneers_07870c2faf.JPG",
+      "byteSize": 32411,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 667,
+      "sha256": "a87710c9b22c5faea562d639bd48ca350d7e0e5ad056d23f1f7ceff0279d2c22",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.11.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a.jpg",
+      "filename": "large_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a.jpg",
+      "byteSize": 86272,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 667,
+      "sha256": "0e8d083642a44479f991e753acda8a9b21a4123fabbe5c45cd005e6dbb163a73",
+      "responsiveFormat": "large",
+      "references": [
+        "/technology-items:response.data.0.image.3.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Rapid_palatal_expander_RPE_b07ba9c46b.JPG",
+      "filename": "large_Rapid_palatal_expander_RPE_b07ba9c46b.JPG",
+      "byteSize": 46533,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 667,
+      "sha256": "a4319e94ea66d501a798e0a1b380ce1853d7d4b692ea54c591ec8e01f0015e3b",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.18.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_removable_appliance_26f1bc7b25.webp",
+      "filename": "large_removable_appliance_26f1bc7b25.webp",
+      "byteSize": 32964,
+      "mimeType": "image/webp",
+      "width": 707,
+      "height": 1000,
+      "sha256": "459e939660a5ccd8b9d5e747dfaaad2ccda015ecb08d6f7f8e5831739d019ad9",
+      "responsiveFormat": "large",
+      "references": [
+        "/hero-section:response.data.showcaseProducts.2.image.formats.large"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Removable_appliance_RPD_005df12f87.webp",
+      "filename": "large_Removable_appliance_RPD_005df12f87.webp",
+      "byteSize": 32228,
+      "mimeType": "image/webp",
+      "width": 1000,
+      "height": 667,
+      "sha256": "ff4cdf7a0ecf838b3879eed18dcca3c3603d06b21027e5297321f5a303de4b20",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.35.image.formats.large"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Removable_Palatal_Expander_d0dceb0e45.JPG",
+      "filename": "large_Removable_Palatal_Expander_d0dceb0e45.JPG",
+      "byteSize": 43659,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 667,
+      "sha256": "26c7ec56e6b222d63b4c47089f66fe26c9d7e0490173eeefdcef53d05d410d09",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.19.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_removable_partial_Dentures_d8d4e8e0c1.webp",
+      "filename": "large_removable_partial_Dentures_d8d4e8e0c1.webp",
+      "byteSize": 13208,
+      "mimeType": "image/webp",
+      "width": 1000,
+      "height": 667,
+      "sha256": "b27a32149bfd265295382a9f57745c5e998a73bd46266094949eb2b92f6e0ca8",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.6.image.formats.large"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Retainer_11a9e5ed3c.JPG",
+      "filename": "large_Retainer_11a9e5ed3c.JPG",
+      "byteSize": 40200,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 667,
+      "sha256": "c24763a3c4e2741c3f6d27235ba6e873075f0296f3214879fdc648ac3b2be8c8",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.20.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_service_1_89f1caf1f7.webp",
+      "filename": "large_service_1_89f1caf1f7.webp",
+      "byteSize": 28212,
+      "mimeType": "image/webp",
+      "width": 1000,
+      "height": 545,
+      "sha256": "253be9852174f899365a2b440e4921c6ca4e1e056a7e70e36407dca0e185d20e",
+      "responsiveFormat": "large",
+      "references": [
+        "/our-services-section:response.data.services.0.image.formats.large"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_service_2_4a5b93df59.webp",
+      "filename": "large_service_2_4a5b93df59.webp",
+      "byteSize": 21298,
+      "mimeType": "image/webp",
+      "width": 1000,
+      "height": 545,
+      "sha256": "c1ee02c9c13ef5ad91dbac5ef5618fb9d76f4414f734e0943bf2bf2deb93bc9f",
+      "responsiveFormat": "large",
+      "references": [
+        "/our-services-section:response.data.services.1.image.formats.large"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_service_4_e95762b0f3.webp",
+      "filename": "large_service_4_e95762b0f3.webp",
+      "byteSize": 31374,
+      "mimeType": "image/webp",
+      "width": 1000,
+      "height": 545,
+      "sha256": "9f872d6aecc035b6bc2fc094ec474916857ecedeb959fcf703d548ce25e62111",
+      "responsiveFormat": "large",
+      "references": [
+        "/our-services-section:response.data.services.2.image.formats.large"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_service_5_5c8dde1357.webp",
+      "filename": "large_service_5_5c8dde1357.webp",
+      "byteSize": 25574,
+      "mimeType": "image/webp",
+      "width": 1000,
+      "height": 545,
+      "sha256": "6d5df215a844d474f567b9c28015485cdbb022f1ca7ffe0bb8a8e032a52d849f",
+      "responsiveFormat": "large",
+      "references": [
+        "/our-services-section:response.data.services.3.image.formats.large"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Stackable_Surgical_guide_1f14f59b4a.webp",
+      "filename": "large_Stackable_Surgical_guide_1f14f59b4a.webp",
+      "byteSize": 16898,
+      "mimeType": "image/webp",
+      "width": 1000,
+      "height": 667,
+      "sha256": "c8a9c2628e6b63c42d1b4d0762c0b2719484f6847eb3d6cbc49c145781721ca9",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.8.image.formats.large"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_step_1_356897bf23.webp",
+      "filename": "large_step_1_356897bf23.webp",
+      "byteSize": 31976,
+      "mimeType": "image/webp",
+      "width": 1000,
+      "height": 545,
+      "sha256": "17319d24f2f8d1ded34b3634746099e3a5042e52610ef2524c87dbf5fb6717e0",
+      "responsiveFormat": "large",
+      "references": [
+        "/technology-section:response.data.processSteps.0.image.formats.large"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_step_2_adf74bd31e.webp",
+      "filename": "large_step_2_adf74bd31e.webp",
+      "byteSize": 31454,
+      "mimeType": "image/webp",
+      "width": 1000,
+      "height": 545,
+      "sha256": "c31ddfc0fcd074ada879a0478725b7e74dff40ce87b1d38762b3096ee9cc8d29",
+      "responsiveFormat": "large",
+      "references": [
+        "/technology-section:response.data.processSteps.1.image.formats.large"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_step_3_194ca704ab.webp",
+      "filename": "large_step_3_194ca704ab.webp",
+      "byteSize": 42072,
+      "mimeType": "image/webp",
+      "width": 1000,
+      "height": 545,
+      "sha256": "6334381ec852f496457b4767368139de91712da7be3660b433ae4f43840aa624",
+      "responsiveFormat": "large",
+      "references": [
+        "/technology-section:response.data.processSteps.2.image.formats.large",
+        "/product-types:response.data.1.image.formats.large"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Surgical_guide_7ce88b4775.webp",
+      "filename": "large_Surgical_guide_7ce88b4775.webp",
+      "byteSize": 41770,
+      "mimeType": "image/webp",
+      "width": 707,
+      "height": 1000,
+      "sha256": "950fc1642217e2f300d5f8828d20190290c79087b85c4eb18b9429b0b8799025",
+      "responsiveFormat": "large",
+      "references": [
+        "/hero-section:response.data.showcaseProducts.3.image.formats.large"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_T_Rex_b4a9b3311b.JPG",
+      "filename": "large_T_Rex_b4a9b3311b.JPG",
+      "byteSize": 51130,
+      "mimeType": "image/jpeg",
+      "width": 1000,
+      "height": 667,
+      "sha256": "b88d8c49cc7967d89ca0adc3f655c71a0cad428422d8f102dfff08cf4e6626cd",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.21.image.formats.large"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Three_implant_4ad1ee1f9b.webp",
+      "filename": "large_Three_implant_4ad1ee1f9b.webp",
+      "byteSize": 23574,
+      "mimeType": "image/webp",
+      "width": 1000,
+      "height": 670,
+      "sha256": "46ab2f4739973f664a30857965e2ffdc11244eee9eade1400fe6ba7363088ae3",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.5.image.formats.large"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/large_Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850.png",
+      "filename": "large_Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850.png",
+      "byteSize": 1234311,
+      "mimeType": "image/png",
+      "width": 810,
+      "height": 1000,
+      "sha256": "1f439df9b9bf8bdf010251de328c74f8faf683bb5c5e95bcdac326a40db72410",
+      "responsiveFormat": "large",
+      "references": [
+        "/product-types:response.data.27.image.formats.large"
+      ],
+      "detectedMimeType": "image/png"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/logo_838ac12b09.png",
+      "filename": "logo_838ac12b09.png",
+      "byteSize": 24963,
+      "mimeType": "image/png",
+      "width": 925,
+      "height": 213,
+      "sha256": "a365fb6a77d1ae965b684f0853bd627498868c410efa45f6c18837ab6dfec6e9",
+      "responsiveFormat": "original",
+      "references": [
+        "/header-navigation:response.data.logo",
+        "/footer:response.data.logo"
+      ],
+      "detectedMimeType": "image/png"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Adobe_Express_file_4_ddb8807b2a.jpg",
+      "filename": "medium_Adobe_Express_file_4_ddb8807b2a.jpg",
+      "byteSize": 30417,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 544,
+      "sha256": "2b52b0d213f49fc5f74968d7efa8a3c91a74a66c6d052f4cddf0fe27d8e8050d",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.34.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_All_on_five_d30c9611ac.webp",
+      "filename": "medium_All_on_five_d30c9611ac.webp",
+      "byteSize": 14824,
+      "mimeType": "image/webp",
+      "width": 750,
+      "height": 500,
+      "sha256": "15506651f111fa160cd8b6a11d45b68c28aa92bd00631f1fc7d119d3a2efe5ac",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.3.image.formats.medium"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_All_on_four_06551a6fb8.webp",
+      "filename": "medium_All_on_four_06551a6fb8.webp",
+      "byteSize": 11254,
+      "mimeType": "image/webp",
+      "width": 750,
+      "height": 500,
+      "sha256": "3894dd3ee133619b605705f2f840d8ef07a187311bf1eaf9710570d5b62fc70a",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.9.image.formats.medium"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_All_on_four_080883193d.JPG",
+      "filename": "medium_All_on_four_080883193d.JPG",
+      "byteSize": 23714,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 500,
+      "sha256": "588dad045ce83fa20358d3dc34331476debae6b98a7a3031c1d73b9eb48b5ff1",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.29.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_All_on_six_db70aa9d5e.webp",
+      "filename": "medium_All_on_six_db70aa9d5e.webp",
+      "byteSize": 16992,
+      "mimeType": "image/webp",
+      "width": 750,
+      "height": 500,
+      "sha256": "0ae744707336a1a151cae26fe304608996838052e8e72b1c62e42bcb210a924e",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.4.image.formats.medium"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_All_On_X_Dental_Implant_3025cfbdb6.JPG",
+      "filename": "medium_All_On_X_Dental_Implant_3025cfbdb6.JPG",
+      "byteSize": 34167,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 500,
+      "sha256": "1d544045b7b14753f5104831d989f3110c5b911daed30cb042dab5a9d6dc7d93",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.22.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Bi_helix_applaince_49cff1e523.JPG",
+      "filename": "medium_Bi_helix_applaince_49cff1e523.JPG",
+      "byteSize": 22350,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 500,
+      "sha256": "fb7c5ab0dddde43ca6a6e864b6d4484ae91eddf1e15f35aeb5679008cf34f587",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.30.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Blue_glass_Appliances_6ecbeda1db.JPG",
+      "filename": "medium_Blue_glass_Appliances_6ecbeda1db.JPG",
+      "byteSize": 26711,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 500,
+      "sha256": "574cd56737d51ba5e6c5f7593cb74b1364d33d68e7b8ef836ae965ee822d3aaf",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.12.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Custom_multi_unit_0bf412dff9.jpg",
+      "filename": "medium_Custom_multi_unit_0bf412dff9.jpg",
+      "byteSize": 44604,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 563,
+      "sha256": "63a1f80e1f09bd2ea37a3c29428e66e3f0c06f6abb51b42d6d2dabe44a951c7b",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.32.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Customized_Abutments_f4c85e5ec1.jpg",
+      "filename": "medium_Customized_Abutments_f4c85e5ec1.jpg",
+      "byteSize": 36869,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 457,
+      "sha256": "ea1aa973098fce4905c863df9cc645929b3b647a07b1d8d1b46157882aef65dd",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.23.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67.JPG",
+      "filename": "medium_Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67.JPG",
+      "byteSize": 23416,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 500,
+      "sha256": "1b33263e2ceacb5d35eb4eb176b228724213ba5ed5a869cde980917257e2797c",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.24.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Distal_pendulum_5d6e563952.JPG",
+      "filename": "medium_Distal_pendulum_5d6e563952.JPG",
+      "byteSize": 23538,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 500,
+      "sha256": "362f551f4e3c77526b0668dfa7169abf336d0e1356c317064451eb457f980eba",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.13.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_f_2d378ce99e.png",
+      "filename": "medium_f_2d378ce99e.png",
+      "byteSize": 452482,
+      "mimeType": "image/png",
+      "width": 584,
+      "height": 750,
+      "sha256": "5ed1622477f5ccb5842765dbf55f311b4d56bc37afba980937a2b0c9ce707d54",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.36.image.formats.medium"
+      ],
+      "detectedMimeType": "image/png"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Feldspathic_Veneers_0aa42f16a8.jpg",
+      "filename": "medium_Feldspathic_Veneers_0aa42f16a8.jpg",
+      "byteSize": 17703,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 457,
+      "sha256": "26a560a362ffa1c212e647cef398807fa8c84df3cefc6545f486937700f0d800",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.10.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_fixed_bonded_retainer_e75464ea04.JPG",
+      "filename": "medium_fixed_bonded_retainer_e75464ea04.JPG",
+      "byteSize": 23704,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 500,
+      "sha256": "63ce22ae97145fa19b8cc8dcc21c812e62a7352e4736c9d437c78ca3b940d3f9",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.14.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_FULL_ARCH_77093bde2b.jpg",
+      "filename": "medium_FULL_ARCH_77093bde2b.jpg",
+      "byteSize": 36207,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 540,
+      "sha256": "60e555337917f6defc3516bc6dfde921e81da18a960dabd8ca3a9f74bc2f33c8",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.28.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_hawely_retainer_21192529ac.JPG",
+      "filename": "medium_hawely_retainer_21192529ac.JPG",
+      "byteSize": 31103,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 500,
+      "sha256": "f130d758390b399ec16b750ab34ea6ffd748a4c9a807aa27f1f1e779c790b308",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.15.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef.JPG",
+      "filename": "medium_Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef.JPG",
+      "byteSize": 25959,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 500,
+      "sha256": "c6ad7904b9d34ced6c483d36541bab30732efe5239eb0de6f08b70fa59b96be6",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.16.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Hawley_With_Palatal_Design_8554f930f1.JPG",
+      "filename": "medium_Hawley_With_Palatal_Design_8554f930f1.JPG",
+      "byteSize": 30802,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 500,
+      "sha256": "6c6517ae158620d8283bad7cb5670d47d3cfb01f9dff0c7a4011f3f3ec9f5612",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.17.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_IMG_20260125_161915_2a72417e9b.jpg",
+      "filename": "medium_IMG_20260125_161915_2a72417e9b.jpg",
+      "byteSize": 36923,
+      "mimeType": "image/jpeg",
+      "width": 749,
+      "height": 750,
+      "sha256": "6039375f597d08a65d020f4e997d87fda476f60ff104a05df8ed4494a9eb5260",
+      "responsiveFormat": "medium",
+      "references": [
+        "/technology-section:response.data.processSteps.3.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_IMG_20260214_150422_a46102a4ad.jpg",
+      "filename": "medium_IMG_20260214_150422_a46102a4ad.jpg",
+      "byteSize": 19639,
+      "mimeType": "image/jpeg",
+      "width": 509,
+      "height": 750,
+      "sha256": "980f5c625ae98626b7aad6ef2f1df9b4e154edf17226bbd9d46f03e59b71de9e",
+      "responsiveFormat": "medium",
+      "references": [
+        "/technology-items:response.data.0.image.0.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Implant_Crowns_d1dc8c0431.jpg",
+      "filename": "medium_Implant_Crowns_d1dc8c0431.jpg",
+      "byteSize": 36788,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 459,
+      "sha256": "1b8d646478b149ff0cb03648e38ff4c67997063ed38b1e764a9f462fe637ad14",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.25.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Injectable_Composite_4f99368198.jpg",
+      "filename": "medium_Injectable_Composite_4f99368198.jpg",
+      "byteSize": 28781,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 563,
+      "sha256": "546526072502e52ae60a1520434e34f51b0398a26feda7b3a010abfdbd8f1158",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.33.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Laithinum_Veneers_59b5b80c0a.jpg",
+      "filename": "medium_Laithinum_Veneers_59b5b80c0a.jpg",
+      "byteSize": 17418,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 328,
+      "sha256": "8b357409db5759e83a2d5510ff5d5e24c79bb71c14a13fd865fa5df27543d85f",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.31.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_logo_838ac12b09.png",
+      "filename": "medium_logo_838ac12b09.png",
+      "byteSize": 70814,
+      "mimeType": "image/png",
+      "width": 750,
+      "height": 173,
+      "sha256": "ae0c13ee8b335182513a51fa89d0980ba5c9254b77c1f1d5aae6cd31b33312be",
+      "responsiveFormat": "medium",
+      "references": [
+        "/header-navigation:response.data.logo.formats.medium",
+        "/footer:response.data.logo.formats.medium"
+      ],
+      "detectedMimeType": "image/png"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Metal_Bar_Over_Implant_b4a585f213.JPG",
+      "filename": "medium_Metal_Bar_Over_Implant_b4a585f213.JPG",
+      "byteSize": 31003,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 500,
+      "sha256": "16214bf0cbbb8127337dca5ea61c012e4c57c25aca161a07dd94d55328fea849",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.26.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_One_implant_182dde9bbf.webp",
+      "filename": "medium_One_implant_182dde9bbf.webp",
+      "byteSize": 10148,
+      "mimeType": "image/webp",
+      "width": 750,
+      "height": 500,
+      "sha256": "748ad37c2a5f86d2338c4c40ae7c38c7043ffb07fba4d9e0e25297cc475d8dad",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.7.image.formats.medium"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Onlay_f7ea61b5f0.webp",
+      "filename": "medium_Onlay_f7ea61b5f0.webp",
+      "byteSize": 9194,
+      "mimeType": "image/webp",
+      "width": 750,
+      "height": 500,
+      "sha256": "f3fd23fa5c0e2533c9dd17625400c7774e7e319135d3297f37c4c25a45c8a5fd",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.2.image.formats.medium"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_partial_veneers_07870c2faf.JPG",
+      "filename": "medium_partial_veneers_07870c2faf.JPG",
+      "byteSize": 19362,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 500,
+      "sha256": "e363e9f905e48595d8dd171197d029f16ff597137840694dc13cdab536471e9a",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.11.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a.jpg",
+      "filename": "medium_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a.jpg",
+      "byteSize": 52412,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 500,
+      "sha256": "9e2260b9ec4919b30d5e79f0a2e153e8ae78bba3f2350e2957bcd5c2fb3069e1",
+      "responsiveFormat": "medium",
+      "references": [
+        "/technology-items:response.data.0.image.3.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Rapid_palatal_expander_RPE_b07ba9c46b.JPG",
+      "filename": "medium_Rapid_palatal_expander_RPE_b07ba9c46b.JPG",
+      "byteSize": 29481,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 500,
+      "sha256": "dea3dfde304f63aa4da74547d92ff2fc029ff2550571882ccdd5fdf0fa6ce938",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.18.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_removable_appliance_26f1bc7b25.webp",
+      "filename": "medium_removable_appliance_26f1bc7b25.webp",
+      "byteSize": 22630,
+      "mimeType": "image/webp",
+      "width": 530,
+      "height": 750,
+      "sha256": "c49f5f886588791c460b61348dadc64e2d9563a3671851d03d1acaea8692050e",
+      "responsiveFormat": "medium",
+      "references": [
+        "/hero-section:response.data.showcaseProducts.2.image.formats.medium"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Removable_appliance_RPD_005df12f87.webp",
+      "filename": "medium_Removable_appliance_RPD_005df12f87.webp",
+      "byteSize": 21880,
+      "mimeType": "image/webp",
+      "width": 750,
+      "height": 500,
+      "sha256": "50cff4234e51e06ee26d45d17a4538dc1a37cfc74aa6e7dcb2ecbed28b681331",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.35.image.formats.medium"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Removable_Palatal_Expander_d0dceb0e45.JPG",
+      "filename": "medium_Removable_Palatal_Expander_d0dceb0e45.JPG",
+      "byteSize": 28444,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 500,
+      "sha256": "28c785a4994be53d1c3116cb6c4aa33f072c0310ca2a0da88f5798a559f6675f",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.19.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_removable_partial_Dentures_d8d4e8e0c1.webp",
+      "filename": "medium_removable_partial_Dentures_d8d4e8e0c1.webp",
+      "byteSize": 9152,
+      "mimeType": "image/webp",
+      "width": 750,
+      "height": 500,
+      "sha256": "61c22eb3d22ffa9a995651370b8651d47bc9361517d1f8200606be6b7d9abffe",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.6.image.formats.medium"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Retainer_11a9e5ed3c.JPG",
+      "filename": "medium_Retainer_11a9e5ed3c.JPG",
+      "byteSize": 25884,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 500,
+      "sha256": "599f98f7464b6d11d0f67de9264a6b6bd3c3eaabc883b002db8fbb2ff1f82198",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.20.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_service_1_89f1caf1f7.webp",
+      "filename": "medium_service_1_89f1caf1f7.webp",
+      "byteSize": 19142,
+      "mimeType": "image/webp",
+      "width": 750,
+      "height": 409,
+      "sha256": "8d01f974fdd255119b8cc6e707d22a184d8b1988dc1cd55526667d285f000c5e",
+      "responsiveFormat": "medium",
+      "references": [
+        "/our-services-section:response.data.services.0.image.formats.medium"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_service_2_4a5b93df59.webp",
+      "filename": "medium_service_2_4a5b93df59.webp",
+      "byteSize": 14348,
+      "mimeType": "image/webp",
+      "width": 750,
+      "height": 409,
+      "sha256": "1ee8856fea9c55a4ec56db54f29bef537ff59f05454934754ed4279460c1f2f0",
+      "responsiveFormat": "medium",
+      "references": [
+        "/our-services-section:response.data.services.1.image.formats.medium"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_service_4_e95762b0f3.webp",
+      "filename": "medium_service_4_e95762b0f3.webp",
+      "byteSize": 21510,
+      "mimeType": "image/webp",
+      "width": 750,
+      "height": 409,
+      "sha256": "4e3138b70de2a44da1f2020740ecaac6cde103e559ba998116ee9bb343b2afae",
+      "responsiveFormat": "medium",
+      "references": [
+        "/our-services-section:response.data.services.2.image.formats.medium"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_service_5_5c8dde1357.webp",
+      "filename": "medium_service_5_5c8dde1357.webp",
+      "byteSize": 17612,
+      "mimeType": "image/webp",
+      "width": 750,
+      "height": 409,
+      "sha256": "1571c54cbcc58879719381e2f4ce10a81aeea3eace6832529e6ce3b64f979484",
+      "responsiveFormat": "medium",
+      "references": [
+        "/our-services-section:response.data.services.3.image.formats.medium"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Stackable_Surgical_guide_1f14f59b4a.webp",
+      "filename": "medium_Stackable_Surgical_guide_1f14f59b4a.webp",
+      "byteSize": 11784,
+      "mimeType": "image/webp",
+      "width": 750,
+      "height": 500,
+      "sha256": "84ae346d07f8d91d3abaf16f4d841e1f7c5bd1a32bcb1b67d4400ab137ab7226",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.8.image.formats.medium"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_step_1_356897bf23.webp",
+      "filename": "medium_step_1_356897bf23.webp",
+      "byteSize": 21440,
+      "mimeType": "image/webp",
+      "width": 750,
+      "height": 409,
+      "sha256": "de8221437ec8ca87542d3b6aacdb3c38a6bf4f1ad801290172a2311d8e9e37f7",
+      "responsiveFormat": "medium",
+      "references": [
+        "/technology-section:response.data.processSteps.0.image.formats.medium"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_step_2_adf74bd31e.webp",
+      "filename": "medium_step_2_adf74bd31e.webp",
+      "byteSize": 21068,
+      "mimeType": "image/webp",
+      "width": 750,
+      "height": 409,
+      "sha256": "5f4d79b1277b3aee4cd996ef660b447b89f3252efef82271931c5af7fdc198ad",
+      "responsiveFormat": "medium",
+      "references": [
+        "/technology-section:response.data.processSteps.1.image.formats.medium"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_step_3_194ca704ab.webp",
+      "filename": "medium_step_3_194ca704ab.webp",
+      "byteSize": 28876,
+      "mimeType": "image/webp",
+      "width": 750,
+      "height": 409,
+      "sha256": "54f803a1eaaa61dd105f7c9ababa6cb7154156afe530e6ed7d8f8ecca3aead21",
+      "responsiveFormat": "medium",
+      "references": [
+        "/technology-section:response.data.processSteps.2.image.formats.medium",
+        "/product-types:response.data.1.image.formats.medium"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Surgical_guide_7ce88b4775.webp",
+      "filename": "medium_Surgical_guide_7ce88b4775.webp",
+      "byteSize": 28888,
+      "mimeType": "image/webp",
+      "width": 530,
+      "height": 750,
+      "sha256": "417a1c7100a48e9798d32f54782423e2e3dc426ec90d21a75361bf1f69661ee0",
+      "responsiveFormat": "medium",
+      "references": [
+        "/hero-section:response.data.showcaseProducts.3.image.formats.medium"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_T_Rex_b4a9b3311b.JPG",
+      "filename": "medium_T_Rex_b4a9b3311b.JPG",
+      "byteSize": 33040,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 500,
+      "sha256": "b41abc43b71bf9375f15c54bf32d26f5c23ad7bf456be31dc5049f36252ea213",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.21.image.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Three_implant_4ad1ee1f9b.webp",
+      "filename": "medium_Three_implant_4ad1ee1f9b.webp",
+      "byteSize": 15638,
+      "mimeType": "image/webp",
+      "width": 750,
+      "height": 502,
+      "sha256": "c87ebd342ed8db4186e617cc0df2a38ac4de9fb1ef497b5444ee4d90b3245e5a",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.5.image.formats.medium"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Whats_App_Image_2026_01_25_at_6_18_50_PM_832b25eba4.jpeg",
+      "filename": "medium_Whats_App_Image_2026_01_25_at_6_18_50_PM_832b25eba4.jpeg",
+      "byteSize": 48935,
+      "mimeType": "image/jpeg",
+      "width": 750,
+      "height": 500,
+      "sha256": "da037762b6536dc50d2f66c7dbe680860855c69df4cf3050467adbffe15bf597",
+      "responsiveFormat": "medium",
+      "references": [
+        "/our-story-section:response.data.storyImage.formats.medium"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/medium_Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850.png",
+      "filename": "medium_Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850.png",
+      "byteSize": 713729,
+      "mimeType": "image/png",
+      "width": 607,
+      "height": 750,
+      "sha256": "f606d739e5053480ae4267eaffec8194e893fb33883412986c38ba66507774de",
+      "responsiveFormat": "medium",
+      "references": [
+        "/product-types:response.data.27.image.formats.medium"
+      ],
+      "detectedMimeType": "image/png"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Metal_Bar_Over_Implant_b4a585f213.JPG",
+      "filename": "Metal_Bar_Over_Implant_b4a585f213.JPG",
+      "byteSize": 1222180,
+      "mimeType": "image/jpeg",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "790f3d8a855f0f5fa54bd952d41ef023181cde5f9273de0d9cc4cb361f8dc443",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.26.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/One_implant_182dde9bbf.webp",
+      "filename": "One_implant_182dde9bbf.webp",
+      "byteSize": 274560,
+      "mimeType": "image/webp",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "9383261e3d91f8791ccce1e25dc62ca722526602d2f5e0b213a8b7e27013f6cd",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.7.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Onlay_f7ea61b5f0.webp",
+      "filename": "Onlay_f7ea61b5f0.webp",
+      "byteSize": 190962,
+      "mimeType": "image/webp",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "ff65aefdcfff0e90efb0728f85875b36784c5861e96464854cfe064808e94ca0",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.2.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/partial_veneers_07870c2faf.JPG",
+      "filename": "partial_veneers_07870c2faf.JPG",
+      "byteSize": 862229,
+      "mimeType": "image/jpeg",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "73beb00c4d87d90396be6d7a61851c7b63767bc2d39e9e0055d646315c888a72",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.11.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a.jpg",
+      "filename": "photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a.jpg",
+      "byteSize": 120880,
+      "mimeType": "image/jpeg",
+      "width": 1200,
+      "height": 800,
+      "sha256": "5aa1a8c856c78d543cc207ee158d8cbe5d97c3b9b64f18ce4d63edfcbcf65b0f",
+      "responsiveFormat": "original",
+      "references": [
+        "/technology-items:response.data.0.image.3"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Rapid_palatal_expander_RPE_b07ba9c46b.JPG",
+      "filename": "Rapid_palatal_expander_RPE_b07ba9c46b.JPG",
+      "byteSize": 991884,
+      "mimeType": "image/jpeg",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "479cc172c1afd400a43377faf1843c3b3a7cfadf0d16e0d58177b6713ecb0294",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.18.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/removable_appliance_26f1bc7b25.webp",
+      "filename": "removable_appliance_26f1bc7b25.webp",
+      "byteSize": 149700,
+      "mimeType": "image/webp",
+      "width": 2480,
+      "height": 3508,
+      "sha256": "b42f4b0c0df22612a28f68090adeb6aa9d0236dea5feddab4db35401cea3f5f1",
+      "responsiveFormat": "original",
+      "references": [
+        "/hero-section:response.data.showcaseProducts.2.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Removable_appliance_RPD_005df12f87.webp",
+      "filename": "Removable_appliance_RPD_005df12f87.webp",
+      "byteSize": 415822,
+      "mimeType": "image/webp",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "79f40eb35206a1be9ca11de981dc7a9d6b9ec6d58e6c45523fa41b487365c8eb",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.35.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Removable_Palatal_Expander_d0dceb0e45.JPG",
+      "filename": "Removable_Palatal_Expander_d0dceb0e45.JPG",
+      "byteSize": 779086,
+      "mimeType": "image/jpeg",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "f01ad9e660f9ca32b2486ac29c9a8993da5460fd4c9d5507c53273e8dd8cb658",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.19.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/removable_partial_Dentures_d8d4e8e0c1.webp",
+      "filename": "removable_partial_Dentures_d8d4e8e0c1.webp",
+      "byteSize": 221962,
+      "mimeType": "image/webp",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "8459eeaa71b85d245187bf06c2007530627fd302dcbc78572e4ee67c94745f68",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.6.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Retainer_11a9e5ed3c.JPG",
+      "filename": "Retainer_11a9e5ed3c.JPG",
+      "byteSize": 774366,
+      "mimeType": "image/jpeg",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "060d35b4dfa2b28c1bf5cddeef1eb43b901ffb98c12c319d6c8416f3fbf32299",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.20.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/service_1_89f1caf1f7.webp",
+      "filename": "service_1_89f1caf1f7.webp",
+      "byteSize": 117822,
+      "mimeType": "image/webp",
+      "width": 2816,
+      "height": 1536,
+      "sha256": "010b8f10270b558373ad3dbff59d472af7b603d1393cb05066aab1e99d7e57cb",
+      "responsiveFormat": "original",
+      "references": [
+        "/our-services-section:response.data.services.0.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/service_2_4a5b93df59.webp",
+      "filename": "service_2_4a5b93df59.webp",
+      "byteSize": 99610,
+      "mimeType": "image/webp",
+      "width": 2816,
+      "height": 1536,
+      "sha256": "30ba3eb3aefc41aec3e0bf685a3c37da47c55a574d5ea723da9feb4a6bfaec47",
+      "responsiveFormat": "original",
+      "references": [
+        "/our-services-section:response.data.services.1.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/service_4_e95762b0f3.webp",
+      "filename": "service_4_e95762b0f3.webp",
+      "byteSize": 120608,
+      "mimeType": "image/webp",
+      "width": 2816,
+      "height": 1536,
+      "sha256": "1bac49d034972dc7b4df52e5c34b37b1a0161cc724c9b69b4948b3faebd44578",
+      "responsiveFormat": "original",
+      "references": [
+        "/our-services-section:response.data.services.2.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/service_5_5c8dde1357.webp",
+      "filename": "service_5_5c8dde1357.webp",
+      "byteSize": 104206,
+      "mimeType": "image/webp",
+      "width": 2816,
+      "height": 1536,
+      "sha256": "75f12d8b9e2b46f8a6df85fd5f671424e321b0b98c6ff3e94071db41c2594502",
+      "responsiveFormat": "original",
+      "references": [
+        "/our-services-section:response.data.services.3.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Adobe_Express_file_4_ddb8807b2a.jpg",
+      "filename": "small_Adobe_Express_file_4_ddb8807b2a.jpg",
+      "byteSize": 16909,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 363,
+      "sha256": "472453f47bec66544218a3ad57518dc2b920665e47d2adb638abb56c6d9375a1",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.34.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_All_on_five_d30c9611ac.webp",
+      "filename": "small_All_on_five_d30c9611ac.webp",
+      "byteSize": 8282,
+      "mimeType": "image/webp",
+      "width": 500,
+      "height": 333,
+      "sha256": "856e7d128c3b25aab5731112e637baf7fee6fa3fce2c9789fc548a1146715558",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.3.image.formats.small"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_All_on_four_06551a6fb8.webp",
+      "filename": "small_All_on_four_06551a6fb8.webp",
+      "byteSize": 6448,
+      "mimeType": "image/webp",
+      "width": 500,
+      "height": 333,
+      "sha256": "0059e20e10daa52560d6debe0467168650a6c82ffc0c17ded482afe9caebdb09",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.9.image.formats.small"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_All_on_four_080883193d.JPG",
+      "filename": "small_All_on_four_080883193d.JPG",
+      "byteSize": 12928,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 333,
+      "sha256": "cc5222d4d3fba34c128bf61e08cf8979640f2afe5b5f5692fbe4c26675eff910",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.29.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_All_on_six_db70aa9d5e.webp",
+      "filename": "small_All_on_six_db70aa9d5e.webp",
+      "byteSize": 9322,
+      "mimeType": "image/webp",
+      "width": 500,
+      "height": 333,
+      "sha256": "4ea3596ef8901b6cc9b6819d2b0fbde5c07cc6d0f76d85bae899c084634efbd8",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.4.image.formats.small"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_All_On_X_Dental_Implant_3025cfbdb6.JPG",
+      "filename": "small_All_On_X_Dental_Implant_3025cfbdb6.JPG",
+      "byteSize": 18209,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 333,
+      "sha256": "6fa89580c37906b6f77f9aee8c9647c8c7bad19485e662b4905d065b3e8a4d9b",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.22.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Bi_helix_applaince_49cff1e523.JPG",
+      "filename": "small_Bi_helix_applaince_49cff1e523.JPG",
+      "byteSize": 12076,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 333,
+      "sha256": "d017d9602c65ecd54ef4921b2bc7bf0f2d13075a4dbbf76823d0bf720a46cd92",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.30.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Blue_glass_Appliances_6ecbeda1db.JPG",
+      "filename": "small_Blue_glass_Appliances_6ecbeda1db.JPG",
+      "byteSize": 14218,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 333,
+      "sha256": "35e251d2f8654896199ccf0697f16800b54947754602b4c7f18f4da77e53c40e",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.12.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Custom_multi_unit_0bf412dff9.jpg",
+      "filename": "small_Custom_multi_unit_0bf412dff9.jpg",
+      "byteSize": 23541,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 375,
+      "sha256": "9ab89eaa08a45450af75c78660224443b38698f998a1c1af5b623ff453c2b356",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.32.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Customized_Abutments_f4c85e5ec1.jpg",
+      "filename": "small_Customized_Abutments_f4c85e5ec1.jpg",
+      "byteSize": 18772,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 305,
+      "sha256": "9d5b067067a0eae63a9c3651e9b7318edba687a90e91d5672454b6908011b7c0",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.23.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67.JPG",
+      "filename": "small_Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67.JPG",
+      "byteSize": 13155,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 333,
+      "sha256": "4fbb25a0f626253abcd379b946a1cc6fd71a58088fad371378e8c2a582badb17",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.24.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Distal_pendulum_5d6e563952.JPG",
+      "filename": "small_Distal_pendulum_5d6e563952.JPG",
+      "byteSize": 12728,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 333,
+      "sha256": "ab7d12e482cf3f5f52655baebfe08b222f2d7788e76cf5022576f259b8a566ec",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.13.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_f_2d378ce99e.png",
+      "filename": "small_f_2d378ce99e.png",
+      "byteSize": 213247,
+      "mimeType": "image/png",
+      "width": 389,
+      "height": 500,
+      "sha256": "ece34f5e5b968828ecb3f15d9fc708fa4ac371d757595201c7845c6996def3eb",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.36.image.formats.small"
+      ],
+      "detectedMimeType": "image/png"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Feldspathic_Veneers_0aa42f16a8.jpg",
+      "filename": "small_Feldspathic_Veneers_0aa42f16a8.jpg",
+      "byteSize": 9884,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 305,
+      "sha256": "d407829a49ac04030849d3e7d27d4420f00e055997de1d58c82659e5a5e44a8b",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.10.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_fixed_bonded_retainer_e75464ea04.JPG",
+      "filename": "small_fixed_bonded_retainer_e75464ea04.JPG",
+      "byteSize": 12860,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 333,
+      "sha256": "94c335925cbb15b7cecd4399cf80af249f86cad5d36db19322cfb4d1785f39a5",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.14.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_FULL_ARCH_77093bde2b.jpg",
+      "filename": "small_FULL_ARCH_77093bde2b.jpg",
+      "byteSize": 19472,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 360,
+      "sha256": "acd4a353a4673d982c345683d49ff34a87fa21f309b79be80fdb8d35e71a4437",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.28.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_hawely_retainer_21192529ac.JPG",
+      "filename": "small_hawely_retainer_21192529ac.JPG",
+      "byteSize": 16688,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 333,
+      "sha256": "ecd452601f86de386303ce34892c05718c804145d29a299d3dd52e0626bf9731",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.15.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef.JPG",
+      "filename": "small_Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef.JPG",
+      "byteSize": 14097,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 333,
+      "sha256": "a45ee2f7371403c3b11832dcc3030bc400ed65f18f947d7cedfd26fea250ba37",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.16.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Hawley_With_Palatal_Design_8554f930f1.JPG",
+      "filename": "small_Hawley_With_Palatal_Design_8554f930f1.JPG",
+      "byteSize": 16086,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 333,
+      "sha256": "7609cb0f08d129037422d8584f34cd840f3ac3702559f3bf143be67cb24f36cb",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.17.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_images_cc32b9cf49.jpeg",
+      "filename": "small_images_cc32b9cf49.jpeg",
+      "byteSize": 19489,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 429,
+      "sha256": "f58bbadfe413006b63dccba0638c9151725475b51ea063575e1edb3794a25dea",
+      "responsiveFormat": "small",
+      "references": [
+        "/our-services-section:response.data.services.4.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_IMG_20260125_161915_2a72417e9b.jpg",
+      "filename": "small_IMG_20260125_161915_2a72417e9b.jpg",
+      "byteSize": 20931,
+      "mimeType": "image/jpeg",
+      "width": 499,
+      "height": 500,
+      "sha256": "a4607b0b58cccee9da5ccb119c0d61c742315aba9dec25d47a7d36bf00f0c06e",
+      "responsiveFormat": "small",
+      "references": [
+        "/technology-section:response.data.processSteps.3.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_IMG_20260214_150422_a46102a4ad.jpg",
+      "filename": "small_IMG_20260214_150422_a46102a4ad.jpg",
+      "byteSize": 10863,
+      "mimeType": "image/jpeg",
+      "width": 340,
+      "height": 500,
+      "sha256": "9923fcd57f33680dbf02a3ab98db2ebef6918637329cd8b3ab652fd354e86c62",
+      "responsiveFormat": "small",
+      "references": [
+        "/technology-items:response.data.0.image.0.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Implant_Crowns_d1dc8c0431.jpg",
+      "filename": "small_Implant_Crowns_d1dc8c0431.jpg",
+      "byteSize": 18141,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 306,
+      "sha256": "87ff42e670999869c872bd63a1fb5cb150c1d0f148590b0f4a63edcff4e09cc2",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.25.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Inaly_1353cf4bd2.png",
+      "filename": "small_Inaly_1353cf4bd2.png",
+      "byteSize": 244696,
+      "mimeType": "image/png",
+      "width": 500,
+      "height": 390,
+      "sha256": "970921bff4570cb77aec659b2f7c07cfa1f844da4a848096e071ae7d8dc5f6ba",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.0.image.formats.small"
+      ],
+      "detectedMimeType": "image/png"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Injectable_Composite_4f99368198.jpg",
+      "filename": "small_Injectable_Composite_4f99368198.jpg",
+      "byteSize": 15280,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 375,
+      "sha256": "baf74a38b100349d895bc1ebb949bc26b349ef022340dbe61e530ae8bd65af5f",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.33.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Laithinum_Veneers_59b5b80c0a.jpg",
+      "filename": "small_Laithinum_Veneers_59b5b80c0a.jpg",
+      "byteSize": 9871,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 219,
+      "sha256": "2f953de37d0106482b5953ddc08b85c62275c428d362594cc181e9c0005496d2",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.31.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_logo_838ac12b09.png",
+      "filename": "small_logo_838ac12b09.png",
+      "byteSize": 36655,
+      "mimeType": "image/png",
+      "width": 500,
+      "height": 115,
+      "sha256": "f612cdb4bd2352355094a22888ea20e83cea1982a8b9e7185be36e2f68e4a978",
+      "responsiveFormat": "small",
+      "references": [
+        "/header-navigation:response.data.logo.formats.small",
+        "/footer:response.data.logo.formats.small"
+      ],
+      "detectedMimeType": "image/png"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Metal_Bar_Over_Implant_b4a585f213.JPG",
+      "filename": "small_Metal_Bar_Over_Implant_b4a585f213.JPG",
+      "byteSize": 16410,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 333,
+      "sha256": "687720c76689ed5c834bbab8d7621f8005b1c52fb536eb60386dc69b8500e60b",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.26.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_One_implant_182dde9bbf.webp",
+      "filename": "small_One_implant_182dde9bbf.webp",
+      "byteSize": 5664,
+      "mimeType": "image/webp",
+      "width": 500,
+      "height": 333,
+      "sha256": "f78b5f23f8923c5c06ec96baf6aad2c43618306a3dd7545c4f79ba67c6bc039b",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.7.image.formats.small"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Onlay_f7ea61b5f0.webp",
+      "filename": "small_Onlay_f7ea61b5f0.webp",
+      "byteSize": 5170,
+      "mimeType": "image/webp",
+      "width": 500,
+      "height": 333,
+      "sha256": "5e0b1ca19d5fb2d0f5e2bbf221aa938c8ae78f24aeb700ee1b4f654f4615de5c",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.2.image.formats.small"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_partial_veneers_07870c2faf.JPG",
+      "filename": "small_partial_veneers_07870c2faf.JPG",
+      "byteSize": 9362,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 333,
+      "sha256": "696da6d725d7317604480fe3a047ada41913e3406bc404cafd517b65ff0680ec",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.11.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a.jpg",
+      "filename": "small_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a.jpg",
+      "byteSize": 27307,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 333,
+      "sha256": "e8e3e95882f79e2617536229e50f130a8cb3407cfa6a7fd36dc43a87e2228897",
+      "responsiveFormat": "small",
+      "references": [
+        "/technology-items:response.data.0.image.3.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Rapid_palatal_expander_RPE_b07ba9c46b.JPG",
+      "filename": "small_Rapid_palatal_expander_RPE_b07ba9c46b.JPG",
+      "byteSize": 15342,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 333,
+      "sha256": "be0a1dc1312171a95fac324fc9c5708fe9c72951d2d96ce04f106a870d09c61f",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.18.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_removable_appliance_26f1bc7b25.webp",
+      "filename": "small_removable_appliance_26f1bc7b25.webp",
+      "byteSize": 13418,
+      "mimeType": "image/webp",
+      "width": 353,
+      "height": 500,
+      "sha256": "aa14b7ae09003b3061763d960dc4042e2dc307933968323c2cf3e5f0c19569da",
+      "responsiveFormat": "small",
+      "references": [
+        "/hero-section:response.data.showcaseProducts.2.image.formats.small"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Removable_appliance_RPD_005df12f87.webp",
+      "filename": "small_Removable_appliance_RPD_005df12f87.webp",
+      "byteSize": 11966,
+      "mimeType": "image/webp",
+      "width": 500,
+      "height": 333,
+      "sha256": "6d85aae976aa1f953e1bf855b5f5a06599c5d89b56fd0c7285a102da9b3ba0a1",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.35.image.formats.small"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Removable_Palatal_Expander_d0dceb0e45.JPG",
+      "filename": "small_Removable_Palatal_Expander_d0dceb0e45.JPG",
+      "byteSize": 15542,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 333,
+      "sha256": "be9d3371fa9c8903b04ceafb88c362a6eafc21c937634341a8a809a7a0b71b1b",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.19.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_removable_partial_Dentures_d8d4e8e0c1.webp",
+      "filename": "small_removable_partial_Dentures_d8d4e8e0c1.webp",
+      "byteSize": 5138,
+      "mimeType": "image/webp",
+      "width": 500,
+      "height": 333,
+      "sha256": "97a4e068961e8853d50570407690ebdf304920e3a103d41ee931d75bafff65f1",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.6.image.formats.small"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Retainer_11a9e5ed3c.JPG",
+      "filename": "small_Retainer_11a9e5ed3c.JPG",
+      "byteSize": 13625,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 333,
+      "sha256": "28bcc5504e270b0f30097ae9b367f0bc130a4ce8a567d7327dd5478178993d7d",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.20.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_service_1_89f1caf1f7.webp",
+      "filename": "small_service_1_89f1caf1f7.webp",
+      "byteSize": 12022,
+      "mimeType": "image/webp",
+      "width": 500,
+      "height": 273,
+      "sha256": "8e241d6dabaf29d87903e91c1034dfa726a86ccfade1c3c3bd30e709d0599976",
+      "responsiveFormat": "small",
+      "references": [
+        "/our-services-section:response.data.services.0.image.formats.small"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_service_2_4a5b93df59.webp",
+      "filename": "small_service_2_4a5b93df59.webp",
+      "byteSize": 8312,
+      "mimeType": "image/webp",
+      "width": 500,
+      "height": 273,
+      "sha256": "a8e82f88ab413b1f59ec9bee70d097297d0368f04204ae8341bbf1d933920b97",
+      "responsiveFormat": "small",
+      "references": [
+        "/our-services-section:response.data.services.1.image.formats.small"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_service_4_e95762b0f3.webp",
+      "filename": "small_service_4_e95762b0f3.webp",
+      "byteSize": 13232,
+      "mimeType": "image/webp",
+      "width": 500,
+      "height": 273,
+      "sha256": "7d263cb41b6278a624207e8fc30f864bb41d0cbc531572360879b47972be46ec",
+      "responsiveFormat": "small",
+      "references": [
+        "/our-services-section:response.data.services.2.image.formats.small"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_service_5_5c8dde1357.webp",
+      "filename": "small_service_5_5c8dde1357.webp",
+      "byteSize": 10676,
+      "mimeType": "image/webp",
+      "width": 500,
+      "height": 273,
+      "sha256": "85abf96d6c464777e1af10710bc95f0774c4edaf7580c303428fdee3621c3c19",
+      "responsiveFormat": "small",
+      "references": [
+        "/our-services-section:response.data.services.3.image.formats.small"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Stackable_Surgical_guide_1f14f59b4a.webp",
+      "filename": "small_Stackable_Surgical_guide_1f14f59b4a.webp",
+      "byteSize": 7022,
+      "mimeType": "image/webp",
+      "width": 500,
+      "height": 333,
+      "sha256": "b7b16b316fdc015c8d202c20606c2c9f93c0972cc50096f6e99ae2b6cae2017a",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.8.image.formats.small"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_step_1_356897bf23.webp",
+      "filename": "small_step_1_356897bf23.webp",
+      "byteSize": 12328,
+      "mimeType": "image/webp",
+      "width": 500,
+      "height": 273,
+      "sha256": "d7a1fc96beb8599674da6aa8fd8f32bb443af6f9d086b3b5f8496fd05e1cd248",
+      "responsiveFormat": "small",
+      "references": [
+        "/technology-section:response.data.processSteps.0.image.formats.small"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_step_2_adf74bd31e.webp",
+      "filename": "small_step_2_adf74bd31e.webp",
+      "byteSize": 12374,
+      "mimeType": "image/webp",
+      "width": 500,
+      "height": 273,
+      "sha256": "96a9e0af16b73f2cbf0562bbbdb5725852b61aa86c68478d922de3540f8000b2",
+      "responsiveFormat": "small",
+      "references": [
+        "/technology-section:response.data.processSteps.1.image.formats.small"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_step_3_194ca704ab.webp",
+      "filename": "small_step_3_194ca704ab.webp",
+      "byteSize": 16820,
+      "mimeType": "image/webp",
+      "width": 500,
+      "height": 273,
+      "sha256": "69108c357238070af8fcdccafffae45b90cb575fe6d79aa30049dfbd6a531da7",
+      "responsiveFormat": "small",
+      "references": [
+        "/technology-section:response.data.processSteps.2.image.formats.small",
+        "/product-types:response.data.1.image.formats.small"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Surgical_guide_7ce88b4775.webp",
+      "filename": "small_Surgical_guide_7ce88b4775.webp",
+      "byteSize": 17108,
+      "mimeType": "image/webp",
+      "width": 353,
+      "height": 500,
+      "sha256": "37c247e5daff5f3645b3fcc93c8929091bff6d5fc676383d3c923e328525bc10",
+      "responsiveFormat": "small",
+      "references": [
+        "/hero-section:response.data.showcaseProducts.3.image.formats.small"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_T_Rex_b4a9b3311b.JPG",
+      "filename": "small_T_Rex_b4a9b3311b.JPG",
+      "byteSize": 17859,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 333,
+      "sha256": "9e26e75491518cc561c5af13f77e3ba7991a7d4c2d32354d44a5408865315f3d",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.21.image.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Three_implant_4ad1ee1f9b.webp",
+      "filename": "small_Three_implant_4ad1ee1f9b.webp",
+      "byteSize": 8782,
+      "mimeType": "image/webp",
+      "width": 500,
+      "height": 335,
+      "sha256": "445925a0c93b530351b22d74dd78e9fb00bcd44da260cde0fb31c77c04b8f318",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.5.image.formats.small"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Whats_App_Image_2026_01_25_at_6_18_50_PM_832b25eba4.jpeg",
+      "filename": "small_Whats_App_Image_2026_01_25_at_6_18_50_PM_832b25eba4.jpeg",
+      "byteSize": 27057,
+      "mimeType": "image/jpeg",
+      "width": 500,
+      "height": 333,
+      "sha256": "4d3f34e3ffc6b30c6fd50238adbf7438bdbaf04639f6393be351aa256aa10dd3",
+      "responsiveFormat": "small",
+      "references": [
+        "/our-story-section:response.data.storyImage.formats.small"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/small_Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850.png",
+      "filename": "small_Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850.png",
+      "byteSize": 330052,
+      "mimeType": "image/png",
+      "width": 405,
+      "height": 500,
+      "sha256": "b83793c028163df6ea94c54f0344142449f3660926c29c030c60c3322522d483",
+      "responsiveFormat": "small",
+      "references": [
+        "/product-types:response.data.27.image.formats.small"
+      ],
+      "detectedMimeType": "image/png"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Stackable_Surgical_guide_1f14f59b4a.webp",
+      "filename": "Stackable_Surgical_guide_1f14f59b4a.webp",
+      "byteSize": 233000,
+      "mimeType": "image/webp",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "4c57d23076e4051b8d94738a35daeba7456bca6c8b727d26a542bb0bc9f1cc63",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.8.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/step_1_356897bf23.webp",
+      "filename": "step_1_356897bf23.webp",
+      "byteSize": 141012,
+      "mimeType": "image/webp",
+      "width": 2816,
+      "height": 1536,
+      "sha256": "103b1458c9e16aa2996d3676fdcf47d31ed401c1fe6ab3bcc4de3a164ec61892",
+      "responsiveFormat": "original",
+      "references": [
+        "/technology-section:response.data.processSteps.0.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/step_2_adf74bd31e.webp",
+      "filename": "step_2_adf74bd31e.webp",
+      "byteSize": 152250,
+      "mimeType": "image/webp",
+      "width": 2816,
+      "height": 1536,
+      "sha256": "8c34ccd48226ecb1b7c47f8449d0a70d55f6db05a644a626c69901ee8b5dfaf7",
+      "responsiveFormat": "original",
+      "references": [
+        "/technology-section:response.data.processSteps.1.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/step_3_194ca704ab.webp",
+      "filename": "step_3_194ca704ab.webp",
+      "byteSize": 203884,
+      "mimeType": "image/webp",
+      "width": 2816,
+      "height": 1536,
+      "sha256": "153df229a0ba03e7df98147aac4f9d65d676c0da5960f78935b19ec664772dfc",
+      "responsiveFormat": "original",
+      "references": [
+        "/technology-section:response.data.processSteps.2.image",
+        "/product-types:response.data.1.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Surgical_guide_7ce88b4775.webp",
+      "filename": "Surgical_guide_7ce88b4775.webp",
+      "byteSize": 196262,
+      "mimeType": "image/webp",
+      "width": 2480,
+      "height": 3508,
+      "sha256": "307117174da0845722dfc67d4638cd3810446548c0fc619b16b7ae0eb16c932b",
+      "responsiveFormat": "original",
+      "references": [
+        "/hero-section:response.data.showcaseProducts.3.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/T_Rex_b4a9b3311b.JPG",
+      "filename": "T_Rex_b4a9b3311b.JPG",
+      "byteSize": 981698,
+      "mimeType": "image/jpeg",
+      "width": 6000,
+      "height": 4000,
+      "sha256": "dc1cd68ae05b607146aa16f3396f494700e9402b3d1f40fee523f1b9f3854c72",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.21.image"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Three_implant_4ad1ee1f9b.webp",
+      "filename": "Three_implant_4ad1ee1f9b.webp",
+      "byteSize": 371288,
+      "mimeType": "image/webp",
+      "width": 4860,
+      "height": 3256,
+      "sha256": "95c91c2382e48d21f67b0807f9327f2870ef3ebaab3b3edd3254a3eb8e51fad0",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.5.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Adobe_Express_file_4_ddb8807b2a.jpg",
+      "filename": "thumbnail_Adobe_Express_file_4_ddb8807b2a.jpg",
+      "byteSize": 4808,
+      "mimeType": "image/jpeg",
+      "width": 215,
+      "height": 156,
+      "sha256": "aca288aa1e7f14b6701d3ae02d53322ba0620f75a79c723414a7c43088331f07",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.34.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_All_on_five_d30c9611ac.webp",
+      "filename": "thumbnail_All_on_five_d30c9611ac.webp",
+      "byteSize": 2870,
+      "mimeType": "image/webp",
+      "width": 234,
+      "height": 156,
+      "sha256": "ccd640f441f5fae35847a2f8f8eb14f6f73aae19a3ef0256a16ebc8c4bdc1666",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.3.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_All_on_four_06551a6fb8.webp",
+      "filename": "thumbnail_All_on_four_06551a6fb8.webp",
+      "byteSize": 2368,
+      "mimeType": "image/webp",
+      "width": 234,
+      "height": 156,
+      "sha256": "5390e892fac987c1a490771d7e0df317b995f2779e0dc302071f7e77a0a3fcf3",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.9.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_All_on_four_080883193d.JPG",
+      "filename": "thumbnail_All_on_four_080883193d.JPG",
+      "byteSize": 4374,
+      "mimeType": "image/jpeg",
+      "width": 234,
+      "height": 156,
+      "sha256": "b0ec8fb8fbf12b60fe81510ec23c43b8dafe61659b84f00c07355bb2e5319db6",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.29.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_All_on_six_db70aa9d5e.webp",
+      "filename": "thumbnail_All_on_six_db70aa9d5e.webp",
+      "byteSize": 3090,
+      "mimeType": "image/webp",
+      "width": 234,
+      "height": 156,
+      "sha256": "2bd1d9eec04f2f86000a32d855f9fa2ae64f70afa94034659861d432a9be712a",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.4.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_All_On_X_Dental_Implant_3025cfbdb6.JPG",
+      "filename": "thumbnail_All_On_X_Dental_Implant_3025cfbdb6.JPG",
+      "byteSize": 5847,
+      "mimeType": "image/jpeg",
+      "width": 234,
+      "height": 156,
+      "sha256": "98ef67673ad2113a223dbf5948068ffd29f82b0b50deba47a35141c17482399d",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.22.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Bi_helix_applaince_49cff1e523.JPG",
+      "filename": "thumbnail_Bi_helix_applaince_49cff1e523.JPG",
+      "byteSize": 4078,
+      "mimeType": "image/jpeg",
+      "width": 234,
+      "height": 156,
+      "sha256": "28f143c26a52a6e70de54d3585a52e8c584bc20aa6ff138966aeec6c23126e72",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.30.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Blue_glass_Appliances_6ecbeda1db.JPG",
+      "filename": "thumbnail_Blue_glass_Appliances_6ecbeda1db.JPG",
+      "byteSize": 4766,
+      "mimeType": "image/jpeg",
+      "width": 234,
+      "height": 156,
+      "sha256": "b3eb58825033a8d9a1b1fa9ce7c635f6ecd6b0183bf74f1476d394b0d149a938",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.12.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Custom_multi_unit_0bf412dff9.jpg",
+      "filename": "thumbnail_Custom_multi_unit_0bf412dff9.jpg",
+      "byteSize": 6158,
+      "mimeType": "image/jpeg",
+      "width": 208,
+      "height": 156,
+      "sha256": "33a23eab7114b2be79c2f20a56c0a8a3472bf9134f764b33c1fa8e0c0a164fe2",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.32.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Customized_Abutments_f4c85e5ec1.jpg",
+      "filename": "thumbnail_Customized_Abutments_f4c85e5ec1.jpg",
+      "byteSize": 6234,
+      "mimeType": "image/jpeg",
+      "width": 245,
+      "height": 149,
+      "sha256": "c99725eec0015aa6f8fa086fb6be22cdb871ce2d4a0533d38564a44eea640312",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.23.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67.JPG",
+      "filename": "thumbnail_Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67.JPG",
+      "byteSize": 4687,
+      "mimeType": "image/jpeg",
+      "width": 234,
+      "height": 156,
+      "sha256": "1817eb5a361dead2e6ac77d62c4b57fdfcaab386361edec3e44ad69d3c337bd5",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.24.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Distal_pendulum_5d6e563952.JPG",
+      "filename": "thumbnail_Distal_pendulum_5d6e563952.JPG",
+      "byteSize": 4286,
+      "mimeType": "image/jpeg",
+      "width": 234,
+      "height": 156,
+      "sha256": "12feb31cdf87327bec003cafd6b1f00cbb0bdb2de6b05f4fc522d51a2f91761f",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.13.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_f_2d378ce99e.png",
+      "filename": "thumbnail_f_2d378ce99e.png",
+      "byteSize": 26286,
+      "mimeType": "image/png",
+      "width": 121,
+      "height": 156,
+      "sha256": "5527fba7be26e420b0ed5b84c14ebedafb305bf53d1585c5c0a2e4f8bd947efe",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.36.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/png"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Feldspathic_Veneers_0aa42f16a8.jpg",
+      "filename": "thumbnail_Feldspathic_Veneers_0aa42f16a8.jpg",
+      "byteSize": 3680,
+      "mimeType": "image/jpeg",
+      "width": 245,
+      "height": 149,
+      "sha256": "0cc51205533e840a143275257f6b6b58814b8c6bcfcccc1007f20015918f280a",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.10.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_fixed_bonded_retainer_e75464ea04.JPG",
+      "filename": "thumbnail_fixed_bonded_retainer_e75464ea04.JPG",
+      "byteSize": 4372,
+      "mimeType": "image/jpeg",
+      "width": 234,
+      "height": 156,
+      "sha256": "50c36a349ff807ff264c23bd64fe93a55e3e75473a04896051647531be057f88",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.14.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_FULL_ARCH_77093bde2b.jpg",
+      "filename": "thumbnail_FULL_ARCH_77093bde2b.jpg",
+      "byteSize": 5948,
+      "mimeType": "image/jpeg",
+      "width": 217,
+      "height": 156,
+      "sha256": "ba8162daf6921e80a58400674361ca35190ef6b16461c534117de44a45124b6a",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.28.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_hawely_retainer_21192529ac.JPG",
+      "filename": "thumbnail_hawely_retainer_21192529ac.JPG",
+      "byteSize": 5647,
+      "mimeType": "image/jpeg",
+      "width": 234,
+      "height": 156,
+      "sha256": "1f6a67b678df4fbb9c7451fde917a9d6af46faaa6d494d8abe416b8569f097f9",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.15.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef.JPG",
+      "filename": "thumbnail_Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef.JPG",
+      "byteSize": 4782,
+      "mimeType": "image/jpeg",
+      "width": 234,
+      "height": 156,
+      "sha256": "2e8c7b0047043f50a23eb8b61ac4c67df11da498126b5cc01c66e7a150715a76",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.16.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Hawley_With_Palatal_Design_8554f930f1.JPG",
+      "filename": "thumbnail_Hawley_With_Palatal_Design_8554f930f1.JPG",
+      "byteSize": 5293,
+      "mimeType": "image/jpeg",
+      "width": 234,
+      "height": 156,
+      "sha256": "906693f298b920b62bb861282798afce73b9e25a4f6faa554ea8004e6183b422",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.17.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_images_cc32b9cf49.jpeg",
+      "filename": "thumbnail_images_cc32b9cf49.jpeg",
+      "byteSize": 4333,
+      "mimeType": "image/jpeg",
+      "width": 182,
+      "height": 156,
+      "sha256": "33dd011e460754da16098244d18a3e3c0f733ee4475ece6d483a74402b725732",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/our-services-section:response.data.services.4.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_IMG_20260125_161915_2a72417e9b.jpg",
+      "filename": "thumbnail_IMG_20260125_161915_2a72417e9b.jpg",
+      "byteSize": 4250,
+      "mimeType": "image/jpeg",
+      "width": 156,
+      "height": 156,
+      "sha256": "dfdd0141944a1594da7727e40f4eb46078e869203608ea643a8fa57b7e183cf5",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/technology-section:response.data.processSteps.3.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_IMG_20260203_115429_894_c6534538b8.jpg",
+      "filename": "thumbnail_IMG_20260203_115429_894_c6534538b8.jpg",
+      "byteSize": 9547,
+      "mimeType": "image/jpeg",
+      "width": 245,
+      "height": 138,
+      "sha256": "16728abaa3d3cfdec71926d511d1bdba11a6884f0d2ca3b7250f39800ffdad14",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/technology-items:response.data.0.image.2.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_IMG_20260203_115432_058_6c285533dd.jpg",
+      "filename": "thumbnail_IMG_20260203_115432_058_6c285533dd.jpg",
+      "byteSize": 4612,
+      "mimeType": "image/jpeg",
+      "width": 88,
+      "height": 156,
+      "sha256": "2754ad2023fb74cebbdb2301af59af328ab6fd1f53fa3f0c693d91a3c666b3b8",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/technology-items:response.data.0.image.1.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_IMG_20260214_150422_a46102a4ad.jpg",
+      "filename": "thumbnail_IMG_20260214_150422_a46102a4ad.jpg",
+      "byteSize": 2062,
+      "mimeType": "image/jpeg",
+      "width": 106,
+      "height": 156,
+      "sha256": "c6e9920a5b421ddc36c7eb37a2533afba1f6a9224dc4e9663c15fa420fc2101c",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/technology-items:response.data.0.image.0.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Implant_Crowns_d1dc8c0431.jpg",
+      "filename": "thumbnail_Implant_Crowns_d1dc8c0431.jpg",
+      "byteSize": 5976,
+      "mimeType": "image/jpeg",
+      "width": 245,
+      "height": 150,
+      "sha256": "0a58f3e0b29eb84e2ef43c91bef6c04c5e9042fdf9a71927d2aa55416ce0a63f",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.25.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_implants_ce30f97b0b.webp",
+      "filename": "thumbnail_implants_ce30f97b0b.webp",
+      "byteSize": 1750,
+      "mimeType": "image/webp",
+      "width": 227,
+      "height": 156,
+      "sha256": "8530166091e42021b7872ff967113a1e61181b86a55a43ae4461055d093e70c6",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/hero-section:response.data.showcaseProducts.1.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Inaly_1353cf4bd2.png",
+      "filename": "thumbnail_Inaly_1353cf4bd2.png",
+      "byteSize": 48547,
+      "mimeType": "image/png",
+      "width": 200,
+      "height": 156,
+      "sha256": "d98a7f54a0a13d4891f19700d571e9cae0d57509f5eba86c6ae6e8a358f22009",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.0.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/png"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Injectable_Composite_4f99368198.jpg",
+      "filename": "thumbnail_Injectable_Composite_4f99368198.jpg",
+      "byteSize": 4257,
+      "mimeType": "image/jpeg",
+      "width": 208,
+      "height": 156,
+      "sha256": "e22bb101f8dfb4e2696b7f09f309319fc8074427146239e5242e689d683ff935",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.33.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Laithinum_Veneers_59b5b80c0a.jpg",
+      "filename": "thumbnail_Laithinum_Veneers_59b5b80c0a.jpg",
+      "byteSize": 3684,
+      "mimeType": "image/jpeg",
+      "width": 245,
+      "height": 107,
+      "sha256": "98c4b48f3cd482a7e359cb9182c3831c20e4d2fba8011c9f647539be365f4cc6",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.31.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_logo_838ac12b09.png",
+      "filename": "thumbnail_logo_838ac12b09.png",
+      "byteSize": 12356,
+      "mimeType": "image/png",
+      "width": 245,
+      "height": 56,
+      "sha256": "7dad34a5579dffe258cc70b1e97806785240469ee803dcd4cd19b1960343d643",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/header-navigation:response.data.logo.formats.thumbnail",
+        "/footer:response.data.logo.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/png"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Metal_Bar_Over_Implant_b4a585f213.JPG",
+      "filename": "thumbnail_Metal_Bar_Over_Implant_b4a585f213.JPG",
+      "byteSize": 5513,
+      "mimeType": "image/jpeg",
+      "width": 234,
+      "height": 156,
+      "sha256": "cd3c49c5a0de14ee49725782b95f648db8b5eff96bfe299aa9bca7943501d2fb",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.26.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_One_implant_182dde9bbf.webp",
+      "filename": "thumbnail_One_implant_182dde9bbf.webp",
+      "byteSize": 2154,
+      "mimeType": "image/webp",
+      "width": 234,
+      "height": 156,
+      "sha256": "f1f073d5c1609fd501ace9cd48b3ba15951d98f340f75de698df8bcf73c5884a",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.7.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Onlay_f7ea61b5f0.webp",
+      "filename": "thumbnail_Onlay_f7ea61b5f0.webp",
+      "byteSize": 2120,
+      "mimeType": "image/webp",
+      "width": 234,
+      "height": 156,
+      "sha256": "3378bd8a33ca87170d1021083ba62fe546b8fe7163860d17717f7ef724dd9300",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.2.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_partial_veneers_07870c2faf.JPG",
+      "filename": "thumbnail_partial_veneers_07870c2faf.JPG",
+      "byteSize": 2943,
+      "mimeType": "image/jpeg",
+      "width": 234,
+      "height": 156,
+      "sha256": "936efaeba7c50a0137e135f350c6e16a7dde9db35b453f07c4b7c5b84f4f6679",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.11.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a.jpg",
+      "filename": "thumbnail_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a.jpg",
+      "byteSize": 8456,
+      "mimeType": "image/jpeg",
+      "width": 234,
+      "height": 156,
+      "sha256": "d373e81f9acc9fcc591e6090de6e56f923e6d1bca32948462c327c5219e287d6",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/technology-items:response.data.0.image.3.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Rapid_palatal_expander_RPE_b07ba9c46b.JPG",
+      "filename": "thumbnail_Rapid_palatal_expander_RPE_b07ba9c46b.JPG",
+      "byteSize": 5064,
+      "mimeType": "image/jpeg",
+      "width": 234,
+      "height": 156,
+      "sha256": "4d2eea8b038b14689bd2c414e2f8481e9c512f63cfb02c84d268711bbe7b6eb0",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.18.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_removable_appliance_26f1bc7b25.webp",
+      "filename": "thumbnail_removable_appliance_26f1bc7b25.webp",
+      "byteSize": 2740,
+      "mimeType": "image/webp",
+      "width": 110,
+      "height": 156,
+      "sha256": "74469658c66ce21db2dd5b1461f527ec480565d5ca5504bce14f0dbd942078da",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/hero-section:response.data.showcaseProducts.2.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Removable_appliance_RPD_005df12f87.webp",
+      "filename": "thumbnail_Removable_appliance_RPD_005df12f87.webp",
+      "byteSize": 4048,
+      "mimeType": "image/webp",
+      "width": 234,
+      "height": 156,
+      "sha256": "d90d0bd62926ae16378ed1f00fca8db9b62404f0f99720fa545fb36cb7c199a7",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.35.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Removable_Palatal_Expander_d0dceb0e45.JPG",
+      "filename": "thumbnail_Removable_Palatal_Expander_d0dceb0e45.JPG",
+      "byteSize": 5138,
+      "mimeType": "image/jpeg",
+      "width": 234,
+      "height": 156,
+      "sha256": "66710ed02092e2077382ed76e02316711f38ae180b736ea296c93670ed0e3ea1",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.19.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_removable_partial_Dentures_d8d4e8e0c1.webp",
+      "filename": "thumbnail_removable_partial_Dentures_d8d4e8e0c1.webp",
+      "byteSize": 1934,
+      "mimeType": "image/webp",
+      "width": 234,
+      "height": 156,
+      "sha256": "c19bbaaa3c54dc8f82ec213bef877989b671b3957221c0cde888878dfcd06fa2",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.6.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Retainer_11a9e5ed3c.JPG",
+      "filename": "thumbnail_Retainer_11a9e5ed3c.JPG",
+      "byteSize": 4374,
+      "mimeType": "image/jpeg",
+      "width": 234,
+      "height": 156,
+      "sha256": "bac0953b341b3156f0f59a16343c9dc57be70467e478727f9dda7068d6623513",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.20.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_service_1_89f1caf1f7.webp",
+      "filename": "thumbnail_service_1_89f1caf1f7.webp",
+      "byteSize": 5278,
+      "mimeType": "image/webp",
+      "width": 245,
+      "height": 134,
+      "sha256": "509308201b59ee74a3200af8eb7c3abdccddb128047d31d23117eb31bfcd7a5e",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/our-services-section:response.data.services.0.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_service_2_4a5b93df59.webp",
+      "filename": "thumbnail_service_2_4a5b93df59.webp",
+      "byteSize": 3440,
+      "mimeType": "image/webp",
+      "width": 245,
+      "height": 134,
+      "sha256": "a4b85db0eafd2ca2879138469ad5f3b33bc5ad4ae3dd363fbd21dd1d16d21836",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/our-services-section:response.data.services.1.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_service_4_e95762b0f3.webp",
+      "filename": "thumbnail_service_4_e95762b0f3.webp",
+      "byteSize": 5350,
+      "mimeType": "image/webp",
+      "width": 245,
+      "height": 134,
+      "sha256": "25c9cda40e38be40000c6bb04b9452b5b435f263c220b408675d9dbec3ba44c0",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/our-services-section:response.data.services.2.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_service_5_5c8dde1357.webp",
+      "filename": "thumbnail_service_5_5c8dde1357.webp",
+      "byteSize": 4500,
+      "mimeType": "image/webp",
+      "width": 245,
+      "height": 134,
+      "sha256": "48d7db962642f4ad0b26329f771c51b5e667096030c4c662ccb7521dce6ac9a1",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/our-services-section:response.data.services.3.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Stackable_Surgical_guide_1f14f59b4a.webp",
+      "filename": "thumbnail_Stackable_Surgical_guide_1f14f59b4a.webp",
+      "byteSize": 2822,
+      "mimeType": "image/webp",
+      "width": 234,
+      "height": 156,
+      "sha256": "9bd1c9db8d9468f3b607a0bf39e9f8144ddfccbedbf68b501f39ff5a7294d334",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.8.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_step_1_356897bf23.webp",
+      "filename": "thumbnail_step_1_356897bf23.webp",
+      "byteSize": 4546,
+      "mimeType": "image/webp",
+      "width": 245,
+      "height": 134,
+      "sha256": "7c8a296b9bd15d778e412f459c5dee2de97f8b404dc58d6405dd776323c5ede7",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/technology-section:response.data.processSteps.0.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_step_2_adf74bd31e.webp",
+      "filename": "thumbnail_step_2_adf74bd31e.webp",
+      "byteSize": 4660,
+      "mimeType": "image/webp",
+      "width": 245,
+      "height": 134,
+      "sha256": "cbff5486584e735f28a172298bf452e4f1dcafd75fecbe337673059f4aad1908",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/technology-section:response.data.processSteps.1.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_step_3_194ca704ab.webp",
+      "filename": "thumbnail_step_3_194ca704ab.webp",
+      "byteSize": 6026,
+      "mimeType": "image/webp",
+      "width": 245,
+      "height": 134,
+      "sha256": "0e184b60672e9889fcf5d96e2432717a65fe83b60d0f5f1afd74bfd945525bb7",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/technology-section:response.data.processSteps.2.image.formats.thumbnail",
+        "/product-types:response.data.1.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Surgical_guide_7ce88b4775.webp",
+      "filename": "thumbnail_Surgical_guide_7ce88b4775.webp",
+      "byteSize": 3568,
+      "mimeType": "image/webp",
+      "width": 110,
+      "height": 156,
+      "sha256": "fe91dadbd7401f75d3aa58907eaf811897fde7fb0c9eb508b868e76abd94e682",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/hero-section:response.data.showcaseProducts.3.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_T_Rex_b4a9b3311b.JPG",
+      "filename": "thumbnail_T_Rex_b4a9b3311b.JPG",
+      "byteSize": 6119,
+      "mimeType": "image/jpeg",
+      "width": 234,
+      "height": 156,
+      "sha256": "bc0f333d408d4d690ab5b9f838e367938540a89303816f1a0c9d699f0f113bdc",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.21.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Three_implant_4ad1ee1f9b.webp",
+      "filename": "thumbnail_Three_implant_4ad1ee1f9b.webp",
+      "byteSize": 3072,
+      "mimeType": "image/webp",
+      "width": 233,
+      "height": 156,
+      "sha256": "1777efb9b2e7899f92009d8111229e09bdeec8cacd64da095802cc232eccbd95",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.5.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Veneers_97cce9546d.webp",
+      "filename": "thumbnail_Veneers_97cce9546d.webp",
+      "byteSize": 1514,
+      "mimeType": "image/webp",
+      "width": 234,
+      "height": 156,
+      "sha256": "aa6de3f9ff4d57ac64e1421ce11bef8d005f63062458a4b76db3240ce6b5033a",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/hero-section:response.data.showcaseProducts.4.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Whats_App_Image_2026_01_25_at_6_18_50_PM_832b25eba4.jpeg",
+      "filename": "thumbnail_Whats_App_Image_2026_01_25_at_6_18_50_PM_832b25eba4.jpeg",
+      "byteSize": 9530,
+      "mimeType": "image/jpeg",
+      "width": 235,
+      "height": 156,
+      "sha256": "707c3e78d2cb73554c6bcf74a0a39fcbe3e626a6d0129ee53cf9883de89c7b23",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/our-story-section:response.data.storyImage.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/thumbnail_Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850.png",
+      "filename": "thumbnail_Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850.png",
+      "byteSize": 37137,
+      "mimeType": "image/png",
+      "width": 126,
+      "height": 156,
+      "sha256": "054e3c92a9fea608090fbecd3083d90f80bab2a930281be35722221d4db22419",
+      "responsiveFormat": "thumbnail",
+      "references": [
+        "/product-types:response.data.27.image.formats.thumbnail"
+      ],
+      "detectedMimeType": "image/png"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Veneers_97cce9546d.webp",
+      "filename": "Veneers_97cce9546d.webp",
+      "byteSize": 4262,
+      "mimeType": "image/webp",
+      "width": 500,
+      "height": 333,
+      "sha256": "f0bd02c8f78e898172465c298aade15718114f9cf6a752d4c2e896ae91d8bd16",
+      "responsiveFormat": "original",
+      "references": [
+        "/hero-section:response.data.showcaseProducts.4.image"
+      ],
+      "detectedMimeType": "image/webp"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Whats_App_Image_2026_01_25_at_6_18_50_PM_832b25eba4.jpeg",
+      "filename": "Whats_App_Image_2026_01_25_at_6_18_50_PM_832b25eba4.jpeg",
+      "byteSize": 56006,
+      "mimeType": "image/jpeg",
+      "width": 800,
+      "height": 533,
+      "sha256": "f7246f8f6ca907f12927cdfe7985affd602b5137a36cecabbe8baaf530e1add5",
+      "responsiveFormat": "original",
+      "references": [
+        "/our-story-section:response.data.storyImage"
+      ],
+      "detectedMimeType": "image/jpeg"
+    },
+    {
+      "sourceUrl": "https://legendary-delight-abce3e6fc0.media.strapiapp.com/Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850.png",
+      "filename": "Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850.png",
+      "byteSize": 2027357,
+      "mimeType": "image/png",
+      "width": 2431,
+      "height": 3002,
+      "sha256": "f4cd4c6e608167250aacd781bfdadbd5b5c852d6a31576a884a4567686288ba4",
+      "responsiveFormat": "original",
+      "references": [
+        "/product-types:response.data.27.image"
+      ],
+      "detectedMimeType": "image/png"
+    }
+  ]
+}

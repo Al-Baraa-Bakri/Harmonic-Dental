@@ -14,10 +14,10 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { getImageSrc } from "@/lib/utils";
-import type { ProcessedHeroSection } from "@/types/strapi";
+import type { ProcessedHeroSection } from "@/types/content";
 
 // Types
-type StrapiProduct = {
+type ShowcaseProduct = {
   id: number;
   name: string;
   slug: string;
@@ -33,7 +33,7 @@ type StrapiProduct = {
   order: number;
 };
 
-type StrapiStat = {
+type HeroStat = {
   id: number;
   value: string;
   label: string;
@@ -73,7 +73,7 @@ const ICON_MAP: Record<string, LucideIcon> = {
 };
 
 // Helper to get icon for a product
-const getIconForProduct = (product: StrapiProduct): LucideIcon => {
+const getIconForProduct = (product: ShowcaseProduct): LucideIcon => {
   const slug = product.slug?.toLowerCase() || "";
   const name = product.name?.toLowerCase() || "";
 
@@ -190,7 +190,7 @@ const CTAButtons = memo(
 
 CTAButtons.displayName = "CTAButtons";
 
-const StatItem = memo<{ stat: StrapiStat }>(({ stat }) => (
+const StatItem = memo<{ stat: HeroStat }>(({ stat }) => (
   <div className="flex flex-col">
     <div className="text-3xl font-bold text-gradient mb-1">{stat.value}</div>
     <div className="text-xs text-muted-foreground capitalize">{stat.label}</div>
@@ -199,7 +199,7 @@ const StatItem = memo<{ stat: StrapiStat }>(({ stat }) => (
 
 StatItem.displayName = "StatItem";
 
-const StatsGrid = memo(({ stats }: { stats: StrapiStat[] }) => {
+const StatsGrid = memo(({ stats }: { stats: HeroStat[] }) => {
   if (!stats || stats.length === 0) return null;
 
   // Sort stats by order (1 is first, 2 is second, etc.)
@@ -221,7 +221,7 @@ const StatsGrid = memo(({ stats }: { stats: StrapiStat[] }) => {
 
 StatsGrid.displayName = "StatsGrid";
 
-const ProductCard = memo<{ product: StrapiProduct; index: number }>(
+const ProductCard = memo<{ product: ShowcaseProduct; index: number }>(
   ({ product, index }) => {
     const Icon = getIconForProduct(product);
 
@@ -283,7 +283,7 @@ const ProductCard = memo<{ product: StrapiProduct; index: number }>(
 
 ProductCard.displayName = "ProductCard";
 
-const ProductsShowcase = memo(({ products }: { products: StrapiProduct[] }) => {
+const ProductsShowcase = memo(({ products }: { products: ShowcaseProduct[] }) => {
   if (!products || products.length === 0) return null;
 
   // Sort products by order (1 is first, 2 is second, etc.)
