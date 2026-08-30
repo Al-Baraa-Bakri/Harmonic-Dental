@@ -28,7 +28,7 @@ const StorySection = ({
   whyChooseUsHeading = "Why Partner With Us?",
   whyChooseUsItems = [],
 }: any) => {
-  // Fallback items if none from Strapi
+  // Fallback items if the local content snapshot is empty.
   const fallbackItems = [
     {
       id: 1,

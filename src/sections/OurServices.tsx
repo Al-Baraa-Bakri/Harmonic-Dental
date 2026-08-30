@@ -8,7 +8,7 @@ const OurServices = ({
   headerSubtitle = "combining artistry with advanced technology.",
   services: propServices = [],
 }: any) => {
-  // Fallback services if none from Strapi
+  // Fallback services if the local content snapshot is empty.
   const fallbackServices = [
     {
       id: 1,
@@ -69,7 +69,7 @@ const OurServices = ({
     },
   ];
 
-  // Use Strapi services if available, otherwise fallback
+  // Use repository content when available, otherwise fall back.
   const services =
     propServices.length > 0
       ? [...propServices].sort((a, b) => {

@@ -1,5 +1,5 @@
-import { fetchAPI, getImageData } from "../strapi";
-import type { StrapiResponse } from "../../types/strapi";
+import { getContentSection } from "../content";
+import type { ImageData } from "../../types/content";
 
 // Types
 export interface FeatureTag {
@@ -13,12 +13,7 @@ export interface ProcessedProductType {
   name: string;
   slug: string;
   description: string;
-  image?: {
-    url: string;
-    alternativeText: string;
-    width: number;
-    height: number;
-  };
+  image?: ImageData;
   badge?: string;
   category?: {
     id: number;
@@ -47,156 +42,8 @@ export interface ProcessedProductsPage {
   }>;
 }
 
-/**
- * Get Products Page data from Strapi
- *
- * Strapi Structure:
- * - Products Page (Single Type)
- *   - API ID: products-page
- *   - heroTitle: "Our"
- *   - heroHighlightedText: "Products"
- *   - heroSubtitle: "Explore our comprehensive..."
- *   - backButtonText: "Back to Home"
- *   - product_types (One-to-Many relation to Product Type collection):
- *     - name, slug, description, image, badge
- *     - category (Many-to-One relation to Product)
- *     - features, order, featured, inStock, etc.
- */
 export async function getProductsPage(): Promise<ProcessedProductsPage | null> {
-  try {
-    // First, get the products page with product_types
-    const response = await fetchAPI<StrapiResponse<any>>("/products-page", {
-      populate: ["product_types"],
-    });
-
-    if (!response.data) {
-      console.warn("[Products Page API] No data found in response");
-      return null;
-    }
-
-    const attrs = response.data;
-
-    // Now fetch each product type with its relations
-    let productTypesData: any[] = [];
-
-    if (Array.isArray(attrs.product_types) && attrs.product_types.length > 0) {
-      // Fetch all product types with their relations
-      const productTypesResponse = await fetchAPI<StrapiResponse<any[]>>(
-        "/product-types", // 1. Keep this clean, remove the ?...
-        {
-          // 2. Add pagination here
-          pagination: {
-            limit: 100,
-          },
-          populate: ["image", "category", "features"],
-          filters: {
-            id: {
-              $in: attrs.product_types.map((pt: any) => pt.id || pt.documentId),
-            },
-          },
-          sort: ["order:asc"],
-        }
-      );
-
-      if (productTypesResponse.data) {
-        productTypesData = Array.isArray(productTypesResponse.data)
-          ? productTypesResponse.data
-          : [productTypesResponse.data];
-      }
-    }
-
-    if (!response.data) {
-      console.warn("[Products Page API] No data found in response");
-      return null;
-    }
-
-    // Process product types and sort manually
-    const productTypes = Array.isArray(productTypesData)
-      ? productTypesData
-          .map((productType: any) => {
-            // Process features
-            const features = Array.isArray(productType.features)
-              ? productType.features
-                  .map((feature: any) => ({
-                    id: feature.id,
-                    name: feature.name || "",
-                    order: feature.order || 0,
-                  }))
-                  .sort((a: FeatureTag, b: FeatureTag) => {
-                    const orderA = a.order === 0 ? 999 : a.order;
-                    const orderB = b.order === 0 ? 999 : b.order;
-                    return orderA - orderB;
-                  })
-              : [];
-
-            // Process category
-            let category;
-            if (productType.category) {
-              category = {
-                id: productType.category.id || productType.category.documentId,
-                name: productType.category.name || "",
-                slug: productType.category.slug || "",
-              };
-            }
-
-            return {
-              id: productType.id || productType.documentId,
-              name: productType.name || "",
-              slug: productType.slug || "",
-              description: productType.description || "",
-              image: productType.image
-                ? getImageData(productType.image)
-                : undefined,
-              badge: productType.badge || undefined,
-              category,
-              features,
-              detailedDescription: productType.detailedDescription || undefined,
-              price: productType.price || undefined,
-              inStock: productType.inStock !== false, // Default to true
-              model3dUrl: productType.model3dUrl || undefined,
-              order: productType.order || 0,
-              featured: productType.featured || false,
-            };
-          })
-          .sort((a, b) => {
-            // Sort by order (1 is first, 0 is last)
-            const orderA = a.order === 0 ? 999 : a.order;
-            const orderB = b.order === 0 ? 999 : b.order;
-            return orderA - orderB;
-          })
-      : [];
-
-    // Extract unique categories from product types
-    const categoriesMap = new Map<
-      number,
-      { id: number; name: string; slug: string }
-    >();
-    productTypes.forEach((productType) => {
-      if (productType.category) {
-        categoriesMap.set(productType.category.id, productType.category);
-      }
-    });
-    const categories = Array.from(categoriesMap.values());
-
-    const result = {
-      heroTitle: attrs.heroTitle || "Our",
-      heroHighlightedText: attrs.heroHighlightedText || "Products",
-      heroSubtitle:
-        attrs.heroSubtitle ||
-        "Explore our comprehensive range of precision-crafted dental prosthetics.",
-      backButtonText: attrs.backButtonText || "Back to Home",
-      productTypes,
-      categories,
-    };
-
-    return result as any;
-  } catch (error) {
-    console.error("[Products Page API] ❌ Error:", error);
-    if (error instanceof Error) {
-      console.error("[Products Page API] Error details:", error.message);
-    }
-    return null;
-  }
+  return getContentSection<ProcessedProductsPage>((content) => content.productsPage);
 }
 
 /**

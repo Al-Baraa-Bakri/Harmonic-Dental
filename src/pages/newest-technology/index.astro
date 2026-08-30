@@ -4,8 +4,6 @@ import DefaultLayout from "../../layouts/Default.astro";
 import { getTechnologyPage } from "@/lib/api/technology-page";
 
 const technologyData = await getTechnologyPage() as any;
-console.log("technologyData" , technologyData);
-
 ---
 
 <DefaultLayout title="The Newest Technology | Harmonic Dental" description="Explore cutting-edge dental technology that transforms precision and efficiency in every restoration.">

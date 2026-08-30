@@ -1,12 +1,21 @@
-import { fetchAPI, getImageData } from "../strapi";
-import type { StrapiResponse } from "../../types/strapi";
+import { getContentSection } from "../content";
+import type { ImageData } from "../../types/content";
+
+export interface ProcessStep {
+  id: number;
+  number: string;
+  title: string;
+  description: string;
+  image?: ImageData;
+  order: number;
+}
 
 export interface ProcessedTechnology {
   headerBadge: string;
   headerTitle: string;
   headerHighlightedText: string;
   headerSubtitle: string;
-  processSteps: any[];
+  processSteps: ProcessStep[];
   ctaButton?: {
     label: string;
     url: string;
@@ -15,45 +24,5 @@ export interface ProcessedTechnology {
 }
 
 export async function getTechnologySection(): Promise<ProcessedTechnology | null> {
-  try {
-    const response = await fetchAPI<StrapiResponse<any>>(
-      "/technology-section",
-      {
-        populate: ["processSteps", "processSteps.image", "ctaButton"],
-      }
-    );
-
-    if (!response.data) {
-      console.warn("[Technology API] No data found");
-      return null;
-    }
-
-    const attrs = response.data;
-
-    // Process steps
-    const processSteps = Array.isArray(attrs.processSteps)
-      ? attrs.processSteps
-          .map((step: any) => ({
-            id: step.id,
-            number: step.number || "",
-            title: step.title || "",
-            description: step.description || "",
-            image: step.image ? getImageData(step.image) : undefined,
-            order: step.order || 0,
-          }))
-          .sort((a: any, b: any) => a.order - b.order)
-      : [];
-
-    return {
-      headerBadge: attrs.headerBadge || "Advanced Technology",
-      headerTitle: attrs.headerTitle || "",
-      headerHighlightedText: attrs.headerHighlightedText || "",
-      headerSubtitle: attrs.headerSubtitle || "",
-      processSteps,
-      ctaButton: attrs.ctaButton || undefined,
-    };
-  } catch (error) {
-    console.error("[Technology API] Error:", error);
-    return null;
-  }
+  return getContentSection<ProcessedTechnology>((content) => content.home.technology);
 }

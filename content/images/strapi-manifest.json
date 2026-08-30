@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "generatedAt": "2026-08-30T05:29:09.488Z",
   "source": "https://legendary-delight-abce3e6fc0.strapiapp.com",
-  "imageDirectory": "content/images/strapi",
+  "imageDirectory": "public/images/strapi",
   "count": 254,
   "totalBytes": 35499128,
   "images": [

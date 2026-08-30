@@ -3,8 +3,7 @@ import { basename } from "node:path";
 
 export const DEFAULT_STRAPI_URL =
   "https://legendary-delight-abce3e6fc0.strapiapp.com";
-export const DEFAULT_ASSET_BASE_URL = "https://assets.harmonicdl.com/strapi";
-export const IMAGE_OUTPUT_DIR = "content/images/strapi";
+export const IMAGE_OUTPUT_DIR = "public/images/strapi";
 export const IMAGE_MANIFEST_PATH = "content/images/strapi-manifest.json";
 export const RAW_EXPORT_PATH = "content/strapi-raw-export.json";
 export const CONTENT_DATA_PATH = "src/data/site-content.json";
@@ -269,6 +268,6 @@ export function detectImageType(buffer) {
   return null;
 }
 
-export function publicAssetUrl(filename, assetBaseUrl = DEFAULT_ASSET_BASE_URL) {
+export function publicAssetUrl(filename, assetBaseUrl = "/images/strapi") {
   return `${assetBaseUrl.replace(/\/$/, "")}/${encodeURIComponent(filename)}`;
 }

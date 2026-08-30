@@ -1,0 +1,4057 @@
+{
+  "schemaVersion": 1,
+  "exportedAt": "2026-08-30T05:26:44.863Z",
+  "header": {
+    "logo": {
+      "url": "/images/strapi/logo_838ac12b09.png",
+      "alternativeText": "logo.png",
+      "width": 925,
+      "height": 213,
+      "formats": {
+        "small": {
+          "ext": ".png",
+          "url": "/images/strapi/small_logo_838ac12b09.png",
+          "hash": "small_logo_838ac12b09",
+          "mime": "image/png",
+          "name": "small_logo.png",
+          "path": null,
+          "size": 36.66,
+          "width": 500,
+          "height": 115,
+          "sizeInBytes": 36655
+        },
+        "medium": {
+          "ext": ".png",
+          "url": "/images/strapi/medium_logo_838ac12b09.png",
+          "hash": "medium_logo_838ac12b09",
+          "mime": "image/png",
+          "name": "medium_logo.png",
+          "path": null,
+          "size": 70.81,
+          "width": 750,
+          "height": 173,
+          "sizeInBytes": 70814
+        },
+        "thumbnail": {
+          "ext": ".png",
+          "url": "/images/strapi/thumbnail_logo_838ac12b09.png",
+          "hash": "thumbnail_logo_838ac12b09",
+          "mime": "image/png",
+          "name": "thumbnail_logo.png",
+          "path": null,
+          "size": 12.36,
+          "width": 245,
+          "height": 56,
+          "sizeInBytes": 12356
+        }
+      }
+    },
+    "navigationItems": [
+      {
+        "id": 13,
+        "label": "Home",
+        "url": "/",
+        "isExternal": false,
+        "order": 1
+      },
+      {
+        "id": 14,
+        "label": "Products",
+        "url": "/products",
+        "isExternal": false,
+        "order": 2
+      },
+      {
+        "id": 15,
+        "label": "The Newest Technology",
+        "url": "/newest-technology",
+        "isExternal": false,
+        "order": 3
+      },
+      {
+        "id": 16,
+        "label": "Contact Us",
+        "url": "#contact-us",
+        "isExternal": false,
+        "order": 4
+      }
+    ],
+    "phoneNumber": "+971 50 669 4070",
+    "ctaButton": {
+      "label": "Get Quote",
+      "url": "#contact-us",
+      "isExternal": false
+    }
+  },
+  "footer": {
+    "logo": {
+      "url": "/images/strapi/logo_838ac12b09.png",
+      "alternativeText": "logo.png",
+      "width": 925,
+      "height": 213,
+      "formats": {
+        "small": {
+          "ext": ".png",
+          "url": "/images/strapi/small_logo_838ac12b09.png",
+          "hash": "small_logo_838ac12b09",
+          "mime": "image/png",
+          "name": "small_logo.png",
+          "path": null,
+          "size": 36.66,
+          "width": 500,
+          "height": 115,
+          "sizeInBytes": 36655
+        },
+        "medium": {
+          "ext": ".png",
+          "url": "/images/strapi/medium_logo_838ac12b09.png",
+          "hash": "medium_logo_838ac12b09",
+          "mime": "image/png",
+          "name": "medium_logo.png",
+          "path": null,
+          "size": 70.81,
+          "width": 750,
+          "height": 173,
+          "sizeInBytes": 70814
+        },
+        "thumbnail": {
+          "ext": ".png",
+          "url": "/images/strapi/thumbnail_logo_838ac12b09.png",
+          "hash": "thumbnail_logo_838ac12b09",
+          "mime": "image/png",
+          "name": "thumbnail_logo.png",
+          "path": null,
+          "size": 12.36,
+          "width": 245,
+          "height": 56,
+          "sizeInBytes": 12356
+        }
+      }
+    },
+    "description": "Crafting excellence in dental solutions with cutting-edge technology and unmatched precision. Your trusted partner in dental prosthetics.",
+    "phoneNumber": "+971 50 669 4070",
+    "email": "harmonicdentallab@gmail.com",
+    "address": "Abu Dhabi\nUnited Arab Emirates ",
+    "navigationColumns": [
+      {
+        "id": 10,
+        "title": "Products",
+        "links": [
+          {
+            "id": 25,
+            "label": "Crowns",
+            "url": "/products?category=crowns",
+            "isExternal": false
+          },
+          {
+            "id": 26,
+            "label": "Implant",
+            "url": "/products?category=Implant",
+            "isExternal": false
+          },
+          {
+            "id": 27,
+            "label": "Removable Appliance",
+            "url": "/products?category=Removable+Appliance",
+            "isExternal": false
+          },
+          {
+            "id": 28,
+            "label": "Surgical Guide",
+            "url": "/products?category=Surgical+guide",
+            "isExternal": false
+          },
+          {
+            "id": 29,
+            "label": "Veneers",
+            "url": "/products?category=veneers",
+            "isExternal": false
+          }
+        ],
+        "order": 1
+      },
+      {
+        "id": 11,
+        "title": "Company",
+        "links": [
+          {
+            "id": 30,
+            "label": "Technology",
+            "url": "/newest-technology",
+            "isExternal": false
+          }
+        ],
+        "order": 2
+      },
+      {
+        "id": 12,
+        "title": "Support",
+        "links": [
+          {
+            "id": 31,
+            "label": "Contact",
+            "url": "#contact-us",
+            "isExternal": false
+          },
+          {
+            "id": 32,
+            "label": "FAQs",
+            "url": "#faqs",
+            "isExternal": false
+          }
+        ],
+        "order": 3
+      }
+    ],
+    "companyName": "Harmonic Dental",
+    "socialLinks": [
+      {
+        "id": 10,
+        "platform": "Facebook",
+        "url": "https://www.facebook.com/harmonicdentallab"
+      },
+      {
+        "id": 11,
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/harmonicdentallab/"
+      },
+      {
+        "id": 12,
+        "platform": "Youtube",
+        "url": "https://www.youtube.com/shorts/ucYA_YBliBY"
+      }
+    ]
+  },
+  "contact": {
+    "headerBadge": "Contact Us",
+    "headerTitle": "To start your amazing journey",
+    "headerHighlightedText": "Get in touch with us",
+    "headerSubtitle": "We're here to help. Reach out to us through any of the channels below.",
+    "emails": [
+      {
+        "id": 62,
+        "label": "HR",
+        "value": "hr@harmonicdl.com",
+        "order": 1
+      },
+      {
+        "id": 63,
+        "label": "CEO",
+        "value": "ceo@harmonicdl.com",
+        "order": 2
+      },
+      {
+        "id": 64,
+        "label": "INFO",
+        "value": "info@harmonicdl.com",
+        "order": 3
+      },
+      {
+        "id": 65,
+        "label": "ACCOUNT",
+        "value": "account@harmonicdl.com",
+        "order": 5
+      },
+      {
+        "id": 66,
+        "label": "cadcam",
+        "value": "cadcam@harmonicdl.com",
+        "order": 5
+      }
+    ],
+    "phones": [
+      {
+        "id": 67,
+        "label": "UAE/ Abu Dhabi",
+        "value": "+971 502298321",
+        "order": 1
+      },
+      {
+        "id": 68,
+        "label": "UAE/Alain",
+        "value": "+971 50 669 4070",
+        "order": 2
+      },
+      {
+        "id": 69,
+        "label": "Bahrain",
+        "value": "+973 32264111",
+        "order": 3
+      }
+    ],
+    "locationTitle": "Visit Our Laboratory",
+    "address": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227.4095837796684!2d55.77967099751988!3d24.222418173446066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8ab6c20c22dbb9%3A0x9c84589946709e34!2z2YjYs9i3INin2YTZhdiv2YrZhtipIC0g2K3ZiiDYp9mE2YXYsdio2LnYqSAtINij2KjZiCDYuNio2YogLSDYp9mE2KXZhdin2LHYp9iqINin2YTYudix2KjZitipINin2YTZhdiq2K3Yr9ip!5e0!3m2!1sar!2snl!4v1763289067862!5m2!1sar!2snl",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227.4095837796684!2d55.77967099751988!3d24.222418173446066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8ab6c20c22dbb9%3A0x9c84589946709e34!2z2YjYs9i3INin2YTZhdiv2YrZhtipIC0g2K3ZiiDYp9mE2YXYsdio2LnYqSAtINij2KjZiCDYuNio2YogLSDYp9mE2KXZhdin2LHYp9iqINin2YTYudix2KjZitipINin2YTZhdiq2K3Yr9ip!5e0!3m2!1sar!2snl!4v1763289067862!5m2!1sar!2snl",
+    "locations": [
+      {
+        "id": 5,
+        "text": "Abu Dhabi",
+        "order": 0
+      },
+      {
+        "id": 6,
+        "text": "Dubai",
+        "order": 0
+      }
+    ]
+  },
+  "home": {
+    "hero": {
+      "badgeText": "Precision Dental Solutions",
+      "mainHeading": "We Combine",
+      "highlightedText": "Arts & Technology",
+      "subtitle": "State-of-the-art laboratory delivering precision-engineered dental solutions with unmatched quality and speed. new",
+      "primaryButton": {
+        "id": 20,
+        "label": "Contact us",
+        "url": "#contact-us",
+        "isExternal": false
+      },
+      "secondaryButton": {
+        "id": 21,
+        "label": "view our work",
+        "url": "/products",
+        "isExternal": false
+      },
+      "stats": [],
+      "showcaseProducts": [
+        {
+          "id": 6,
+          "name": "Crowns",
+          "slug": "product-1",
+          "description": "Premium ceramic & zirconia",
+          "image": {
+            "url": "/images/strapi/crown_f27b04d2c6.webp",
+            "alternativeText": "crown.webp",
+            "width": 200,
+            "height": 133,
+            "formats": null
+          },
+          "badge": "Popular",
+          "featured": false,
+          "order": 1
+        },
+        {
+          "id": 5,
+          "name": "Implant",
+          "slug": "product-2",
+          "description": "High-precision titanium",
+          "image": {
+            "url": "/images/strapi/implants_ce30f97b0b.webp",
+            "alternativeText": "implants.webp",
+            "width": 500,
+            "height": 344,
+            "formats": {
+              "thumbnail": {
+                "ext": ".webp",
+                "url": "/images/strapi/thumbnail_implants_ce30f97b0b.webp",
+                "hash": "thumbnail_implants_ce30f97b0b",
+                "mime": "image/webp",
+                "name": "thumbnail_implants.webp",
+                "path": null,
+                "size": 1.75,
+                "width": 227,
+                "height": 156,
+                "sizeInBytes": 1750
+              }
+            }
+          },
+          "badge": "Advanced",
+          "featured": false,
+          "order": 2
+        },
+        {
+          "id": 16,
+          "name": "Removable Appliance",
+          "slug": "product-3",
+          "description": "Flexible partials",
+          "image": {
+            "url": "/images/strapi/removable_appliance_26f1bc7b25.webp",
+            "alternativeText": "removable appliance.webp",
+            "width": 2480,
+            "height": 3508,
+            "formats": {
+              "large": {
+                "ext": ".webp",
+                "url": "/images/strapi/large_removable_appliance_26f1bc7b25.webp",
+                "hash": "large_removable_appliance_26f1bc7b25",
+                "mime": "image/webp",
+                "name": "large_removable appliance.webp",
+                "path": null,
+                "size": 32.96,
+                "width": 707,
+                "height": 1000,
+                "sizeInBytes": 32964
+              },
+              "small": {
+                "ext": ".webp",
+                "url": "/images/strapi/small_removable_appliance_26f1bc7b25.webp",
+                "hash": "small_removable_appliance_26f1bc7b25",
+                "mime": "image/webp",
+                "name": "small_removable appliance.webp",
+                "path": null,
+                "size": 13.42,
+                "width": 353,
+                "height": 500,
+                "sizeInBytes": 13418
+              },
+              "medium": {
+                "ext": ".webp",
+                "url": "/images/strapi/medium_removable_appliance_26f1bc7b25.webp",
+                "hash": "medium_removable_appliance_26f1bc7b25",
+                "mime": "image/webp",
+                "name": "medium_removable appliance.webp",
+                "path": null,
+                "size": 22.63,
+                "width": 530,
+                "height": 750,
+                "sizeInBytes": 22630
+              },
+              "thumbnail": {
+                "ext": ".webp",
+                "url": "/images/strapi/thumbnail_removable_appliance_26f1bc7b25.webp",
+                "hash": "thumbnail_removable_appliance_26f1bc7b25",
+                "mime": "image/webp",
+                "name": "thumbnail_removable appliance.webp",
+                "path": null,
+                "size": 2.74,
+                "width": 110,
+                "height": 156,
+                "sizeInBytes": 2740
+              }
+            }
+          },
+          "badge": "Popular",
+          "featured": true,
+          "order": 3
+        },
+        {
+          "id": 17,
+          "name": "Surgical guide",
+          "slug": "product-4",
+          "description": "Precision implant guide",
+          "image": {
+            "url": "/images/strapi/Surgical_guide_7ce88b4775.webp",
+            "alternativeText": "Surgical guide.webp",
+            "width": 2480,
+            "height": 3508,
+            "formats": {
+              "large": {
+                "ext": ".webp",
+                "url": "/images/strapi/large_Surgical_guide_7ce88b4775.webp",
+                "hash": "large_Surgical_guide_7ce88b4775",
+                "mime": "image/webp",
+                "name": "large_Surgical guide.webp",
+                "path": null,
+                "size": 41.77,
+                "width": 707,
+                "height": 1000,
+                "sizeInBytes": 41770
+              },
+              "small": {
+                "ext": ".webp",
+                "url": "/images/strapi/small_Surgical_guide_7ce88b4775.webp",
+                "hash": "small_Surgical_guide_7ce88b4775",
+                "mime": "image/webp",
+                "name": "small_Surgical guide.webp",
+                "path": null,
+                "size": 17.11,
+                "width": 353,
+                "height": 500,
+                "sizeInBytes": 17108
+              },
+              "medium": {
+                "ext": ".webp",
+                "url": "/images/strapi/medium_Surgical_guide_7ce88b4775.webp",
+                "hash": "medium_Surgical_guide_7ce88b4775",
+                "mime": "image/webp",
+                "name": "medium_Surgical guide.webp",
+                "path": null,
+                "size": 28.89,
+                "width": 530,
+                "height": 750,
+                "sizeInBytes": 28888
+              },
+              "thumbnail": {
+                "ext": ".webp",
+                "url": "/images/strapi/thumbnail_Surgical_guide_7ce88b4775.webp",
+                "hash": "thumbnail_Surgical_guide_7ce88b4775",
+                "mime": "image/webp",
+                "name": "thumbnail_Surgical guide.webp",
+                "path": null,
+                "size": 3.57,
+                "width": 110,
+                "height": 156,
+                "sizeInBytes": 3568
+              }
+            }
+          },
+          "badge": "Popular",
+          "featured": true,
+          "order": 4
+        },
+        {
+          "id": 18,
+          "name": "Veneers",
+          "slug": "product-5",
+          "description": "Custom cosmetic shells",
+          "image": {
+            "url": "/images/strapi/Veneers_97cce9546d.webp",
+            "alternativeText": "Veneers.webp",
+            "width": 500,
+            "height": 333,
+            "formats": {
+              "thumbnail": {
+                "ext": ".webp",
+                "url": "/images/strapi/thumbnail_Veneers_97cce9546d.webp",
+                "hash": "thumbnail_Veneers_97cce9546d",
+                "mime": "image/webp",
+                "name": "thumbnail_Veneers.webp",
+                "path": null,
+                "size": 1.51,
+                "width": 234,
+                "height": 156,
+                "sizeInBytes": 1514
+              }
+            }
+          },
+          "badge": "Advanced",
+          "featured": true,
+          "order": 0
+        }
+      ]
+    },
+    "story": {
+      "headerBadge": "About Us",
+      "headerTitle": "Our Journey & Core Values",
+      "headerSubtitle": "Where precision meets innovation in dental excellence. We are dedicated to crafting superior, patient-focused dental solutions.",
+      "establishedYear": "2018",
+      "storyHeading": "Crafting Smiles with Precision & Innovation",
+      "storyParagraph1": "Welcome to Harmonic Dental Lab, where precision and innovation converge to create superior dental solutions. Our laboratory is a testament to our commitment to providing high-quality, custom-crafted dental products.",
+      "storyParagraph2": "Established in 2018, our state-of-the-art facility utilizes advanced CAD/CAM technology to deliver dental restorations that dramatically enhance patient satisfaction and well-being.",
+      "storyImage": {
+        "url": "/images/strapi/Whats_App_Image_2026_01_25_at_6_18_50_PM_832b25eba4.jpeg",
+        "alternativeText": "WhatsApp Image 2026-01-25 at 6.18.50 PM.jpeg",
+        "width": 800,
+        "height": 533,
+        "formats": {
+          "small": {
+            "ext": ".jpeg",
+            "url": "/images/strapi/small_Whats_App_Image_2026_01_25_at_6_18_50_PM_832b25eba4.jpeg",
+            "hash": "small_Whats_App_Image_2026_01_25_at_6_18_50_PM_832b25eba4",
+            "mime": "image/jpeg",
+            "name": "small_WhatsApp Image 2026-01-25 at 6.18.50 PM.jpeg",
+            "path": null,
+            "size": 27.06,
+            "width": 500,
+            "height": 333,
+            "sizeInBytes": 27057
+          },
+          "medium": {
+            "ext": ".jpeg",
+            "url": "/images/strapi/medium_Whats_App_Image_2026_01_25_at_6_18_50_PM_832b25eba4.jpeg",
+            "hash": "medium_Whats_App_Image_2026_01_25_at_6_18_50_PM_832b25eba4",
+            "mime": "image/jpeg",
+            "name": "medium_WhatsApp Image 2026-01-25 at 6.18.50 PM.jpeg",
+            "path": null,
+            "size": 48.94,
+            "width": 750,
+            "height": 500,
+            "sizeInBytes": 48935
+          },
+          "thumbnail": {
+            "ext": ".jpeg",
+            "url": "/images/strapi/thumbnail_Whats_App_Image_2026_01_25_at_6_18_50_PM_832b25eba4.jpeg",
+            "hash": "thumbnail_Whats_App_Image_2026_01_25_at_6_18_50_PM_832b25eba4",
+            "mime": "image/jpeg",
+            "name": "thumbnail_WhatsApp Image 2026-01-25 at 6.18.50 PM.jpeg",
+            "path": null,
+            "size": 9.53,
+            "width": 235,
+            "height": 156,
+            "sizeInBytes": 9530
+          }
+        }
+      },
+      "storyImageFloatingText": "CAD/CAM Powered Innovation",
+      "whyChooseUsHeading": "Why Partner With Us?",
+      "whyChooseUsItems": [
+        {
+          "id": 17,
+          "title": "Advanced Technology",
+          "description": "Equipped with the latest CAD/CAM systems, 3D printers, and milling machines to ensure precision and efficiency.",
+          "order": 1
+        },
+        {
+          "id": 18,
+          "title": "Skilled Technicians",
+          "description": "Our team comprises experienced dental technicians who are passionate about their craft and dedicated to delivering exceptional results.",
+          "order": 2
+        },
+        {
+          "id": 19,
+          "title": "Quality Materials",
+          "description": "We use only the finest materials, ensuring durability, functionality, and aesthetic appeal.",
+          "order": 3
+        },
+        {
+          "id": 20,
+          "title": "Personalized Service",
+          "description": "We work closely with dental professionals to understand and meet the specific needs of each case, ensuring patient satisfaction.\n\n",
+          "order": 4
+        }
+      ],
+      "missionHeading": "Our Unwavering Mission",
+      "missionParagraph1": "Our mission is to provide dental professionals with superior dental appliances that are tailored to the unique needs of each patient. We strive to achieve excellence through innovation, precision, and dedicated customer service.",
+      "missionParagraph2": "Committed to quality, precision, and lasting partnership."
+    },
+    "technology": {
+      "headerBadge": "Advanced Technology",
+      "headerTitle": "Your Journey to",
+      "headerHighlightedText": "Perfect Dental Prosthetics.",
+      "headerSubtitle": "Follow the path from digital scan to final delivery, powered by cutting-edge technology.",
+      "processSteps": [
+        {
+          "id": 9,
+          "number": "01",
+          "title": "Digital Scanning",
+          "description": "Advanced scanners capture every microscopic detail with 10-micron precision.",
+          "image": {
+            "url": "/images/strapi/step_1_356897bf23.webp",
+            "alternativeText": "step 1.webp",
+            "width": 2816,
+            "height": 1536,
+            "formats": {
+              "large": {
+                "ext": ".webp",
+                "url": "/images/strapi/large_step_1_356897bf23.webp",
+                "hash": "large_step_1_356897bf23",
+                "mime": "image/webp",
+                "name": "large_step 1.webp",
+                "path": null,
+                "size": 31.98,
+                "width": 1000,
+                "height": 545,
+                "sizeInBytes": 31976
+              },
+              "small": {
+                "ext": ".webp",
+                "url": "/images/strapi/small_step_1_356897bf23.webp",
+                "hash": "small_step_1_356897bf23",
+                "mime": "image/webp",
+                "name": "small_step 1.webp",
+                "path": null,
+                "size": 12.33,
+                "width": 500,
+                "height": 273,
+                "sizeInBytes": 12328
+              },
+              "medium": {
+                "ext": ".webp",
+                "url": "/images/strapi/medium_step_1_356897bf23.webp",
+                "hash": "medium_step_1_356897bf23",
+                "mime": "image/webp",
+                "name": "medium_step 1.webp",
+                "path": null,
+                "size": 21.44,
+                "width": 750,
+                "height": 409,
+                "sizeInBytes": 21440
+              },
+              "thumbnail": {
+                "ext": ".webp",
+                "url": "/images/strapi/thumbnail_step_1_356897bf23.webp",
+                "hash": "thumbnail_step_1_356897bf23",
+                "mime": "image/webp",
+                "name": "thumbnail_step 1.webp",
+                "path": null,
+                "size": 4.55,
+                "width": 245,
+                "height": 134,
+                "sizeInBytes": 4546
+              }
+            }
+          },
+          "order": 1
+        },
+        {
+          "id": 10,
+          "number": "02",
+          "title": "CAD Design",
+          "description": "Cutting-edge CAD/CAM software for perfect anatomical form.",
+          "image": {
+            "url": "/images/strapi/step_2_adf74bd31e.webp",
+            "alternativeText": "step 2.webp",
+            "width": 2816,
+            "height": 1536,
+            "formats": {
+              "large": {
+                "ext": ".webp",
+                "url": "/images/strapi/large_step_2_adf74bd31e.webp",
+                "hash": "large_step_2_adf74bd31e",
+                "mime": "image/webp",
+                "name": "large_step 2.webp",
+                "path": null,
+                "size": 31.45,
+                "width": 1000,
+                "height": 545,
+                "sizeInBytes": 31454
+              },
+              "small": {
+                "ext": ".webp",
+                "url": "/images/strapi/small_step_2_adf74bd31e.webp",
+                "hash": "small_step_2_adf74bd31e",
+                "mime": "image/webp",
+                "name": "small_step 2.webp",
+                "path": null,
+                "size": 12.37,
+                "width": 500,
+                "height": 273,
+                "sizeInBytes": 12374
+              },
+              "medium": {
+                "ext": ".webp",
+                "url": "/images/strapi/medium_step_2_adf74bd31e.webp",
+                "hash": "medium_step_2_adf74bd31e",
+                "mime": "image/webp",
+                "name": "medium_step 2.webp",
+                "path": null,
+                "size": 21.07,
+                "width": 750,
+                "height": 409,
+                "sizeInBytes": 21068
+              },
+              "thumbnail": {
+                "ext": ".webp",
+                "url": "/images/strapi/thumbnail_step_2_adf74bd31e.webp",
+                "hash": "thumbnail_step_2_adf74bd31e",
+                "mime": "image/webp",
+                "name": "thumbnail_step 2.webp",
+                "path": null,
+                "size": 4.66,
+                "width": 245,
+                "height": 134,
+                "sizeInBytes": 4660
+              }
+            }
+          },
+          "order": 2
+        },
+        {
+          "id": 11,
+          "number": "03",
+          "title": "Precision Manufacturing",
+          "description": "5-axis milling machines craft prosthetics with unmatched accuracy.",
+          "image": {
+            "url": "/images/strapi/step_3_194ca704ab.webp",
+            "alternativeText": "step 3.webp",
+            "width": 2816,
+            "height": 1536,
+            "formats": {
+              "large": {
+                "ext": ".webp",
+                "url": "/images/strapi/large_step_3_194ca704ab.webp",
+                "hash": "large_step_3_194ca704ab",
+                "mime": "image/webp",
+                "name": "large_step 3.webp",
+                "path": null,
+                "size": 42.07,
+                "width": 1000,
+                "height": 545,
+                "sizeInBytes": 42072
+              },
+              "small": {
+                "ext": ".webp",
+                "url": "/images/strapi/small_step_3_194ca704ab.webp",
+                "hash": "small_step_3_194ca704ab",
+                "mime": "image/webp",
+                "name": "small_step 3.webp",
+                "path": null,
+                "size": 16.82,
+                "width": 500,
+                "height": 273,
+                "sizeInBytes": 16820
+              },
+              "medium": {
+                "ext": ".webp",
+                "url": "/images/strapi/medium_step_3_194ca704ab.webp",
+                "hash": "medium_step_3_194ca704ab",
+                "mime": "image/webp",
+                "name": "medium_step 3.webp",
+                "path": null,
+                "size": 28.88,
+                "width": 750,
+                "height": 409,
+                "sizeInBytes": 28876
+              },
+              "thumbnail": {
+                "ext": ".webp",
+                "url": "/images/strapi/thumbnail_step_3_194ca704ab.webp",
+                "hash": "thumbnail_step_3_194ca704ab",
+                "mime": "image/webp",
+                "name": "thumbnail_step 3.webp",
+                "path": null,
+                "size": 6.03,
+                "width": 245,
+                "height": 134,
+                "sizeInBytes": 6026
+              }
+            }
+          },
+          "order": 3
+        },
+        {
+          "id": 12,
+          "number": "04",
+          "title": "Quality Control",
+          "description": "Multi-point inspection ensures perfect fit and integrity.",
+          "image": {
+            "url": "/images/strapi/IMG_20260125_161915_2a72417e9b.jpg",
+            "alternativeText": "IMG_20260125_161915.jpg",
+            "width": 1264,
+            "height": 1266,
+            "formats": {
+              "large": {
+                "ext": ".jpg",
+                "url": "/images/strapi/large_IMG_20260125_161915_2a72417e9b.jpg",
+                "hash": "large_IMG_20260125_161915_2a72417e9b",
+                "mime": "image/jpeg",
+                "name": "large_IMG_20260125_161915.jpg",
+                "path": null,
+                "size": 56.09,
+                "width": 998,
+                "height": 1000,
+                "sizeInBytes": 56093
+              },
+              "small": {
+                "ext": ".jpg",
+                "url": "/images/strapi/small_IMG_20260125_161915_2a72417e9b.jpg",
+                "hash": "small_IMG_20260125_161915_2a72417e9b",
+                "mime": "image/jpeg",
+                "name": "small_IMG_20260125_161915.jpg",
+                "path": null,
+                "size": 20.93,
+                "width": 499,
+                "height": 500,
+                "sizeInBytes": 20931
+              },
+              "medium": {
+                "ext": ".jpg",
+                "url": "/images/strapi/medium_IMG_20260125_161915_2a72417e9b.jpg",
+                "hash": "medium_IMG_20260125_161915_2a72417e9b",
+                "mime": "image/jpeg",
+                "name": "medium_IMG_20260125_161915.jpg",
+                "path": null,
+                "size": 36.92,
+                "width": 749,
+                "height": 750,
+                "sizeInBytes": 36923
+              },
+              "thumbnail": {
+                "ext": ".jpg",
+                "url": "/images/strapi/thumbnail_IMG_20260125_161915_2a72417e9b.jpg",
+                "hash": "thumbnail_IMG_20260125_161915_2a72417e9b",
+                "mime": "image/jpeg",
+                "name": "thumbnail_IMG_20260125_161915.jpg",
+                "path": null,
+                "size": 4.25,
+                "width": 156,
+                "height": 156,
+                "sizeInBytes": 4250
+              }
+            }
+          },
+          "order": 4
+        }
+      ],
+      "ctaButton": {
+        "id": 16,
+        "label": "Start Your Journey",
+        "url": "#contact-us",
+        "isExternal": false
+      }
+    },
+    "services": {
+      "headerBadge": "Our Services",
+      "headerTitle": "Precision-crafted solutions",
+      "headerHighlightedText": "for every dental need",
+      "headerSubtitle": "combining artistry with advanced technology.",
+      "services": [
+        {
+          "id": 11,
+          "title": "Crown and Bridge Fabrication",
+          "image": {
+            "url": "/images/strapi/service_1_89f1caf1f7.webp",
+            "alternativeText": "service 1.webp",
+            "width": 2816,
+            "height": 1536,
+            "formats": {
+              "large": {
+                "ext": ".webp",
+                "url": "/images/strapi/large_service_1_89f1caf1f7.webp",
+                "hash": "large_service_1_89f1caf1f7",
+                "mime": "image/webp",
+                "name": "large_service 1.webp",
+                "path": null,
+                "size": 28.21,
+                "width": 1000,
+                "height": 545,
+                "sizeInBytes": 28212
+              },
+              "small": {
+                "ext": ".webp",
+                "url": "/images/strapi/small_service_1_89f1caf1f7.webp",
+                "hash": "small_service_1_89f1caf1f7",
+                "mime": "image/webp",
+                "name": "small_service 1.webp",
+                "path": null,
+                "size": 12.02,
+                "width": 500,
+                "height": 273,
+                "sizeInBytes": 12022
+              },
+              "medium": {
+                "ext": ".webp",
+                "url": "/images/strapi/medium_service_1_89f1caf1f7.webp",
+                "hash": "medium_service_1_89f1caf1f7",
+                "mime": "image/webp",
+                "name": "medium_service 1.webp",
+                "path": null,
+                "size": 19.14,
+                "width": 750,
+                "height": 409,
+                "sizeInBytes": 19142
+              },
+              "thumbnail": {
+                "ext": ".webp",
+                "url": "/images/strapi/thumbnail_service_1_89f1caf1f7.webp",
+                "hash": "thumbnail_service_1_89f1caf1f7",
+                "mime": "image/webp",
+                "name": "thumbnail_service 1.webp",
+                "path": null,
+                "size": 5.28,
+                "width": 245,
+                "height": 134,
+                "sizeInBytes": 5278
+              }
+            }
+          },
+          "items": [
+            {
+              "id": 23,
+              "text": "Custom-made crowns and bridges"
+            },
+            {
+              "id": 24,
+              "text": "Utilizing advanced CAD/CAM technology for precision"
+            }
+          ],
+          "order": 1
+        },
+        {
+          "id": 12,
+          "title": "Denture Creation and Repair",
+          "image": {
+            "url": "/images/strapi/service_2_4a5b93df59.webp",
+            "alternativeText": "service 2.webp",
+            "width": 2816,
+            "height": 1536,
+            "formats": {
+              "large": {
+                "ext": ".webp",
+                "url": "/images/strapi/large_service_2_4a5b93df59.webp",
+                "hash": "large_service_2_4a5b93df59",
+                "mime": "image/webp",
+                "name": "large_service 2.webp",
+                "path": null,
+                "size": 21.3,
+                "width": 1000,
+                "height": 545,
+                "sizeInBytes": 21298
+              },
+              "small": {
+                "ext": ".webp",
+                "url": "/images/strapi/small_service_2_4a5b93df59.webp",
+                "hash": "small_service_2_4a5b93df59",
+                "mime": "image/webp",
+                "name": "small_service 2.webp",
+                "path": null,
+                "size": 8.31,
+                "width": 500,
+                "height": 273,
+                "sizeInBytes": 8312
+              },
+              "medium": {
+                "ext": ".webp",
+                "url": "/images/strapi/medium_service_2_4a5b93df59.webp",
+                "hash": "medium_service_2_4a5b93df59",
+                "mime": "image/webp",
+                "name": "medium_service 2.webp",
+                "path": null,
+                "size": 14.35,
+                "width": 750,
+                "height": 409,
+                "sizeInBytes": 14348
+              },
+              "thumbnail": {
+                "ext": ".webp",
+                "url": "/images/strapi/thumbnail_service_2_4a5b93df59.webp",
+                "hash": "thumbnail_service_2_4a5b93df59",
+                "mime": "image/webp",
+                "name": "thumbnail_service 2.webp",
+                "path": null,
+                "size": 3.44,
+                "width": 245,
+                "height": 134,
+                "sizeInBytes": 3440
+              }
+            }
+          },
+          "items": [
+            {
+              "id": 25,
+              "text": "Full and partial dentures"
+            },
+            {
+              "id": 26,
+              "text": "Rapid repair services to minimize patient inconvenience"
+            }
+          ],
+          "order": 2
+        },
+        {
+          "id": 13,
+          "title": "Orthodontic Appliances",
+          "image": {
+            "url": "/images/strapi/service_4_e95762b0f3.webp",
+            "alternativeText": "service 4.webp",
+            "width": 2816,
+            "height": 1536,
+            "formats": {
+              "large": {
+                "ext": ".webp",
+                "url": "/images/strapi/large_service_4_e95762b0f3.webp",
+                "hash": "large_service_4_e95762b0f3",
+                "mime": "image/webp",
+                "name": "large_service 4.webp",
+                "path": null,
+                "size": 31.37,
+                "width": 1000,
+                "height": 545,
+                "sizeInBytes": 31374
+              },
+              "small": {
+                "ext": ".webp",
+                "url": "/images/strapi/small_service_4_e95762b0f3.webp",
+                "hash": "small_service_4_e95762b0f3",
+                "mime": "image/webp",
+                "name": "small_service 4.webp",
+                "path": null,
+                "size": 13.23,
+                "width": 500,
+                "height": 273,
+                "sizeInBytes": 13232
+              },
+              "medium": {
+                "ext": ".webp",
+                "url": "/images/strapi/medium_service_4_e95762b0f3.webp",
+                "hash": "medium_service_4_e95762b0f3",
+                "mime": "image/webp",
+                "name": "medium_service 4.webp",
+                "path": null,
+                "size": 21.51,
+                "width": 750,
+                "height": 409,
+                "sizeInBytes": 21510
+              },
+              "thumbnail": {
+                "ext": ".webp",
+                "url": "/images/strapi/thumbnail_service_4_e95762b0f3.webp",
+                "hash": "thumbnail_service_4_e95762b0f3",
+                "mime": "image/webp",
+                "name": "thumbnail_service 4.webp",
+                "path": null,
+                "size": 5.35,
+                "width": 245,
+                "height": 134,
+                "sizeInBytes": 5350
+              }
+            }
+          },
+          "items": [
+            {
+              "id": 27,
+              "text": "Braces, retainers, and other corrective devices"
+            },
+            {
+              "id": 28,
+              "text": "Designed for comfort and effectiveness"
+            }
+          ],
+          "order": 3
+        },
+        {
+          "id": 14,
+          "title": "Custom Mouthguards",
+          "image": {
+            "url": "/images/strapi/service_5_5c8dde1357.webp",
+            "alternativeText": "service 5.webp",
+            "width": 2816,
+            "height": 1536,
+            "formats": {
+              "large": {
+                "ext": ".webp",
+                "url": "/images/strapi/large_service_5_5c8dde1357.webp",
+                "hash": "large_service_5_5c8dde1357",
+                "mime": "image/webp",
+                "name": "large_service 5.webp",
+                "path": null,
+                "size": 25.57,
+                "width": 1000,
+                "height": 545,
+                "sizeInBytes": 25574
+              },
+              "small": {
+                "ext": ".webp",
+                "url": "/images/strapi/small_service_5_5c8dde1357.webp",
+                "hash": "small_service_5_5c8dde1357",
+                "mime": "image/webp",
+                "name": "small_service 5.webp",
+                "path": null,
+                "size": 10.68,
+                "width": 500,
+                "height": 273,
+                "sizeInBytes": 10676
+              },
+              "medium": {
+                "ext": ".webp",
+                "url": "/images/strapi/medium_service_5_5c8dde1357.webp",
+                "hash": "medium_service_5_5c8dde1357",
+                "mime": "image/webp",
+                "name": "medium_service 5.webp",
+                "path": null,
+                "size": 17.61,
+                "width": 750,
+                "height": 409,
+                "sizeInBytes": 17612
+              },
+              "thumbnail": {
+                "ext": ".webp",
+                "url": "/images/strapi/thumbnail_service_5_5c8dde1357.webp",
+                "hash": "thumbnail_service_5_5c8dde1357",
+                "mime": "image/webp",
+                "name": "thumbnail_service 5.webp",
+                "path": null,
+                "size": 4.5,
+                "width": 245,
+                "height": 134,
+                "sizeInBytes": 4500
+              }
+            }
+          },
+          "items": [
+            {
+              "id": 29,
+              "text": "Tailor-made for sports or night use"
+            },
+            {
+              "id": 30,
+              "text": "Protecting teeth with a perfect fit"
+            }
+          ],
+          "order": 4
+        },
+        {
+          "id": 15,
+          "title": "Implant Prosthetics",
+          "image": {
+            "url": "/images/strapi/images_cc32b9cf49.jpeg",
+            "alternativeText": "images.jpeg",
+            "width": 598,
+            "height": 513,
+            "formats": {
+              "small": {
+                "ext": ".jpeg",
+                "url": "/images/strapi/small_images_cc32b9cf49.jpeg",
+                "hash": "small_images_cc32b9cf49",
+                "mime": "image/jpeg",
+                "name": "small_images.jpeg",
+                "path": null,
+                "size": 19.49,
+                "width": 500,
+                "height": 429,
+                "sizeInBytes": 19489
+              },
+              "thumbnail": {
+                "ext": ".jpeg",
+                "url": "/images/strapi/thumbnail_images_cc32b9cf49.jpeg",
+                "hash": "thumbnail_images_cc32b9cf49",
+                "mime": "image/jpeg",
+                "name": "thumbnail_images.jpeg",
+                "path": null,
+                "size": 4.33,
+                "width": 182,
+                "height": 156,
+                "sizeInBytes": 4333
+              }
+            }
+          },
+          "items": [
+            {
+              "id": 31,
+              "text": "High-quality prosthetic components for dental implants"
+            },
+            {
+              "id": 32,
+              "text": "Ensuring a natural look and feel"
+            },
+            {
+              "id": 33,
+              "text": "Custom abutment"
+            }
+          ],
+          "order": 5
+        }
+      ]
+    }
+  },
+  "productsPage": {
+    "heroTitle": "Our",
+    "heroHighlightedText": "Products",
+    "heroSubtitle": "Explore our comprehensive range of precision-crafted dental prosthetics, each designed to meet the highest standards of quality and aesthetics.",
+    "backButtonText": "Back to Home ",
+    "productTypes": [
+      {
+        "id": 117,
+        "name": "Inaly",
+        "slug": "product-type",
+        "description": "Inlays milled with glass ceramic and lithium disilicate blocks",
+        "image": {
+          "url": "/images/strapi/Inaly_1353cf4bd2.png",
+          "alternativeText": "Inaly.png",
+          "width": 554,
+          "height": 432,
+          "formats": {
+            "small": {
+              "ext": ".png",
+              "url": "/images/strapi/small_Inaly_1353cf4bd2.png",
+              "hash": "small_Inaly_1353cf4bd2",
+              "mime": "image/png",
+              "name": "small_Inaly.png",
+              "path": null,
+              "size": 244.7,
+              "width": 500,
+              "height": 390,
+              "sizeInBytes": 244696
+            },
+            "thumbnail": {
+              "ext": ".png",
+              "url": "/images/strapi/thumbnail_Inaly_1353cf4bd2.png",
+              "hash": "thumbnail_Inaly_1353cf4bd2",
+              "mime": "image/png",
+              "name": "thumbnail_Inaly.png",
+              "path": null,
+              "size": 48.55,
+              "width": 200,
+              "height": 156,
+              "sizeInBytes": 48547
+            }
+          }
+        },
+        "badge": "Popular",
+        "category": {
+          "id": 6,
+          "name": "Crowns",
+          "slug": "product-1"
+        },
+        "features": [
+          {
+            "id": 30,
+            "name": "Zirconia & Ceramic",
+            "order": 1
+          },
+          {
+            "id": 31,
+            "name": "Natural Look",
+            "order": 2
+          }
+        ],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 31,
+        "name": "zirconia crowns",
+        "slug": "product-type-2",
+        "description": "Durable, tooth-colored crowns made from zirconia, offering strength, aesthetics, and a natural appearance.",
+        "image": {
+          "url": "/images/strapi/step_3_194ca704ab.webp",
+          "alternativeText": "step 3.webp",
+          "width": 2816,
+          "height": 1536,
+          "formats": {
+            "large": {
+              "ext": ".webp",
+              "url": "/images/strapi/large_step_3_194ca704ab.webp",
+              "hash": "large_step_3_194ca704ab",
+              "mime": "image/webp",
+              "name": "large_step 3.webp",
+              "path": null,
+              "size": 42.07,
+              "width": 1000,
+              "height": 545,
+              "sizeInBytes": 42072
+            },
+            "small": {
+              "ext": ".webp",
+              "url": "/images/strapi/small_step_3_194ca704ab.webp",
+              "hash": "small_step_3_194ca704ab",
+              "mime": "image/webp",
+              "name": "small_step 3.webp",
+              "path": null,
+              "size": 16.82,
+              "width": 500,
+              "height": 273,
+              "sizeInBytes": 16820
+            },
+            "medium": {
+              "ext": ".webp",
+              "url": "/images/strapi/medium_step_3_194ca704ab.webp",
+              "hash": "medium_step_3_194ca704ab",
+              "mime": "image/webp",
+              "name": "medium_step 3.webp",
+              "path": null,
+              "size": 28.88,
+              "width": 750,
+              "height": 409,
+              "sizeInBytes": 28876
+            },
+            "thumbnail": {
+              "ext": ".webp",
+              "url": "/images/strapi/thumbnail_step_3_194ca704ab.webp",
+              "hash": "thumbnail_step_3_194ca704ab",
+              "mime": "image/webp",
+              "name": "thumbnail_step 3.webp",
+              "path": null,
+              "size": 6.03,
+              "width": 245,
+              "height": 134,
+              "sizeInBytes": 6026
+            }
+          }
+        },
+        "badge": "Advanced",
+        "category": {
+          "id": 6,
+          "name": "Crowns",
+          "slug": "product-1"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 4,
+        "name": "Onlay",
+        "slug": "product-type-1",
+        "description": "High-strength ceramic and zirconia crowns designed for maximum durability and natural aesthetics.",
+        "image": {
+          "url": "/images/strapi/Onlay_f7ea61b5f0.webp",
+          "alternativeText": "Onlay.webp",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".webp",
+              "url": "/images/strapi/large_Onlay_f7ea61b5f0.webp",
+              "hash": "large_Onlay_f7ea61b5f0",
+              "mime": "image/webp",
+              "name": "large_Onlay.webp",
+              "path": null,
+              "size": 13.41,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 13408
+            },
+            "small": {
+              "ext": ".webp",
+              "url": "/images/strapi/small_Onlay_f7ea61b5f0.webp",
+              "hash": "small_Onlay_f7ea61b5f0",
+              "mime": "image/webp",
+              "name": "small_Onlay.webp",
+              "path": null,
+              "size": 5.17,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 5170
+            },
+            "medium": {
+              "ext": ".webp",
+              "url": "/images/strapi/medium_Onlay_f7ea61b5f0.webp",
+              "hash": "medium_Onlay_f7ea61b5f0",
+              "mime": "image/webp",
+              "name": "medium_Onlay.webp",
+              "path": null,
+              "size": 9.19,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 9194
+            },
+            "thumbnail": {
+              "ext": ".webp",
+              "url": "/images/strapi/thumbnail_Onlay_f7ea61b5f0.webp",
+              "hash": "thumbnail_Onlay_f7ea61b5f0",
+              "mime": "image/webp",
+              "name": "thumbnail_Onlay.webp",
+              "path": null,
+              "size": 2.12,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 2120
+            }
+          }
+        },
+        "badge": "Advanced",
+        "category": {
+          "id": 6,
+          "name": "Crowns",
+          "slug": "product-1"
+        },
+        "features": [
+          {
+            "id": 6,
+            "name": " CAD/CAM Design",
+            "order": 1
+          }
+        ],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 32,
+        "name": "All on five",
+        "slug": "product-type-6",
+        "description": "A full-arch restoration supported by five implants for strong, fixed results.",
+        "image": {
+          "url": "/images/strapi/All_on_five_d30c9611ac.webp",
+          "alternativeText": "All on five.webp",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".webp",
+              "url": "/images/strapi/large_All_on_five_d30c9611ac.webp",
+              "hash": "large_All_on_five_d30c9611ac",
+              "mime": "image/webp",
+              "name": "large_All on five.webp",
+              "path": null,
+              "size": 21.55,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 21552
+            },
+            "small": {
+              "ext": ".webp",
+              "url": "/images/strapi/small_All_on_five_d30c9611ac.webp",
+              "hash": "small_All_on_five_d30c9611ac",
+              "mime": "image/webp",
+              "name": "small_All on five.webp",
+              "path": null,
+              "size": 8.28,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 8282
+            },
+            "medium": {
+              "ext": ".webp",
+              "url": "/images/strapi/medium_All_on_five_d30c9611ac.webp",
+              "hash": "medium_All_on_five_d30c9611ac",
+              "mime": "image/webp",
+              "name": "medium_All on five.webp",
+              "path": null,
+              "size": 14.82,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 14824
+            },
+            "thumbnail": {
+              "ext": ".webp",
+              "url": "/images/strapi/thumbnail_All_on_five_d30c9611ac.webp",
+              "hash": "thumbnail_All_on_five_d30c9611ac",
+              "mime": "image/webp",
+              "name": "thumbnail_All on five.webp",
+              "path": null,
+              "size": 2.87,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 2870
+            }
+          }
+        },
+        "badge": "Popular",
+        "category": {
+          "id": 17,
+          "name": "Surgical guide",
+          "slug": "product-4"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 34,
+        "name": "All on six",
+        "slug": "product-type-8",
+        "description": "A six-implant full-arch restoration offering enhanced strength and stability.",
+        "image": {
+          "url": "/images/strapi/All_on_six_db70aa9d5e.webp",
+          "alternativeText": "All on six.webp",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".webp",
+              "url": "/images/strapi/large_All_on_six_db70aa9d5e.webp",
+              "hash": "large_All_on_six_db70aa9d5e",
+              "mime": "image/webp",
+              "name": "large_All on six.webp",
+              "path": null,
+              "size": 25.33,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 25334
+            },
+            "small": {
+              "ext": ".webp",
+              "url": "/images/strapi/small_All_on_six_db70aa9d5e.webp",
+              "hash": "small_All_on_six_db70aa9d5e",
+              "mime": "image/webp",
+              "name": "small_All on six.webp",
+              "path": null,
+              "size": 9.32,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 9322
+            },
+            "medium": {
+              "ext": ".webp",
+              "url": "/images/strapi/medium_All_on_six_db70aa9d5e.webp",
+              "hash": "medium_All_on_six_db70aa9d5e",
+              "mime": "image/webp",
+              "name": "medium_All on six.webp",
+              "path": null,
+              "size": 16.99,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 16992
+            },
+            "thumbnail": {
+              "ext": ".webp",
+              "url": "/images/strapi/thumbnail_All_on_six_db70aa9d5e.webp",
+              "hash": "thumbnail_All_on_six_db70aa9d5e",
+              "mime": "image/webp",
+              "name": "thumbnail_All on six.webp",
+              "path": null,
+              "size": 3.09,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 3090
+            }
+          }
+        },
+        "badge": "Popular",
+        "category": {
+          "id": 17,
+          "name": "Surgical guide",
+          "slug": "product-4"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 35,
+        "name": "Three implant",
+        "slug": "three-implant",
+        "description": "A restoration supported by three implants, providing stable and functional support for multiple missing teeth.",
+        "image": {
+          "url": "/images/strapi/Three_implant_4ad1ee1f9b.webp",
+          "alternativeText": "Three implant.webp",
+          "width": 4860,
+          "height": 3256,
+          "formats": {
+            "large": {
+              "ext": ".webp",
+              "url": "/images/strapi/large_Three_implant_4ad1ee1f9b.webp",
+              "hash": "large_Three_implant_4ad1ee1f9b",
+              "mime": "image/webp",
+              "name": "large_Three implant.webp",
+              "path": null,
+              "size": 23.57,
+              "width": 1000,
+              "height": 670,
+              "sizeInBytes": 23574
+            },
+            "small": {
+              "ext": ".webp",
+              "url": "/images/strapi/small_Three_implant_4ad1ee1f9b.webp",
+              "hash": "small_Three_implant_4ad1ee1f9b",
+              "mime": "image/webp",
+              "name": "small_Three implant.webp",
+              "path": null,
+              "size": 8.78,
+              "width": 500,
+              "height": 335,
+              "sizeInBytes": 8782
+            },
+            "medium": {
+              "ext": ".webp",
+              "url": "/images/strapi/medium_Three_implant_4ad1ee1f9b.webp",
+              "hash": "medium_Three_implant_4ad1ee1f9b",
+              "mime": "image/webp",
+              "name": "medium_Three implant.webp",
+              "path": null,
+              "size": 15.64,
+              "width": 750,
+              "height": 502,
+              "sizeInBytes": 15638
+            },
+            "thumbnail": {
+              "ext": ".webp",
+              "url": "/images/strapi/thumbnail_Three_implant_4ad1ee1f9b.webp",
+              "hash": "thumbnail_Three_implant_4ad1ee1f9b",
+              "mime": "image/webp",
+              "name": "thumbnail_Three implant.webp",
+              "path": null,
+              "size": 3.07,
+              "width": 233,
+              "height": 156,
+              "sizeInBytes": 3072
+            }
+          }
+        },
+        "badge": "Advanced",
+        "category": {
+          "id": 17,
+          "name": "Surgical guide",
+          "slug": "product-4"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 36,
+        "name": "removable partial Dentures",
+        "slug": "product-type-5",
+        "description": "A removable dental prosthesis that replaces some missing teeth, restoring function and aesthetics while being easy to remove and clean",
+        "image": {
+          "url": "/images/strapi/removable_partial_Dentures_d8d4e8e0c1.webp",
+          "alternativeText": "removable partial Dentures.webp",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".webp",
+              "url": "/images/strapi/large_removable_partial_Dentures_d8d4e8e0c1.webp",
+              "hash": "large_removable_partial_Dentures_d8d4e8e0c1",
+              "mime": "image/webp",
+              "name": "large_removable partial Dentures.webp",
+              "path": null,
+              "size": 13.21,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 13208
+            },
+            "small": {
+              "ext": ".webp",
+              "url": "/images/strapi/small_removable_partial_Dentures_d8d4e8e0c1.webp",
+              "hash": "small_removable_partial_Dentures_d8d4e8e0c1",
+              "mime": "image/webp",
+              "name": "small_removable partial Dentures.webp",
+              "path": null,
+              "size": 5.14,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 5138
+            },
+            "medium": {
+              "ext": ".webp",
+              "url": "/images/strapi/medium_removable_partial_Dentures_d8d4e8e0c1.webp",
+              "hash": "medium_removable_partial_Dentures_d8d4e8e0c1",
+              "mime": "image/webp",
+              "name": "medium_removable partial Dentures.webp",
+              "path": null,
+              "size": 9.15,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 9152
+            },
+            "thumbnail": {
+              "ext": ".webp",
+              "url": "/images/strapi/thumbnail_removable_partial_Dentures_d8d4e8e0c1.webp",
+              "hash": "thumbnail_removable_partial_Dentures_d8d4e8e0c1",
+              "mime": "image/webp",
+              "name": "thumbnail_removable partial Dentures.webp",
+              "path": null,
+              "size": 1.93,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 1934
+            }
+          }
+        },
+        "badge": "Popular",
+        "category": {
+          "id": 16,
+          "name": "Removable Appliance",
+          "slug": "product-3"
+        },
+        "features": [
+          {
+            "id": 18,
+            "name": "removable partial Dentures",
+            "order": 1
+          }
+        ],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 37,
+        "name": "One implant",
+        "slug": "one-implant",
+        "description": "A single implant used to replace one missing tooth with a natural, long-lasting result.",
+        "image": {
+          "url": "/images/strapi/One_implant_182dde9bbf.webp",
+          "alternativeText": "One implant.webp",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".webp",
+              "url": "/images/strapi/large_One_implant_182dde9bbf.webp",
+              "hash": "large_One_implant_182dde9bbf",
+              "mime": "image/webp",
+              "name": "large_One implant.webp",
+              "path": null,
+              "size": 15.44,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 15444
+            },
+            "small": {
+              "ext": ".webp",
+              "url": "/images/strapi/small_One_implant_182dde9bbf.webp",
+              "hash": "small_One_implant_182dde9bbf",
+              "mime": "image/webp",
+              "name": "small_One implant.webp",
+              "path": null,
+              "size": 5.66,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 5664
+            },
+            "medium": {
+              "ext": ".webp",
+              "url": "/images/strapi/medium_One_implant_182dde9bbf.webp",
+              "hash": "medium_One_implant_182dde9bbf",
+              "mime": "image/webp",
+              "name": "medium_One implant.webp",
+              "path": null,
+              "size": 10.15,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 10148
+            },
+            "thumbnail": {
+              "ext": ".webp",
+              "url": "/images/strapi/thumbnail_One_implant_182dde9bbf.webp",
+              "hash": "thumbnail_One_implant_182dde9bbf",
+              "mime": "image/webp",
+              "name": "thumbnail_One implant.webp",
+              "path": null,
+              "size": 2.15,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 2154
+            }
+          }
+        },
+        "badge": "Popular",
+        "category": {
+          "id": 17,
+          "name": "Surgical guide",
+          "slug": "product-4"
+        },
+        "features": [
+          {
+            "id": 19,
+            "name": "removable partial Dentures",
+            "order": 1
+          },
+          {
+            "id": 20,
+            "name": "One implant one implant.",
+            "order": 2
+          }
+        ],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 57,
+        "name": "Stackable Surgical guide",
+        "slug": "stackable-surgical-guide",
+        "description": "A modular guide system that can be layered for precise, step-by-step implant placement during surgery.",
+        "image": {
+          "url": "/images/strapi/Stackable_Surgical_guide_1f14f59b4a.webp",
+          "alternativeText": "Stackable Surgical guide.webp",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".webp",
+              "url": "/images/strapi/large_Stackable_Surgical_guide_1f14f59b4a.webp",
+              "hash": "large_Stackable_Surgical_guide_1f14f59b4a",
+              "mime": "image/webp",
+              "name": "large_Stackable Surgical guide.webp",
+              "path": null,
+              "size": 16.9,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 16898
+            },
+            "small": {
+              "ext": ".webp",
+              "url": "/images/strapi/small_Stackable_Surgical_guide_1f14f59b4a.webp",
+              "hash": "small_Stackable_Surgical_guide_1f14f59b4a",
+              "mime": "image/webp",
+              "name": "small_Stackable Surgical guide.webp",
+              "path": null,
+              "size": 7.02,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 7022
+            },
+            "medium": {
+              "ext": ".webp",
+              "url": "/images/strapi/medium_Stackable_Surgical_guide_1f14f59b4a.webp",
+              "hash": "medium_Stackable_Surgical_guide_1f14f59b4a",
+              "mime": "image/webp",
+              "name": "medium_Stackable Surgical guide.webp",
+              "path": null,
+              "size": 11.78,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 11784
+            },
+            "thumbnail": {
+              "ext": ".webp",
+              "url": "/images/strapi/thumbnail_Stackable_Surgical_guide_1f14f59b4a.webp",
+              "hash": "thumbnail_Stackable_Surgical_guide_1f14f59b4a",
+              "mime": "image/webp",
+              "name": "thumbnail_Stackable Surgical guide.webp",
+              "path": null,
+              "size": 2.82,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 2822
+            }
+          }
+        },
+        "badge": "Popular",
+        "category": {
+          "id": 17,
+          "name": "Surgical guide",
+          "slug": "product-4"
+        },
+        "features": [
+          {
+            "id": 29,
+            "name": "Stackable Surgical guide",
+            "order": 1
+          }
+        ],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 55,
+        "name": "All on four",
+        "slug": "product-type-7",
+        "description": "A full-arch solution using four implants for stable, natural-looking restoration.",
+        "image": {
+          "url": "/images/strapi/All_on_four_06551a6fb8.webp",
+          "alternativeText": "All on four.webp",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".webp",
+              "url": "/images/strapi/large_All_on_four_06551a6fb8.webp",
+              "hash": "large_All_on_four_06551a6fb8",
+              "mime": "image/webp",
+              "name": "large_All on four.webp",
+              "path": null,
+              "size": 16.83,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 16834
+            },
+            "small": {
+              "ext": ".webp",
+              "url": "/images/strapi/small_All_on_four_06551a6fb8.webp",
+              "hash": "small_All_on_four_06551a6fb8",
+              "mime": "image/webp",
+              "name": "small_All on four.webp",
+              "path": null,
+              "size": 6.45,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 6448
+            },
+            "medium": {
+              "ext": ".webp",
+              "url": "/images/strapi/medium_All_on_four_06551a6fb8.webp",
+              "hash": "medium_All_on_four_06551a6fb8",
+              "mime": "image/webp",
+              "name": "medium_All on four.webp",
+              "path": null,
+              "size": 11.25,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 11254
+            },
+            "thumbnail": {
+              "ext": ".webp",
+              "url": "/images/strapi/thumbnail_All_on_four_06551a6fb8.webp",
+              "hash": "thumbnail_All_on_four_06551a6fb8",
+              "mime": "image/webp",
+              "name": "thumbnail_All on four.webp",
+              "path": null,
+              "size": 2.37,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 2368
+            }
+          }
+        },
+        "badge": "Advanced",
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 63,
+        "name": "Feldspathic Veneers",
+        "slug": "feldspathic-veneers",
+        "description": "Thin porcelain veneers made from feldspathic ceramic for highly aesthetic tooth coverage.",
+        "image": {
+          "url": "/images/strapi/Feldspathic_Veneers_0aa42f16a8.jpg",
+          "alternativeText": "Feldspathic Veneers.jpg",
+          "width": 1215,
+          "height": 741,
+          "formats": {
+            "large": {
+              "ext": ".jpg",
+              "url": "/images/strapi/large_Feldspathic_Veneers_0aa42f16a8.jpg",
+              "hash": "large_Feldspathic_Veneers_0aa42f16a8",
+              "mime": "image/jpeg",
+              "name": "large_Feldspathic Veneers.jpg",
+              "path": null,
+              "size": 27.26,
+              "width": 1000,
+              "height": 610,
+              "sizeInBytes": 27256
+            },
+            "small": {
+              "ext": ".jpg",
+              "url": "/images/strapi/small_Feldspathic_Veneers_0aa42f16a8.jpg",
+              "hash": "small_Feldspathic_Veneers_0aa42f16a8",
+              "mime": "image/jpeg",
+              "name": "small_Feldspathic Veneers.jpg",
+              "path": null,
+              "size": 9.88,
+              "width": 500,
+              "height": 305,
+              "sizeInBytes": 9884
+            },
+            "medium": {
+              "ext": ".jpg",
+              "url": "/images/strapi/medium_Feldspathic_Veneers_0aa42f16a8.jpg",
+              "hash": "medium_Feldspathic_Veneers_0aa42f16a8",
+              "mime": "image/jpeg",
+              "name": "medium_Feldspathic Veneers.jpg",
+              "path": null,
+              "size": 17.7,
+              "width": 750,
+              "height": 457,
+              "sizeInBytes": 17703
+            },
+            "thumbnail": {
+              "ext": ".jpg",
+              "url": "/images/strapi/thumbnail_Feldspathic_Veneers_0aa42f16a8.jpg",
+              "hash": "thumbnail_Feldspathic_Veneers_0aa42f16a8",
+              "mime": "image/jpeg",
+              "name": "thumbnail_Feldspathic Veneers.jpg",
+              "path": null,
+              "size": 3.68,
+              "width": 245,
+              "height": 149,
+              "sizeInBytes": 3680
+            }
+          }
+        },
+        "category": {
+          "id": 18,
+          "name": "Veneers",
+          "slug": "product-5"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 69,
+        "name": "Partial Veneers",
+        "slug": "partial-veneers",
+        "description": "Conservative veneers that cover only part of the tooth to improve shape or aesthetics.",
+        "image": {
+          "url": "/images/strapi/partial_veneers_07870c2faf.JPG",
+          "alternativeText": "partial veneers.JPG",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".JPG",
+              "url": "/images/strapi/large_partial_veneers_07870c2faf.JPG",
+              "hash": "large_partial_veneers_07870c2faf",
+              "mime": "image/jpeg",
+              "name": "large_partial veneers.JPG",
+              "path": null,
+              "size": 32.41,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 32411
+            },
+            "small": {
+              "ext": ".JPG",
+              "url": "/images/strapi/small_partial_veneers_07870c2faf.JPG",
+              "hash": "small_partial_veneers_07870c2faf",
+              "mime": "image/jpeg",
+              "name": "small_partial veneers.JPG",
+              "path": null,
+              "size": 9.36,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 9362
+            },
+            "medium": {
+              "ext": ".JPG",
+              "url": "/images/strapi/medium_partial_veneers_07870c2faf.JPG",
+              "hash": "medium_partial_veneers_07870c2faf",
+              "mime": "image/jpeg",
+              "name": "medium_partial veneers.JPG",
+              "path": null,
+              "size": 19.36,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 19362
+            },
+            "thumbnail": {
+              "ext": ".JPG",
+              "url": "/images/strapi/thumbnail_partial_veneers_07870c2faf.JPG",
+              "hash": "thumbnail_partial_veneers_07870c2faf",
+              "mime": "image/jpeg",
+              "name": "thumbnail_partial veneers.JPG",
+              "path": null,
+              "size": 2.94,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 2943
+            }
+          }
+        },
+        "category": {
+          "id": 18,
+          "name": "Veneers",
+          "slug": "product-5"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 77,
+        "name": "Blue Glass Appliances",
+        "slug": "product-type-14",
+        "description": "An orthodontic appliance used mainly to stop thumb sucking and tongue habits.",
+        "image": {
+          "url": "/images/strapi/Blue_glass_Appliances_6ecbeda1db.JPG",
+          "alternativeText": "Blue glass Appliances.JPG",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".JPG",
+              "url": "/images/strapi/large_Blue_glass_Appliances_6ecbeda1db.JPG",
+              "hash": "large_Blue_glass_Appliances_6ecbeda1db",
+              "mime": "image/jpeg",
+              "name": "large_Blue glass Appliances.JPG",
+              "path": null,
+              "size": 41.78,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 41776
+            },
+            "small": {
+              "ext": ".JPG",
+              "url": "/images/strapi/small_Blue_glass_Appliances_6ecbeda1db.JPG",
+              "hash": "small_Blue_glass_Appliances_6ecbeda1db",
+              "mime": "image/jpeg",
+              "name": "small_Blue glass Appliances.JPG",
+              "path": null,
+              "size": 14.22,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 14218
+            },
+            "medium": {
+              "ext": ".JPG",
+              "url": "/images/strapi/medium_Blue_glass_Appliances_6ecbeda1db.JPG",
+              "hash": "medium_Blue_glass_Appliances_6ecbeda1db",
+              "mime": "image/jpeg",
+              "name": "medium_Blue glass Appliances.JPG",
+              "path": null,
+              "size": 26.71,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 26711
+            },
+            "thumbnail": {
+              "ext": ".JPG",
+              "url": "/images/strapi/thumbnail_Blue_glass_Appliances_6ecbeda1db.JPG",
+              "hash": "thumbnail_Blue_glass_Appliances_6ecbeda1db",
+              "mime": "image/jpeg",
+              "name": "thumbnail_Blue glass Appliances.JPG",
+              "path": null,
+              "size": 4.77,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 4766
+            }
+          }
+        },
+        "category": {
+          "id": 16,
+          "name": "Removable Appliance",
+          "slug": "product-3"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 79,
+        "name": "Distal Pendulum",
+        "slug": "product-type-15",
+        "description": "An orthodontic appliance used to move upper molars backward to create space.",
+        "image": {
+          "url": "/images/strapi/Distal_pendulum_5d6e563952.JPG",
+          "alternativeText": "Distal pendulum.JPG",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".JPG",
+              "url": "/images/strapi/large_Distal_pendulum_5d6e563952.JPG",
+              "hash": "large_Distal_pendulum_5d6e563952",
+              "mime": "image/jpeg",
+              "name": "large_Distal pendulum.JPG",
+              "path": null,
+              "size": 36.32,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 36321
+            },
+            "small": {
+              "ext": ".JPG",
+              "url": "/images/strapi/small_Distal_pendulum_5d6e563952.JPG",
+              "hash": "small_Distal_pendulum_5d6e563952",
+              "mime": "image/jpeg",
+              "name": "small_Distal pendulum.JPG",
+              "path": null,
+              "size": 12.73,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 12728
+            },
+            "medium": {
+              "ext": ".JPG",
+              "url": "/images/strapi/medium_Distal_pendulum_5d6e563952.JPG",
+              "hash": "medium_Distal_pendulum_5d6e563952",
+              "mime": "image/jpeg",
+              "name": "medium_Distal pendulum.JPG",
+              "path": null,
+              "size": 23.54,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 23538
+            },
+            "thumbnail": {
+              "ext": ".JPG",
+              "url": "/images/strapi/thumbnail_Distal_pendulum_5d6e563952.JPG",
+              "hash": "thumbnail_Distal_pendulum_5d6e563952",
+              "mime": "image/jpeg",
+              "name": "thumbnail_Distal pendulum.JPG",
+              "path": null,
+              "size": 4.29,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 4286
+            }
+          }
+        },
+        "category": {
+          "id": 16,
+          "name": "Removable Appliance",
+          "slug": "product-3"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 81,
+        "name": "Fixed Bonded Retainer",
+        "slug": "product-type-16",
+        "description": "A wire bonded to the back of teeth to maintain alignment after orthodontic treatment.",
+        "image": {
+          "url": "/images/strapi/fixed_bonded_retainer_e75464ea04.JPG",
+          "alternativeText": "fixed bonded retainer.JPG",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".JPG",
+              "url": "/images/strapi/large_fixed_bonded_retainer_e75464ea04.JPG",
+              "hash": "large_fixed_bonded_retainer_e75464ea04",
+              "mime": "image/jpeg",
+              "name": "large_fixed bonded retainer.JPG",
+              "path": null,
+              "size": 36.15,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 36145
+            },
+            "small": {
+              "ext": ".JPG",
+              "url": "/images/strapi/small_fixed_bonded_retainer_e75464ea04.JPG",
+              "hash": "small_fixed_bonded_retainer_e75464ea04",
+              "mime": "image/jpeg",
+              "name": "small_fixed bonded retainer.JPG",
+              "path": null,
+              "size": 12.86,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 12860
+            },
+            "medium": {
+              "ext": ".JPG",
+              "url": "/images/strapi/medium_fixed_bonded_retainer_e75464ea04.JPG",
+              "hash": "medium_fixed_bonded_retainer_e75464ea04",
+              "mime": "image/jpeg",
+              "name": "medium_fixed bonded retainer.JPG",
+              "path": null,
+              "size": 23.7,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 23704
+            },
+            "thumbnail": {
+              "ext": ".JPG",
+              "url": "/images/strapi/thumbnail_fixed_bonded_retainer_e75464ea04.JPG",
+              "hash": "thumbnail_fixed_bonded_retainer_e75464ea04",
+              "mime": "image/jpeg",
+              "name": "thumbnail_fixed bonded retainer.JPG",
+              "path": null,
+              "size": 4.37,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 4372
+            }
+          }
+        },
+        "category": {
+          "id": 16,
+          "name": "Removable Appliance",
+          "slug": "product-3"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 83,
+        "name": "Hawely Retainer",
+        "slug": "hawely-retainer",
+        "description": "A removable orthodontic retainer with a metal wire and acrylic plate to maintain teeth position.",
+        "image": {
+          "url": "/images/strapi/hawely_retainer_21192529ac.JPG",
+          "alternativeText": "hawely retainer.JPG",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".JPG",
+              "url": "/images/strapi/large_hawely_retainer_21192529ac.JPG",
+              "hash": "large_hawely_retainer_21192529ac",
+              "mime": "image/jpeg",
+              "name": "large_hawely retainer.JPG",
+              "path": null,
+              "size": 48.17,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 48170
+            },
+            "small": {
+              "ext": ".JPG",
+              "url": "/images/strapi/small_hawely_retainer_21192529ac.JPG",
+              "hash": "small_hawely_retainer_21192529ac",
+              "mime": "image/jpeg",
+              "name": "small_hawely retainer.JPG",
+              "path": null,
+              "size": 16.69,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 16688
+            },
+            "medium": {
+              "ext": ".JPG",
+              "url": "/images/strapi/medium_hawely_retainer_21192529ac.JPG",
+              "hash": "medium_hawely_retainer_21192529ac",
+              "mime": "image/jpeg",
+              "name": "medium_hawely retainer.JPG",
+              "path": null,
+              "size": 31.1,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 31103
+            },
+            "thumbnail": {
+              "ext": ".JPG",
+              "url": "/images/strapi/thumbnail_hawely_retainer_21192529ac.JPG",
+              "hash": "thumbnail_hawely_retainer_21192529ac",
+              "mime": "image/jpeg",
+              "name": "thumbnail_hawely retainer.JPG",
+              "path": null,
+              "size": 5.65,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 5647
+            }
+          }
+        },
+        "category": {
+          "id": 16,
+          "name": "Removable Appliance",
+          "slug": "product-3"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 85,
+        "name": "Hawley Retainer With An Anterior Bite Ramp",
+        "slug": "hawley-retainer-with-an-anterior-bite-ramp",
+        "description": "A Hawley retainer with a front acrylic ramp to correct deep bites while maintaining teeth alignment.",
+        "image": {
+          "url": "/images/strapi/Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef.JPG",
+          "alternativeText": "Hawley retainer with an anterior bite ramp.JPG",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".JPG",
+              "url": "/images/strapi/large_Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef.JPG",
+              "hash": "large_Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef",
+              "mime": "image/jpeg",
+              "name": "large_Hawley retainer with an anterior bite ramp.JPG",
+              "path": null,
+              "size": 39.85,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 39855
+            },
+            "small": {
+              "ext": ".JPG",
+              "url": "/images/strapi/small_Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef.JPG",
+              "hash": "small_Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef",
+              "mime": "image/jpeg",
+              "name": "small_Hawley retainer with an anterior bite ramp.JPG",
+              "path": null,
+              "size": 14.1,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 14097
+            },
+            "medium": {
+              "ext": ".JPG",
+              "url": "/images/strapi/medium_Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef.JPG",
+              "hash": "medium_Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef",
+              "mime": "image/jpeg",
+              "name": "medium_Hawley retainer with an anterior bite ramp.JPG",
+              "path": null,
+              "size": 25.96,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 25959
+            },
+            "thumbnail": {
+              "ext": ".JPG",
+              "url": "/images/strapi/thumbnail_Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef.JPG",
+              "hash": "thumbnail_Hawley_retainer_with_an_anterior_bite_ramp_eac0a80fef",
+              "mime": "image/jpeg",
+              "name": "thumbnail_Hawley retainer with an anterior bite ramp.JPG",
+              "path": null,
+              "size": 4.78,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 4782
+            }
+          }
+        },
+        "category": {
+          "id": 16,
+          "name": "Removable Appliance",
+          "slug": "product-3"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 87,
+        "name": "Hawley With Palatal Design",
+        "slug": "product-type-17",
+        "description": "A Hawley retainer featuring a custom acrylic palatal design for added stability or function.",
+        "image": {
+          "url": "/images/strapi/Hawley_With_Palatal_Design_8554f930f1.JPG",
+          "alternativeText": "Hawley With Palatal Design.JPG",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".JPG",
+              "url": "/images/strapi/large_Hawley_With_Palatal_Design_8554f930f1.JPG",
+              "hash": "large_Hawley_With_Palatal_Design_8554f930f1",
+              "mime": "image/jpeg",
+              "name": "large_Hawley With Palatal Design.JPG",
+              "path": null,
+              "size": 48.8,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 48803
+            },
+            "small": {
+              "ext": ".JPG",
+              "url": "/images/strapi/small_Hawley_With_Palatal_Design_8554f930f1.JPG",
+              "hash": "small_Hawley_With_Palatal_Design_8554f930f1",
+              "mime": "image/jpeg",
+              "name": "small_Hawley With Palatal Design.JPG",
+              "path": null,
+              "size": 16.09,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 16086
+            },
+            "medium": {
+              "ext": ".JPG",
+              "url": "/images/strapi/medium_Hawley_With_Palatal_Design_8554f930f1.JPG",
+              "hash": "medium_Hawley_With_Palatal_Design_8554f930f1",
+              "mime": "image/jpeg",
+              "name": "medium_Hawley With Palatal Design.JPG",
+              "path": null,
+              "size": 30.8,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 30802
+            },
+            "thumbnail": {
+              "ext": ".JPG",
+              "url": "/images/strapi/thumbnail_Hawley_With_Palatal_Design_8554f930f1.JPG",
+              "hash": "thumbnail_Hawley_With_Palatal_Design_8554f930f1",
+              "mime": "image/jpeg",
+              "name": "thumbnail_Hawley With Palatal Design.JPG",
+              "path": null,
+              "size": 5.29,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 5293
+            }
+          }
+        },
+        "category": {
+          "id": 16,
+          "name": "Removable Appliance",
+          "slug": "product-3"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 89,
+        "name": "Rapid Palatal Expander RPE",
+        "slug": "product-type-18",
+        "description": "An orthodontic appliance used to quickly widen the upper jaw by separating the midpalatal suture.",
+        "image": {
+          "url": "/images/strapi/Rapid_palatal_expander_RPE_b07ba9c46b.JPG",
+          "alternativeText": "Rapid palatal expander RPE.JPG",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".JPG",
+              "url": "/images/strapi/large_Rapid_palatal_expander_RPE_b07ba9c46b.JPG",
+              "hash": "large_Rapid_palatal_expander_RPE_b07ba9c46b",
+              "mime": "image/jpeg",
+              "name": "large_Rapid palatal expander RPE.JPG",
+              "path": null,
+              "size": 46.53,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 46533
+            },
+            "small": {
+              "ext": ".JPG",
+              "url": "/images/strapi/small_Rapid_palatal_expander_RPE_b07ba9c46b.JPG",
+              "hash": "small_Rapid_palatal_expander_RPE_b07ba9c46b",
+              "mime": "image/jpeg",
+              "name": "small_Rapid palatal expander RPE.JPG",
+              "path": null,
+              "size": 15.34,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 15342
+            },
+            "medium": {
+              "ext": ".JPG",
+              "url": "/images/strapi/medium_Rapid_palatal_expander_RPE_b07ba9c46b.JPG",
+              "hash": "medium_Rapid_palatal_expander_RPE_b07ba9c46b",
+              "mime": "image/jpeg",
+              "name": "medium_Rapid palatal expander RPE.JPG",
+              "path": null,
+              "size": 29.48,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 29481
+            },
+            "thumbnail": {
+              "ext": ".JPG",
+              "url": "/images/strapi/thumbnail_Rapid_palatal_expander_RPE_b07ba9c46b.JPG",
+              "hash": "thumbnail_Rapid_palatal_expander_RPE_b07ba9c46b",
+              "mime": "image/jpeg",
+              "name": "thumbnail_Rapid palatal expander RPE.JPG",
+              "path": null,
+              "size": 5.06,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 5064
+            }
+          }
+        },
+        "category": {
+          "id": 16,
+          "name": "Removable Appliance",
+          "slug": "product-3"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 91,
+        "name": "Removable Palatal Expander",
+        "slug": "product-type-19",
+        "description": "A removable device used to gradually widen the upper jaw for better arch alignment.",
+        "image": {
+          "url": "/images/strapi/Removable_Palatal_Expander_d0dceb0e45.JPG",
+          "alternativeText": "Removable Palatal Expander.JPG",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".JPG",
+              "url": "/images/strapi/large_Removable_Palatal_Expander_d0dceb0e45.JPG",
+              "hash": "large_Removable_Palatal_Expander_d0dceb0e45",
+              "mime": "image/jpeg",
+              "name": "large_Removable Palatal Expander.JPG",
+              "path": null,
+              "size": 43.66,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 43659
+            },
+            "small": {
+              "ext": ".JPG",
+              "url": "/images/strapi/small_Removable_Palatal_Expander_d0dceb0e45.JPG",
+              "hash": "small_Removable_Palatal_Expander_d0dceb0e45",
+              "mime": "image/jpeg",
+              "name": "small_Removable Palatal Expander.JPG",
+              "path": null,
+              "size": 15.54,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 15542
+            },
+            "medium": {
+              "ext": ".JPG",
+              "url": "/images/strapi/medium_Removable_Palatal_Expander_d0dceb0e45.JPG",
+              "hash": "medium_Removable_Palatal_Expander_d0dceb0e45",
+              "mime": "image/jpeg",
+              "name": "medium_Removable Palatal Expander.JPG",
+              "path": null,
+              "size": 28.44,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 28444
+            },
+            "thumbnail": {
+              "ext": ".JPG",
+              "url": "/images/strapi/thumbnail_Removable_Palatal_Expander_d0dceb0e45.JPG",
+              "hash": "thumbnail_Removable_Palatal_Expander_d0dceb0e45",
+              "mime": "image/jpeg",
+              "name": "thumbnail_Removable Palatal Expander.JPG",
+              "path": null,
+              "size": 5.14,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 5138
+            }
+          }
+        },
+        "category": {
+          "id": 16,
+          "name": "Removable Appliance",
+          "slug": "product-3"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 93,
+        "name": "Retainer",
+        "slug": "product-type-20",
+        "description": "A device, removable or fixed, used to maintain teeth in their corrected positions after orthodontic treatment.",
+        "image": {
+          "url": "/images/strapi/Retainer_11a9e5ed3c.JPG",
+          "alternativeText": "Retainer.JPG",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".JPG",
+              "url": "/images/strapi/large_Retainer_11a9e5ed3c.JPG",
+              "hash": "large_Retainer_11a9e5ed3c",
+              "mime": "image/jpeg",
+              "name": "large_Retainer.JPG",
+              "path": null,
+              "size": 40.2,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 40200
+            },
+            "small": {
+              "ext": ".JPG",
+              "url": "/images/strapi/small_Retainer_11a9e5ed3c.JPG",
+              "hash": "small_Retainer_11a9e5ed3c",
+              "mime": "image/jpeg",
+              "name": "small_Retainer.JPG",
+              "path": null,
+              "size": 13.63,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 13625
+            },
+            "medium": {
+              "ext": ".JPG",
+              "url": "/images/strapi/medium_Retainer_11a9e5ed3c.JPG",
+              "hash": "medium_Retainer_11a9e5ed3c",
+              "mime": "image/jpeg",
+              "name": "medium_Retainer.JPG",
+              "path": null,
+              "size": 25.88,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 25884
+            },
+            "thumbnail": {
+              "ext": ".JPG",
+              "url": "/images/strapi/thumbnail_Retainer_11a9e5ed3c.JPG",
+              "hash": "thumbnail_Retainer_11a9e5ed3c",
+              "mime": "image/jpeg",
+              "name": "thumbnail_Retainer.JPG",
+              "path": null,
+              "size": 4.37,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 4374
+            }
+          }
+        },
+        "category": {
+          "id": 16,
+          "name": "Removable Appliance",
+          "slug": "product-3"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 95,
+        "name": "T-Rex",
+        "slug": "product-type-21",
+        "description": "An orthodontic appliance designed to correct underbites by guiding jaw growth forward.",
+        "image": {
+          "url": "/images/strapi/T_Rex_b4a9b3311b.JPG",
+          "alternativeText": "TRex.JPG",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".JPG",
+              "url": "/images/strapi/large_T_Rex_b4a9b3311b.JPG",
+              "hash": "large_T_Rex_b4a9b3311b",
+              "mime": "image/jpeg",
+              "name": "large_TRex.JPG",
+              "path": null,
+              "size": 51.13,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 51130
+            },
+            "small": {
+              "ext": ".JPG",
+              "url": "/images/strapi/small_T_Rex_b4a9b3311b.JPG",
+              "hash": "small_T_Rex_b4a9b3311b",
+              "mime": "image/jpeg",
+              "name": "small_TRex.JPG",
+              "path": null,
+              "size": 17.86,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 17859
+            },
+            "medium": {
+              "ext": ".JPG",
+              "url": "/images/strapi/medium_T_Rex_b4a9b3311b.JPG",
+              "hash": "medium_T_Rex_b4a9b3311b",
+              "mime": "image/jpeg",
+              "name": "medium_TRex.JPG",
+              "path": null,
+              "size": 33.04,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 33040
+            },
+            "thumbnail": {
+              "ext": ".JPG",
+              "url": "/images/strapi/thumbnail_T_Rex_b4a9b3311b.JPG",
+              "hash": "thumbnail_T_Rex_b4a9b3311b",
+              "mime": "image/jpeg",
+              "name": "thumbnail_TRex.JPG",
+              "path": null,
+              "size": 6.12,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 6119
+            }
+          }
+        },
+        "category": {
+          "id": 16,
+          "name": "Removable Appliance",
+          "slug": "product-3"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 97,
+        "name": "All On X Dental Implant",
+        "slug": "product-type-22",
+        "description": "A full-arch dental implant system supporting a complete set of teeth on multiple implants.",
+        "image": {
+          "url": "/images/strapi/All_On_X_Dental_Implant_3025cfbdb6.JPG",
+          "alternativeText": "All On X Dental Implant.JPG",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".JPG",
+              "url": "/images/strapi/large_All_On_X_Dental_Implant_3025cfbdb6.JPG",
+              "hash": "large_All_On_X_Dental_Implant_3025cfbdb6",
+              "mime": "image/jpeg",
+              "name": "large_All On X Dental Implant.JPG",
+              "path": null,
+              "size": 53.39,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 53385
+            },
+            "small": {
+              "ext": ".JPG",
+              "url": "/images/strapi/small_All_On_X_Dental_Implant_3025cfbdb6.JPG",
+              "hash": "small_All_On_X_Dental_Implant_3025cfbdb6",
+              "mime": "image/jpeg",
+              "name": "small_All On X Dental Implant.JPG",
+              "path": null,
+              "size": 18.21,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 18209
+            },
+            "medium": {
+              "ext": ".JPG",
+              "url": "/images/strapi/medium_All_On_X_Dental_Implant_3025cfbdb6.JPG",
+              "hash": "medium_All_On_X_Dental_Implant_3025cfbdb6",
+              "mime": "image/jpeg",
+              "name": "medium_All On X Dental Implant.JPG",
+              "path": null,
+              "size": 34.17,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 34167
+            },
+            "thumbnail": {
+              "ext": ".JPG",
+              "url": "/images/strapi/thumbnail_All_On_X_Dental_Implant_3025cfbdb6.JPG",
+              "hash": "thumbnail_All_On_X_Dental_Implant_3025cfbdb6",
+              "mime": "image/jpeg",
+              "name": "thumbnail_All On X Dental Implant.JPG",
+              "path": null,
+              "size": 5.85,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 5847
+            }
+          }
+        },
+        "category": {
+          "id": 5,
+          "name": "Implant",
+          "slug": "product-2"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 99,
+        "name": "Customized Abutments",
+        "slug": "product-type-23",
+        "description": "Abutments individually shaped to fit the implant and support the final crown or bridge perfectly.",
+        "image": {
+          "url": "/images/strapi/Customized_Abutments_f4c85e5ec1.jpg",
+          "alternativeText": "Customized Abutments.jpg",
+          "width": 5899,
+          "height": 3598,
+          "formats": {
+            "large": {
+              "ext": ".jpg",
+              "url": "/images/strapi/large_Customized_Abutments_f4c85e5ec1.jpg",
+              "hash": "large_Customized_Abutments_f4c85e5ec1",
+              "mime": "image/jpeg",
+              "name": "large_Customized Abutments.jpg",
+              "path": null,
+              "size": 59.11,
+              "width": 1000,
+              "height": 610,
+              "sizeInBytes": 59113
+            },
+            "small": {
+              "ext": ".jpg",
+              "url": "/images/strapi/small_Customized_Abutments_f4c85e5ec1.jpg",
+              "hash": "small_Customized_Abutments_f4c85e5ec1",
+              "mime": "image/jpeg",
+              "name": "small_Customized Abutments.jpg",
+              "path": null,
+              "size": 18.77,
+              "width": 500,
+              "height": 305,
+              "sizeInBytes": 18772
+            },
+            "medium": {
+              "ext": ".jpg",
+              "url": "/images/strapi/medium_Customized_Abutments_f4c85e5ec1.jpg",
+              "hash": "medium_Customized_Abutments_f4c85e5ec1",
+              "mime": "image/jpeg",
+              "name": "medium_Customized Abutments.jpg",
+              "path": null,
+              "size": 36.87,
+              "width": 750,
+              "height": 457,
+              "sizeInBytes": 36869
+            },
+            "thumbnail": {
+              "ext": ".jpg",
+              "url": "/images/strapi/thumbnail_Customized_Abutments_f4c85e5ec1.jpg",
+              "hash": "thumbnail_Customized_Abutments_f4c85e5ec1",
+              "mime": "image/jpeg",
+              "name": "thumbnail_Customized Abutments.jpg",
+              "path": null,
+              "size": 6.23,
+              "width": 245,
+              "height": 149,
+              "sizeInBytes": 6234
+            }
+          }
+        },
+        "category": {
+          "id": 5,
+          "name": "Implant",
+          "slug": "product-2"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 101,
+        "name": "Dental Implant Abutment Secured With Screw",
+        "slug": "product-type-24",
+        "description": "An abutment attached to an implant using a screw to hold the crown or prosthesis in place.",
+        "image": {
+          "url": "/images/strapi/Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67.JPG",
+          "alternativeText": "Dental Implant Abutment Secured With Screw.JPG",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".JPG",
+              "url": "/images/strapi/large_Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67.JPG",
+              "hash": "large_Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67",
+              "mime": "image/jpeg",
+              "name": "large_Dental Implant Abutment Secured With Screw.JPG",
+              "path": null,
+              "size": 35.2,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 35197
+            },
+            "small": {
+              "ext": ".JPG",
+              "url": "/images/strapi/small_Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67.JPG",
+              "hash": "small_Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67",
+              "mime": "image/jpeg",
+              "name": "small_Dental Implant Abutment Secured With Screw.JPG",
+              "path": null,
+              "size": 13.16,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 13155
+            },
+            "medium": {
+              "ext": ".JPG",
+              "url": "/images/strapi/medium_Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67.JPG",
+              "hash": "medium_Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67",
+              "mime": "image/jpeg",
+              "name": "medium_Dental Implant Abutment Secured With Screw.JPG",
+              "path": null,
+              "size": 23.42,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 23416
+            },
+            "thumbnail": {
+              "ext": ".JPG",
+              "url": "/images/strapi/thumbnail_Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67.JPG",
+              "hash": "thumbnail_Dental_Implant_Abutment_Secured_With_Screw_9d44a2bd67",
+              "mime": "image/jpeg",
+              "name": "thumbnail_Dental Implant Abutment Secured With Screw.JPG",
+              "path": null,
+              "size": 4.69,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 4687
+            }
+          }
+        },
+        "category": {
+          "id": 5,
+          "name": "Implant",
+          "slug": "product-2"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 103,
+        "name": "Implant Crowns",
+        "slug": "implant-crowns",
+        "description": "Artificial teeth placed on implants to restore function and aesthetics.",
+        "image": {
+          "url": "/images/strapi/Implant_Crowns_d1dc8c0431.jpg",
+          "alternativeText": "Implant Crowns.jpg",
+          "width": 5299,
+          "height": 3244,
+          "formats": {
+            "large": {
+              "ext": ".jpg",
+              "url": "/images/strapi/large_Implant_Crowns_d1dc8c0431.jpg",
+              "hash": "large_Implant_Crowns_d1dc8c0431",
+              "mime": "image/jpeg",
+              "name": "large_Implant Crowns.jpg",
+              "path": null,
+              "size": 61.79,
+              "width": 1000,
+              "height": 613,
+              "sizeInBytes": 61793
+            },
+            "small": {
+              "ext": ".jpg",
+              "url": "/images/strapi/small_Implant_Crowns_d1dc8c0431.jpg",
+              "hash": "small_Implant_Crowns_d1dc8c0431",
+              "mime": "image/jpeg",
+              "name": "small_Implant Crowns.jpg",
+              "path": null,
+              "size": 18.14,
+              "width": 500,
+              "height": 306,
+              "sizeInBytes": 18141
+            },
+            "medium": {
+              "ext": ".jpg",
+              "url": "/images/strapi/medium_Implant_Crowns_d1dc8c0431.jpg",
+              "hash": "medium_Implant_Crowns_d1dc8c0431",
+              "mime": "image/jpeg",
+              "name": "medium_Implant Crowns.jpg",
+              "path": null,
+              "size": 36.79,
+              "width": 750,
+              "height": 459,
+              "sizeInBytes": 36788
+            },
+            "thumbnail": {
+              "ext": ".jpg",
+              "url": "/images/strapi/thumbnail_Implant_Crowns_d1dc8c0431.jpg",
+              "hash": "thumbnail_Implant_Crowns_d1dc8c0431",
+              "mime": "image/jpeg",
+              "name": "thumbnail_Implant Crowns.jpg",
+              "path": null,
+              "size": 5.98,
+              "width": 245,
+              "height": 150,
+              "sizeInBytes": 5976
+            }
+          }
+        },
+        "category": {
+          "id": 5,
+          "name": "Implant",
+          "slug": "product-2"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 105,
+        "name": "Metal Bar Over Implant",
+        "slug": "product-type-25",
+        "description": "A metal bar connecting multiple implants to support a removable or fixed prosthesis.",
+        "image": {
+          "url": "/images/strapi/Metal_Bar_Over_Implant_b4a585f213.JPG",
+          "alternativeText": "Metal Bar Over Implant.JPG",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".JPG",
+              "url": "/images/strapi/large_Metal_Bar_Over_Implant_b4a585f213.JPG",
+              "hash": "large_Metal_Bar_Over_Implant_b4a585f213",
+              "mime": "image/jpeg",
+              "name": "large_Metal Bar Over Implant.JPG",
+              "path": null,
+              "size": 48.82,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 48816
+            },
+            "small": {
+              "ext": ".JPG",
+              "url": "/images/strapi/small_Metal_Bar_Over_Implant_b4a585f213.JPG",
+              "hash": "small_Metal_Bar_Over_Implant_b4a585f213",
+              "mime": "image/jpeg",
+              "name": "small_Metal Bar Over Implant.JPG",
+              "path": null,
+              "size": 16.41,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 16410
+            },
+            "medium": {
+              "ext": ".JPG",
+              "url": "/images/strapi/medium_Metal_Bar_Over_Implant_b4a585f213.JPG",
+              "hash": "medium_Metal_Bar_Over_Implant_b4a585f213",
+              "mime": "image/jpeg",
+              "name": "medium_Metal Bar Over Implant.JPG",
+              "path": null,
+              "size": 31,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 31003
+            },
+            "thumbnail": {
+              "ext": ".JPG",
+              "url": "/images/strapi/thumbnail_Metal_Bar_Over_Implant_b4a585f213.JPG",
+              "hash": "thumbnail_Metal_Bar_Over_Implant_b4a585f213",
+              "mime": "image/jpeg",
+              "name": "thumbnail_Metal Bar Over Implant.JPG",
+              "path": null,
+              "size": 5.51,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 5513
+            }
+          }
+        },
+        "category": {
+          "id": 5,
+          "name": "Implant",
+          "slug": "product-2"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 109,
+        "name": "Zirconia Bridge Over Screw Retained Metal Bar",
+        "slug": "product-type-27",
+        "description": "A strong, aesthetic zirconia bridge placed over a metal bar that is screw-retained on implants.",
+        "image": {
+          "url": "/images/strapi/Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850.png",
+          "alternativeText": "Zirconia Bridge Over Screw Retained Metal Bar.png",
+          "width": 2431,
+          "height": 3002,
+          "formats": {
+            "large": {
+              "ext": ".png",
+              "url": "/images/strapi/large_Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850.png",
+              "hash": "large_Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850",
+              "mime": "image/png",
+              "name": "large_Zirconia Bridge Over Screw Retained Metal Bar.png",
+              "path": null,
+              "size": 1234.31,
+              "width": 810,
+              "height": 1000,
+              "sizeInBytes": 1234311
+            },
+            "small": {
+              "ext": ".png",
+              "url": "/images/strapi/small_Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850.png",
+              "hash": "small_Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850",
+              "mime": "image/png",
+              "name": "small_Zirconia Bridge Over Screw Retained Metal Bar.png",
+              "path": null,
+              "size": 330.05,
+              "width": 405,
+              "height": 500,
+              "sizeInBytes": 330052
+            },
+            "medium": {
+              "ext": ".png",
+              "url": "/images/strapi/medium_Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850.png",
+              "hash": "medium_Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850",
+              "mime": "image/png",
+              "name": "medium_Zirconia Bridge Over Screw Retained Metal Bar.png",
+              "path": null,
+              "size": 713.73,
+              "width": 607,
+              "height": 750,
+              "sizeInBytes": 713729
+            },
+            "thumbnail": {
+              "ext": ".png",
+              "url": "/images/strapi/thumbnail_Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850.png",
+              "hash": "thumbnail_Zirconia_Bridge_Over_Screw_Retained_Metal_Bar_7b06536850",
+              "mime": "image/png",
+              "name": "thumbnail_Zirconia Bridge Over Screw Retained Metal Bar.png",
+              "path": null,
+              "size": 37.14,
+              "width": 126,
+              "height": 156,
+              "sizeInBytes": 37137
+            }
+          }
+        },
+        "category": {
+          "id": 5,
+          "name": "Implant",
+          "slug": "product-2"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 111,
+        "name": "Zirconia Crowns Over Titanium Metal Milled Frame",
+        "slug": "product-type-28",
+        "description": "Durable zirconia crowns layered over a custom-milled titanium implant framework.",
+        "image": {
+          "url": "/images/strapi/FULL_ARCH_77093bde2b.jpg",
+          "alternativeText": "FULL ARCH.jpg",
+          "width": 4866,
+          "height": 3507,
+          "formats": {
+            "large": {
+              "ext": ".jpg",
+              "url": "/images/strapi/large_FULL_ARCH_77093bde2b.jpg",
+              "hash": "large_FULL_ARCH_77093bde2b",
+              "mime": "image/jpeg",
+              "name": "large_FULL ARCH.jpg",
+              "path": null,
+              "size": 57.32,
+              "width": 1000,
+              "height": 721,
+              "sizeInBytes": 57322
+            },
+            "small": {
+              "ext": ".jpg",
+              "url": "/images/strapi/small_FULL_ARCH_77093bde2b.jpg",
+              "hash": "small_FULL_ARCH_77093bde2b",
+              "mime": "image/jpeg",
+              "name": "small_FULL ARCH.jpg",
+              "path": null,
+              "size": 19.47,
+              "width": 500,
+              "height": 360,
+              "sizeInBytes": 19472
+            },
+            "medium": {
+              "ext": ".jpg",
+              "url": "/images/strapi/medium_FULL_ARCH_77093bde2b.jpg",
+              "hash": "medium_FULL_ARCH_77093bde2b",
+              "mime": "image/jpeg",
+              "name": "medium_FULL ARCH.jpg",
+              "path": null,
+              "size": 36.21,
+              "width": 750,
+              "height": 540,
+              "sizeInBytes": 36207
+            },
+            "thumbnail": {
+              "ext": ".jpg",
+              "url": "/images/strapi/thumbnail_FULL_ARCH_77093bde2b.jpg",
+              "hash": "thumbnail_FULL_ARCH_77093bde2b",
+              "mime": "image/jpeg",
+              "name": "thumbnail_FULL ARCH.jpg",
+              "path": null,
+              "size": 5.95,
+              "width": 217,
+              "height": 156,
+              "sizeInBytes": 5948
+            }
+          }
+        },
+        "category": {
+          "id": 5,
+          "name": "Implant",
+          "slug": "product-2"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 114,
+        "name": "All on four",
+        "slug": "product-type-12",
+        "description": "A surgical guide used to accurately place four implants for full-arch dental rehabilitation.",
+        "image": {
+          "url": "/images/strapi/All_on_four_080883193d.JPG",
+          "alternativeText": "All on four.JPG",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".JPG",
+              "url": "/images/strapi/large_All_on_four_080883193d.JPG",
+              "hash": "large_All_on_four_080883193d",
+              "mime": "image/jpeg",
+              "name": "large_All on four.JPG",
+              "path": null,
+              "size": 36.45,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 36447
+            },
+            "small": {
+              "ext": ".JPG",
+              "url": "/images/strapi/small_All_on_four_080883193d.JPG",
+              "hash": "small_All_on_four_080883193d",
+              "mime": "image/jpeg",
+              "name": "small_All on four.JPG",
+              "path": null,
+              "size": 12.93,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 12928
+            },
+            "medium": {
+              "ext": ".JPG",
+              "url": "/images/strapi/medium_All_on_four_080883193d.JPG",
+              "hash": "medium_All_on_four_080883193d",
+              "mime": "image/jpeg",
+              "name": "medium_All on four.JPG",
+              "path": null,
+              "size": 23.71,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 23714
+            },
+            "thumbnail": {
+              "ext": ".JPG",
+              "url": "/images/strapi/thumbnail_All_on_four_080883193d.JPG",
+              "hash": "thumbnail_All_on_four_080883193d",
+              "mime": "image/jpeg",
+              "name": "thumbnail_All on four.JPG",
+              "path": null,
+              "size": 4.37,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 4374
+            }
+          }
+        },
+        "category": {
+          "id": 17,
+          "name": "Surgical guide",
+          "slug": "product-4"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 115,
+        "name": "Bi Helix Applaince",
+        "slug": "product-type-13",
+        "description": "An orthodontic appliance used to expand the dental arch and correct crossbites.",
+        "image": {
+          "url": "/images/strapi/Bi_helix_applaince_49cff1e523.JPG",
+          "alternativeText": "Bi helix applaince.JPG",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".JPG",
+              "url": "/images/strapi/large_Bi_helix_applaince_49cff1e523.JPG",
+              "hash": "large_Bi_helix_applaince_49cff1e523",
+              "mime": "image/jpeg",
+              "name": "large_Bi helix applaince.JPG",
+              "path": null,
+              "size": 34.78,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 34777
+            },
+            "small": {
+              "ext": ".JPG",
+              "url": "/images/strapi/small_Bi_helix_applaince_49cff1e523.JPG",
+              "hash": "small_Bi_helix_applaince_49cff1e523",
+              "mime": "image/jpeg",
+              "name": "small_Bi helix applaince.JPG",
+              "path": null,
+              "size": 12.08,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 12076
+            },
+            "medium": {
+              "ext": ".JPG",
+              "url": "/images/strapi/medium_Bi_helix_applaince_49cff1e523.JPG",
+              "hash": "medium_Bi_helix_applaince_49cff1e523",
+              "mime": "image/jpeg",
+              "name": "medium_Bi helix applaince.JPG",
+              "path": null,
+              "size": 22.35,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 22350
+            },
+            "thumbnail": {
+              "ext": ".JPG",
+              "url": "/images/strapi/thumbnail_Bi_helix_applaince_49cff1e523.JPG",
+              "hash": "thumbnail_Bi_helix_applaince_49cff1e523",
+              "mime": "image/jpeg",
+              "name": "thumbnail_Bi helix applaince.JPG",
+              "path": null,
+              "size": 4.08,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 4078
+            }
+          }
+        },
+        "category": {
+          "id": 16,
+          "name": "Removable Appliance",
+          "slug": "product-3"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 118,
+        "name": "Laithinum Veneers",
+        "slug": "product-type-11",
+        "description": "Thin ceramic veneers made from lithium disilicate for strong and aesthetic tooth restoration.",
+        "image": {
+          "url": "/images/strapi/Laithinum_Veneers_59b5b80c0a.jpg",
+          "alternativeText": "Laithinum Veneers.jpg",
+          "width": 1000,
+          "height": 437,
+          "formats": {
+            "small": {
+              "ext": ".jpg",
+              "url": "/images/strapi/small_Laithinum_Veneers_59b5b80c0a.jpg",
+              "hash": "small_Laithinum_Veneers_59b5b80c0a",
+              "mime": "image/jpeg",
+              "name": "small_Laithinum Veneers.jpg",
+              "path": null,
+              "size": 9.87,
+              "width": 500,
+              "height": 219,
+              "sizeInBytes": 9871
+            },
+            "medium": {
+              "ext": ".jpg",
+              "url": "/images/strapi/medium_Laithinum_Veneers_59b5b80c0a.jpg",
+              "hash": "medium_Laithinum_Veneers_59b5b80c0a",
+              "mime": "image/jpeg",
+              "name": "medium_Laithinum Veneers.jpg",
+              "path": null,
+              "size": 17.42,
+              "width": 750,
+              "height": 328,
+              "sizeInBytes": 17418
+            },
+            "thumbnail": {
+              "ext": ".jpg",
+              "url": "/images/strapi/thumbnail_Laithinum_Veneers_59b5b80c0a.jpg",
+              "hash": "thumbnail_Laithinum_Veneers_59b5b80c0a",
+              "mime": "image/jpeg",
+              "name": "thumbnail_Laithinum Veneers.jpg",
+              "path": null,
+              "size": 3.68,
+              "width": 245,
+              "height": 107,
+              "sizeInBytes": 3684
+            }
+          }
+        },
+        "category": {
+          "id": 18,
+          "name": "Veneers",
+          "slug": "product-5"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 119,
+        "name": "Custom multi unit",
+        "slug": "product-type-3",
+        "description": "A customized abutment system that improves implant alignment and prosthetic fit.",
+        "image": {
+          "url": "/images/strapi/Custom_multi_unit_0bf412dff9.jpg",
+          "alternativeText": "Custom multi unit.jpg",
+          "width": 1000,
+          "height": 750,
+          "formats": {
+            "small": {
+              "ext": ".jpg",
+              "url": "/images/strapi/small_Custom_multi_unit_0bf412dff9.jpg",
+              "hash": "small_Custom_multi_unit_0bf412dff9",
+              "mime": "image/jpeg",
+              "name": "small_Custom multi unit.jpg",
+              "path": null,
+              "size": 23.54,
+              "width": 500,
+              "height": 375,
+              "sizeInBytes": 23541
+            },
+            "medium": {
+              "ext": ".jpg",
+              "url": "/images/strapi/medium_Custom_multi_unit_0bf412dff9.jpg",
+              "hash": "medium_Custom_multi_unit_0bf412dff9",
+              "mime": "image/jpeg",
+              "name": "medium_Custom multi unit.jpg",
+              "path": null,
+              "size": 44.6,
+              "width": 750,
+              "height": 563,
+              "sizeInBytes": 44604
+            },
+            "thumbnail": {
+              "ext": ".jpg",
+              "url": "/images/strapi/thumbnail_Custom_multi_unit_0bf412dff9.jpg",
+              "hash": "thumbnail_Custom_multi_unit_0bf412dff9",
+              "mime": "image/jpeg",
+              "name": "thumbnail_Custom multi unit.jpg",
+              "path": null,
+              "size": 6.16,
+              "width": 208,
+              "height": 156,
+              "sizeInBytes": 6158
+            }
+          }
+        },
+        "badge": "Popular",
+        "category": {
+          "id": 5,
+          "name": "Implant",
+          "slug": "product-2"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 120,
+        "name": "Injectable Composite",
+        "slug": "product-type-10",
+        "description": "A flowable composite technique injected into molds to create minimally invasive aesthetic restorations.",
+        "image": {
+          "url": "/images/strapi/Injectable_Composite_4f99368198.jpg",
+          "alternativeText": "Injectable Composite.jpg",
+          "width": 1000,
+          "height": 750,
+          "formats": {
+            "small": {
+              "ext": ".jpg",
+              "url": "/images/strapi/small_Injectable_Composite_4f99368198.jpg",
+              "hash": "small_Injectable_Composite_4f99368198",
+              "mime": "image/jpeg",
+              "name": "small_Injectable Composite.jpg",
+              "path": null,
+              "size": 15.28,
+              "width": 500,
+              "height": 375,
+              "sizeInBytes": 15280
+            },
+            "medium": {
+              "ext": ".jpg",
+              "url": "/images/strapi/medium_Injectable_Composite_4f99368198.jpg",
+              "hash": "medium_Injectable_Composite_4f99368198",
+              "mime": "image/jpeg",
+              "name": "medium_Injectable Composite.jpg",
+              "path": null,
+              "size": 28.78,
+              "width": 750,
+              "height": 563,
+              "sizeInBytes": 28781
+            },
+            "thumbnail": {
+              "ext": ".jpg",
+              "url": "/images/strapi/thumbnail_Injectable_Composite_4f99368198.jpg",
+              "hash": "thumbnail_Injectable_Composite_4f99368198",
+              "mime": "image/jpeg",
+              "name": "thumbnail_Injectable Composite.jpg",
+              "path": null,
+              "size": 4.26,
+              "width": 208,
+              "height": 156,
+              "sizeInBytes": 4257
+            }
+          }
+        },
+        "category": {
+          "id": 18,
+          "name": "Veneers",
+          "slug": "product-5"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 121,
+        "name": "DSD",
+        "slug": "product-type-9",
+        "description": "Custom-designed veneers created using Digital Smile Design (DSD) for precise, aesthetic, and natural-looking results.",
+        "image": {
+          "url": "/images/strapi/Adobe_Express_file_4_ddb8807b2a.jpg",
+          "alternativeText": "Adobe Express - file (4).jpg",
+          "width": 1000,
+          "height": 725,
+          "formats": {
+            "small": {
+              "ext": ".jpg",
+              "url": "/images/strapi/small_Adobe_Express_file_4_ddb8807b2a.jpg",
+              "hash": "small_Adobe_Express_file_4_ddb8807b2a",
+              "mime": "image/jpeg",
+              "name": "small_Adobe Express - file (4).jpg",
+              "path": null,
+              "size": 16.91,
+              "width": 500,
+              "height": 363,
+              "sizeInBytes": 16909
+            },
+            "medium": {
+              "ext": ".jpg",
+              "url": "/images/strapi/medium_Adobe_Express_file_4_ddb8807b2a.jpg",
+              "hash": "medium_Adobe_Express_file_4_ddb8807b2a",
+              "mime": "image/jpeg",
+              "name": "medium_Adobe Express - file (4).jpg",
+              "path": null,
+              "size": 30.42,
+              "width": 750,
+              "height": 544,
+              "sizeInBytes": 30417
+            },
+            "thumbnail": {
+              "ext": ".jpg",
+              "url": "/images/strapi/thumbnail_Adobe_Express_file_4_ddb8807b2a.jpg",
+              "hash": "thumbnail_Adobe_Express_file_4_ddb8807b2a",
+              "mime": "image/jpeg",
+              "name": "thumbnail_Adobe Express - file (4).jpg",
+              "path": null,
+              "size": 4.81,
+              "width": 215,
+              "height": 156,
+              "sizeInBytes": 4808
+            }
+          }
+        },
+        "badge": "Advanced",
+        "category": {
+          "id": 18,
+          "name": "Veneers",
+          "slug": "product-5"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 30,
+        "name": "Removable appliance RPD",
+        "slug": "product-type-4",
+        "description": "A partial denture designed to replace missing teeth, offering a removable, functional, and comfortable restorative solution.",
+        "image": {
+          "url": "/images/strapi/Removable_appliance_RPD_005df12f87.webp",
+          "alternativeText": "Removable appliance RPD.webp",
+          "width": 6000,
+          "height": 4000,
+          "formats": {
+            "large": {
+              "ext": ".webp",
+              "url": "/images/strapi/large_Removable_appliance_RPD_005df12f87.webp",
+              "hash": "large_Removable_appliance_RPD_005df12f87",
+              "mime": "image/webp",
+              "name": "large_Removable appliance RPD.webp",
+              "path": null,
+              "size": 32.23,
+              "width": 1000,
+              "height": 667,
+              "sizeInBytes": 32228
+            },
+            "small": {
+              "ext": ".webp",
+              "url": "/images/strapi/small_Removable_appliance_RPD_005df12f87.webp",
+              "hash": "small_Removable_appliance_RPD_005df12f87",
+              "mime": "image/webp",
+              "name": "small_Removable appliance RPD.webp",
+              "path": null,
+              "size": 11.97,
+              "width": 500,
+              "height": 333,
+              "sizeInBytes": 11966
+            },
+            "medium": {
+              "ext": ".webp",
+              "url": "/images/strapi/medium_Removable_appliance_RPD_005df12f87.webp",
+              "hash": "medium_Removable_appliance_RPD_005df12f87",
+              "mime": "image/webp",
+              "name": "medium_Removable appliance RPD.webp",
+              "path": null,
+              "size": 21.88,
+              "width": 750,
+              "height": 500,
+              "sizeInBytes": 21880
+            },
+            "thumbnail": {
+              "ext": ".webp",
+              "url": "/images/strapi/thumbnail_Removable_appliance_RPD_005df12f87.webp",
+              "hash": "thumbnail_Removable_appliance_RPD_005df12f87",
+              "mime": "image/webp",
+              "name": "thumbnail_Removable appliance RPD.webp",
+              "path": null,
+              "size": 4.05,
+              "width": 234,
+              "height": 156,
+              "sizeInBytes": 4048
+            }
+          }
+        },
+        "badge": "Popular",
+        "category": {
+          "id": 16,
+          "name": "Removable Appliance",
+          "slug": "product-3"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      },
+      {
+        "id": 122,
+        "name": "Double-screw zirconia abutment for screw-retained bridge.",
+        "slug": "product-type-26",
+        "description": "Custom double-screw zirconia abutment bridge.",
+        "image": {
+          "url": "/images/strapi/f_2d378ce99e.png",
+          "alternativeText": "f.png",
+          "width": 2480,
+          "height": 3186,
+          "formats": {
+            "large": {
+              "ext": ".png",
+              "url": "/images/strapi/large_f_2d378ce99e.png",
+              "hash": "large_f_2d378ce99e",
+              "mime": "image/png",
+              "name": "large_f.png",
+              "path": null,
+              "size": 769.41,
+              "width": 778,
+              "height": 1000,
+              "sizeInBytes": 769413
+            },
+            "small": {
+              "ext": ".png",
+              "url": "/images/strapi/small_f_2d378ce99e.png",
+              "hash": "small_f_2d378ce99e",
+              "mime": "image/png",
+              "name": "small_f.png",
+              "path": null,
+              "size": 213.25,
+              "width": 389,
+              "height": 500,
+              "sizeInBytes": 213247
+            },
+            "medium": {
+              "ext": ".png",
+              "url": "/images/strapi/medium_f_2d378ce99e.png",
+              "hash": "medium_f_2d378ce99e",
+              "mime": "image/png",
+              "name": "medium_f.png",
+              "path": null,
+              "size": 452.48,
+              "width": 584,
+              "height": 750,
+              "sizeInBytes": 452482
+            },
+            "thumbnail": {
+              "ext": ".png",
+              "url": "/images/strapi/thumbnail_f_2d378ce99e.png",
+              "hash": "thumbnail_f_2d378ce99e",
+              "mime": "image/png",
+              "name": "thumbnail_f.png",
+              "path": null,
+              "size": 26.29,
+              "width": 121,
+              "height": 156,
+              "sizeInBytes": 26286
+            }
+          }
+        },
+        "category": {
+          "id": 5,
+          "name": "Implant",
+          "slug": "product-2"
+        },
+        "features": [],
+        "inStock": true,
+        "order": 0,
+        "featured": false
+      }
+    ],
+    "categories": [
+      {
+        "id": 6,
+        "name": "Crowns",
+        "slug": "product-1"
+      },
+      {
+        "id": 17,
+        "name": "Surgical guide",
+        "slug": "product-4"
+      },
+      {
+        "id": 16,
+        "name": "Removable Appliance",
+        "slug": "product-3"
+      },
+      {
+        "id": 18,
+        "name": "Veneers",
+        "slug": "product-5"
+      },
+      {
+        "id": 5,
+        "name": "Implant",
+        "slug": "product-2"
+      }
+    ]
+  },
+  "technologyPage": {
+    "heroTitle": "The Newest",
+    "heroHighlightedText": "Technology",
+    "heroSubtitle": "Explore cutting-edge dental technology that transforms precision and efficiency in every restoration.",
+    "backButtonText": "Back to Home",
+    "sectionTitle": "Our Advanced Technologies",
+    "sectionDescription": "We invest in the latest technology to deliver superior results.",
+    "technologyItems": [
+      {
+        "id": 7,
+        "name": "Photogrammetry Scan",
+        "slug": "technology-item",
+        "description": "We offer advanced Dental Photogrammetry and 3D Face Scan solutions to deliver ultra-accurate implant positioning and natural smile design. Our technology ensures high precision, fast scanning, and reliable full-arch data, perfectly matching intraoral scans with facial anatomy. This results in improved accuracy, reduced chair time, and predictable esthetic outcomes for implant and prosthetic cases",
+        "images": [
+          {
+            "url": "/images/strapi/photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a.jpg",
+            "alternativeText": "photogrammetry_in_full_arch_implant_treatment_portland_perio_implant.jpg",
+            "width": 1200,
+            "height": 800,
+            "formats": {
+              "large": {
+                "ext": ".jpg",
+                "url": "/images/strapi/large_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a.jpg",
+                "hash": "large_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a",
+                "mime": "image/jpeg",
+                "name": "large_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant.jpg",
+                "path": null,
+                "size": 86.27,
+                "width": 1000,
+                "height": 667,
+                "sizeInBytes": 86272
+              },
+              "small": {
+                "ext": ".jpg",
+                "url": "/images/strapi/small_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a.jpg",
+                "hash": "small_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a",
+                "mime": "image/jpeg",
+                "name": "small_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant.jpg",
+                "path": null,
+                "size": 27.31,
+                "width": 500,
+                "height": 333,
+                "sizeInBytes": 27307
+              },
+              "medium": {
+                "ext": ".jpg",
+                "url": "/images/strapi/medium_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a.jpg",
+                "hash": "medium_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a",
+                "mime": "image/jpeg",
+                "name": "medium_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant.jpg",
+                "path": null,
+                "size": 52.41,
+                "width": 750,
+                "height": 500,
+                "sizeInBytes": 52412
+              },
+              "thumbnail": {
+                "ext": ".jpg",
+                "url": "/images/strapi/thumbnail_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a.jpg",
+                "hash": "thumbnail_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant_88ce91f31a",
+                "mime": "image/jpeg",
+                "name": "thumbnail_photogrammetry_in_full_arch_implant_treatment_portland_perio_implant.jpg",
+                "path": null,
+                "size": 8.46,
+                "width": 234,
+                "height": 156,
+                "sizeInBytes": 8456
+              }
+            }
+          },
+          {
+            "url": "/images/strapi/IMG_20260203_115429_894_c6534538b8.jpg",
+            "alternativeText": "IMG_20260203_115429_894.jpg",
+            "width": 490,
+            "height": 275,
+            "formats": {
+              "thumbnail": {
+                "ext": ".jpg",
+                "url": "/images/strapi/thumbnail_IMG_20260203_115429_894_c6534538b8.jpg",
+                "hash": "thumbnail_IMG_20260203_115429_894_c6534538b8",
+                "mime": "image/jpeg",
+                "name": "thumbnail_IMG_20260203_115429_894.jpg",
+                "path": null,
+                "size": 9.55,
+                "width": 245,
+                "height": 138,
+                "sizeInBytes": 9547
+              }
+            }
+          },
+          {
+            "url": "/images/strapi/IMG_20260203_115432_058_6c285533dd.jpg",
+            "alternativeText": "IMG_20260203_115432_058.jpg",
+            "width": 241,
+            "height": 428,
+            "formats": {
+              "thumbnail": {
+                "ext": ".jpg",
+                "url": "/images/strapi/thumbnail_IMG_20260203_115432_058_6c285533dd.jpg",
+                "hash": "thumbnail_IMG_20260203_115432_058_6c285533dd",
+                "mime": "image/jpeg",
+                "name": "thumbnail_IMG_20260203_115432_058.jpg",
+                "path": null,
+                "size": 4.61,
+                "width": 88,
+                "height": 156,
+                "sizeInBytes": 4612
+              }
+            }
+          },
+          {
+            "url": "/images/strapi/IMG_20260214_150422_a46102a4ad.jpg",
+            "alternativeText": "IMG_20260214_150422.jpg",
+            "width": 1198,
+            "height": 1764,
+            "formats": {
+              "large": {
+                "ext": ".jpg",
+                "url": "/images/strapi/large_IMG_20260214_150422_a46102a4ad.jpg",
+                "hash": "large_IMG_20260214_150422_a46102a4ad",
+                "mime": "image/jpeg",
+                "name": "large_IMG_20260214_150422.jpg",
+                "path": null,
+                "size": 29.89,
+                "width": 679,
+                "height": 1000,
+                "sizeInBytes": 29894
+              },
+              "small": {
+                "ext": ".jpg",
+                "url": "/images/strapi/small_IMG_20260214_150422_a46102a4ad.jpg",
+                "hash": "small_IMG_20260214_150422_a46102a4ad",
+                "mime": "image/jpeg",
+                "name": "small_IMG_20260214_150422.jpg",
+                "path": null,
+                "size": 10.86,
+                "width": 340,
+                "height": 500,
+                "sizeInBytes": 10863
+              },
+              "medium": {
+                "ext": ".jpg",
+                "url": "/images/strapi/medium_IMG_20260214_150422_a46102a4ad.jpg",
+                "hash": "medium_IMG_20260214_150422_a46102a4ad",
+                "mime": "image/jpeg",
+                "name": "medium_IMG_20260214_150422.jpg",
+                "path": null,
+                "size": 19.64,
+                "width": 509,
+                "height": 750,
+                "sizeInBytes": 19639
+              },
+              "thumbnail": {
+                "ext": ".jpg",
+                "url": "/images/strapi/thumbnail_IMG_20260214_150422_a46102a4ad.jpg",
+                "hash": "thumbnail_IMG_20260214_150422_a46102a4ad",
+                "mime": "image/jpeg",
+                "name": "thumbnail_IMG_20260214_150422.jpg",
+                "path": null,
+                "size": 2.06,
+                "width": 106,
+                "height": 156,
+                "sizeInBytes": 2062
+              }
+            }
+          }
+        ],
+        "badge": "Popular",
+        "features": [
+          {
+            "id": 29,
+            "name": "Ultra-high implant position accuracy",
+            "order": 1
+          },
+          {
+            "id": 30,
+            "name": "Distortion-free digital capture",
+            "order": 2
+          },
+          {
+            "id": 31,
+            "name": "Ideal for full-arch implant cases",
+            "order": 3
+          },
+          {
+            "id": 32,
+            "name": "Reduces need for physical impressions",
+            "order": 4
+          },
+          {
+            "id": 33,
+            "name": "Improves passive fit of restorations",
+            "order": 5
+          }
+        ],
+        "detailedDescription": "Photogrammetry scanning is an advanced digital technique used to capture the exact three-dimensional position of dental implants with extremely high accuracy. Unlike conventional impression methods, photogrammetry relies on calibrated multi-angle imaging to record implant locations without distortion caused by materials, movement, or scanning stitching errors.\n\nThis technology is especially valuable for full-arch implant restorations, where even minor positional inaccuracies can lead to misfit, mechanical stress, or long-term complications. By directly capturing implant spatial relationships, photogrammetry ensures a passive fit of frameworks and prosthetics, reducing chair time, remakes, and adjustments. It enhances predictability and improves overall treatment efficiency for both clinicians and laboratories.",
+        "order": 0,
+        "featured": false
+      }
+    ]
+  }
+}
